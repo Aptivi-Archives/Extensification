@@ -1,0 +1,72 @@
+Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports Extensification.StringExts
+
+<TestClass>
+Public Class StringTests
+
+    ''' <summary>
+    ''' Tests replacing last occurrence of a string
+    ''' </summary>
+    <TestMethod>
+    Sub TestReplaceLastOccurrence()
+        Dim Source As String = "Extensification is awesome and is great!"
+        Dim Target As String = "is"
+        Source = Source.ReplaceLastOccurrence(Target, "its features are")
+        Assert.AreEqual(Source, "Extensification is awesome and its features are great!", "Replacement failed. Got {0}", Source)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting all indexes of a character
+    ''' </summary>
+    <TestMethod()> Public Sub TestAllIndexesOf()
+        Dim Source As String = "Extensification is awesome and is great!"
+        Dim Target As String = "a"
+        Dim Indexes As Integer = Source.AllIndexesOf(Target).Count
+        Assert.AreEqual(Indexes, 4, "Getting all indexes of a character failed. Expected 4, got {0}", Indexes)
+    End Sub
+
+    ''' <summary>
+    ''' Tests truncating...
+    ''' </summary>
+    <TestMethod()> Public Sub TestTruncate()
+        Dim Source As String = "Extensification is awesome and is great!"
+        Dim Target As Integer = 20
+        Source = Source.Truncate(Target)
+        Assert.AreEqual(Source, "Extensification is ...", "Truncation failed. Got {0}", Source)
+    End Sub
+
+    ''' <summary>
+    ''' Tests string formatting
+    ''' </summary>
+    <TestMethod()> Public Sub TestFormatString()
+        Dim Expected As String = "Kernel Simulator 0.0.1 first launched 2/22/2018."
+        Dim Actual As String = "Kernel Simulator 0.0.1 first launched {0}/{1}/{2}."
+        Dim Day As Integer = 22
+        Dim Year As Integer = 2018
+        Dim Month As Integer = 2
+        Actual = Actual.FormatString(Month, Day, Year)
+        Assert.AreEqual(Expected, Actual, "Format failed. Got {0}", Actual)
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing spaces from the beginning of the string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveSpacesFromBeginning()
+        Dim ExpectedString As String = "Extensification is awesome and is great!"
+        Dim TargetString As String = "     Extensification is awesome and is great!"
+        TargetString = TargetString.RemoveSpacesFromBeginning
+        Assert.AreEqual(ExpectedString, TargetString, "Removing space from beginning of string failed. Got ""{0}""", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests replacing all specified occurrences of strings with a single string
+    ''' </summary>
+    <TestMethod> Public Sub TestReplaceAll()
+        Dim ExpectedString As String = "Please test Extensification. This sub is a unit test."
+        Dim TargetString As String = "Please <replace> Extensification. This sub is a unit <replace2>."
+        TargetString = TargetString.ReplaceAll({"<replace>", "<replace2>"}, "test")
+        Assert.AreEqual(ExpectedString, TargetString, "String replacement failed. Got ""{0}""", TargetString)
+    End Sub
+
+End Class
+
