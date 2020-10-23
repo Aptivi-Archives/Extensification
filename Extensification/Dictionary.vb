@@ -13,6 +13,7 @@ Namespace DictionaryExts
         ''' <returns>Key from value</returns>
         <Extension>
         Public Function GetKeyFromValue(Of TKey, TValue)(ByVal Dict As Dictionary(Of TKey, TValue), ByVal Value As Object) As Object
+            If Dict Is Nothing Then Throw New ArgumentNullException("Dict")
             For Each DictKey As Object In Dict.Keys
                 If Dict(DictKey).Equals(Value) Then
                     Return DictKey
@@ -31,9 +32,11 @@ Namespace DictionaryExts
         ''' <returns>Index of key</returns>
         <Extension>
         Public Function GetIndexOfKey(Of TKey, TValue)(ByVal Dict As Dictionary(Of TKey, TValue), ByVal Key As Object) As Integer
+            If Dict Is Nothing Then Throw New ArgumentNullException("Dict")
             Dim DetectedIndex As Integer = 0
             For Index As Integer = 0 To Dict.Count - 1
-                If Dict.Keys(Index) = Key Then
+                Dim ListEntry As Object = Dict.Keys(Index)
+                If ListEntry = Key Then
                     DetectedIndex = Index
                 End If
             Next

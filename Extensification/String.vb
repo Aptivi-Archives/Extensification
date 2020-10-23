@@ -1,4 +1,5 @@
 Imports System.Runtime.CompilerServices
+Imports Extensification.ArrayExts
 
 Namespace StringExts
     Public Module Extensions
@@ -12,6 +13,8 @@ Namespace StringExts
         ''' <returns>String that has its last occurrence of text replaced</returns>
         <Extension>
         Public Function ReplaceLastOccurrence(ByVal source As String, ByVal searchText As String, ByVal replace As String) As String
+            If source Is Nothing Then Throw New ArgumentNullException("source")
+            If searchText Is Nothing Then Throw New ArgumentNullException("searchText")
             Dim position = source.LastIndexOf(searchText)
             If position = -1 Then Return source
             Dim result = source.Remove(position, searchText.Length).Insert(position, replace)
@@ -26,6 +29,7 @@ Namespace StringExts
         ''' <returns>Indexes of strings</returns>
         <Extension>
         Public Iterator Function AllIndexesOf(ByVal str As String, ByVal value As String) As IEnumerable(Of Integer)
+            If str Is Nothing Then Throw New ArgumentNullException("Str")
             If String.IsNullOrEmpty(value) Then
                 Throw New ArgumentException("Empty string specified", "value")
             End If
@@ -48,6 +52,7 @@ Namespace StringExts
         ''' <returns>Truncated string</returns>
         <Extension>
         Public Function Truncate(ByVal str As String, ByVal threshold As Integer) As String
+            If str Is Nothing Then Throw New ArgumentNullException("Str")
             Dim result As String
             If str.Length > threshold Then
                 result = str.Substring(0, threshold - 1) + "..."
@@ -65,6 +70,8 @@ Namespace StringExts
         ''' <returns>Formatted string</returns>
         <Extension>
         Public Function FormatString(ByVal Str As String, ByVal ParamArray Variables() As Object) As String
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            If Variables Is Nothing Then Throw New ArgumentNullException("Variables")
             For v As Integer = 0 To Variables.Length - 1
                 If Not Variables(v).Equals(Nothing) Then
                     Str = Str.Replace("{" + CStr(v) + "}", Variables(v).ToString)
@@ -82,6 +89,7 @@ Namespace StringExts
         ''' <returns>Modified string</returns>
         <Extension>
         Public Function RemoveSpacesFromBeginning(ByVal Str As String) As String
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
             Dim StrChars() As Char = Str.ToCharArray
             Dim CharNum As Integer = 0
             Do Until StrChars(CharNum) <> " "
@@ -101,12 +109,46 @@ Namespace StringExts
         ''' <exception cref="ArgumentNullException"></exception>
         <Extension>
         Public Function ReplaceAll(ByVal Str As String, ByVal ToBeReplaced() As String, ByVal ToReplace As String) As String
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
             If ToBeReplaced Is Nothing Then Throw New ArgumentNullException("ToBeReplaced")
             If ToBeReplaced.Count = 0 Then Throw New ArgumentNullException("ToBeReplaced")
             For Each ReplaceTarget As String In ToBeReplaced
                 Str = Str.Replace(ReplaceTarget, ToReplace)
             Next
             Return Str
+        End Function
+
+        ''' <summary>
+        ''' Shifts letters in a string either backwards or forward.
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="ShiftThreshold">How many times to shift. If the threshold is negative, the shifting will go backwards. If the threshold is positive, the shifting will go forward.</param>
+        ''' <returns>Shifted string</returns>
+        <Extension>
+        Public Function ShiftLetters(ByVal Str As String, ByVal ShiftThreshold As Integer) As String
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            Dim StrChars As Char() = Str.ToCharArray
+            For Character As Integer = 0 To StrChars.Length - 1
+                StrChars(Character) = ChrW(AscW(StrChars(Character)) + ShiftThreshold)
+            Next
+            Return StrChars
+        End Function
+
+        ''' <summary>
+        ''' Gets list of ASCII codes from a string
+        ''' </summary>
+        ''' <param name="Str"></param>
+        ''' <returns></returns>
+        <Extension>
+        Public Function GetAsciiCodes(ByVal Str As String) As Byte()
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            Dim StrChars As Char() = Str.ToCharArray
+            Dim StrAscii As Byte() = {}
+            For Character As Integer = 0 To StrChars.Length - 1
+                Dim AsciiCode As Integer = AscW(StrChars(Character))
+                StrAscii = StrAscii.Add(AsciiCode)
+            Next
+            Return StrAscii
         End Function
 
     End Module

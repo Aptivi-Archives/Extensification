@@ -1,0 +1,28 @@
+name: Package Registry Push
+
+on:
+  release:
+    types: [published]
+    
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: NuGet Installation
+      uses: warrenbuckley/Setup-Nuget@v1
+    - name: CURL Installation
+      run: choco install curl
+    - name: MSBuild Installation
+      uses: microsoft/setup-msbuild@v1.0.0
+    - name: Dependency Restoration
+      run: nuget restore "Extensification.sln"
+    - name: Solution Compilation
+      run: msbuild "Extensification.sln"
+    - name: Package Publication
+      run: |
+        $path = "Extensification.Bin"
+        $FileName = Get-ChildItem -Path $path -Recurse -Name -Filter "*symbols*"
+        curl -vX PUT -u "EoflaOE:${{ secrets.GITHUB_APIKEY }}" -F package="@$path\$FileName" https://nuget.pkg.github.com/EoflaOE/

@@ -16,7 +16,7 @@ Namespace LongExts
             ''' </summary>
             MeasurementsMetric
             ''' <summary>
-            ''' Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Dekameters), hm (Hectometers), km, ...)
+            ''' Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Decameters), hm (Hectameters), km, ...)
             ''' </summary>
             MeasurementsMetricUnusual
             ''' <summary>
@@ -45,20 +45,101 @@ Namespace LongExts
         ''' <returns>A string containing the processed number and unit</returns>
         <Extension>
         Public Function ToHumanReadable(ByVal Num As Long, ByVal Type As HumanFormats) As String
+            Dim HumanString As String = ""
+            Dim HumanNum As Double
             Select Case Type
                 Case HumanFormats.DataSize
-
+                    If Num >= 1000000000000000000 Then 'EB
+                        HumanNum = Num / 1000000000000000000
+                        HumanString = HumanNum & " EB"
+                    ElseIf Num >= 1000000000000000 Then 'PB
+                        HumanNum = Num / 1000000000000000
+                        HumanString = HumanNum & " PB"
+                    ElseIf Num >= 1000000000000 Then 'TB
+                        HumanNum = Num / 1000000000000
+                        HumanString = HumanNum & " TB"
+                    ElseIf Num >= 1000000000 Then 'GB
+                        HumanNum = Num / 1000000000
+                        HumanString = HumanNum & " GB"
+                    ElseIf Num >= 1000000 Then 'MB
+                        HumanNum = Num / 1000000
+                        HumanString = HumanNum & " MB"
+                    ElseIf Num >= 1000 Then 'KB
+                        HumanNum = Num / 1000
+                        HumanString = HumanNum & " KB"
+                    Else 'bytes
+                        HumanString = HumanNum & " bytes"
+                    End If
                 Case HumanFormats.MeasurementsImperial
-
+                    If Num >= 63360 Then 'miles
+                        HumanNum = Num / 63360
+                        HumanString = HumanNum & " miles"
+                    ElseIf Num >= 36 Then 'yards
+                        HumanNum = Num / 36
+                        HumanString = HumanNum & " yards"
+                    ElseIf Num >= 12 Then 'feet
+                        HumanNum = Num / 12
+                        HumanString = HumanNum & " feet"
+                    Else 'inches
+                        HumanString = Num & " inches"
+                    End If
                 Case HumanFormats.MeasurementsMetric
-
+                    If Num >= 1000000 Then 'km
+                        HumanNum = Num / 1000000
+                        HumanString = HumanNum & " kilometers"
+                    ElseIf Num >= 1000 Then 'm
+                        HumanNum = Num / 1000
+                        HumanString = HumanNum & " meters"
+                    ElseIf Num >= 10 Then 'cm
+                        HumanNum = Num / 10
+                        HumanString = HumanNum & " centimeters"
+                    Else 'mm
+                        HumanString = Num & " millimeters"
+                    End If
                 Case HumanFormats.MeasurementsMetricUnusual
-
-                Case HumanFormats.VolumeImperial
-
+                    If Num >= 1000000 Then 'km
+                        HumanNum = Num / 1000000
+                        HumanString = HumanNum & " kilometers"
+                    ElseIf Num >= 100000 Then 'hm
+                        HumanNum = Num / 100000
+                        HumanString = HumanNum & " hectameters"
+                    ElseIf Num >= 10000 Then 'dcm
+                        HumanNum = Num / 10000
+                        HumanString = HumanNum & " decameters"
+                    ElseIf Num >= 1000 Then 'm
+                        HumanNum = Num / 1000
+                        HumanString = HumanNum & " meters"
+                    ElseIf Num >= 100 Then 'dm
+                        HumanNum = Num / 100
+                        HumanString = HumanNum & " decimeters"
+                    ElseIf Num >= 10 Then 'cm
+                        HumanNum = Num / 10
+                        HumanString = HumanNum & " centimeters"
+                    Else 'mm
+                        HumanString = Num & " millimeters"
+                    End If
                 Case HumanFormats.VolumeMetric
-
+                    If Num >= 1000000 Then 'kL
+                        HumanNum = Num / 1000000
+                        HumanString = HumanNum & " kiloliters"
+                    ElseIf Num >= 1000 Then 'L
+                        HumanNum = Num / 1000
+                        HumanString = HumanNum & " liters"
+                    Else 'mL
+                        HumanString = Num & " milliliters"
+                    End If
+                Case HumanFormats.VolumeImperial
+                    If Num >= 8 Then 'gallons
+                        HumanNum = Num / 8
+                        HumanString = HumanNum & " gallons"
+                    ElseIf Num >= 2 Then 'quarts
+                        HumanNum = Num / 2
+                        HumanString = HumanNum & " quarts"
+                    Else 'pints
+                        HumanString = Num & " pints"
+                    End If
             End Select
+            Return HumanString
         End Function
 
         ''' <summary>

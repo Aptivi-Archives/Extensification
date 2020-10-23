@@ -3,43 +3,68 @@
 Namespace ArrayExts
     Public Module Extensions
 
+        ''' <summary>
+        ''' Adds an entry to array
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <param name="Item">Any item</param>
+        ''' <returns>An array with added item</returns>
         <Extension>
-        Public Function Add(ByVal TargetArray As Array, ByVal Item As Object) As Array
-            Dim TargetArrayList As ArrayList = TargetArray.ToArrayList
-            TargetArrayList.Add(Item)
-            Return TargetArrayList.ToArray
+        Public Function Add(Of T)(ByVal TargetArray() As T, ByVal Item As Object) As T()
+            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            ReDim Preserve TargetArray(TargetArray.Length)
+            TargetArray(TargetArray.Length - 1) = Item
+            Return TargetArray
         End Function
 
+        ''' <summary>
+        ''' Removes an entry from array
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <param name="Item">Any item</param>
+        ''' <returns>An array without targeted item</returns>
         <Extension>
-        Public Function Remove(ByVal TargetArray As Array, ByVal Item As Object) As Array
-            Dim TargetArrayList As ArrayList = TargetArray.ToArrayList
+        Public Function Remove(Of T)(ByVal TargetArray() As T, ByVal Item As Object) As T()
+            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            Dim TargetArrayList As List(Of T) = TargetArray.ToList
             TargetArrayList.Remove(Item)
-            Return TargetArrayList.ToArray
+            Return TargetArrayList.ToArray()
         End Function
 
+        ''' <summary>
+        ''' COnverts array to array list
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <returns>An array list of an array</returns>
         <Extension>
-        Public Function ToArrayList(ByVal TargetArray As Array) As ArrayList
+        Public Function ToArrayList(Of T)(ByVal TargetArray() As T) As ArrayList
+            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
             Dim ArrayValues As New ArrayList
             ArrayValues.AddRange(TargetArray)
             Return ArrayValues
         End Function
 
+        ''' <summary>
+        ''' Gets index from entry
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <param name="Entry">An entry from array</param>
+        ''' <returns>List of indexes. If none is found, returns an empty array list</returns>
         <Extension>
-        Public Function ToList(ByVal TargetArray As Array) As List(Of Object)
-            Dim ArrayValues As New List(Of Object)
-            ArrayValues.AddRange(TargetArray)
-            Return ArrayValues
-        End Function
-
-        <Extension>
-        Public Function GetIndexFromEntry(ByVal TargetArray As Array, ByVal Entry As String) As Array
+        Public Function GetIndexFromEntry(Of T)(ByVal TargetArray() As T, ByVal Entry As String) As T()
+            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
             Dim Indexes As New ArrayList
             For Index As Integer = 0 To TargetArray.Length - 1
-                If TargetArray(Index) = Entry Then
+                Dim ArrayEntry As Object = TargetArray(Index)
+                If ArrayEntry = Entry Then
                     Indexes.Add(Index)
                 End If
             Next
-            Return Indexes.ToArray
+            Return Indexes.ToArray(GetType(T))
         End Function
 
     End Module

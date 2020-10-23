@@ -1,5 +1,6 @@
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 Imports Extensification.StringExts
+Imports Extensification.ArrayExts
 
 <TestClass>
 Public Class StringTests
@@ -66,6 +67,37 @@ Public Class StringTests
         Dim TargetString As String = "Please <replace> Extensification. This sub is a unit <replace2>."
         TargetString = TargetString.ReplaceAll({"<replace>", "<replace2>"}, "test")
         Assert.AreEqual(ExpectedString, TargetString, "String replacement failed. Got ""{0}""", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests shifting letters backwards in a string
+    ''' </summary>
+    <TestMethod> Public Sub TestShiftLettersBackwards()
+        Dim ExpectedString As String = "Beha"
+        Dim TargetString As String = "File"
+        TargetString = TargetString.ShiftLetters(-4)
+        Assert.AreEqual(ExpectedString, TargetString, "String shift failed. Got ""{0}""", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests shifting letters forward in a string
+    ''' </summary>
+    <TestMethod> Public Sub TestShiftLettersForward()
+        Dim ExpectedString As String = "File"
+        Dim TargetString As String = "Beha"
+        TargetString = TargetString.ShiftLetters(4)
+        Assert.AreEqual(ExpectedString, TargetString, "String shift failed. Got ""{0}""", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests shifting letters forward in a string
+    ''' </summary>
+    <TestMethod> Public Sub TestGetAscii()
+        Dim TargetString As String = "File"
+        Dim TargetStringAscii() As Byte = TargetString.GetAsciiCodes
+        Assert.IsNotNull(TargetStringAscii, "Array is null.")
+        Assert.IsFalse(TargetStringAscii.Length = 0, "Getting ASCII codes failed. Length is zero.")
+        Assert.IsTrue(TargetStringAscii.Length = 4, "Expected four entries of ASCII codes of characters. Got {0}", TargetStringAscii.Length)
     End Sub
 
 End Class
