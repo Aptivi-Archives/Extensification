@@ -73,7 +73,7 @@ Namespace StringExts
             If Str Is Nothing Then Throw New ArgumentNullException("Str")
             If Variables Is Nothing Then Throw New ArgumentNullException("Variables")
             For v As Integer = 0 To Variables.Length - 1
-                If Not Variables(v).Equals(Nothing) Then
+                If Not Variables(v) Is Nothing Then
                     Str = Str.Replace("{" + CStr(v) + "}", Variables(v).ToString)
                 Else
                     Str = Str.Replace("{" + CStr(v) + "}", "((Null))")

@@ -50,6 +50,16 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
+    ''' Tests string formatting with reference to null
+    ''' </summary>
+    <TestMethod()> Public Sub TestFormatStringNullReference()
+        Dim Expected As String = "Nothing is ((Null))"
+        Dim Actual As String = "{0} is {1}"
+        Actual = Actual.FormatString("Nothing", Nothing)
+        Assert.AreEqual(Expected, Actual, "Format failed. Got {0}", Actual)
+    End Sub
+
+    ''' <summary>
     ''' Tests removing spaces from the beginning of the string
     ''' </summary>
     <TestMethod> Public Sub TestRemoveSpacesFromBeginning()
