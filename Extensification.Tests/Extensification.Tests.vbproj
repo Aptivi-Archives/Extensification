@@ -6,7 +6,7 @@
     <IsPackable>false</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2020.0</Version>
+    <Version>2020.1</Version>
     <Authors>EoflaOE</Authors>
     <Description>Extensification is an extension pack to .NET Framework that extends your ability to use more functions on strings, integers, and objects. Initially, it started with the string, integer, double, long, dictionary, array, arraylist, and list extensions, and inherited from Kernel Simulator. Over time, it grows with support for more objects.</Description>
     <Copyright>Copyright © 2020 EoflaOE and its companies</Copyright>
@@ -16,7 +16,10 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <NeutralLanguage>English (United States)</NeutralLanguage>
-    <PackageReleaseNotes>2020.0:
+    <PackageReleaseNotes>2020.1:
+- Added new tests
+
+2020.0:
 - Initial release</PackageReleaseNotes>
   </PropertyGroup>
 
