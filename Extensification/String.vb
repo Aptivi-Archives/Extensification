@@ -137,8 +137,6 @@ Namespace StringExts
         ''' <summary>
         ''' Gets list of ASCII codes from a string
         ''' </summary>
-        ''' <param name="Str"></param>
-        ''' <returns></returns>
         <Extension>
         Public Function GetAsciiCodes(ByVal Str As String) As Byte()
             If Str Is Nothing Then Throw New ArgumentNullException("Str")
@@ -149,6 +147,42 @@ Namespace StringExts
                 StrAscii = StrAscii.Add(AsciiCode)
             Next
             Return StrAscii
+        End Function
+
+        ''' <summary>
+        ''' Gets an ASCII code for a character
+        ''' </summary>
+        ''' <param name="CharacterNum">A zero-based character number</param>
+        <Extension>
+        Public Function GetAsciiCode(ByVal Str As String, ByVal CharacterNum As Integer) As Byte
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            Dim StrChars As Char() = Str.ToCharArray
+            Return AscW(StrChars(CharacterNum))
+        End Function
+
+        ''' <summary>
+        ''' Removes a letter from a string
+        ''' </summary>
+        ''' <param name="CharacterNum">A zero-based character number</param>
+        <Extension>
+        Public Function RemoveLetter(ByVal Str As String, ByVal CharacterNum As Integer) As String
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            Dim StrChars As List(Of Char) = Str.ToCharArray.ToList
+            StrChars.RemoveAt(CharacterNum)
+            Return String.Join("", StrChars)
+        End Function
+
+        ''' <summary>
+        ''' Removes a range of letters from a string
+        ''' </summary>
+        ''' <param name="Characters">Array of characters to be remove</param>
+        <Extension>
+        Public Function RemoveLettersRange(ByVal Str As String, ByVal Characters() As Char) As String
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            If Characters Is Nothing Then Throw New ArgumentNullException("Characters")
+            Dim StrChars As List(Of Char) = Str.ToCharArray.ToList
+            StrChars.RemoveAll(AddressOf Characters.Contains)
+            Return String.Join("", StrChars)
         End Function
 
     End Module

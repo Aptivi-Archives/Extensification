@@ -100,14 +100,43 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
-    ''' Tests shifting letters forward in a string
+    ''' Tests getting ASCII codes for a string
     ''' </summary>
-    <TestMethod> Public Sub TestGetAscii()
+    <TestMethod> Public Sub TestGetAsciiCodes()
         Dim TargetString As String = "File"
         Dim TargetStringAscii() As Byte = TargetString.GetAsciiCodes
         Assert.IsNotNull(TargetStringAscii, "Array is null.")
         Assert.IsFalse(TargetStringAscii.Length = 0, "Getting ASCII codes failed. Length is zero.")
         Assert.IsTrue(TargetStringAscii.Length = 4, "Expected four entries of ASCII codes of characters. Got {0}", TargetStringAscii.Length)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting an ASCII code for a letter in a string
+    ''' </summary>
+    <TestMethod> Public Sub TestGetAsciiCode()
+        Dim TargetString As String = "File"
+        Dim TargetStringAscii As Byte = TargetString.GetAsciiCode(3)
+        Assert.IsNotNull(TargetStringAscii, "Byte is null.")
+        Assert.AreEqual(101, CInt(TargetStringAscii))
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing a letter from a string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveLetter()
+        Dim TargetString As String = "Helllo"
+        TargetString = TargetString.RemoveLetter(4)
+        Assert.AreEqual("Hello", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing letters from a string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveLettersRange()
+        Dim TargetString As String = "Helllo"
+        Dim CharRange() As Char = {"l"c, "o"c}
+        TargetString = TargetString.RemoveLettersRange(CharRange)
+        Assert.AreEqual("He", TargetString)
     End Sub
 
 End Class
