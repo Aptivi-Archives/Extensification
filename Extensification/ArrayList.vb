@@ -12,7 +12,7 @@ Namespace ArrayListExts
         Public Function ToList(ByVal TargetArray As ArrayList) As List(Of Object)
             If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
             Dim ArrayValues As New List(Of Object)
-            ArrayValues.AddRange(TargetArray)
+            ArrayValues.AddRange(TargetArray.ToArray)
             Return ArrayValues
         End Function
 

@@ -34,7 +34,7 @@ Namespace ArrayExts
         End Function
 
         ''' <summary>
-        ''' COnverts array to array list
+        ''' Converts array to array list
         ''' </summary>
         ''' <typeparam name="T">Type</typeparam>
         ''' <param name="TargetArray">Target array</param>

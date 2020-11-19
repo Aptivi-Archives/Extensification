@@ -5,6 +5,27 @@ Imports Extensification.ArrayListExts
 Public Class ArrayListTests
 
     ''' <summary>
+    ''' Tests converting array list to list
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestToArrayList()
+        Dim TargetArrayList As New ArrayList From {"Test converting", "target array list", "to list."}
+        Dim TargetList As List(Of Object) = TargetArrayList.ToList
+        Assert.IsNotNull(TargetList)
+        Assert.IsTrue(TargetList.Count > 0)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting index from entry
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexOfEntry()
+        Dim TargetList As New ArrayList From {"Test getting", "index from", "array list entry."}
+        Dim ExpectedIndex As Integer = 1
+        Assert.AreEqual(ExpectedIndex, TargetList.GetIndexOfEntry("index from")(0))
+    End Sub
+
+    ''' <summary>
     ''' Tests counting full entries
     ''' </summary>
     <TestMethod>
