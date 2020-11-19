@@ -3,6 +3,11 @@
 Namespace ListExts
     Public Module Extensions
 
+        ''' <summary>
+        ''' Converts list to array list
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
         <Extension>
         Public Function ToArrayList(Of T)(ByVal TargetList As List(Of T)) As ArrayList
             Dim ResultList As New ArrayList
@@ -10,6 +15,13 @@ Namespace ListExts
             Return ResultList
         End Function
 
+        ''' <summary>
+        ''' Gets indexes from entry
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
+        ''' <param name="Entry">An entry</param>
+        ''' <returns>List of indexes from entry</returns>
         <Extension>
         Public Function GetIndexFromEntry(Of T)(ByVal TargetList As List(Of T), ByVal Entry As String) As List(Of Integer)
             Dim Indexes As New List(Of Integer)
@@ -19,6 +31,48 @@ Namespace ListExts
                 End If
             Next
             Return Indexes
+        End Function
+
+        ''' <summary>
+        ''' Gets how many non-empty items are there
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
+        ''' <returns>Count of non-empty items</returns>
+        <Extension>
+        Public Function CountFullEntries(Of T)(TargetList As List(Of T)) As Long
+            Dim FullEntries As Long
+            For i As Long = 0 To TargetList.LongCount - 1
+                If TargetList(i) IsNot Nothing Then
+                    If TypeOf TargetList(i) Is String Then
+                        If Not TargetList(i).Equals("") Then
+                            FullEntries += 1
+                        End If
+                    Else
+                        FullEntries += 1
+                    End If
+                End If
+            Next
+            Return FullEntries
+        End Function
+
+        ''' <summary>
+        ''' Gets how many empty items are there
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
+        ''' <returns>Count of empty items</returns>
+        <Extension>
+        Public Function CountEmptyEntries(Of T)(TargetList As List(Of T)) As Long
+            Dim EmptyEntries As Long
+            For i As Long = 0 To TargetList.LongCount - 1
+                If TargetList(i) Is Nothing Then
+                    EmptyEntries += 1
+                ElseIf TypeOf TargetList(i) Is String And TargetList(i).Equals("") Then
+                    EmptyEntries += 1
+                End If
+            Next
+            Return EmptyEntries
         End Function
 
     End Module

@@ -23,5 +23,27 @@ Public Class DictionaryTests
         Assert.AreEqual(2, Returned, "Failed to get index of key. Got {0}", Returned)
     End Sub
 
+    ''' <summary>
+    ''' Tests counting full entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestCountFullEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, String) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Assert.AreEqual(CLng(2), TargetDict.CountFullEntries)
+        Assert.AreEqual(CLng(1), TargetDictObjects.CountFullEntries)
+    End Sub
+
+    ''' <summary>
+    ''' Tests counting empty entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestCountEmptyEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Assert.AreEqual(CLng(1), TargetDict.CountEmptyEntries)
+        Assert.AreEqual(CLng(1), TargetDictObjects.CountEmptyEntries)
+    End Sub
+
 End Class
 

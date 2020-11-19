@@ -43,6 +43,50 @@ Namespace DictionaryExts
             Return DetectedIndex
         End Function
 
+        ''' <summary>
+        ''' Gets how many non-empty values are there (Empty keys are not counted)
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target array</param>
+        ''' <returns>Count of non-empty values</returns>
+        <Extension>
+        Public Function CountFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Long
+            Dim FullEntries As Long
+            For i As Long = 0 To Dict.LongCount - 1
+                If Dict.Values(i) IsNot Nothing Then
+                    If TypeOf Dict.Values(i) Is String Then
+                        If Not Dict.Values(i).Equals("") Then
+                            FullEntries += 1
+                        End If
+                    Else
+                        FullEntries += 1
+                    End If
+                End If
+            Next
+            Return FullEntries
+        End Function
+
+        ''' <summary>
+        ''' Gets how many empty values are there (Empty keys are not counted)
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target array</param>
+        ''' <returns>Count of empty values</returns>
+        <Extension>
+        Public Function CountEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Long
+            Dim EmptyEntries As Long
+            For i As Long = 0 To Dict.LongCount - 1
+                If Dict.Values(i) Is Nothing Then
+                    EmptyEntries += 1
+                ElseIf TypeOf Dict.Values(i) Is String And Dict.Values(i).Equals("") Then
+                    EmptyEntries += 1
+                End If
+            Next
+            Return EmptyEntries
+        End Function
+
     End Module
 End Namespace
 

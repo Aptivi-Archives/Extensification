@@ -35,5 +35,47 @@ Namespace ArrayListExts
             Return Indexes
         End Function
 
+        ''' <summary>
+        ''' Gets how many non-empty items are there
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <returns>Count of non-empty items</returns>
+        <Extension>
+        Public Function CountFullEntries(TargetArray As ArrayList) As Long
+            Dim FullEntries As Long
+            For i As Long = 0 To TargetArray.Count - 1
+                If TargetArray(i) IsNot Nothing Then
+                    If TypeOf TargetArray(i) Is String Then
+                        If Not TargetArray(i).Equals("") Then
+                            FullEntries += 1
+                        End If
+                    Else
+                        FullEntries += 1
+                    End If
+                End If
+            Next
+            Return FullEntries
+        End Function
+
+        ''' <summary>
+        ''' Gets how many empty items are there
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <returns>Count of empty items</returns>
+        <Extension>
+        Public Function CountEmptyEntries(TargetArray As ArrayList) As Long
+            Dim EmptyEntries As Long
+            For i As Long = 0 To TargetArray.Count - 1
+                If TargetArray(i) Is Nothing Then
+                    EmptyEntries += 1
+                ElseIf TypeOf TargetArray(i) Is String And TargetArray(i).Equals("") Then
+                    EmptyEntries += 1
+                End If
+            Next
+            Return EmptyEntries
+        End Function
+
     End Module
 End Namespace
