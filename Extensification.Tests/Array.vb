@@ -42,7 +42,7 @@ Public Class ArrayTests
     Public Sub TestGetIndexFromEntry()
         Dim TargetArray As String() = {"Test getting", "index from", "array entry."}
         Dim ExpectedIndex As Integer = 1
-        Dim ActualIndex As String() = TargetArray.GetIndexFromEntry("index from")
+        Dim ActualIndex As Integer() = TargetArray.GetIndexFromEntry("index from")
         Assert.AreEqual(ExpectedIndex, ActualIndex(0))
     End Sub
 

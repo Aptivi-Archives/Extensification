@@ -55,7 +55,7 @@ Namespace ArrayExts
         ''' <param name="Entry">An entry from array</param>
         ''' <returns>List of indexes. If none is found, returns an empty array list</returns>
         <Extension>
-        Public Function GetIndexFromEntry(Of T)(ByVal TargetArray() As T, ByVal Entry As String) As T()
+        Public Function GetIndexFromEntry(Of T)(ByVal TargetArray() As T, ByVal Entry As Object) As Integer()
             If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
             Dim Indexes As New ArrayList
             For Index As Integer = 0 To TargetArray.Length - 1
@@ -64,7 +64,7 @@ Namespace ArrayExts
                     Indexes.Add(Index)
                 End If
             Next
-            Return Indexes.ToArray(GetType(T))
+            Return Indexes.ToArray(GetType(Integer))
         End Function
 
         ''' <summary>
