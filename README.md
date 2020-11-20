@@ -6,35 +6,37 @@ Extensification is the group of extensions that improve your experience of progr
 
 ## System Requirements
 
+To run any project that use this library, we recommend that you have:
+
 ### Windows systems
 
 1. Windows 7 or later (Windows 10 recommended)
-2. .NET Framework 4.5 or later, or .NET Core 2.1 or 3.1
+2. .NET Framework 4.5 or later, or .NET Core 2.1 or 3.1, or .NET 5.0
 
 ### Linux systems
 
-1. Mono 5.10 or higher (6.0 or higher is recommended) or dotnet with .NET Core 2.1 or 3.1
+1. Mono 5.10 or higher (6.0 or higher is recommended) or dotnet with .NET Core 2.1 or 3.1 or .NET 5.0
 
 ## How to install
 
-This section covers how to install Kernel Simulator on your system. Please scroll down to your system below.
+This section covers how to install Extensification on your project. Please scroll down to your system below.
 
-### Windows systems (First method)
+### Windows systems (Recommended)
+
+1. Open Visual Studio to any project, and open the NuGet package manager
+2. Search for `Extensification` and install it there
+
+### Windows systems (Alternative)
 
 1. Download the Extensification library files [here](https://github.com/EoflaOE/Extensification/releases).
 2. Unzip the file to any directory
 3. Open Visual Studio to any project, and add a reference to Extensification
 
-### Windows systems (Second method)
-
-1. Open Visual Studio to any project, and open the NuGet package manager
-2. Search for `Extensification` and install it there
-
 ## How to Build
 
 This section covers how to build Extensification on your system. Please scroll down to your platform below.
 
-### Visual Studio 2017+
+### Visual Studio 2019 16.8+
 
 1. Open Visual Studio
 2. Press `Clone a repository`

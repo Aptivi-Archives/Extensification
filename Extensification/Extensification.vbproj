@@ -20,7 +20,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2020.1.0:
-- 
+- Added new string and array extensions
+- Added .NET 5.0 support
 
 2020.0.1:
 - Fixed NullReferenceException when formatting string with Nothing in it.
@@ -28,6 +29,18 @@
 2020.0:
 - Initial release</PackageReleaseNotes>
     <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
+    <OutputPath>../Extensification.Bin/</OutputPath>
+    <WarningsAsErrors></WarningsAsErrors>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
+    <OutputPath>../Extensification.Bin/</OutputPath>
+    <WarningsAsErrors></WarningsAsErrors>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
