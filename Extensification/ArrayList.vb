@@ -23,7 +23,7 @@ Namespace ArrayListExts
         ''' <param name="Entry">An entry found in the list</param>
         ''' <returns>List of indexes. If none is found, returns an empty array list</returns>
         <Extension>
-        Public Function GetIndexOfEntry(ByVal TargetArray As ArrayList, ByVal Entry As String) As ArrayList
+        Public Function GetIndexOfEntry(ByVal TargetArray As ArrayList, ByVal Entry As Object) As ArrayList
             If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
             Dim Indexes As New ArrayList
             For Index As Integer = 0 To TargetArray.Count - 1

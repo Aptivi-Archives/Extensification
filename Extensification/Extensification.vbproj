@@ -20,7 +20,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2020.2.0:
-- 
+- Fixed GetIndexOfEntry taking only string entries
 
 2020.1.0:
 - Added new string and array extensions
