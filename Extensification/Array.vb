@@ -109,5 +109,47 @@ Namespace ArrayExts
             Return EmptyEntries
         End Function
 
+        ''' <summary>
+        ''' Gets indexes of non-empty items
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <returns>Indexes of non-empty items</returns>
+        <Extension>
+        Public Function GetIndexesOfFullEntries(Of T)(TargetArray() As T) As Integer()
+            Dim FullIndexes As New List(Of Integer)
+            For i As Long = 0 To TargetArray.LongCount - 1
+                If TargetArray(i) IsNot Nothing Then
+                    If TypeOf TargetArray(i) Is String Then
+                        If Not TargetArray(i).Equals("") Then
+                            FullIndexes.Add(i)
+                        End If
+                    Else
+                        FullIndexes.Add(i)
+                    End If
+                End If
+            Next
+            Return FullIndexes.ToArray
+        End Function
+
+        ''' <summary>
+        ''' Gets indexes of empty items
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <returns>Indexes of empty items</returns>
+        <Extension>
+        Public Function GetIndexesOfEmptyEntries(Of T)(TargetArray() As T) As Integer()
+            Dim EmptyIndexes As New List(Of Integer)
+            For i As Long = 0 To TargetArray.LongCount - 1
+                If TargetArray(i) Is Nothing Then
+                    EmptyIndexes.Add(i)
+                ElseIf TypeOf TargetArray(i) Is String And TargetArray(i).Equals("") Then
+                    EmptyIndexes.Add(i)
+                End If
+            Next
+            Return EmptyIndexes.ToArray
+        End Function
+
     End Module
 End Namespace

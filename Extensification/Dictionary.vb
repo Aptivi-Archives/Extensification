@@ -87,6 +87,50 @@ Namespace DictionaryExts
             Return EmptyEntries
         End Function
 
+        ''' <summary>
+        ''' Gets indexes of non-empty items
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target list</param>
+        ''' <returns>Indexes of non-empty items</returns>
+        <Extension>
+        Public Function GetIndexesOfFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
+            Dim FullIndexes As New List(Of Integer)
+            For i As Long = 0 To Dict.LongCount - 1
+                If Dict.Values(i) IsNot Nothing Then
+                    If TypeOf Dict.Values(i) Is String Then
+                        If Not Dict.Values(i).Equals("") Then
+                            FullIndexes.Add(i)
+                        End If
+                    Else
+                        FullIndexes.Add(i)
+                    End If
+                End If
+            Next
+            Return FullIndexes.ToArray
+        End Function
+
+        ''' <summary>
+        ''' Gets indexes of empty items
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target list</param>
+        ''' <returns>Indexes of empty items</returns>
+        <Extension>
+        Public Function GetIndexesOfEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
+            Dim EmptyIndexes As New List(Of Integer)
+            For i As Long = 0 To Dict.LongCount - 1
+                If Dict.Values(i) Is Nothing Then
+                    EmptyIndexes.Add(i)
+                ElseIf TypeOf Dict.Values(i) Is String And Dict.Values(i).Equals("") Then
+                    EmptyIndexes.Add(i)
+                End If
+            Next
+            Return EmptyIndexes.ToArray
+        End Function
+
     End Module
 End Namespace
 

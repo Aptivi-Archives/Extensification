@@ -47,4 +47,34 @@ Public Class ArrayListTests
         Assert.AreEqual(CLng(2), TargetArrayObjects.CountEmptyEntries)
     End Sub
 
+    ''' <summary>
+    ''' Tests getting indexes of full entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexesOfFullEntries()
+        Dim TargetArray As New ArrayList From {"", "Full", "", "Entry", ""}
+        Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
+        Dim ExpectedIndexes() As Integer = {1, 3}
+        Dim ExpectedIndexesObjects() As Integer = {0}
+        Assert.IsNotNull(TargetArray.GetIndexesOfFullEntries)
+        Assert.IsNotNull(TargetArrayObjects.GetIndexesOfFullEntries)
+        Assert.IsTrue(TargetArray.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexes))
+        Assert.IsTrue(TargetArrayObjects.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexesObjects))
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting indexes of empty entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexesOfEmptyEntries()
+        Dim TargetArray As New ArrayList From {"", "Full", "", "Entry", ""}
+        Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
+        Dim ExpectedIndexes() As Integer = {0, 2, 4}
+        Dim ExpectedIndexesObjects() As Integer = {1, 2}
+        Assert.IsNotNull(TargetArray.GetIndexesOfEmptyEntries)
+        Assert.IsNotNull(TargetArrayObjects.GetIndexesOfEmptyEntries)
+        Assert.IsTrue(TargetArray.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
+        Assert.IsTrue(TargetArrayObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
+    End Sub
+
 End Class

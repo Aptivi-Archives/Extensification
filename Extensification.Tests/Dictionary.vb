@@ -45,5 +45,35 @@ Public Class DictionaryTests
         Assert.AreEqual(CLng(1), TargetDictObjects.CountEmptyEntries)
     End Sub
 
+    ''' <summary>
+    ''' Tests getting indexes of full entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexesOfFullEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Dim ExpectedIndexes() As Integer = {1, 2}
+        Dim ExpectedIndexesObjects() As Integer = {0}
+        Assert.IsNotNull(TargetDict.GetIndexesOfFullEntries)
+        Assert.IsNotNull(TargetDictObjects.GetIndexesOfFullEntries)
+        Assert.IsTrue(TargetDict.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexes))
+        Assert.IsTrue(TargetDictObjects.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexesObjects))
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting indexes of empty entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexesOfEmptyEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Dim ExpectedIndexes() As Integer = {0}
+        Dim ExpectedIndexesObjects() As Integer = {1}
+        Assert.IsNotNull(TargetDict.GetIndexesOfEmptyEntries)
+        Assert.IsNotNull(TargetDictObjects.GetIndexesOfEmptyEntries)
+        Assert.IsTrue(TargetDict.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
+        Assert.IsTrue(TargetDictObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
+    End Sub
+
 End Class
 
