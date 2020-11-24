@@ -13,6 +13,8 @@ To run any project that use this library, we recommend that you have:
 1. Windows 7 or later (Windows 10 recommended)
 2. .NET Framework 4.5 or later, or .NET Core 2.1 or 3.1, or .NET 5.0
 
+* If your app uses Extensification, uses x86, and uses one of .NET Core 2.1, 3.1, or .NET 5.0, at least a 2.00 GHz processor with SSE2 is required.
+
 ### Linux systems
 
 1. Mono 5.10 or higher (6.0 or higher is recommended) or dotnet with .NET Core 2.1 or 3.1 or .NET 5.0
