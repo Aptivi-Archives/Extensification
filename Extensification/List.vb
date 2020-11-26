@@ -23,7 +23,7 @@ Namespace ListExts
         ''' <param name="Entry">An entry</param>
         ''' <returns>List of indexes from entry</returns>
         <Extension>
-        Public Function GetIndexFromEntry(Of T)(ByVal TargetList As List(Of T), ByVal Entry As Object) As List(Of Integer)
+        Public Function GetIndexFromEntry(Of T)(ByVal TargetList As List(Of T), ByVal Entry As T) As List(Of Integer)
             Dim Indexes As New List(Of Integer)
             For Index As Integer = 0 To TargetList.Count - 1
                 If TargetList(Index).Equals(Entry) Then
@@ -124,7 +124,7 @@ Namespace ListExts
         ''' <param name="TargetList">Target list</param>
         ''' <param name="Entry">An entry to be added</param>
         <Extension>
-        Public Sub AddIfNotFound(Of T)(TargetList As List(Of T), Entry As Object)
+        Public Sub AddIfNotFound(Of T)(TargetList As List(Of T), Entry As T)
             If Not TargetList.Contains(Entry) Then
                 TargetList.Add(Entry)
             End If
@@ -141,8 +141,7 @@ Namespace ListExts
         Public Function TryRemove(Of T)(TargetList As List(Of T), Entry As T) As Boolean
             If Entry Is Nothing Then Throw New ArgumentNullException(NameOf(Entry))
             Try
-                TargetList.Remove(Entry)
-                Return True
+                Return TargetList.Remove(Entry)
             Catch ex As Exception
                 Return False
             End Try
