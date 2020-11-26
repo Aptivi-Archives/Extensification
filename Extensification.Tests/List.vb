@@ -77,4 +77,15 @@ Public Class ListTests
         Assert.IsTrue(TargetListObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
 
+    ''' <summary>
+    ''' Tests adding an entry to list if not found
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddIfNotFound()
+        Dim TargetList As New List(Of String)
+        TargetList.AddIfNotFound("String 1")
+        TargetList.AddIfNotFound("String 1")
+        Assert.IsTrue(TargetList.Count = 1)
+    End Sub
+
 End Class

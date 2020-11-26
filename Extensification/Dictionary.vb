@@ -48,7 +48,7 @@ Namespace DictionaryExts
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
         ''' <typeparam name="TValue">Value</typeparam>
-        ''' <param name="Dict">Target array</param>
+        ''' <param name="Dict">Target dictionary</param>
         ''' <returns>Count of non-empty values</returns>
         <Extension>
         Public Function CountFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Long
@@ -72,7 +72,7 @@ Namespace DictionaryExts
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
         ''' <typeparam name="TValue">Value</typeparam>
-        ''' <param name="Dict">Target array</param>
+        ''' <param name="Dict">Target dictionary</param>
         ''' <returns>Count of empty values</returns>
         <Extension>
         Public Function CountEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Long
@@ -92,7 +92,7 @@ Namespace DictionaryExts
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
         ''' <typeparam name="TValue">Value</typeparam>
-        ''' <param name="Dict">Target list</param>
+        ''' <param name="Dict">Target dictionary</param>
         ''' <returns>Indexes of non-empty items</returns>
         <Extension>
         Public Function GetIndexesOfFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
@@ -116,7 +116,7 @@ Namespace DictionaryExts
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
         ''' <typeparam name="TValue">Value</typeparam>
-        ''' <param name="Dict">Target list</param>
+        ''' <param name="Dict">Target dictionary</param>
         ''' <returns>Indexes of empty items</returns>
         <Extension>
         Public Function GetIndexesOfEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
@@ -130,6 +130,21 @@ Namespace DictionaryExts
             Next
             Return EmptyIndexes.ToArray
         End Function
+
+        ''' <summary>
+        ''' Adds an entry to dictionary if not foud
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry</param>
+        <Extension>
+        Public Sub AddIfNotFound(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), EntryKey As TKey, EntryValue As TValue)
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            End If
+        End Sub
 
     End Module
 End Namespace

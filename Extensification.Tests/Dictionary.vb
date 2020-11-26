@@ -75,5 +75,16 @@ Public Class DictionaryTests
         Assert.IsTrue(TargetDictObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
 
+    ''' <summary>
+    ''' Tests adding an entry to dictionary if not found
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddIfNotFound()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        TargetDict.AddIfNotFound("String 1", 64)
+        TargetDict.AddIfNotFound("String 1", 128)
+        Assert.IsTrue(TargetDict.Count = 1)
+    End Sub
+
 End Class
 

@@ -117,5 +117,18 @@ Namespace ListExts
             Return EmptyIndexes.ToArray
         End Function
 
+        ''' <summary>
+        ''' Adds an entry to list if not foud
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
+        ''' <param name="Entry">An entry to be added</param>
+        <Extension>
+        Public Sub AddIfNotFound(Of T)(TargetList As List(Of T), Entry As Object)
+            If Not TargetList.Contains(Entry) Then
+                TargetList.Add(Entry)
+            End If
+        End Sub
+
     End Module
 End Namespace
