@@ -86,6 +86,41 @@ Public Class DictionaryTests
         Assert.IsTrue(TargetDict.Count = 1)
     End Sub
 
+    ''' <summary>
+    ''' Tests adding or modifying an entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrModify()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        TargetDict.AddOrModify("String 1", 64)
+        TargetDict.AddOrModify("String 1", 128)
+        Assert.IsTrue(TargetDict("String 1") = 128)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumber()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumber()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = -10)
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests trying to add an entry to dictionary

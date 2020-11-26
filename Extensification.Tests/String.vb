@@ -139,5 +139,14 @@ Public Class StringTests
         Assert.AreEqual("He", TargetString)
     End Sub
 
+    ''' <summary>
+    ''' Tests removing letters from a string
+    ''' </summary>
+    <TestMethod> Public Sub TestGetListOfRepeatedLetters()
+        Dim TargetString As String = "Extensification"
+        Dim ExpectedReps As New Dictionary(Of String, Integer) From {{"E", 1}, {"x", 1}, {"t", 2}, {"e", 1}, {"n", 2}, {"s", 1}, {"i", 3}, {"f", 1}, {"c", 1}, {"a", 1}, {"o", 1}}
+        Assert.IsTrue(TargetString.GetListOfRepeatedLetters.SequenceEqual(ExpectedReps))
+    End Sub
+
 End Class
 

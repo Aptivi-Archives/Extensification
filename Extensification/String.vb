@@ -1,5 +1,6 @@
 Imports System.Runtime.CompilerServices
 Imports Extensification.ArrayExts
+Imports Extensification.DictionaryExts
 
 Namespace StringExts
     Public Module Extensions
@@ -183,6 +184,21 @@ Namespace StringExts
             Dim StrChars As List(Of Char) = Str.ToCharArray.ToList
             StrChars.RemoveAll(AddressOf Characters.Contains)
             Return String.Join("", StrChars)
+        End Function
+
+        ''' <summary>
+        ''' Gets the list of repeated letters
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        <Extension>
+        Public Function GetListOfRepeatedLetters(ByVal Str As String) As Dictionary(Of String, Integer)
+            If Str Is Nothing Then Throw New ArgumentNullException("Str")
+            Dim Letters As New Dictionary(Of String, Integer)
+            Dim StrChars() As Char = Str.ToCharArray
+            For Each Chr As Char In StrChars
+                Letters.IncrementNumber(Chr)
+            Next
+            Return Letters
         End Function
 
     End Module

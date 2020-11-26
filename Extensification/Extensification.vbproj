@@ -21,7 +21,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2020.2.0:
 - Fixed GetIndexOfEntry taking only string entries
-- Added new array extensions
+- Added new extensions
 - Added some extensions from .NET Core
 
 2020.1.0:
