@@ -88,4 +88,14 @@ Public Class ListTests
         Assert.IsTrue(TargetList.Count = 1)
     End Sub
 
+    ''' <summary>
+    ''' Tests trying to remove an entry from list
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryRemove()
+        Dim TargetList As New List(Of String) From {"Test"}
+        Assert.IsTrue(TargetList.TryRemove("Test"))
+        Assert.IsFalse(TargetList.TryRemove("Test2"))
+    End Sub
+
 End Class

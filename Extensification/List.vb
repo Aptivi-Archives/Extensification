@@ -130,5 +130,23 @@ Namespace ListExts
             End If
         End Sub
 
+        ''' <summary>
+        ''' Tries to remove an entry from the list
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
+        ''' <param name="Entry">An entry to be removed</param>
+        ''' <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function TryRemove(Of T)(TargetList As List(Of T), Entry As T) As Boolean
+            If Entry Is Nothing Then Throw New ArgumentNullException(NameOf(Entry))
+            Try
+                TargetList.Remove(Entry)
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Function
+
     End Module
 End Namespace

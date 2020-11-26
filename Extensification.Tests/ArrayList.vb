@@ -77,4 +77,14 @@ Public Class ArrayListTests
         Assert.IsTrue(TargetArrayObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
 
+    ''' <summary>
+    ''' Tests trying to remove an entry from array list
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryRemove()
+        Dim TargetArray As New ArrayList From {"Test"}
+        Assert.IsTrue(TargetArray.TryRemove("Test"))
+        Assert.IsFalse(TargetArray.TryRemove("Test2"))
+    End Sub
+
 End Class

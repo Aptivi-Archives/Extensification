@@ -118,5 +118,23 @@ Namespace ArrayListExts
             Return EmptyIndexes.ToArray
         End Function
 
+        ''' <summary>
+        ''' Tries to remove an entry from the array list
+        ''' </summary>
+        ''' <param name="TargetArray">Target array list</param>
+        ''' <param name="Entry">An entry to be removed</param>
+        ''' <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function TryRemove(TargetArray As ArrayList, Entry As Object) As Boolean
+            If Entry Is Nothing Then Throw New ArgumentNullException(NameOf(Entry))
+            If Not TargetArray.Contains(Entry) Then Return False
+            Try
+                TargetArray.Remove(Entry)
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Function
+
     End Module
 End Namespace
