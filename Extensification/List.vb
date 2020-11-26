@@ -118,7 +118,7 @@ Namespace ListExts
         End Function
 
         ''' <summary>
-        ''' Adds an entry to list if not foud
+        ''' Adds an entry to list if not found
         ''' </summary>
         ''' <typeparam name="T">Type</typeparam>
         ''' <param name="TargetList">Target list</param>

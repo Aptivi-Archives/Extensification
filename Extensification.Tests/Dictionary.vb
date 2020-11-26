@@ -86,5 +86,17 @@ Public Class DictionaryTests
         Assert.IsTrue(TargetDict.Count = 1)
     End Sub
 
+#If NET45 Then
+    ''' <summary>
+    ''' Tests trying to add an entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryAdd()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        Assert.IsTrue(TargetDict.TryAdd("Document number", 12))
+        Assert.IsFalse(TargetDict.TryAdd("Document number", 13))
+    End Sub
+#End If
+
 End Class
 

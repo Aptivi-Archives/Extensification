@@ -132,7 +132,7 @@ Namespace DictionaryExts
         End Function
 
         ''' <summary>
-        ''' Adds an entry to dictionary if not foud
+        ''' Adds an entry to dictionary if not found
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
         ''' <typeparam name="TValue">Value</typeparam>
@@ -145,6 +145,28 @@ Namespace DictionaryExts
                 Dict.Add(EntryKey, EntryValue)
             End If
         End Sub
+
+#If NET45 Then
+        ''' <summary>
+        ''' Attempts to add the specified key and value to the dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry</param>
+        ''' <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function TryAdd(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), EntryKey As TKey, EntryValue As TValue) As Boolean
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            Try
+                Dict.Add(EntryKey, EntryValue)
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Function
+#End If
 
     End Module
 End Namespace
