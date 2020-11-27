@@ -26,4 +26,26 @@ Public Class IntegerTests
         Assert.AreEqual(ExpectedInteger, TargetInteger)
     End Sub
 
+    ''' <summary>
+    ''' Tests unsigned integer incrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementUnsigned()
+        Dim ExpectedUInteger As UInteger = 5
+        Dim TargetUInteger As UInteger = 3
+        TargetUInteger = TargetUInteger.Increment(2)
+        Assert.AreEqual(ExpectedUInteger, TargetUInteger)
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned integer decrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementUnsigned()
+        Dim ExpectedUInteger As UInteger = 3
+        Dim TargetUInteger As UInteger = 5
+        TargetUInteger = TargetUInteger.Decrement(2)
+        Assert.AreEqual(ExpectedUInteger, TargetUInteger)
+    End Sub
+
 End Class

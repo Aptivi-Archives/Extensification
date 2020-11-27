@@ -22,6 +22,7 @@
     <PackageReleaseNotes>2020.2.0:
 - Fixed GetIndexOfEntry taking only string entries
 - Added new extensions
+- Added support for UInteger, ULong, Short, and UShort
 - Added some extensions from .NET Core
 
 2020.1.0:
