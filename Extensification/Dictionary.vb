@@ -13,7 +13,7 @@ Namespace DictionaryExts
         ''' <returns>Key from value</returns>
         <Extension>
         Public Function GetKeyFromValue(Of TKey, TValue)(ByVal Dict As Dictionary(Of TKey, TValue), ByVal Value As TValue) As TKey
-            If Dict Is Nothing Then Throw New ArgumentNullException("Dict")
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
             For Each DictKey As TKey In Dict.Keys
                 If Dict(DictKey).Equals(Value) Then
                     Return DictKey
@@ -32,7 +32,7 @@ Namespace DictionaryExts
         ''' <returns>Index of key</returns>
         <Extension>
         Public Function GetIndexOfKey(Of TKey, TValue)(ByVal Dict As Dictionary(Of TKey, TValue), ByVal Key As TKey) As Integer
-            If Dict Is Nothing Then Throw New ArgumentNullException("Dict")
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
             Dim DetectedIndex As Integer = 0
             For Index As Integer = 0 To Dict.Count - 1
                 Dim ListEntry As Object = Dict.Keys(Index)
@@ -51,9 +51,9 @@ Namespace DictionaryExts
         ''' <param name="Dict">Target dictionary</param>
         ''' <returns>Count of non-empty values</returns>
         <Extension>
-        Public Function CountFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Long
-            Dim FullEntries As Long
-            For i As Long = 0 To Dict.LongCount - 1
+        Public Function CountFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer
+            Dim FullEntries As Integer
+            For i As Long = 0 To Dict.Count - 1
                 If Dict.Values(i) IsNot Nothing Then
                     If TypeOf Dict.Values(i) Is String Then
                         If Not Dict.Values(i).Equals("") Then
@@ -75,9 +75,9 @@ Namespace DictionaryExts
         ''' <param name="Dict">Target dictionary</param>
         ''' <returns>Count of empty values</returns>
         <Extension>
-        Public Function CountEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Long
-            Dim EmptyEntries As Long
-            For i As Long = 0 To Dict.LongCount - 1
+        Public Function CountEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer
+            Dim EmptyEntries As Integer
+            For i As Long = 0 To Dict.Count - 1
                 If Dict.Values(i) Is Nothing Then
                     EmptyEntries += 1
                 ElseIf TypeOf Dict.Values(i) Is String And Dict.Values(i).Equals("") Then
@@ -97,7 +97,7 @@ Namespace DictionaryExts
         <Extension>
         Public Function GetIndexesOfFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
             Dim FullIndexes As New List(Of Integer)
-            For i As Long = 0 To Dict.LongCount - 1
+            For i As Long = 0 To Dict.Count - 1
                 If Dict.Values(i) IsNot Nothing Then
                     If TypeOf Dict.Values(i) Is String Then
                         If Not Dict.Values(i).Equals("") Then
@@ -121,7 +121,7 @@ Namespace DictionaryExts
         <Extension>
         Public Function GetIndexesOfEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
             Dim EmptyIndexes As New List(Of Integer)
-            For i As Long = 0 To Dict.LongCount - 1
+            For i As Long = 0 To Dict.Count - 1
                 If Dict.Values(i) Is Nothing Then
                     EmptyIndexes.Add(i)
                 ElseIf TypeOf Dict.Values(i) Is String And Dict.Values(i).Equals("") Then

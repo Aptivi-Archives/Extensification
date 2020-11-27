@@ -10,7 +10,7 @@ Namespace ArrayListExts
         ''' <returns>A list from array list</returns>
         <Extension>
         Public Function ToList(ByVal TargetArray As ArrayList) As List(Of Object)
-            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim ArrayValues As New List(Of Object)
             ArrayValues.AddRange(TargetArray.ToArray)
             Return ArrayValues
@@ -24,7 +24,7 @@ Namespace ArrayListExts
         ''' <returns>List of indexes. If none is found, returns an empty array list</returns>
         <Extension>
         Public Function GetIndexOfEntry(ByVal TargetArray As ArrayList, ByVal Entry As Object) As ArrayList
-            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim Indexes As New ArrayList
             For Index As Integer = 0 To TargetArray.Count - 1
                 Dim ArrayEntry As Object = TargetArray(Index)

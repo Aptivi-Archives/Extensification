@@ -40,9 +40,9 @@ Namespace ListExts
         ''' <param name="TargetList">Target list</param>
         ''' <returns>Count of non-empty items</returns>
         <Extension>
-        Public Function CountFullEntries(Of T)(TargetList As List(Of T)) As Long
-            Dim FullEntries As Long
-            For i As Long = 0 To TargetList.LongCount - 1
+        Public Function CountFullEntries(Of T)(TargetList As List(Of T)) As Integer
+            Dim FullEntries As Integer
+            For i As Long = 0 To TargetList.Count - 1
                 If TargetList(i) IsNot Nothing Then
                     If TypeOf TargetList(i) Is String Then
                         If Not TargetList(i).Equals("") Then
@@ -63,9 +63,9 @@ Namespace ListExts
         ''' <param name="TargetList">Target list</param>
         ''' <returns>Count of empty items</returns>
         <Extension>
-        Public Function CountEmptyEntries(Of T)(TargetList As List(Of T)) As Long
-            Dim EmptyEntries As Long
-            For i As Long = 0 To TargetList.LongCount - 1
+        Public Function CountEmptyEntries(Of T)(TargetList As List(Of T)) As Integer
+            Dim EmptyEntries As Integer
+            For i As Long = 0 To TargetList.Count - 1
                 If TargetList(i) Is Nothing Then
                     EmptyEntries += 1
                 ElseIf TypeOf TargetList(i) Is String And TargetList(i).Equals("") Then
@@ -84,7 +84,7 @@ Namespace ListExts
         <Extension>
         Public Function GetIndexesOfFullEntries(Of T)(TargetList As List(Of T)) As Integer()
             Dim FullIndexes As New List(Of Integer)
-            For i As Long = 0 To TargetList.LongCount - 1
+            For i As Long = 0 To TargetList.Count - 1
                 If TargetList(i) IsNot Nothing Then
                     If TypeOf TargetList(i) Is String Then
                         If Not TargetList(i).Equals("") Then
@@ -107,7 +107,7 @@ Namespace ListExts
         <Extension>
         Public Function GetIndexesOfEmptyEntries(Of T)(TargetList As List(Of T)) As Integer()
             Dim EmptyIndexes As New List(Of Integer)
-            For i As Long = 0 To TargetList.LongCount - 1
+            For i As Long = 0 To TargetList.Count - 1
                 If TargetList(i) Is Nothing Then
                     EmptyIndexes.Add(i)
                 ElseIf TypeOf TargetList(i) Is String And TargetList(i).Equals("") Then

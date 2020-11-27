@@ -30,8 +30,8 @@ Public Class DictionaryTests
     Public Sub TestCountFullEntries()
         Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
         Dim TargetDictObjects As New Dictionary(Of String, String) From {{"Object 1", 68}, {"Object 2", Nothing}}
-        Assert.AreEqual(CLng(2), TargetDict.CountFullEntries)
-        Assert.AreEqual(CLng(1), TargetDictObjects.CountFullEntries)
+        Assert.AreEqual(2, TargetDict.CountFullEntries)
+        Assert.AreEqual(1, TargetDictObjects.CountFullEntries)
     End Sub
 
     ''' <summary>
@@ -41,8 +41,8 @@ Public Class DictionaryTests
     Public Sub TestCountEmptyEntries()
         Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
         Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
-        Assert.AreEqual(CLng(1), TargetDict.CountEmptyEntries)
-        Assert.AreEqual(CLng(1), TargetDictObjects.CountEmptyEntries)
+        Assert.AreEqual(1, TargetDict.CountEmptyEntries)
+        Assert.AreEqual(1, TargetDictObjects.CountEmptyEntries)
     End Sub
 
     ''' <summary>

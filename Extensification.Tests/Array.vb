@@ -11,7 +11,7 @@ Public Class ArrayTests
     Public Sub TestAdd()
         Dim TargetArray() As Integer = {2, 3}
         TargetArray = TargetArray.Add(4)
-        Assert.IsTrue(TargetArray.Count = 3)
+        Assert.IsTrue(TargetArray.Length = 3)
     End Sub
 
     ''' <summary>
@@ -21,7 +21,7 @@ Public Class ArrayTests
     Public Sub TestRemove()
         Dim TargetArray() As Integer = {2, 3, 4}
         TargetArray = TargetArray.Remove(4)
-        Assert.IsTrue(TargetArray.Count = 2)
+        Assert.IsTrue(TargetArray.Length = 2)
     End Sub
 
     ''' <summary>

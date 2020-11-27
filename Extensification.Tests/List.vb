@@ -32,8 +32,8 @@ Public Class ListTests
     Public Sub TestCountFullEntries()
         Dim TargetList As New List(Of String) From {"Full", "", "", "entry", "", "5"}
         Dim TargetListObjects As New List(Of Object) From {12, Nothing, 32, 48}
-        Assert.AreEqual(CLng(3), TargetList.CountFullEntries)
-        Assert.AreEqual(CLng(3), TargetListObjects.CountFullEntries)
+        Assert.AreEqual(3, TargetList.CountFullEntries)
+        Assert.AreEqual(3, TargetListObjects.CountFullEntries)
     End Sub
 
     ''' <summary>
@@ -43,8 +43,8 @@ Public Class ListTests
     Public Sub TestCountEmptyEntries()
         Dim TargetList As New List(Of String) From {"Full", "", "", "entry", "", "", "6"}
         Dim TargetListObjects As New List(Of Object) From {12, Nothing, 32, 48}
-        Assert.AreEqual(CLng(4), TargetList.CountEmptyEntries)
-        Assert.AreEqual(CLng(1), TargetListObjects.CountEmptyEntries)
+        Assert.AreEqual(4, TargetList.CountEmptyEntries)
+        Assert.AreEqual(1, TargetListObjects.CountEmptyEntries)
     End Sub
 
     ''' <summary>

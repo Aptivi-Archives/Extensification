@@ -12,7 +12,7 @@ Namespace ArrayExts
         ''' <returns>An array with added item</returns>
         <Extension>
         Public Function Add(Of T)(ByVal TargetArray() As T, ByVal Item As T) As T()
-            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             ReDim Preserve TargetArray(TargetArray.Length)
             TargetArray(TargetArray.Length - 1) = Item
             Return TargetArray
@@ -27,7 +27,7 @@ Namespace ArrayExts
         ''' <returns>An array without targeted item</returns>
         <Extension>
         Public Function Remove(Of T)(ByVal TargetArray() As T, ByVal Item As T) As T()
-            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim TargetArrayList As List(Of T) = TargetArray.ToList
             TargetArrayList.Remove(Item)
             Return TargetArrayList.ToArray()
@@ -41,7 +41,7 @@ Namespace ArrayExts
         ''' <returns>An array list of an array</returns>
         <Extension>
         Public Function ToArrayList(Of T)(ByVal TargetArray() As T) As ArrayList
-            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim ArrayValues As New ArrayList
             ArrayValues.AddRange(TargetArray)
             Return ArrayValues
@@ -56,7 +56,7 @@ Namespace ArrayExts
         ''' <returns>List of indexes. If none is found, returns an empty array list</returns>
         <Extension>
         Public Function GetIndexFromEntry(Of T)(ByVal TargetArray() As T, ByVal Entry As T) As Integer()
-            If TargetArray Is Nothing Then Throw New ArgumentNullException("TargetArray")
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim Indexes As New ArrayList
             For Index As Integer = 0 To TargetArray.Length - 1
                 Dim ArrayEntry As Object = TargetArray(Index)
@@ -76,7 +76,7 @@ Namespace ArrayExts
         <Extension>
         Public Function CountFullEntries(Of T)(TargetArray() As T) As Long
             Dim FullEntries As Long
-            For i As Long = 0 To TargetArray.LongCount - 1
+            For i As Long = 0 To TargetArray.LongLength - 1
                 If TargetArray(i) IsNot Nothing Then
                     If TypeOf TargetArray(i) Is String Then
                         If Not TargetArray(i).Equals("") Then
@@ -99,7 +99,7 @@ Namespace ArrayExts
         <Extension>
         Public Function CountEmptyEntries(Of T)(TargetArray() As T) As Long
             Dim EmptyEntries As Long
-            For i As Long = 0 To TargetArray.LongCount - 1
+            For i As Long = 0 To TargetArray.LongLength - 1
                 If TargetArray(i) Is Nothing Then
                     EmptyEntries += 1
                 ElseIf TypeOf TargetArray(i) Is String And TargetArray(i).Equals("") Then
@@ -118,7 +118,7 @@ Namespace ArrayExts
         <Extension>
         Public Function GetIndexesOfFullEntries(Of T)(TargetArray() As T) As Integer()
             Dim FullIndexes As New List(Of Integer)
-            For i As Long = 0 To TargetArray.LongCount - 1
+            For i As Long = 0 To TargetArray.LongLength - 1
                 If TargetArray(i) IsNot Nothing Then
                     If TypeOf TargetArray(i) Is String Then
                         If Not TargetArray(i).Equals("") Then
@@ -141,7 +141,7 @@ Namespace ArrayExts
         <Extension>
         Public Function GetIndexesOfEmptyEntries(Of T)(TargetArray() As T) As Integer()
             Dim EmptyIndexes As New List(Of Integer)
-            For i As Long = 0 To TargetArray.LongCount - 1
+            For i As Long = 0 To TargetArray.LongLength - 1
                 If TargetArray(i) Is Nothing Then
                     EmptyIndexes.Add(i)
                 ElseIf TypeOf TargetArray(i) Is String And TargetArray(i).Equals("") Then
