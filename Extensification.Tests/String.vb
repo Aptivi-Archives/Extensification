@@ -148,5 +148,16 @@ Public Class StringTests
         Assert.IsTrue(TargetString.GetListOfRepeatedLetters.SequenceEqual(ExpectedReps))
     End Sub
 
+#If NET45 Then
+    ''' <summary>
+    ''' Tests removing letters from a string
+    ''' </summary>
+    <TestMethod> Public Sub TestEvaluate()
+        Dim TargetString As String = "2 + 5"
+        Dim ExpectedEvaluated As Integer = 7
+        Assert.AreEqual(ExpectedEvaluated, TargetString.Evaluate)
+    End Sub
+#End If
+
 End Class
 

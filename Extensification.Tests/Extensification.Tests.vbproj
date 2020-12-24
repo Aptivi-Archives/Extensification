@@ -17,7 +17,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <NeutralLanguage>English (United States)</NeutralLanguage>
     <PackageReleaseNotes>2020.3:
-- 
+- Added Evaluate tests
 
 2020.1:
 - Added new tests

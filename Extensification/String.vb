@@ -1,3 +1,5 @@
+Imports System.CodeDom.Compiler
+Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports Extensification.ArrayExts
 Imports Extensification.DictionaryExts
@@ -204,6 +206,39 @@ Namespace StringExts
             Next
             Return Letters
         End Function
+
+#If NET45 Then
+        ''' <summary>
+        ''' Evaluates a string
+        ''' </summary>
+        ''' <param name="Str">A string</param>
+        ''' <returns></returns>
+        <Extension>
+        Public Function Evaluate(ByVal Str As String) As Object
+            Dim EvalP As New VBCodeProvider
+            Dim EvalCP As New CompilerParameters With {.GenerateExecutable = False,
+                                                       .GenerateInMemory = True}
+            EvalCP.ReferencedAssemblies.Add(Assembly.GetExecutingAssembly.Location) 'It should reference itself
+            EvalCP.ReferencedAssemblies.Add("System.dll")
+            EvalCP.ReferencedAssemblies.Add("System.Core.dll")
+            EvalCP.ReferencedAssemblies.Add("System.Data.dll")
+            EvalCP.ReferencedAssemblies.Add("System.DirectoryServices.dll")
+            EvalCP.ReferencedAssemblies.Add("System.Xml.dll")
+            EvalCP.ReferencedAssemblies.Add("System.Xml.Linq.dll")
+            Dim EvalCode As String = "Imports System" & Environment.NewLine &
+                                     "Public Class Eval" & Environment.NewLine &
+                                     "Public Shared Function Evaluate()" & Environment.NewLine &
+                                     "Return " & Str & Environment.NewLine &
+                                     "End Function" & Environment.NewLine &
+                                     "End Class"
+            Dim cr As CompilerResults = EvalP.CompileAssemblyFromSource(EvalCP, EvalCode)
+            If cr.Errors.Count = 0 Then
+                Dim methInfo As MethodInfo = cr.CompiledAssembly.GetType("Eval").GetMethod("Evaluate")
+                Return methInfo.Invoke(Nothing, Nothing)
+            End If
+            Return Nothing
+        End Function
+#End If
 
     End Module
 End Namespace

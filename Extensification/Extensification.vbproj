@@ -20,7 +20,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2020.3.0:
-- 
+- Added Evaluate (only in .NET Framework 4.5)
 
 2020.2.0:
 - Fixed GetIndexOfEntry taking only string entries
@@ -89,5 +89,17 @@
 	  <WarningsAsErrors></WarningsAsErrors>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <PackageReference Include="System.CodeDom">
+      <Version>5.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <PackageReference Include="System.CodeDom">
+      <Version>5.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
