@@ -184,6 +184,15 @@ Public Class StringTests
         Assert.IsFalse(TargetString.ContainsAllOf({"Awesome", "developers"}))
     End Sub
 
+    ''' <summary>
+    ''' Tests parsing VT sequences.
+    ''' </summary>
+    <TestMethod> Public Sub TestConvertVTSequences()
+        Dim TargetString As String = "Hi. We have <38;5;6>new improvements. <0>Well, we'll have to do this: <38;5;7>Yay!<38;5;2>Colors!"
+        TargetString.ConvertVTSequences
+        Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6>", "<38;5;7>", "<0>", "<38;5;2>"}))
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string

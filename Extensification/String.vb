@@ -260,6 +260,39 @@ Namespace StringExts
             Return Done.SequenceEqual(Targets)
         End Function
 
+        ''' <summary>
+        ''' Converts all of the VT sequence numbers enclosed in &lt; and &gt; marks to their appropriate VT sequence.
+        ''' For example, &lt;38;5;5&gt; will be converted to ChrW(&amp;H1B)[38;5;5m. Note that if you write spaces between &lt; and &gt; marks,
+        ''' it will not parse it.
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        <Extension>
+        Public Sub ConvertVTSequences(ByRef Str As String)
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            Dim StrArrayWords() As String = Str.Split(" ")
+            For WordNumber As Integer = 0 To StrArrayWords.Length - 1
+                If StrArrayWords(WordNumber).ContainsAllOf({"<", ">"}) Then
+ParseSequence:
+                    'Get sequence that is enclosed between < and > quotes.
+                    Dim StartIndex As Integer = StrArrayWords(WordNumber).IndexOf("<")
+                    Dim EndIndex As Integer = StrArrayWords(WordNumber).IndexOf(">") + 1
+                    Dim Sequence As String
+
+                    'Replace placeholder sequence with the parsable sequence.
+                    If StartIndex <> -1 And EndIndex <> -1 Then
+                        Sequence = StrArrayWords(WordNumber).Substring(StartIndex, EndIndex - StartIndex)
+                        StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "[" + Sequence.ReplaceAll({"<", ">"}, "") + "m")
+                    End If
+
+                    'Check if there are any more sequences.
+                    If StrArrayWords(WordNumber).ContainsAllOf({"<", ">"}) Then
+                        GoTo ParseSequence
+                    End If
+                End If
+            Next
+            Str = String.Join(" ", StrArrayWords)
+        End Sub
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string
