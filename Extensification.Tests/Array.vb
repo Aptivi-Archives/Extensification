@@ -1,4 +1,22 @@
-﻿Imports Microsoft.VisualStudio.TestTools.UnitTesting
+﻿
+'    Extensification  Copyright (C) 2020-2021  EoflaOE
+'
+'    This file is part of Extensification
+'
+'    Extensification is free software: you can redistribute it and/or modify
+'    it under the terms of the GNU General Public License as published by
+'    the Free Software Foundation, either version 3 of the License, or
+'    (at your option) any later version.
+'
+'    Extensification is distributed in the hope that it will be useful,
+'    but WITHOUT ANY WARRANTY; without even the implied warranty of
+'    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+'    GNU General Public License for more details.
+'
+'    You should have received a copy of the GNU General Public License
+'    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Imports Microsoft.VisualStudio.TestTools.UnitTesting
 Imports Extensification.ArrayExts
 
 <TestClass>
@@ -10,7 +28,7 @@ Public Class ArrayTests
     <TestMethod>
     Public Sub TestAdd()
         Dim TargetArray() As Integer = {2, 3}
-        TargetArray = TargetArray.Add(4)
+        TargetArray.Add(4)
         Assert.IsTrue(TargetArray.Length = 3)
     End Sub
 
@@ -20,7 +38,7 @@ Public Class ArrayTests
     <TestMethod>
     Public Sub TestRemove()
         Dim TargetArray() As Integer = {2, 3, 4}
-        TargetArray = TargetArray.Remove(4)
+        TargetArray.Remove(4)
         Assert.IsTrue(TargetArray.Length = 2)
     End Sub
 

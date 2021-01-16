@@ -1,3 +1,21 @@
+
+'    Extensification  Copyright (C) 2020-2021  EoflaOE
+'
+'    This file is part of Extensification
+'
+'    Extensification is free software: you can redistribute it and/or modify
+'    it under the terms of the GNU General Public License as published by
+'    the Free Software Foundation, either version 3 of the License, or
+'    (at your option) any later version.
+'
+'    Extensification is distributed in the hope that it will be useful,
+'    but WITHOUT ANY WARRANTY; without even the implied warranty of
+'    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+'    GNU General Public License for more details.
+'
+'    You should have received a copy of the GNU General Public License
+'    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 Imports System.CodeDom.Compiler
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
@@ -151,7 +169,7 @@ Namespace StringExts
 #End If
             For Character As Integer = 0 To StrChars.Length - 1
                 Dim AsciiCode As Integer = AscW(StrChars(Character))
-                StrAscii = StrAscii.Add(AsciiCode)
+                StrAscii.Add(AsciiCode)
             Next
             Return StrAscii
         End Function
@@ -237,7 +255,7 @@ Namespace StringExts
             Dim Done() As String = Array.Empty(Of String)
 #End If
             For Each Target As String In Targets
-                If Str.Contains(Target) Then Done = Done.Add(Target)
+                If Str.Contains(Target) Then Done.Add(Target)
             Next
             Return Done.SequenceEqual(Targets)
         End Function

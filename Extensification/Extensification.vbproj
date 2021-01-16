@@ -21,6 +21,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.0:
 - Added new string extensions
+- Now Add and Remove for arrays don't require you to set a value. For example, "TargetArray = TargetArray.Add(4)" is now "TargetArray.Add(4)"
 
 2020.3.0:
 - Added Evaluate (only in .NET Framework 4.5)
