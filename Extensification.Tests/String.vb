@@ -148,6 +148,24 @@ Public Class StringTests
         Assert.IsTrue(TargetString.GetListOfRepeatedLetters.SequenceEqual(ExpectedReps))
     End Sub
 
+    ''' <summary>
+    ''' Tests checking if the string contains any of the target strings.
+    ''' </summary>
+    <TestMethod> Public Sub TestContainsAnyOf()
+        Dim TargetString As String = "Hello, Extensification users!"
+        Assert.IsTrue(TargetString.ContainsAnyOf({"Extensification", "users"}))
+        Assert.IsFalse(TargetString.ContainsAnyOf({"Awesome", "developers"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests checking if the string contains all of the target strings.
+    ''' </summary>
+    <TestMethod> Public Sub TestContainsAllOf()
+        Dim TargetString As String = "Hello, Extensification users!"
+        Assert.IsTrue(TargetString.ContainsAllOf({"Extensification", "users"}))
+        Assert.IsFalse(TargetString.ContainsAllOf({"Awesome", "developers"}))
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string

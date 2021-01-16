@@ -207,6 +207,41 @@ Namespace StringExts
             Return Letters
         End Function
 
+        ''' <summary>
+        ''' Checks to see if the string contains any of the target strings.
+        ''' </summary>
+        ''' <param name="Str">Source string</param>
+        ''' <param name="Targets">Target strings</param>
+        ''' <returns>True if one of them is found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAnyOf(ByVal Str As String, ByVal Targets() As String) As Boolean
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            For Each Target As String In Targets
+                If Str.Contains(Target) Then Return True
+            Next
+            Return False
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the string contains all of the target strings.
+        ''' </summary>
+        ''' <param name="Str">Source string</param>
+        ''' <param name="Targets">Target strings</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAllOf(ByVal Str As String, ByVal Targets() As String) As Boolean
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+#If NET45 Then
+            Dim Done() As String = {}
+#Else
+            Dim Done() As String = Array.Empty(Of String)
+#End If
+            For Each Target As String In Targets
+                If Str.Contains(Target) Then Done = Done.Add(Target)
+            Next
+            Return Done.SequenceEqual(Targets)
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string

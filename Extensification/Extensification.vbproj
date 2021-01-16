@@ -10,16 +10,19 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>EoflaOE</Authors>
     <Company>EoflaOE</Company>
-    <Version>2020.3.0</Version>
+    <Version>2021.0.0</Version>
     <Description>Extensification is an extension pack to .NET Framework that extends your ability to use more functions on strings, integers, and objects. Initially, it started with the string, integer, double, long, dictionary, array, arraylist, and list extensions, and inherited from Kernel Simulator. Over time, it grows with support for more objects.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-    <Copyright>Copyright © 2020 EoflaOE and its companies</Copyright>
+    <Copyright>Copyright © 2020-2021 EoflaOE and its companies</Copyright>
     <PackageProjectUrl>https://github.com/EoflaOE/Extensification</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EoflaOE/Extensification</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
-    <PackageReleaseNotes>2020.3.0:
+    <PackageReleaseNotes>2021.0:
+- Added new string extensions
+
+2020.3.0:
 - Added Evaluate (only in .NET Framework 4.5)
 
 2020.2.0:
@@ -38,8 +41,8 @@
 2020.0:
 - Initial release</PackageReleaseNotes>
     <OptionStrict>Off</OptionStrict>
-    <AssemblyVersion>2020.3.0.0</AssemblyVersion>
-    <FileVersion>2020.3.0.0</FileVersion>
+    <AssemblyVersion>2021.0.0.0</AssemblyVersion>
+    <FileVersion>2021.0.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
