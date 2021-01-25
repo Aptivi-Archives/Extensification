@@ -116,4 +116,24 @@ Public Class ListTests
         Assert.IsFalse(TargetList.TryRemove("Test2"))
     End Sub
 
+    ''' <summary>
+    ''' Tests seeing if the list contains any of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAnyOf()
+        Dim TargetList As New List(Of String) From {"Test", "Hello and Test", "Tester! Hello!"}
+        Assert.IsTrue(TargetList.ContainsAnyOf({"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetList.ContainsAnyOf({"Goodbye", "Works"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests seeing if the list contains all of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAllOf()
+        Dim TargetList As New List(Of String) From {"Test", "Hello and Test", "Tester! Hello!"}
+        Assert.IsTrue(TargetList.ContainsAllOf({"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetList.ContainsAllOf({"Goodbye", "Works"}))
+    End Sub
+
 End Class

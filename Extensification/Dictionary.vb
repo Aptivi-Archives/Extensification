@@ -17,6 +17,7 @@
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 Imports System.Runtime.CompilerServices
+Imports Extensification.ArrayExts
 
 Namespace DictionaryExts
     Public Module Extensions
@@ -234,6 +235,76 @@ Namespace DictionaryExts
             If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
             Dict(EntryKey) -= 1
         End Sub
+
+        ''' <summary>
+        ''' Checks to see if the keys in dictionary contains any of the targets.
+        ''' </summary>
+        ''' <param name="Dict">Source dictionary</param>
+        ''' <param name="Targets">Target dictionary</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAnyOfInKeys(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), Targets As TKey()) As Boolean
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
+            For Each Target In Targets
+                If Dict.ContainsKey(Target) Then Return True
+            Next
+            Return False
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the values in dictionary contains any of the targets.
+        ''' </summary>
+        ''' <param name="Dict">Source dictionary</param>
+        ''' <param name="Targets">Target dictionary</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAnyOfInValues(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), Targets As TValue()) As Boolean
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
+            For Each Target In Targets
+                If Dict.ContainsValue(Target) Then Return True
+            Next
+            Return False
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the keys in dictionary contains all of the targets.
+        ''' </summary>
+        ''' <param name="Dict">Source dictionary</param>
+        ''' <param name="Targets">Target dictionary</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAllOfInKeys(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), Targets As TKey()) As Boolean
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
+#If NET45 Then
+            Dim Done() As TKey = {}
+#Else
+            Dim Done() As TKey = Array.Empty(Of TKey)
+#End If
+            For Each Target In Targets
+                If Dict.ContainsKey(Target) Then Done.Add(Target)
+            Next
+            Return Done.SequenceEqual(Targets)
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the values in dictionary contains all of the targets.
+        ''' </summary>
+        ''' <param name="Dict">Source dictionary</param>
+        ''' <param name="Targets">Target dictionary</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAllOfInValues(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), Targets As TValue()) As Boolean
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
+#If NET45 Then
+            Dim Done() As TValue = {}
+#Else
+            Dim Done() As TValue = Array.Empty(Of TValue)
+#End If
+            For Each Target In Targets
+                If Dict.ContainsValue(Target) Then Done.Add(Target)
+            Next
+            Return Done.SequenceEqual(Targets)
+        End Function
 
 #If NET45 Then
         ''' <summary>

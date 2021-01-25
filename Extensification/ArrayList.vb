@@ -17,6 +17,7 @@
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 Imports System.Runtime.CompilerServices
+Imports Extensification.ArrayExts
 
 Namespace ArrayListExts
     Public Module Extensions
@@ -152,6 +153,41 @@ Namespace ArrayListExts
             Catch ex As Exception
                 Return False
             End Try
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the array contains any of the targets.
+        ''' </summary>
+        ''' <param name="TargetArray">Source array</param>
+        ''' <param name="Targets">Target array</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAnyOf(TargetArray As ArrayList, Targets As ArrayList) As Boolean
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
+            For Each Target In Targets
+                If TargetArray.Contains(Target) Then Return True
+            Next
+            Return False
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the array contains all of the targets.
+        ''' </summary>
+        ''' <param name="TargetArray">Source array</param>
+        ''' <param name="Targets">Target array</param>
+        ''' <returns>True if all of them are found; else, false.</returns>
+        <Extension>
+        Public Function ContainsAllOf(TargetArray As ArrayList, Targets As ArrayList) As Boolean
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
+#If NET45 Then
+            Dim Done() As Object = {}
+#Else
+            Dim Done() As Object = Array.Empty(Of Object)
+#End If
+            For Each Target In Targets
+                If TargetArray.Contains(Target) Then Done.Add(Target)
+            Next
+            Return Done.SequenceEqual(Targets.ToArray)
         End Function
 
     End Module

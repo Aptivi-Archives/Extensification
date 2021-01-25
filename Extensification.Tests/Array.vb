@@ -116,4 +116,24 @@ Public Class ArrayTests
         Assert.IsTrue(TargetArrayObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
 
+    ''' <summary>
+    ''' Tests seeing if the array contains any of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAnyOf()
+        Dim TargetArray() As String = {"Test", "Hello and Test", "Tester! Hello!"}
+        Assert.IsTrue(TargetArray.ContainsAnyOf({"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetArray.ContainsAnyOf({"Goodbye", "Works"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests seeing if the array contains all of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAllOf()
+        Dim TargetArray() As String = {"Test", "Hello and Test", "Tester! Hello!"}
+        Assert.IsTrue(TargetArray.ContainsAllOf({"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetArray.ContainsAllOf({"Goodbye", "Works"}))
+    End Sub
+
 End Class

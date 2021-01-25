@@ -139,6 +139,46 @@ Public Class DictionaryTests
         Assert.IsTrue(TargetDict("Counter") = -10)
     End Sub
 
+    ''' <summary>
+    ''' Tests seeing if the dictionary contains any of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAnyOfInKeys()
+        Dim TargetDict As New Dictionary(Of String, Integer) From {{"Test", 1}, {"Hello and Test", 2}, {"Tester! Hello!", 3}}
+        Assert.IsTrue(TargetDict.ContainsAnyOfInKeys({"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetDict.ContainsAnyOfInKeys({"Goodbye", "Works"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests seeing if the dictionary contains all of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAllOfInKeys()
+        Dim TargetDict As New Dictionary(Of String, Integer) From {{"Test", 1}, {"Hello and Test", 2}, {"Tester! Hello!", 3}}
+        Assert.IsTrue(TargetDict.ContainsAllOfInKeys({"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetDict.ContainsAllOfInKeys({"Goodbye", "Works"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests seeing if the dictionary contains any of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAnyOfInValues()
+        Dim TargetDict As New Dictionary(Of String, Integer) From {{"Test", 1}, {"Hello and Test", 2}, {"Tester! Hello!", 3}}
+        Assert.IsTrue(TargetDict.ContainsAnyOfInValues({1, 3}))
+        Assert.IsFalse(TargetDict.ContainsAnyOfInValues({5, 7}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests seeing if the dictionary contains all of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAllOfInValues()
+        Dim TargetDict As New Dictionary(Of String, Integer) From {{"Test", 1}, {"Hello and Test", 2}, {"Tester! Hello!", 3}}
+        Assert.IsTrue(TargetDict.ContainsAllOfInValues({1, 3}))
+        Assert.IsFalse(TargetDict.ContainsAllOfInValues({5, 7}))
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests trying to add an entry to dictionary

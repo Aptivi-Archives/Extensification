@@ -105,4 +105,24 @@ Public Class ArrayListTests
         Assert.IsFalse(TargetArray.TryRemove("Test2"))
     End Sub
 
+    ''' <summary>
+    ''' Tests seeing if the array list contains any of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAnyOf()
+        Dim TargetArray As New ArrayList From {"Test", "Hello and Test", "Tester! Hello!"}
+        Assert.IsTrue(TargetArray.ContainsAnyOf(New ArrayList From {"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetArray.ContainsAnyOf(New ArrayList From {"Goodbye", "Works"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests seeing if the array list contains all of the specified clauses
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestContainsAllOf()
+        Dim TargetArray As New ArrayList From {"Test", "Hello and Test", "Tester! Hello!"}
+        Assert.IsTrue(TargetArray.ContainsAllOf(New ArrayList From {"Hello and Test", "Test"}))
+        Assert.IsFalse(TargetArray.ContainsAllOf(New ArrayList From {"Goodbye", "Works"}))
+    End Sub
+
 End Class
