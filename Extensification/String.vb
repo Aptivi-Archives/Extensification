@@ -293,6 +293,16 @@ ParseSequence:
             Str = String.Join(" ", StrArrayWords)
         End Sub
 
+        ''' <summary>
+        ''' Reverses the order of characters in a string
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        <Extension>
+        Public Function Reverse(ByVal Str As String) As String
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            Return String.Join("", Str.ToCharArray.Reverse)
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string

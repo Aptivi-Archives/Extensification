@@ -193,6 +193,14 @@ Public Class StringTests
         Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6>", "<38;5;7>", "<0>", "<38;5;2>"}))
     End Sub
 
+    ''' <summary>
+    ''' Tests reserving orders of characters in a string
+    ''' </summary>
+    <TestMethod> Public Sub TestReverse()
+        Dim TargetString As String = "olleH"
+        Assert.AreEqual("Hello", TargetString.Reverse)
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string
