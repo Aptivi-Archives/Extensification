@@ -303,6 +303,52 @@ ParseSequence:
             Return String.Join("", Str.ToCharArray.Reverse)
         End Function
 
+        ''' <summary>
+        ''' Repeats a string 'n' times
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Times">Number of times to be repeated</param>
+        <Extension>
+        Public Function Repeat(ByVal Str As String, ByVal Times As Long) As String
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            If Times <= 0 Then Throw New ArgumentException("Zero or negative times aren't allowed.", NameOf(Str))
+            Dim Target As String = ""
+            For i As Long = 1 To Times
+                Target += Str
+            Next
+            Return Target
+        End Function
+
+        ''' <summary>
+        ''' Removes null characters or whitespaces at the end of the string
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        <Extension>
+        Public Sub RemoveNullsOrWhitespacesAtTheEnd(ByRef Str As String)
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            Dim StrList As List(Of Char) = Str.ToCharArray.ToList
+            Dim CharIndex As Integer = Str.Length - 1
+            Do While String.IsNullOrWhiteSpace(StrList(CharIndex))
+                StrList.RemoveAt(CharIndex)
+                CharIndex -= 1
+            Loop
+            Str = String.Join("", StrList)
+        End Sub
+
+        ''' <summary>
+        ''' Removes null characters or whitespaces at the beginning of the string
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        <Extension>
+        Public Sub RemoveNullsOrWhitespacesAtTheBeginning(ByRef Str As String)
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            Dim StrList As List(Of Char) = Str.ToCharArray.ToList
+            Do While String.IsNullOrWhiteSpace(StrList(0))
+                StrList.RemoveAt(0)
+            Loop
+            Str = String.Join("", StrList)
+        End Sub
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string

@@ -201,6 +201,32 @@ Public Class StringTests
         Assert.AreEqual("Hello", TargetString.Reverse)
     End Sub
 
+    ''' <summary>
+    ''' Tests reserving orders of characters in a string
+    ''' </summary>
+    <TestMethod> Public Sub TestRepeat()
+        Dim TargetString As String = "Hi! "
+        Assert.AreEqual("Hi! Hi! Hi! ", TargetString.Repeat(3))
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing null characters or whitespaces at the end of the string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheEnd()
+        Dim TargetString As String = "Hi!   "
+        TargetString.RemoveNullsOrWhitespacesAtTheEnd
+        Assert.AreEqual("Hi!", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing null characters or whitespaces at the beginning of the string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginning()
+        Dim TargetString As String = "   Hi!"
+        TargetString.RemoveNullsOrWhitespacesAtTheBeginning
+        Assert.AreEqual("Hi!", TargetString)
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string
