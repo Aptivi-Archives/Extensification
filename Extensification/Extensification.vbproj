@@ -21,6 +21,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.2:
 - Added Armstrong number and list digits
+- Added Single support
 
 2021.1:
 - Added new extensions

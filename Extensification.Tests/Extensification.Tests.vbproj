@@ -17,7 +17,8 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <NeutralLanguage>English (United States)</NeutralLanguage>
     <PackageReleaseNotes>2021.2:
-- 
+- Added new tests
+- Added Single support
 
 2021.0:
 - Added new unit tests
