@@ -44,4 +44,33 @@ Public Class DoubleTests
         Assert.AreEqual(ExpectedDouble, TargetDouble)
     End Sub
 
+    ''' <summary>
+    ''' Tests double digit listing (before the decimal point)
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigitsBeforeDecimal()
+        Dim ExpectedDigits() As Double = {3, 2}
+        Dim TargetNumber As Double = 32.9
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigitsBeforeDecimal))
+    End Sub
+
+    ''' <summary>
+    ''' Tests double digit listing (after the decimal point)
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigitsAfterDecimal()
+        Dim ExpectedDigits() As Double = {9}
+        Dim TargetNumber As Double = 32.9
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigitsAfterDecimal))
+    End Sub
+
+    ''' <summary>
+    ''' Tests double Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrong()
+        Dim TargetNumber As Double = 153.4
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
 End Class

@@ -186,4 +186,42 @@ Public Class LongTests
         Assert.AreEqual(Expected, Number.ToHumanReadable(HumanFormats.VolumeImperial))
     End Sub
 
+    ''' <summary>
+    ''' Tests long integer digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigits()
+        Dim ExpectedDigits() As Long = {7, 5}
+        Dim TargetNumber As Long = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned long integer digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigitsUnsigned()
+        Dim ExpectedDigits() As ULong = {7, 5}
+        Dim TargetNumber As ULong = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
+    ''' Tests long integer Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrong()
+        Dim TargetNumber As Long = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned long integer Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrongUnsigned()
+        Dim TargetNumber As ULong = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
 End Class

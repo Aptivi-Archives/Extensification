@@ -66,4 +66,42 @@ Public Class IntegerTests
         Assert.AreEqual(ExpectedUInteger, TargetUInteger)
     End Sub
 
+    ''' <summary>
+    ''' Tests integer digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigits()
+        Dim ExpectedDigits() As Integer = {7, 5}
+        Dim TargetNumber As Integer = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned integer digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigitsUnsigned()
+        Dim ExpectedDigits() As UInteger = {7, 5}
+        Dim TargetNumber As UInteger = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
+    ''' Tests integer Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrong()
+        Dim TargetNumber As Integer = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned integer Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrongUnsigned()
+        Dim TargetNumber As UInteger = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
 End Class

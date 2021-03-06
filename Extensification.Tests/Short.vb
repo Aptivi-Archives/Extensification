@@ -66,4 +66,42 @@ Public Class ShortTests
         Assert.AreEqual(ExpectedUShort, TargetUShort)
     End Sub
 
+    ''' <summary>
+    ''' Tests short integer digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigits()
+        Dim ExpectedDigits() As Short = {7, 5}
+        Dim TargetNumber As Short = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned short integer digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigitsUnsigned()
+        Dim ExpectedDigits() As UShort = {7, 5}
+        Dim TargetNumber As UShort = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
+    ''' Tests short integer Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrong()
+        Dim TargetNumber As Short = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned short integer Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrongUnsigned()
+        Dim TargetNumber As UShort = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
 End Class

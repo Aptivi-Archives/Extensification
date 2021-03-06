@@ -20,7 +20,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.2:
-- 
+- Added Armstrong number and list digits
 
 2021.1:
 - Added new extensions
