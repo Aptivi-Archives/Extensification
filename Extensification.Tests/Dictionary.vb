@@ -140,6 +140,174 @@ Public Class DictionaryTests
     End Sub
 
     ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberUInteger()
+        Dim TargetDict As New Dictionary(Of String, UInteger)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberUInteger()
+        Dim TargetDict As New Dictionary(Of String, UInteger) From {{"Counter", 10}}
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 0)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberShort()
+        Dim TargetDict As New Dictionary(Of String, Short)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberShort()
+        Dim TargetDict As New Dictionary(Of String, Short)
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = -10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberUShort()
+        Dim TargetDict As New Dictionary(Of String, UShort)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberUShort()
+        Dim TargetDict As New Dictionary(Of String, UShort) From {{"Counter", 10}}
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 0)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberLong()
+        Dim TargetDict As New Dictionary(Of String, Long)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberLong()
+        Dim TargetDict As New Dictionary(Of String, Long)
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = -10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberULong()
+        Dim TargetDict As New Dictionary(Of String, ULong)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberULong()
+        Dim TargetDict As New Dictionary(Of String, ULong) From {{"Counter", 10}}
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 0)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberSingle()
+        Dim TargetDict As New Dictionary(Of String, Single)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberSingle()
+        Dim TargetDict As New Dictionary(Of String, Single)
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = -10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests incrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementNumberDouble()
+        Dim TargetDict As New Dictionary(Of String, Double)
+        For t As Integer = 1 To 10
+            TargetDict.IncrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = 10)
+    End Sub
+
+    ''' <summary>
+    ''' Tests decrementing a number
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementNumberDouble()
+        Dim TargetDict As New Dictionary(Of String, Double)
+        For t As Integer = 1 To 10
+            TargetDict.DecrementNumber("Counter")
+        Next
+        Assert.IsTrue(TargetDict("Counter") = -10)
+    End Sub
+
+    ''' <summary>
     ''' Tests seeing if the dictionary contains any of the specified clauses
     ''' </summary>
     <TestMethod>

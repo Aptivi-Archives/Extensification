@@ -204,7 +204,85 @@ Namespace DictionaryExts
         ''' <param name="Dict">Target dictionary</param>
         ''' <param name="EntryKey">A key entry to be incremented</param>
         <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, UInteger), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
         Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Long), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, ULong), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Short), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, UShort), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Single), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Double), EntryKey As TKey)
             If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
             If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
             Dict(EntryKey) += 1
@@ -230,7 +308,85 @@ Namespace DictionaryExts
         ''' <param name="Dict">Target dictionary</param>
         ''' <param name="EntryKey">A key entry to be decremented</param>
         <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, UInteger), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
         Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Long), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, ULong), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Short), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, UShort), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Single), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Double), EntryKey As TKey)
             If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
             If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
             Dict(EntryKey) -= 1
