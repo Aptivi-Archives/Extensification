@@ -19,7 +19,7 @@
     <PackageReleaseNotes>2021.2:
 - Added new tests
 - Added Single support
-- Added Char tests
+- Added Char and Byte tests
 
 2021.0:
 - Added new unit tests

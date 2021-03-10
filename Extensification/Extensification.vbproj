@@ -23,7 +23,7 @@
 - Added Armstrong number and list digits
 - Added Single support
 - Added more number types for (In/De)crementNumber
-- Added Char extensions
+- Added Char and Byte extensions
 
 2021.1:
 - Added new extensions
