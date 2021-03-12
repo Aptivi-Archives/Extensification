@@ -18,6 +18,7 @@
 
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 Imports Extensification.DictionaryExts
+Imports System.IO
 
 <TestClass>
 Public Class DictionaryTests
@@ -33,12 +34,26 @@ Public Class DictionaryTests
         Assert.AreEqual("awesome!", Returned, "Failed to get key from value. Got {0}", Returned)
     End Sub
 
+    ''' <summary>
+    ''' Tests getting index of a key in dictionary that has keys of type <see cref="String"/>
+    ''' </summary>
     <TestMethod>
     Sub TestGetIndexOfKey()
         Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
         Dim NeededKey As String = "awesome!"
         Dim Returned As Integer = TargetDictionary.GetIndexOfKey(NeededKey)
         Assert.AreEqual(2, Returned, "Failed to get index of key. Got {0}", Returned)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting index of a key in dictionary that has keys of a type that can't be compared using the "=" operator.
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetIndexOfKeyNonString()
+        Dim NeededKey As New MemoryStream(16)
+        Dim TargetDictionary As New Dictionary(Of Stream, Integer) From {{New MemoryStream(8), 0}, {NeededKey, 1}, {New MemoryStream(32), 2}}
+        Dim Returned As Integer = TargetDictionary.GetIndexOfKey(NeededKey)
+        Assert.AreEqual(1, Returned, "Failed to get index of key. Got {0}", Returned)
     End Sub
 
     ''' <summary>

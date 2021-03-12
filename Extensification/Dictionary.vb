@@ -55,7 +55,7 @@ Namespace DictionaryExts
             Dim DetectedIndex As Integer = 0
             For Index As Integer = 0 To Dict.Count - 1
                 Dim ListEntry As Object = Dict.Keys(Index)
-                If ListEntry = Key Then
+                If ListEntry.Equals(Key) Then
                     DetectedIndex = Index
                 End If
             Next
