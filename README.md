@@ -71,7 +71,7 @@ This section covers how to build Extensification on your system. Please scroll d
 ## License
 
     Extensification - Extends your .NET methods
-    Copyright (C) 2020  EoflaOE
+    Copyright (C) 2020-2021  EoflaOE
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
