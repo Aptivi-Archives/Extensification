@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification</RootNamespace>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net45;net5.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net45;net5.0;net6.0</TargetFrameworks>
     <OptionInfer>On</OptionInfer>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<IncludeSymbols>True</IncludeSymbols>
@@ -10,7 +10,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>EoflaOE</Authors>
     <Company>EoflaOE</Company>
-    <Version>2021.2.1</Version>
+    <Version>2021.2.2</Version>
     <Description>Extensification is an extension pack to .NET Framework that extends your ability to use more functions on strings, integers, and objects. Initially, it started with the string, integer, double, long, dictionary, array, arraylist, and list extensions, and inherited from Kernel Simulator. Over time, it grows with support for more objects.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
@@ -19,7 +19,10 @@
     <RepositoryUrl>https://github.com/EoflaOE/Extensification</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
-    <PackageReleaseNotes>2021.2.1:
+    <PackageReleaseNotes>2021.2.2:
+- Added .NET 6.0 support
+
+2021.2.1:
 - Fixed inability to get index of key that can't be compared by =
 
 2021.2:
@@ -54,56 +57,20 @@
 2020.0:
 - Initial release</PackageReleaseNotes>
     <OptionStrict>Off</OptionStrict>
-    <AssemblyVersion>2021.2.1.0</AssemblyVersion>
-    <FileVersion>2021.2.1.0</FileVersion>
+    <AssemblyVersion>2021.2.2.0</AssemblyVersion>
+    <FileVersion>2021.2.2.0</FileVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>../Extensification.Bin/</OutputPath>
     <WarningsAsErrors></WarningsAsErrors>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>../Extensification.Bin/</OutputPath>
     <WarningsAsErrors></WarningsAsErrors>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
-    <OutputPath>../Extensification.Bin/</OutputPath>
-    <WarningsAsErrors></WarningsAsErrors>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
-    <OutputPath>../Extensification.Bin/</OutputPath>
-    <WarningsAsErrors></WarningsAsErrors>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.1|AnyCPU'">
-	<OutputPath>../Extensification.Bin/</OutputPath>
-	<WarningsAsErrors></WarningsAsErrors>
-	<NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.1|AnyCPU'">
-	<OutputPath>../Extensification.Bin/</OutputPath>
-	<WarningsAsErrors></WarningsAsErrors>
-	<NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
-	<OutputPath>../Extensification.Bin/</OutputPath>
-	  <WarningsAsErrors></WarningsAsErrors>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
-	<OutputPath>../Extensification.Bin/</OutputPath>
-	  <WarningsAsErrors></WarningsAsErrors>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-  </PropertyGroup>
-
+  
 </Project>
