@@ -68,6 +68,18 @@ This section covers how to build Extensification on your system. Please scroll d
 
 **EoflaOE:** Owner of Extensification
 
+## Open Source Libraries
+
+Below entries are the open source libraries that is used by Extensification. They are required for execution.
+
+### Newtonsoft.Json
+
+Source code: https://github.com/JamesNK/Newtonsoft.Json
+
+Copyright (c) 2007, James Newton-King
+
+License (MIT): https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
+
 ## License
 
     Extensification - Extends your .NET methods

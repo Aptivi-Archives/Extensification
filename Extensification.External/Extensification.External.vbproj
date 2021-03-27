@@ -20,7 +20,7 @@ This package is for extensions for external libraries.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.3:
--</PackageReleaseNotes>
+- Added Newtonsoft.Json extensions</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

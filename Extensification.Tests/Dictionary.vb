@@ -46,6 +46,17 @@ Public Class DictionaryTests
     End Sub
 
     ''' <summary>
+    ''' Tests getting index of a value in dictionary that has keys of type <see cref="String"/>
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetIndexOfValue()
+        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
+        Dim NeededValue As Integer = 1
+        Dim Returned As Integer = TargetDictionary.GetIndexOfValue(NeededValue)
+        Assert.AreEqual(1, Returned, "Failed to get index of key. Got {0}", Returned)
+    End Sub
+
+    ''' <summary>
     ''' Tests getting index of a key in dictionary that has keys of a type that can't be compared using the "=" operator.
     ''' </summary>
     <TestMethod>

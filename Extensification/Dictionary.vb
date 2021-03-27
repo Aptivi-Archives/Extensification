@@ -63,6 +63,27 @@ Namespace DictionaryExts
         End Function
 
         ''' <summary>
+        ''' Gets an index from a value in the dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Source dictionary</param>
+        ''' <param name="Value">Value</param>
+        ''' <returns>Index of value</returns>
+        <Extension>
+        Public Function GetIndexOfValue(Of TKey, TValue)(ByVal Dict As Dictionary(Of TKey, TValue), ByVal Value As TValue) As Integer
+            If Dict Is Nothing Then Throw New ArgumentNullException(NameOf(Dict))
+            Dim DetectedIndex As Integer = 0
+            For Index As Integer = 0 To Dict.Count - 1
+                Dim ListEntry As Object = Dict.Values(Index)
+                If ListEntry.Equals(Value) Then
+                    DetectedIndex = Index
+                End If
+            Next
+            Return DetectedIndex
+        End Function
+
+        ''' <summary>
         ''' Gets how many non-empty values are there (Empty keys are not counted)
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
