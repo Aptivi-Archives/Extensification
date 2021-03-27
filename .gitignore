@@ -32,6 +32,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 Extensification.Bin/
+Extensification.Bin.Tests/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

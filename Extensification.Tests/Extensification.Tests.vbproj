@@ -17,7 +17,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <NeutralLanguage>English (United States)</NeutralLanguage>
     <PackageReleaseNotes>2021.3:
-- 
+- Added Extensification.External tests
 
 2021.2.1:
 - Added new tests
@@ -42,11 +42,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>../Extensification.Bin/</OutputPath>
+    <OutputPath>../Extensification.Bin.Tests/</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>../Extensification.Bin/</OutputPath>
+    <OutputPath>../Extensification.Bin.Tests/</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>
