@@ -136,4 +136,15 @@ Public Class ArrayTests
         Assert.IsFalse(TargetArray.ContainsAllOf({"Goodbye", "Works"}))
     End Sub
 
+    ''' <summary>
+    ''' Tests adding a range of entries to array
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddRange()
+        Dim TargetArray() As Integer = {2, 3}
+        Dim Range() As Integer = {4, 5, 6, 7, 8, 9}
+        TargetArray.AddRange(Range)
+        Assert.IsTrue(TargetArray.Length = 8)
+    End Sub
+
 End Class

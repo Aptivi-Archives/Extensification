@@ -201,5 +201,24 @@ Namespace ArrayExts
             Return Done.SequenceEqual(Targets)
         End Function
 
+        ''' <summary>
+        ''' Adds a range of entries to array
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <param name="ToBeAdded">Range of entries in an array</param>
+        <Extension>
+        Public Sub AddRange(Of T)(ByRef TargetArray() As T, ByVal ToBeAdded() As T)
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
+            Dim OldIndex As Integer = TargetArray.Length - 1
+            Array.Resize(TargetArray, TargetArray.Length + ToBeAdded.Length)
+            Dim NewIndex As Integer = TargetArray.Length - 1
+            Dim AddedIndex As Integer = 0
+            For CurrIndex As Integer = OldIndex + 1 To NewIndex
+                TargetArray(CurrIndex) = ToBeAdded(AddedIndex)
+                AddedIndex += 1
+            Next
+        End Sub
+
     End Module
 End Namespace
