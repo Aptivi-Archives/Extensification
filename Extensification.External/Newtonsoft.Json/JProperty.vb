@@ -23,6 +23,22 @@ Namespace Newtonsoft.Json.JPropertyExts
     Public Module Extensions
 
         ''' <summary>
+        ''' Gets a property name that starts with specified string
+        ''' </summary>
+        ''' <param name="Token">JSON token</param>
+        ''' <param name="Containing">String to find at the beginning of string</param>
+        ''' <returns>A property name if found; nothing if not found</returns>
+        <Extension>
+        Public Function GetPropertyNameStartingWith(ByVal Token As JToken, ByVal Containing As String) As String
+            For Each TokenProperty As JProperty In Token
+                If TokenProperty.Name.StartsWith(Containing) Then
+                    Return TokenProperty.Name
+                End If
+            Next
+            Return ""
+        End Function
+
+        ''' <summary>
         ''' Gets a property name that ends with specified string
         ''' </summary>
         ''' <param name="Token">JSON token</param>
@@ -79,6 +95,22 @@ Namespace Newtonsoft.Json.JPropertyExts
         <Extension>
         Public Function SelectTokenKeyEndingWith(ByVal Token As JToken, ByVal Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameEndingWith(Containing)
+            If Not String.IsNullOrEmpty(PropertyName) Then
+                Return Token.SelectToken(PropertyName)
+            Else
+                Return Nothing
+            End If
+        End Function
+
+        ''' <summary>
+        ''' Selects a token that has its key starting with the specified string
+        ''' </summary>
+        ''' <param name="Token">JSON token</param>
+        ''' <param name="Containing">String to find at the beginning of key string</param>
+        ''' <returns>A token if found; nothing if not found</returns>
+        <Extension>
+        Public Function SelectTokenKeyStartingWith(ByVal Token As JToken, ByVal Containing As String) As JToken
+            Dim PropertyName As String = Token.GetPropertyNameStartingWith(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
                 Return Token.SelectToken(PropertyName)
             Else
