@@ -227,6 +227,15 @@ Public Class StringTests
         Assert.AreEqual("Hi!", TargetString)
     End Sub
 
+    ''' <summary>
+    ''' Tests retrieving substring
+    ''' </summary>
+    <TestMethod> Public Sub TestSubstring()
+        Dim TargetString = "Hello!"
+        Assert.AreEqual("llo", TargetString.Substring(2, length:=3))
+        Assert.AreEqual("llo", TargetString.Substring(2, Finish:=4))
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string

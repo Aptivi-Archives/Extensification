@@ -349,6 +349,19 @@ ParseSequence:
             Str = String.Join("", StrList)
         End Sub
 
+        ''' <summary>
+        ''' Retrieves a substring from this instance. The substring starts at a specified starting position and ends at a specified ending position
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Start">Start position</param>
+        ''' <param name="Finish">Finish position</param>
+        <Extension>
+        Public Function Substring(ByVal Str As String, ByVal Start As Integer, ByVal Finish As Integer) As String
+            If Finish < Start Then Throw New ArgumentException("Finish position couldn't be before the start position")
+            Dim Length As Integer = Finish - Start
+            Return Str.Substring(Start, length:=Length + 1)
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string
