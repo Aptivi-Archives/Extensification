@@ -236,6 +236,14 @@ Public Class StringTests
         Assert.AreEqual("llo", TargetString.Substring(2, Finish:=4))
     End Sub
 
+    ''' <summary>
+    ''' Tests getting LRP from string
+    ''' </summary>
+    <TestMethod> Public Sub TestLRP()
+        Dim TargetString = "Hello!"
+        Assert.AreEqual(3, TargetString.LRP(4))
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string

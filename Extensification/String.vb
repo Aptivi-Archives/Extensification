@@ -362,6 +362,33 @@ ParseSequence:
             Return Str.Substring(Start, length:=Length + 1)
         End Function
 
+        ''' <summary>
+        ''' Gets how many times does the program need to step n times on the string until it reaches the end of string.
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Steps">Number of characters to step on</param>
+        <Extension>
+        Public Function LRP(ByVal Str As String, ByVal Steps As Integer) As Integer
+            If Steps <= 0 Then Throw New ArgumentException("Can't step zero or negative characters.", NameOf(Steps))
+            Dim LastPosition As Integer
+            Dim StringLength As Integer = Str.Length
+            Dim RepeatTimes As Integer
+            Dim LoopStep As Integer
+            Dim [Step] As Integer
+            While True
+                For LoopStep = LastPosition To Steps + LastPosition
+                    [Step] = LoopStep
+                    While [Step] > StringLength
+                        [Step] -= StringLength
+                    End While
+                Next
+                LastPosition = [Step]
+                RepeatTimes += 1
+                If LastPosition = StringLength Then Return RepeatTimes
+            End While
+            Return 0
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string

@@ -21,6 +21,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.4:
 - New branding
+- New extensions added
 
 2021.3:
 - Added Extensification.External
