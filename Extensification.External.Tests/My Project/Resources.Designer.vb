@@ -66,7 +66,7 @@ Namespace My.Resources
         '''{&quot;000#1#2#id&quot;:3,&quot;001#6#3#appname&quot;:&quot;Namfix&quot;,&quot;002#0#0#appver&quot;:&quot;8.2.5&quot;,&quot;003#0#0#released&quot;:&quot;11/8/2018&quot;},
         '''{&quot;000#1#2#id&quot;:4,&quot;001#6#3#appname&quot;:&quot;Y-find&quot;,&quot;002#0#0#appver&quot;:&quot;8.2.5&quot;,&quot;003#0#0#released&quot;:&quot;7/24/2018&quot;},
         '''{&quot;000#1#2#id&quot;:5,&quot;001#6#3#appname&quot;:&quot;Sub-Ex&quot;,&quot;002#0#0#appver&quot;:&quot;4.7.4&quot;,&quot;003#0#0#released&quot;:&quot;6/17/2018&quot;},
-        '''{&quot;000 [rest of string was truncated]&quot;;.
+        ''' [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property JSON_PropertyTest1() As String
             Get
