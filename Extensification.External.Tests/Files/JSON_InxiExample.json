@@ -1,0 +1,157 @@
+{
+  "001#1#0#Machine": [
+    {
+      "006#0#2#v": "Version 07.00T",
+      "000#0#1#Type": "Desktop",
+      "007#0#2#date": "04/02/01",
+      "004#0#2#serial": "<superuser required>",
+      "001#1#1#Mobo": "MSI",
+      "002#0#2#model": "MS-6712",
+      "003#0#2#v": "1.0",
+      "005#1#1#BIOS": "American Megatrends"
+    }
+  ],
+  "000#1#0#System": [
+    {
+      "001#1#1#Kernel": "5.10.0-5-686-pae i686",
+      "002#0#2#bits": "32",
+      "006#0#2#dm": "LightDM",
+      "005#1#1#Desktop": "N/A",
+      "000#0#1#Host": "<redacted>",
+      "007#1#1#Distro": "Debian GNU/Linux bullseye/sid",
+      "004#0#3#v": "10.2.1",
+      "003#1#2#compiler": "gcc"
+    }
+  ],
+  "009#1#0#Drives": [
+    {
+      "000#1#1#Local Storage": "",
+      "002#0#2#used": "13.44 GiB (36.1%)",
+      "001#0#2#total": "37.27 GiB"
+    },
+    {
+      "003#0#2#model": "WD400BB-00DEA0",
+      "001#1#1#ID": "/dev/sda",
+      "005#0#2#speed": "<unknown>",
+      "002#0#2#vendor": "Western Digital",
+      "004#0#2#size": "37.27 GiB",
+      "006#0#2#serial": "WD-WMAD13319992"
+    }
+  ],
+  "006#1#0#Network": [
+    {
+      "001#0#1#Message": "No Device data found."
+    },
+    {
+      "003#0#2#driver": "rtl8192cu",
+      "002#0#2#type": "USB",
+      "001#1#1#Device": "D-Link DWA-121 802.11n Wireless N 150 Pico Adapter [Realtek RTL8188CUS]",
+      "005#0#2#chip ID": "2001:3308",
+      "004#0#2#bus ID": "4-1:2"
+    },
+    {
+      "001#0#3#state": "up",
+      "000#1#2#IF": "wlan0",
+      "002#0#3#mac": "1c:7e:e5:cc:c7:8f"
+    }
+  ],
+  "005#1#0#Audio": [
+    {
+      "003#1#2#driver": "snd_via82xx",
+      "002#0#2#vendor": "Micro-Star MSI",
+      "005#0#2#bus ID": "00:11.5",
+      "004#0#3#v": "kernel",
+      "001#1#1#Device": "VIA VT8233/A/8235/8237 AC97 Audio",
+      "006#0#2#chip ID": "1106:3059"
+    },
+    {
+      "000#1#1#Sound Server": "ALSA",
+      "001#0#2#v": "k5.10.0-5-686-pae"
+    }
+  ],
+  "012#1#0#Sensors": [
+    {
+      "000#0#1#Message": "No sensors data was found. Is sensors configured?"
+    }
+  ],
+  "004#1#0#Graphics": [
+    {
+      "003#1#2#driver": "radeon",
+      "002#0#2#vendor": "Micro-Star MSI",
+      "005#0#2#bus ID": "01:00.0",
+      "001#1#1#Device": "AMD RV280 [Radeon 9200 SE]",
+      "004#0#3#v": "kernel",
+      "006#0#2#chip ID": "1002:5964"
+    },
+    {
+      "004#0#3#unloaded": "fbdev,modesetting,vesa",
+      "002#1#2#driver": "",
+      "000#1#1#Display": "",
+      "003#1#3#loaded": "ati,radeon",
+      "001#0#2#server": "X.org 1.20.10"
+    },
+    {
+      "000#0#1#Message": "No advanced graphics data found on this system."
+    }
+  ],
+  "011#1#0#Swap": [
+    {
+      "005#0#2#priority": "-2",
+      "002#0#2#type": "partition",
+      "003#0#2#size": "1.95 GiB",
+      "001#1#1#ID": "swap-1",
+      "006#1#2#dev": "/dev/sda3",
+      "004#0#2#used": "0 KiB (0.0%)"
+    }
+  ],
+  "010#1#0#Partition": [
+    {
+      "001#1#1#ID": "/",
+      "004#0#2#fs": "ext4",
+      "005#1#2#dev": "/dev/sda2",
+      "003#0#2#used": "13.44 GiB (38.7%)",
+      "002#0#2#size": "34.71 GiB"
+    }
+  ],
+  "013#1#0#Info": [
+    {
+      "005#0#2#v": "247",
+      "014#0#2#running in": "sshd",
+      "001#1#1#Uptime": "3h 22m",
+      "015#0#1#inxi": "3.3.01",
+      "010#1#1#Packages": "",
+      "000#0#1#Processes": 208,
+      "002#1#1#Memory": "1.97 GiB",
+      "009#0#3#alt": "10",
+      "008#1#2#gcc": "10.2.1",
+      "007#1#1#Compilers": "",
+      "004#1#1#Init": "systemd",
+      "006#0#2#runlevel": "5",
+      "012#1#1#Shell": "Bash",
+      "011#1#2#apt": 2675,
+      "013#0#2#v": "5.1.4",
+      "003#0#2#used": "938.8 MiB (46.6%)"
+    }
+  ],
+  "003#1#0#CPU": [
+    {
+      "003#0#2#type": "UP",
+      "001#0#2#model": "AMD Athlon XP 1500+",
+      "000#1#1#Info": "Single Core",
+      "002#0#2#bits": 32,
+      "005#0#2#rev": "1",
+      "006#0#2#L2 cache": "256 KiB",
+      "004#1#2#arch": "K7 Palomino+"
+    },
+    {
+      "008#0#2#bogomips": 2600,
+      "007#0#2#flags": "pae sse"
+    },
+    {
+      "009#1#1#Speed": "1300 MHz",
+      "010#0#2#min/max": "N/A",
+      "011#1#2#Core speed (MHz)": "",
+      "012#0#3#1": "1300"
+    }
+  ]
+}

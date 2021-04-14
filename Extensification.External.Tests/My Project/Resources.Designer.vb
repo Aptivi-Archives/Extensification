@@ -61,6 +61,34 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to {
+        '''  &quot;001#1#0#Machine&quot;: [
+        '''    {
+        '''      &quot;006#0#2#v&quot;: &quot;Version 07.00T&quot;,
+        '''      &quot;000#0#1#Type&quot;: &quot;Desktop&quot;,
+        '''      &quot;007#0#2#date&quot;: &quot;04/02/01&quot;,
+        '''      &quot;004#0#2#serial&quot;: &quot;&lt;superuser required&gt;&quot;,
+        '''      &quot;001#1#1#Mobo&quot;: &quot;MSI&quot;,
+        '''      &quot;002#0#2#model&quot;: &quot;MS-6712&quot;,
+        '''      &quot;003#0#2#v&quot;: &quot;1.0&quot;,
+        '''      &quot;005#1#1#BIOS&quot;: &quot;American Megatrends&quot;
+        '''    }
+        '''  ],
+        '''  &quot;000#1#0#System&quot;: [
+        '''    {
+        '''      &quot;001#1#1#Kernel&quot;: &quot;5.10.0-5-686-pae i686&quot;,
+        '''      &quot;002#0#2#bits&quot;: &quot;32&quot;,
+        '''      &quot;006#0#2#dm&quot;: &quot;LightDM&quot;,
+        '''      &quot;005#1#1#Desktop&quot;: &quot;N/A&quot;,
+        '''      &quot;000#0#1#Ho [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property JSON_InxiExample() As String
+            Get
+                Return ResourceManager.GetString("JSON_InxiExample", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to [{&quot;000#1#2#id&quot;:1,&quot;001#6#3#appname&quot;:&quot;Treeflex&quot;,&quot;002#0#0#appver&quot;:&quot;9.72&quot;,&quot;003#0#0#released&quot;:&quot;10/11/2018&quot;},
         '''{&quot;000#1#2#id&quot;:2,&quot;001#6#3#appname&quot;:&quot;Transcof&quot;,&quot;002#0#0#appver&quot;:&quot;5.5&quot;,&quot;003#0#0#released&quot;:&quot;2/1/2019&quot;},
         '''{&quot;000#1#2#id&quot;:3,&quot;001#6#3#appname&quot;:&quot;Namfix&quot;,&quot;002#0#0#appver&quot;:&quot;8.2.5&quot;,&quot;003#0#0#released&quot;:&quot;11/8/2018&quot;},

@@ -101,6 +101,17 @@ Public Class JPropertyTests
     End Sub
 
     ''' <summary>
+    ''' Tests selecting a token that has its key that contains the whitespace ending with a specified string
+    ''' </summary>
+    <TestMethod>
+    Sub TestSelectTokenKeyThatHasWhitespaceEndingWith()
+        Dim JsonString As String = My.Resources.JSON_InxiExample
+        Dim JsonToken As JToken = JToken.Parse(JsonString)
+        Dim JsonProperty As JToken = JsonToken.SelectTokenKeyEndingWith("CPU")(0).SelectTokenKeyEndingWith("L2 cache")
+        Assert.IsNotNull(JsonProperty)
+    End Sub
+
+    ''' <summary>
     ''' Tests the logic of selecting a token that has its key ending with a specified string should return nothing if the property doesn't exist
     ''' </summary>
     <TestMethod>
@@ -123,6 +134,17 @@ Public Class JPropertyTests
     End Sub
 
     ''' <summary>
+    ''' Tests selecting a token that has its key that contains the whitespace beginning with a specified string
+    ''' </summary>
+    <TestMethod>
+    Sub TestSelectTokenKeyThatHasWhitespaceStartingWith()
+        Dim JsonString As String = My.Resources.JSON_InxiExample
+        Dim JsonToken As JToken = JToken.Parse(JsonString)
+        Dim JsonProperty As JToken = JsonToken.SelectTokenKeyEndingWith("CPU")(0).SelectTokenKeyStartingWith("006#0")
+        Assert.IsNotNull(JsonProperty)
+    End Sub
+
+    ''' <summary>
     ''' Tests the logic of selecting a token that has its key beginning with a specified string should return nothing if the property doesn't exist
     ''' </summary>
     <TestMethod>
@@ -141,6 +163,17 @@ Public Class JPropertyTests
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
         Dim JsonProperty As JToken = JsonToken.First.SelectTokenKeyContaining("ppv")
+        Assert.IsNotNull(JsonProperty)
+    End Sub
+
+    ''' <summary>
+    ''' Tests selecting a token that has its key that contains the whitespace containing the specified string
+    ''' </summary>
+    <TestMethod>
+    Sub TestSelectTokenKeyThatHasWhitespaceContaining()
+        Dim JsonString As String = My.Resources.JSON_InxiExample
+        Dim JsonToken As JToken = JToken.Parse(JsonString)
+        Dim JsonProperty As JToken = JsonToken.SelectTokenKeyEndingWith("CPU")(0).SelectTokenKeyContaining("L2")
         Assert.IsNotNull(JsonProperty)
     End Sub
 

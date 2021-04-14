@@ -21,6 +21,7 @@ This package is for extensions for external libraries.</Description>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.4:
 - New branding
+- Fixed SelectTokenKey... extensions don't work with whitespaces
 
 2021.3:
 - Added Newtonsoft.Json extensions</PackageReleaseNotes>
