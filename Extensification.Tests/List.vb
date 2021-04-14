@@ -136,4 +136,13 @@ Public Class ListTests
         Assert.IsFalse(TargetList.ContainsAllOf({"Goodbye", "Works"}))
     End Sub
 
+    ''' <summary>
+    ''' Tests stringifying a char array
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestStringify()
+        Dim TargetArray As New List(Of Char) From {"H", "e", "l", "l", "o"}
+        Assert.AreEqual("Hello", TargetArray.Stringify)
+    End Sub
+
 End Class

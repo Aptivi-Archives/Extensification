@@ -147,4 +147,13 @@ Public Class ArrayTests
         Assert.IsTrue(TargetArray.Length = 8)
     End Sub
 
+    ''' <summary>
+    ''' Tests stringifying a char array
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestStringify()
+        Dim TargetArray() As Char = {"H", "e", "l", "l", "o"}
+        Assert.AreEqual("Hello", TargetArray.Stringify)
+    End Sub
+
 End Class

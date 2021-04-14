@@ -201,5 +201,14 @@ Namespace ListExts
             Return Done.SequenceEqual(Targets)
         End Function
 
+        ''' <summary>
+        ''' Stringifies the character array (making a string from the character entries found inside the array)
+        ''' </summary>
+        ''' <param name="TargetCharArray">Character array</param>
+        <Extension>
+        Public Function Stringify(ByRef TargetCharArray As List(Of Char)) As String
+            Return String.Join("", TargetCharArray)
+        End Function
+
     End Module
 End Namespace
