@@ -389,6 +389,29 @@ ParseSequence:
             Return 0
         End Function
 
+        ''' <summary>
+        ''' Replaces all the instances of strings with a string assigned to each entry
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="ToBeReplaced">Strings to be replaced</param>
+        ''' <param name="ToReplace">Strings to replace with</param>
+        ''' <returns>Modified string</returns>
+        ''' <exception cref="ArgumentNullException"></exception>
+        ''' <exception cref="ArgumentException"></exception>
+        <Extension>
+        Public Function ReplaceAllRange(ByVal Str As String, ByVal ToBeReplaced() As String, ByVal ToReplace() As String) As String
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            If ToBeReplaced Is Nothing Then Throw New ArgumentNullException(NameOf(ToBeReplaced))
+            If ToBeReplaced.Length = 0 Then Throw New ArgumentNullException(NameOf(ToBeReplaced))
+            If ToReplace Is Nothing Then Throw New ArgumentNullException(NameOf(ToReplace))
+            If ToReplace.Length = 0 Then Throw New ArgumentNullException(NameOf(ToReplace))
+            If ToBeReplaced.Length <> ToBeReplaced.Length Then Throw New ArgumentException("Array length of which strings to be replaced doesn't equal the array length of which strings to replace.")
+            For i As Integer = 0 To ToBeReplaced.Length - 1
+                Str = Str.Replace(ToBeReplaced(i), ToReplace(i))
+            Next
+            Return Str
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string

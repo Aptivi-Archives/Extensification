@@ -98,6 +98,16 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
+    ''' Tests replacing all specified occurrences of strings with multiple strings
+    ''' </summary>
+    <TestMethod> Public Sub TestReplaceAllRange()
+        Dim ExpectedString As String = "Please test the integrity of Extensification. This sub is a unit test."
+        Dim TargetString As String = "Please <replace> Extensification. This sub is a unit <replace2>."
+        TargetString = TargetString.ReplaceAllRange({"<replace>", "<replace2>"}, {"test the integrity of", "test"})
+        Assert.AreEqual(ExpectedString, TargetString, "String replacement failed. Got ""{0}""", TargetString)
+    End Sub
+
+    ''' <summary>
     ''' Tests shifting letters backwards in a string
     ''' </summary>
     <TestMethod> Public Sub TestShiftLettersBackwards()

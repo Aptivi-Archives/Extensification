@@ -53,4 +53,8 @@ This package is for extensions for external libraries.</Description>
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Extensification\Extensification.vbproj" />
+  </ItemGroup>
+
 </Project>

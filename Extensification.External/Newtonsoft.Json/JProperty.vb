@@ -18,6 +18,7 @@
 
 Imports System.Runtime.CompilerServices
 Imports Newtonsoft.Json.Linq
+Imports Extensification.StringExts
 
 Namespace Newtonsoft.Json.JPropertyExts
     Public Module Extensions
@@ -80,7 +81,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         Public Function SelectTokenKeyContaining(ByVal Token As JToken, ByVal Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameContaining(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
-                Return Token.SelectToken("['" + PropertyName + "']")
+                Return Token.SelectToken("['" + PropertyName.ReplaceAllRange({"\", "/", "'", """"}, {"\\", "\/", "\'", "\"""}) + "']")
             Else
                 Return Nothing
             End If
@@ -96,7 +97,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         Public Function SelectTokenKeyEndingWith(ByVal Token As JToken, ByVal Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameEndingWith(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
-                Return Token.SelectToken("['" + PropertyName + "']")
+                Return Token.SelectToken("['" + PropertyName.ReplaceAllRange({"\", "/", "'", """"}, {"\\", "\/", "\'", "\"""}) + "']")
             Else
                 Return Nothing
             End If
@@ -112,7 +113,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         Public Function SelectTokenKeyStartingWith(ByVal Token As JToken, ByVal Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameStartingWith(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
-                Return Token.SelectToken("['" + PropertyName + "']")
+                Return Token.SelectToken("['" + PropertyName.ReplaceAllRange({"\", "/", "'", """"}, {"\\", "\/", "\'", "\"""}) + "']")
             Else
                 Return Nothing
             End If
