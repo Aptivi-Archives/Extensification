@@ -79,8 +79,7 @@ Namespace My.Resources
         '''      &quot;001#1#1#Kernel&quot;: &quot;5.10.0-5-686-pae i686&quot;,
         '''      &quot;002#0#2#bits&quot;: &quot;32&quot;,
         '''      &quot;006#0#2#dm&quot;: &quot;LightDM&quot;,
-        '''      &quot;005#1#1#Desktop&quot;: &quot;N/A&quot;,
-        '''      &quot;000#0#1#Ho [rest of string was truncated]&quot;;.
+        '''      &quot;005#1#1#Desktop&quot;: &quot;N/A&quot;, [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property JSON_InxiExample() As String
             Get
@@ -94,11 +93,25 @@ Namespace My.Resources
         '''{&quot;000#1#2#id&quot;:3,&quot;001#6#3#appname&quot;:&quot;Namfix&quot;,&quot;002#0#0#appver&quot;:&quot;8.2.5&quot;,&quot;003#0#0#released&quot;:&quot;11/8/2018&quot;},
         '''{&quot;000#1#2#id&quot;:4,&quot;001#6#3#appname&quot;:&quot;Y-find&quot;,&quot;002#0#0#appver&quot;:&quot;8.2.5&quot;,&quot;003#0#0#released&quot;:&quot;7/24/2018&quot;},
         '''{&quot;000#1#2#id&quot;:5,&quot;001#6#3#appname&quot;:&quot;Sub-Ex&quot;,&quot;002#0#0#appver&quot;:&quot;4.7.4&quot;,&quot;003#0#0#released&quot;:&quot;6/17/2018&quot;},
-        '''{&quot;000 [rest of string was truncated]&quot;;.
+        ''' [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property JSON_PropertyTest1() As String
             Get
                 Return ResourceManager.GetString("JSON_PropertyTest1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to [{&quot;id&quot;:1,&quot;movie&quot;:&quot;On_Line (a.k.a. On Line)&quot;,&quot;movie&apos;s hex&quot;:&quot;4a0e6043747f4f09de38be2f1efd6a2a&quot;},
+        '''{&quot;id&quot;:2,&quot;movie&quot;:&quot;Trick&quot;,&quot;movie&apos;s hex&quot;:&quot;fda188552c93f8708f994a00452aee8a&quot;},
+        '''{&quot;id&quot;:3,&quot;movie&quot;:&quot;One Magic Christmas&quot;,&quot;movie&apos;s hex&quot;:&quot;d46fac7992e8fd51c01dc41da7ee9802&quot;},
+        '''{&quot;id&quot;:4,&quot;movie&quot;:&quot;Rabbit Without Ears 2 (Zweiohrküken)&quot;,&quot;movie&apos;s hex&quot;:&quot;0c3a00ff23bf66019a6009e979708002&quot;},
+        '''{&quot;id&quot;:5,&quot;movie&quot;:&quot;Billy Jack Goes to Washington&quot;,&quot;movie&apos;s hex&quot;:&quot;07189c3c93884cf8eb92ccbc1f7d8603&quot;},
+        '''{&quot;id&quot;:6,&quot;movie&quot;:&quot;Wake of Death&quot;,&quot;movie&apos;s hex&quot;:&quot;d [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property JSON_PropertyTest2() As String
+            Get
+                Return ResourceManager.GetString("JSON_PropertyTest2", resourceCulture)
             End Get
         End Property
     End Module
