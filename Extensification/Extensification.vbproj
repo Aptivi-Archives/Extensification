@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification</RootNamespace>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net45;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net45;net5.0</TargetFrameworks>
     <OptionInfer>On</OptionInfer>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <IncludeSymbols>True</IncludeSymbols>
