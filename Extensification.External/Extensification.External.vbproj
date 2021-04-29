@@ -7,7 +7,7 @@
     <IncludeSymbols>True</IncludeSymbols>
     <PackageOutputPath>../Extensification.Bin</PackageOutputPath>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2021.4</Version>
+    <Version>2021.4.1</Version>
     <Authors>EoflaOE</Authors>
     <Product>Extensification</Product>
     <Description>Extensification is an extension pack to .NET Framework that extends your ability to use more functions on strings, integers, and objects. Initially, it started with the string, integer, double, long, dictionary, array, arraylist, and list extensions, and inherited from Kernel Simulator. Over time, it grows with support for more objects.
@@ -19,14 +19,17 @@ This package is for extensions for external libraries.</Description>
     <RepositoryUrl>https://github.com/EoflaOE/Extensification</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
-    <PackageReleaseNotes>2021.4:
+    <PackageReleaseNotes>2021.4.1:
+- Fixed no code documentation
+
+2021.4:
 - New branding
 - Fixed SelectTokenKey... extensions don't work with whitespaces
 
 2021.3:
 - Added Newtonsoft.Json extensions</PackageReleaseNotes>
-    <AssemblyVersion>2021.4.0.0</AssemblyVersion>
-    <FileVersion>2021.4.0.0</FileVersion>
+    <AssemblyVersion>2021.4.1.0</AssemblyVersion>
+    <FileVersion>2021.4.1.0</FileVersion>
     <PackageIcon>OfficialAppIcon-Extensification-512.png</PackageIcon>
   </PropertyGroup>
 
@@ -40,6 +43,14 @@ This package is for extensions for external libraries.</Description>
     <OutputPath>../Extensification.Bin/</OutputPath>
     <WarningsAsErrors></WarningsAsErrors>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.1|AnyCPU'">
+    <DocumentationFile>Extensification.External.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.1|AnyCPU'">
+    <DocumentationFile>Extensification.External.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

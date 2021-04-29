@@ -254,6 +254,22 @@ Public Class StringTests
         Assert.AreEqual(3, TargetString.LRP(4))
     End Sub
 
+    ''' <summary>
+    ''' Tests enclosing a string by double quotes
+    ''' </summary>
+    <TestMethod> Public Sub TestEncloseByDoubleQuotes()
+        Dim TargetString = "Hi!"
+        Assert.AreEqual("""Hi!""", TargetString.EncloseByDoubleQuotes)
+    End Sub
+
+    ''' <summary>
+    ''' Tests releasing a string from double quotes
+    ''' </summary>
+    <TestMethod> Public Sub TestReleaseDoubleQuotes()
+        Dim TargetString = """Hi!"""
+        Assert.AreEqual("Hi!", TargetString.ReleaseDoubleQuotes)
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string

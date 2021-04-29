@@ -412,6 +412,31 @@ ParseSequence:
             Return Str
         End Function
 
+        ''' <summary>
+        ''' Encloses a string by double quotations
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <returns>Enclosed string</returns>
+        <Extension>
+        Public Function EncloseByDoubleQuotes(ByVal Str As String) As String
+            Return """" + Str + """"
+        End Function
+
+        ''' <summary>
+        ''' Releases a string from double quotations
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <returns>Released string</returns>
+        <Extension>
+        Public Function ReleaseDoubleQuotes(ByVal Str As String) As String
+            Dim ReleasedString As String = Str
+            If Str.StartsWith("""") And Str.EndsWith("""") Then
+                ReleasedString = ReleasedString.Remove(0, 1)
+                ReleasedString = ReleasedString.Remove(ReleasedString.Length - 1)
+            End If
+            Return ReleasedString
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string
