@@ -328,10 +328,12 @@ ParseSequence:
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrList As List(Of Char) = Str.ToCharArray.ToList
             Dim CharIndex As Integer = Str.Length - 1
-            Do While String.IsNullOrWhiteSpace(StrList(CharIndex))
-                StrList.RemoveAt(CharIndex)
-                CharIndex -= 1
-            Loop
+            If Not StrList.Count = 0 Then
+                Do While String.IsNullOrWhiteSpace(StrList(CharIndex))
+                    StrList.RemoveAt(CharIndex)
+                    CharIndex -= 1
+                Loop
+            End If
             Str = String.Join("", StrList)
         End Sub
 
@@ -343,9 +345,11 @@ ParseSequence:
         Public Sub RemoveNullsOrWhitespacesAtTheBeginning(ByRef Str As String)
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrList As List(Of Char) = Str.ToCharArray.ToList
-            Do While String.IsNullOrWhiteSpace(StrList(0))
-                StrList.RemoveAt(0)
-            Loop
+            If Not StrList.Count = 0 Then
+                Do While String.IsNullOrWhiteSpace(StrList(0))
+                    StrList.RemoveAt(0)
+                Loop
+            End If
             Str = String.Join("", StrList)
         End Sub
 
