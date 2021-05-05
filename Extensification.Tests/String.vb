@@ -198,9 +198,9 @@ Public Class StringTests
     ''' Tests parsing VT sequences (normal CSI ones).
     ''' </summary>
     <TestMethod> Public Sub TestConvertVTSequencesNormal()
-        Dim TargetString As String = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<38;5;2m>Colors!"
+        Dim TargetString As String = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<48;5;2m>Colors!"
         TargetString.ConvertVTSequences
-        Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6m>", "<38;5;7m>", "<0m>", "<38;5;2m>"}))
+        Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6m>", "<38;5;7m>", "<0m>", "<48;5;2m>"}))
         Assert.IsTrue(TargetString.Contains(ChrW(&H1B) + "["))
     End Sub
 

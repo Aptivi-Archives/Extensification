@@ -287,7 +287,7 @@ ParseSequence:
                            Not Sequence.EndsWithAnyOf({"F>", "G>", "H>", "d>", "f>", "S>", "T>", "@>", "P>", "X>", "L>", "M>", "J>", "K>", "m>", "I>", "Z>", "r>"}) Then
                             'These sequences don't need any of '[' and ']'.
                             StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + Sequence.ReplaceAll({"<", ">"}, ""))
-                        ElseIf Sequence.StartsWithAnyOf({"<4", "<0", "<2"}) And (Not Sequence.StartsWithAnyOf({"<2~", "<20", "<21", "<23", "<24"}) And Not Sequence.EndsWith("0m>")) Then
+                        ElseIf Sequence.StartsWithAnyOf({"<4", "<0", "<2"}) And (Not Sequence.StartsWithAnyOf({"<2~", "<20", "<21", "<23", "<24", "<48"}) And Not Sequence.EndsWith("0m>")) Then
                             'These sequences need ']' as they are OSC sequences.
                             If Sequence.StartsWithAnyOf({"<0", "<2"}) Then
                                 'They each need a BELL character &H07
