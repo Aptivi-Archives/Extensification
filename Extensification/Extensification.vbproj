@@ -21,6 +21,8 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.4.2:
 - Fixed a critical bug in both RemoveNullsOrWhitespacesAtTheBeginning and RemoveNullsOrWhitespacesAtTheEnd
+- ConvertVTSequences now supports more sequences
+- Added new string extensions
 
 2021.4.1:
 - Added string extensions
