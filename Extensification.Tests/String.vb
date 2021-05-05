@@ -229,12 +229,28 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
+    ''' Tests removing null characters or whitespaces at the end of the empty string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheEndOnEmptyString()
+        Dim TargetString As String = ""
+        TargetString.RemoveNullsOrWhitespacesAtTheEnd
+    End Sub
+
+    ''' <summary>
     ''' Tests removing null characters or whitespaces at the beginning of the string
     ''' </summary>
     <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginning()
         Dim TargetString As String = "   Hi!"
         TargetString.RemoveNullsOrWhitespacesAtTheBeginning
         Assert.AreEqual("Hi!", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing null characters or whitespaces at the beginning of the empty string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginningOnEmptyString()
+        Dim TargetString As String = ""
+        TargetString.RemoveNullsOrWhitespacesAtTheBeginning
     End Sub
 
     ''' <summary>
