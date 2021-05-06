@@ -6,7 +6,7 @@ Extensification is the group of extensions that improve your experience of progr
 
 ## Build Status
 
-Here are all the CI build status for all KS branches.
+Here are all the CI build status for all Extensification branches.
 
 | Branch                | AppVeyor | Travis CI
 |-----------------------|----------|------------
