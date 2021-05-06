@@ -262,7 +262,7 @@ Namespace StringExts
 
         ''' <summary>
         ''' Converts all of the VT sequence numbers enclosed in &lt; and &gt; marks to their appropriate VT sequence.
-        ''' For example, &lt;38;5;5&gt; will be converted to ChrW(&amp;H1B)[38;5;5m. Note that if you write spaces between &lt; and &gt; marks,
+        ''' For example, &lt;38;5;5&gt; will be converted to ChrW(&amp;H1B)[38;5;5. Note that if you write spaces between &lt; and &gt; marks,
         ''' it will not parse it.
         ''' </summary>
         ''' <param name="Str">Target string</param>
@@ -281,7 +281,28 @@ ParseSequence:
                     'Replace placeholder sequence with the parsable sequence.
                     If StartIndex <> -1 And EndIndex <> -1 Then
                         Sequence = StrArrayWords(WordNumber).Substring(StartIndex, EndIndex - StartIndex)
-                        StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "[" + Sequence.ReplaceAll({"<", ">"}, "") + "m")
+
+                        'Check if the sequence needs special beginning
+                        If Sequence.StartsWithAnyOf({"<A", "<B", "<C", "<D", "<M", "<E", "<7", "<8", "<=", "<>", "<H", "<N", "<O", "<5n", "<6n"}) And
+                           Not Sequence.EndsWithAnyOf({"F>", "G>", "H>", "d>", "f>", "S>", "T>", "@>", "P>", "X>", "L>", "M>", "J>", "K>", "m>", "I>", "Z>", "r>"}) Then
+                            'These sequences don't need any of '[' and ']'.
+                            StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + Sequence.ReplaceAll({"<", ">"}, ""))
+                        ElseIf Sequence.StartsWithAnyOf({"<4", "<0", "<2"}) And (Not Sequence.StartsWithAnyOf({"<2~", "<20", "<21", "<23", "<24", "<48"}) And Not Sequence.EndsWith("0m>")) Then
+                            'These sequences need ']' as they are OSC sequences.
+                            If Sequence.StartsWithAnyOf({"<0", "<2"}) Then
+                                'They each need a BELL character &H07
+                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, "") + ChrW(&H7))
+                            ElseIf Sequence.StartsWith("<4") Then
+                                'This needs an ESC character &H1B
+                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, "") + ChrW(&H1B))
+                            Else
+                                'No special suffixes needed
+                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, ""))
+                            End If
+                        Else
+                            'These sequences need '[' as they are CSI sequences.
+                            StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "[" + Sequence.ReplaceAll({"<", ">"}, ""))
+                        End If
                     End If
 
                     'Check if there are any more sequences.
@@ -328,10 +349,12 @@ ParseSequence:
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrList As List(Of Char) = Str.ToCharArray.ToList
             Dim CharIndex As Integer = Str.Length - 1
-            Do While String.IsNullOrWhiteSpace(StrList(CharIndex))
-                StrList.RemoveAt(CharIndex)
-                CharIndex -= 1
-            Loop
+            If Not StrList.Count = 0 Then
+                Do While String.IsNullOrWhiteSpace(StrList(CharIndex))
+                    StrList.RemoveAt(CharIndex)
+                    CharIndex -= 1
+                Loop
+            End If
             Str = String.Join("", StrList)
         End Sub
 
@@ -343,9 +366,11 @@ ParseSequence:
         Public Sub RemoveNullsOrWhitespacesAtTheBeginning(ByRef Str As String)
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrList As List(Of Char) = Str.ToCharArray.ToList
-            Do While String.IsNullOrWhiteSpace(StrList(0))
-                StrList.RemoveAt(0)
-            Loop
+            If Not StrList.Count = 0 Then
+                Do While String.IsNullOrWhiteSpace(StrList(0))
+                    StrList.RemoveAt(0)
+                Loop
+            End If
             Str = String.Join("", StrList)
         End Sub
 
@@ -410,6 +435,99 @@ ParseSequence:
                 Str = Str.Replace(ToBeReplaced(i), ToReplace(i))
             Next
             Return Str
+        End Function
+
+        ''' <summary>
+        ''' Encloses a string by double quotations
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <returns>Enclosed string</returns>
+        <Extension>
+        Public Function EncloseByDoubleQuotes(ByVal Str As String) As String
+            Return """" + Str + """"
+        End Function
+
+        ''' <summary>
+        ''' Releases a string from double quotations
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <returns>Released string</returns>
+        <Extension>
+        Public Function ReleaseDoubleQuotes(ByVal Str As String) As String
+            Dim ReleasedString As String = Str
+            If Str.StartsWith("""") And Str.EndsWith("""") Then
+                ReleasedString = ReleasedString.Remove(0, 1)
+                ReleasedString = ReleasedString.Remove(ReleasedString.Length - 1)
+            End If
+            Return ReleasedString
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the string starts with any of the values
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Values">Values</param>
+        <Extension>
+        Public Function StartsWithAnyOf(ByVal Str As String, ByVal Values() As String) As Boolean
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            Dim Started As Boolean
+            For Each Value As String In Values
+                If Str.StartsWith(Value) Then Started = True
+            Next
+            Return Started
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the string starts with all of the values
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Values">Values</param>
+        <Extension>
+        Public Function StartsWithAllOf(ByVal Str As String, ByVal Values() As String) As Boolean
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+#If NET45 Then
+            Dim Done() As String = {}
+#Else
+            Dim Done() As String = Array.Empty(Of String)
+#End If
+            For Each Value As String In Values
+                If Str.StartsWith(Value) Then Done.Add(Value)
+            Next
+            Return Done.SequenceEqual(Values)
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the string ends with any of the values
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Values">Values</param>
+        <Extension>
+        Public Function EndsWithAnyOf(ByVal Str As String, ByVal Values() As String) As Boolean
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+            Dim Started As Boolean
+            For Each Value As String In Values
+                If Str.EndsWith(Value) Then Started = True
+            Next
+            Return Started
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the string ends with all of the values
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Values">Values</param>
+        <Extension>
+        Public Function EndsWithAllOf(ByVal Str As String, ByVal Values() As String) As Boolean
+            If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
+#If NET45 Then
+            Dim Done() As String = {}
+#Else
+            Dim Done() As String = Array.Empty(Of String)
+#End If
+            For Each Value As String In Values
+                If Str.EndsWith(Value) Then Done.Add(Value)
+            Next
+            Return Done.SequenceEqual(Values)
         End Function
 
 #If NET45 Then

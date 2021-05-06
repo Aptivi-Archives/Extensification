@@ -57,7 +57,6 @@ Namespace ArrayListExts
         ''' <summary>
         ''' Gets how many non-empty items are there
         ''' </summary>
-        ''' <typeparam name="T">Type</typeparam>
         ''' <param name="TargetArray">Target array</param>
         ''' <returns>Count of non-empty items</returns>
         <Extension>
@@ -80,7 +79,6 @@ Namespace ArrayListExts
         ''' <summary>
         ''' Gets how many empty items are there
         ''' </summary>
-        ''' <typeparam name="T">Type</typeparam>
         ''' <param name="TargetArray">Target array</param>
         ''' <returns>Count of empty items</returns>
         <Extension>
@@ -99,7 +97,6 @@ Namespace ArrayListExts
         ''' <summary>
         ''' Gets indexes of non-empty items
         ''' </summary>
-        ''' <typeparam name="T">Type</typeparam>
         ''' <param name="TargetArray">Target array</param>
         ''' <returns>Indexes of non-empty items</returns>
         <Extension>

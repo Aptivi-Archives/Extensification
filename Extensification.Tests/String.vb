@@ -195,12 +195,45 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
-    ''' Tests parsing VT sequences.
+    ''' Tests parsing VT sequences (normal CSI ones).
     ''' </summary>
-    <TestMethod> Public Sub TestConvertVTSequences()
-        Dim TargetString As String = "Hi. We have <38;5;6>new improvements. <0>Well, we'll have to do this: <38;5;7>Yay!<38;5;2>Colors!"
+    <TestMethod> Public Sub TestConvertVTSequencesNormal()
+        Dim TargetString As String = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<48;5;2m>Colors!"
         TargetString.ConvertVTSequences
-        Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6>", "<38;5;7>", "<0>", "<38;5;2>"}))
+        Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6m>", "<38;5;7m>", "<0m>", "<48;5;2m>"}))
+        Assert.IsTrue(TargetString.Contains(ChrW(&H1B) + "["))
+    End Sub
+
+    ''' <summary>
+    ''' Tests parsing VT sequences (OSC title one).
+    ''' </summary>
+    <TestMethod> Public Sub TestConvertVTSequencesOSCTitle()
+        Dim TargetString As String = "<0;Hi!>"
+        TargetString.ConvertVTSequences
+        Assert.IsFalse(TargetString.ContainsAnyOf({"<0;Hi!>"}))
+        Assert.IsTrue(TargetString.Contains(ChrW(&H1B) + "]"))
+        Assert.IsTrue(TargetString.EndsWith(ChrW(&H7)))
+    End Sub
+
+    ''' <summary>
+    ''' Tests parsing VT sequences (OSC screen color one).
+    ''' </summary>
+    <TestMethod> Public Sub TestConvertVTSequencesOSCScreenColor()
+        Dim TargetString As String = "<4;15;rgb:ff/ff/ff>"
+        TargetString.ConvertVTSequences
+        Assert.IsFalse(TargetString.ContainsAnyOf({"<0;Hi!>"}))
+        Assert.IsTrue(TargetString.Contains(ChrW(&H1B) + "]"))
+        Assert.IsTrue(TargetString.EndsWith(ChrW(&H1B)))
+    End Sub
+
+    ''' <summary>
+    ''' Tests parsing VT sequences (simple cursor positioning).
+    ''' </summary>
+    <TestMethod> Public Sub TestConvertVTSequencesSimpleCursorPositioning()
+        Dim TargetString As String = "<A>"
+        TargetString.ConvertVTSequences
+        Assert.IsFalse(TargetString.ContainsAnyOf({"<A>"}))
+        Assert.IsTrue(TargetString = ChrW(&H1B) + "A")
     End Sub
 
     ''' <summary>
@@ -229,12 +262,28 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
+    ''' Tests removing null characters or whitespaces at the end of the empty string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheEndOnEmptyString()
+        Dim TargetString As String = ""
+        TargetString.RemoveNullsOrWhitespacesAtTheEnd
+    End Sub
+
+    ''' <summary>
     ''' Tests removing null characters or whitespaces at the beginning of the string
     ''' </summary>
     <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginning()
         Dim TargetString As String = "   Hi!"
         TargetString.RemoveNullsOrWhitespacesAtTheBeginning
         Assert.AreEqual("Hi!", TargetString)
+    End Sub
+
+    ''' <summary>
+    ''' Tests removing null characters or whitespaces at the beginning of the empty string
+    ''' </summary>
+    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginningOnEmptyString()
+        Dim TargetString As String = ""
+        TargetString.RemoveNullsOrWhitespacesAtTheBeginning
     End Sub
 
     ''' <summary>
@@ -252,6 +301,54 @@ Public Class StringTests
     <TestMethod> Public Sub TestLRP()
         Dim TargetString = "Hello!"
         Assert.AreEqual(3, TargetString.LRP(4))
+    End Sub
+
+    ''' <summary>
+    ''' Tests enclosing a string by double quotes
+    ''' </summary>
+    <TestMethod> Public Sub TestEncloseByDoubleQuotes()
+        Dim TargetString = "Hi!"
+        Assert.AreEqual("""Hi!""", TargetString.EncloseByDoubleQuotes)
+    End Sub
+
+    ''' <summary>
+    ''' Tests releasing a string from double quotes
+    ''' </summary>
+    <TestMethod> Public Sub TestReleaseDoubleQuotes()
+        Dim TargetString = """Hi!"""
+        Assert.AreEqual("Hi!", TargetString.ReleaseDoubleQuotes)
+    End Sub
+
+    ''' <summary>
+    ''' Tests checking to see if the string starts with any of the values
+    ''' </summary>
+    <TestMethod> Public Sub TestStartsWithAnyOf()
+        Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
+        Assert.IsTrue(TargetString.StartsWithAnyOf({"dotnet", "sdk"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests checking to see if the string starts with all of the values
+    ''' </summary>
+    <TestMethod> Public Sub TestStartsWithAllOf()
+        Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
+        Assert.IsTrue(TargetString.StartsWithAllOf({"dotnet", "dotnet-hostfxr"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests checking to see if the string ends with any of the values
+    ''' </summary>
+    <TestMethod> Public Sub TestEndsWithAnyOf()
+        Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
+        Assert.IsTrue(TargetString.EndsWithAnyOf({"5.0", "3.1"}))
+    End Sub
+
+    ''' <summary>
+    ''' Tests checking to see if the string ends with all of the values
+    ''' </summary>
+    <TestMethod> Public Sub TestEndsWithAllOf()
+        Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
+        Assert.IsTrue(TargetString.EndsWithAllOf({"5.0", "sdk-5.0"}))
     End Sub
 
 #If NET45 Then
