@@ -1,40 +1,60 @@
 # Extensification
 
-[![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=master)](https://travis-ci.org/EoflaOE/Extensification) ![GitHub repo size](https://img.shields.io/github/repo-size/EoflaOE/Extensification?color=purple&label=size) [![GitHub All Releases](https://img.shields.io/github/downloads/EoflaOE/Extensification/total?color=purple&label=d/l)](https://github.com/EoflaOE/Extensification/releases) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/EoflaOE/Extensification?color=purple&include_prereleases&label=github)](https://github.com/EoflaOE/Extensification/releases/latest) [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Extensification?color=purple)](https://www.nuget.org/packages/Extensification/)
+![GitHub repo size](https://img.shields.io/github/repo-size/EoflaOE/Extensification?color=purple&label=size) [![GitHub All Releases](https://img.shields.io/github/downloads/EoflaOE/Extensification/total?color=purple&label=d/l)](https://github.com/EoflaOE/Extensification/releases) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/EoflaOE/Extensification?color=purple&include_prereleases&label=github)](https://github.com/EoflaOE/Extensification/releases/latest) [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Extensification?color=purple)](https://www.nuget.org/packages/Extensification/)
 
-Extensification is the group of extensions that improve your experience of programming for .NET Core and .NET Framework applications. 
+Extensification is the group of extensions that improve your experience of programming for .NET Core and .NET Framework applications.
+
+## Build Status
+
+Here are all the CI build status for all Extensification branches.
+
+| Branch                | AppVeyor | Travis CI
+|-----------------------|----------|------------
+| master                | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/master?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/master) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=master)](https://travis-ci.org/EoflaOE/Extensification)
+| v2021.4.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.4.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.4.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.4.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2021.3.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.3.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.3.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.3.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2021.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.2.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.2.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.2.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2021.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.1.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.1.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.1.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2021.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.0.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.0.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.0.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2020.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.2.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2020.2.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2020.2.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2020.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.1.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2020.1.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2020.1.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| v2020.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.0.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2020.0.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2020.0.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
 
 ## System Requirements
+
+To run any project that use this library, we recommend that you have:
 
 ### Windows systems
 
 1. Windows 7 or later (Windows 10 recommended)
-2. .NET Framework 4.5 or later, or .NET Core 2.1 or 3.1
+2. .NET Framework 4.5 or later, or .NET Core 2.1 or 3.1, or .NET 5.0
+
+* If your app uses Extensification, uses x86, and uses one of .NET Core 2.1, 3.1, or .NET 5.0, at least a 2.00 GHz processor with SSE2 is required.
 
 ### Linux systems
 
-1. Mono 5.10 or higher (6.0 or higher is recommended) or dotnet with .NET Core 2.1 or 3.1
+1. Mono 5.10 or higher (6.0 or higher is recommended) or dotnet with .NET Core 2.1 or 3.1 or .NET 5.0
 
 ## How to install
 
-This section covers how to install Kernel Simulator on your system. Please scroll down to your system below.
+This section covers how to install Extensification on your project. Please scroll down to your system below.
 
-### Windows systems (First method)
+### Windows systems (Recommended)
+
+1. Open Visual Studio to any project, and open the NuGet package manager
+2. Search for `Extensification` and install it there
+
+### Windows systems (Alternative)
 
 1. Download the Extensification library files [here](https://github.com/EoflaOE/Extensification/releases).
 2. Unzip the file to any directory
 3. Open Visual Studio to any project, and add a reference to Extensification
 
-### Windows systems (Second method)
-
-1. Open Visual Studio to any project, and open the NuGet package manager
-2. Search for `Extensification` and install it there
-
 ## How to Build
 
 This section covers how to build Extensification on your system. Please scroll down to your platform below.
 
-### Visual Studio 2017+
+### Visual Studio 2019 16.8+
 
 1. Open Visual Studio
 2. Press `Clone a repository`
@@ -67,7 +87,7 @@ This section covers how to build Extensification on your system. Please scroll d
 ## License
 
     Extensification - Extends your .NET methods
-    Copyright (C) 2020  EoflaOE
+    Copyright (C) 2020-2021  EoflaOE
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
