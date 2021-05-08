@@ -18,6 +18,7 @@
 
 Imports System.Runtime.CompilerServices
 Imports Extensification.ArrayExts
+Imports Extensification.StringExts
 
 Namespace DictionaryExts
     Public Module Extensions
@@ -482,6 +483,25 @@ Namespace DictionaryExts
             Next
             Return Done.SequenceEqual(Targets)
         End Function
+
+        ''' <summary>
+        ''' Renames a key in a dictionary that has the key type of string
+        ''' </summary>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="OldName">Original key name</param>
+        ''' <param name="NewName">New key name</param>
+        ''' <exception cref="KeyNotFoundException"></exception>
+        <Extension>
+        Public Sub RenameKey(Of TValue)(Dict As Dictionary(Of String, TValue), OldName As String, NewName As String)
+            If Dict.ContainsKey(OldName) Then
+                Dim KeyValue As TValue = Dict(OldName)
+                Dict.Remove(OldName)
+                Dict.Add(NewName, KeyValue)
+            Else
+                Throw New KeyNotFoundException("Key {0} not found".FormatString(OldName))
+            End If
+        End Sub
 
 #If NET45 Then
         ''' <summary>

@@ -107,7 +107,7 @@ Namespace My.Resources
         '''{&quot;id&quot;:3,&quot;movie&quot;:&quot;One Magic Christmas&quot;,&quot;movie&apos;s hex&quot;:&quot;d46fac7992e8fd51c01dc41da7ee9802&quot;},
         '''{&quot;id&quot;:4,&quot;movie&quot;:&quot;Rabbit Without Ears 2 (Zweiohrküken)&quot;,&quot;movie&apos;s hex&quot;:&quot;0c3a00ff23bf66019a6009e979708002&quot;},
         '''{&quot;id&quot;:5,&quot;movie&quot;:&quot;Billy Jack Goes to Washington&quot;,&quot;movie&apos;s hex&quot;:&quot;07189c3c93884cf8eb92ccbc1f7d8603&quot;},
-        '''{&quot;id&quot;:6,&quot;movie&quot;:&quot;Wake of Death&quot;,&quot;movie&apos;s hex&quot;:&quot;d [rest of string was truncated]&quot;;.
+        '''{&quot;id&quot;:6,&quot;movie&quot;:&quot;Wake of Death&quot;,&quot;movie&apos;s he [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property JSON_PropertyTest2() As String
             Get

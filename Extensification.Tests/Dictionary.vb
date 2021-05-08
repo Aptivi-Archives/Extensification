@@ -373,6 +373,13 @@ Public Class DictionaryTests
         Assert.IsFalse(TargetDict.ContainsAllOfInValues({5, 7}))
     End Sub
 
+    <TestMethod>
+    Public Sub TestRenameKey()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Name", "Extensification"}, {"Tyoe", "Library"}}
+        TargetDict.RenameKey("Tyoe", "Type")
+        Assert.IsTrue(TargetDict.ContainsKey("Type"))
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests trying to add an entry to dictionary
