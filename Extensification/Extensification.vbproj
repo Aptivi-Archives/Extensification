@@ -21,6 +21,7 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.5:
 - Added new extensions
+- Added support for StreamReader
 
 2021.4.2.1:
 - Fixed a critical bug regarding background VT sequence
