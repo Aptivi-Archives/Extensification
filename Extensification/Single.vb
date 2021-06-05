@@ -17,7 +17,6 @@
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 Imports System.Runtime.CompilerServices
-Imports Extensification.ArrayExts
 Imports Extensification.IntegerExts
 
 Namespace SingleExts
