@@ -549,7 +549,7 @@ ParseSequence:
         ''' <returns></returns>
         <Extension>
         Public Function SplitNewLinesCr(ByVal Str As String) As String()
-            Return Str.Split(ChrW(13))
+            Return Str.Replace(ChrW(10), "").Split(ChrW(13))
         End Function
 
 #If NET45 Then
