@@ -532,6 +532,26 @@ ParseSequence:
             Return Done.SequenceEqual(Values)
         End Function
 
+        ''' <summary>
+        ''' Makes a string array with new line as delimiter
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <returns></returns>
+        <Extension>
+        Public Function SplitNewLines(ByVal Str As String) As String()
+            Return Str.Replace(ChrW(13), "").Split(ChrW(10))
+        End Function
+
+        ''' <summary>
+        ''' Makes a string array with new line (vbCr) as delimiter
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <returns></returns>
+        <Extension>
+        Public Function SplitNewLinesCr(ByVal Str As String) As String()
+            Return Str.Split(ChrW(13))
+        End Function
+
 #If NET45 Then
         ''' <summary>
         ''' Evaluates a string

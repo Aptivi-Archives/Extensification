@@ -351,6 +351,33 @@ Public Class StringTests
         Assert.IsTrue(TargetString.EndsWithAllOf({"5.0", "sdk-5.0"}))
     End Sub
 
+    ''' <summary>
+    ''' Tests splitting a string with new lines (vbCrLf)
+    ''' </summary>
+    <TestMethod> Public Sub TestSplitNewLinesCrLf()
+        Dim TargetString As String = "First line" + vbCrLf + "Second line" + vbCrLf + "Third line"
+        Dim TargetArray() As String = TargetString.SplitNewLines
+        Assert.IsTrue(TargetArray.Length = 3)
+    End Sub
+
+    ''' <summary>
+    ''' Tests splitting a string with new lines (vbCr)
+    ''' </summary>
+    <TestMethod> Public Sub TestSplitNewLinesCr()
+        Dim TargetString As String = "First line" + vbCr + "Second line" + vbCr + "Third line"
+        Dim TargetArray() As String = TargetString.SplitNewLinesCr
+        Assert.IsTrue(TargetArray.Length = 3)
+    End Sub
+
+    ''' <summary>
+    ''' Tests splitting a string with new lines (vbLf)
+    ''' </summary>
+    <TestMethod> Public Sub TestSplitNewLinesLf()
+        Dim TargetString As String = "First line" + vbLf + "Second line" + vbLf + "Third line"
+        Dim TargetArray() As String = TargetString.SplitNewLines
+        Assert.IsTrue(TargetArray.Length = 3)
+    End Sub
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string
