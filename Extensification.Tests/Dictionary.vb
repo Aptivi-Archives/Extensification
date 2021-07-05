@@ -263,6 +263,116 @@ Public Class DictionaryTests
     End Sub
 
     ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrement()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementUInteger()
+        Dim TargetDict As New Dictionary(Of String, UInteger)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementByte()
+        Dim TargetDict As New Dictionary(Of String, Byte)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementSByte()
+        Dim TargetDict As New Dictionary(Of String, SByte)
+        TargetDict.AddOrDecrement("String 1", 16)
+        TargetDict.AddOrDecrement("String 1", 8)
+        Assert.IsTrue(TargetDict("String 1") = 8)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementDouble()
+        Dim TargetDict As New Dictionary(Of String, Double)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementLong()
+        Dim TargetDict As New Dictionary(Of String, Long)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementULong()
+        Dim TargetDict As New Dictionary(Of String, ULong)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementShort()
+        Dim TargetDict As New Dictionary(Of String, Short)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementUShort()
+        Dim TargetDict As New Dictionary(Of String, UShort)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
+    ''' Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddOrDecrementSingle()
+        Dim TargetDict As New Dictionary(Of String, Single)
+        TargetDict.AddOrDecrement("String 1", 64)
+        TargetDict.AddOrDecrement("String 1", 32)
+        Assert.IsTrue(TargetDict("String 1") = 32)
+    End Sub
+
+    ''' <summary>
     ''' Tests incrementing a number
     ''' </summary>
     <TestMethod>
