@@ -35,12 +35,34 @@ Public Class ByteTests
     End Sub
 
     ''' <summary>
+    ''' Tests signed byte incrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementSigned()
+        Dim ExpectedByte As SByte = 5
+        Dim TargetByte As SByte = 3
+        TargetByte = TargetByte.Increment(2)
+        Assert.AreEqual(ExpectedByte, TargetByte)
+    End Sub
+
+    ''' <summary>
     ''' Tests byte decrementation
     ''' </summary>
     <TestMethod>
     Public Sub TestDecrement()
         Dim ExpectedByte As Byte = 3
         Dim TargetByte As Byte = 5
+        TargetByte = TargetByte.Decrement(2)
+        Assert.AreEqual(ExpectedByte, TargetByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests signed byte decrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementSigned()
+        Dim ExpectedByte As SByte = 3
+        Dim TargetByte As SByte = 5
         TargetByte = TargetByte.Decrement(2)
         Assert.AreEqual(ExpectedByte, TargetByte)
     End Sub
@@ -58,11 +80,30 @@ Public Class ByteTests
     End Sub
 
     ''' <summary>
+    ''' Tests signed byte digit listing
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestListDigitsSigned()
+        Dim ExpectedDigits() As SByte = {7, 5}
+        Dim TargetNumber As SByte = 75
+        Assert.IsTrue(ExpectedDigits.SequenceEqual(TargetNumber.ListDigits))
+    End Sub
+
+    ''' <summary>
     ''' Tests byte Armstrong number detection
     ''' </summary>
     <TestMethod>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Byte = 153
+        Assert.IsTrue(TargetNumber.IsArmstrong)
+    End Sub
+
+    ''' <summary>
+    ''' Tests signed byte Armstrong number detection
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIsArmstrongSigned()
+        Dim TargetNumber As SByte = 1
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
 #End Region

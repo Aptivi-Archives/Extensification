@@ -16,43 +16,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <NeutralLanguage>English (United States)</NeutralLanguage>
-    <PackageReleaseNotes>2021.6:
-- 
-
-2021.5.2:
-- Added new unit tests
-
-2021.5:
-- Added new unit tests
-
-2021.4.2:
-- Added new unit tests
-
-
-2021.3:
-- Added Extensification.External tests
-
-2021.2.1:
-- Added new tests
-
-2021.2:
-- Added new tests
-- Added Single support
-- Added Char and Byte tests
-
-2021.0:
-- Added new unit tests
-- Reflected recent changes for arrays
-
-2020.3:
-- Added Evaluate tests
-
-2020.1:
-- Added new tests
-
-2020.0:
-- Initial release</PackageReleaseNotes>
-    <AssemblyVersion>2021.6.2.0</AssemblyVersion>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <AssemblyVersion>2021.6.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

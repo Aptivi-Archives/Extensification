@@ -37,6 +37,18 @@ Namespace ByteExts
         End Function
 
         ''' <summary>
+        ''' Makes a list of digits
+        ''' </summary>
+        ''' <param name="Number">Number</param>
+        ''' <returns>Array of digits</returns>
+        <Extension>
+        Public Function ListDigits(ByVal Number As SByte) As SByte()
+            Dim StrNum As String = Number.ToString
+            Dim NumList As SByte() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToSByte(x.ToString))
+            Return NumList
+        End Function
+
+        ''' <summary>
         ''' Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
         ''' </summary>
         ''' <param name="Number">Number</param>
@@ -47,6 +59,22 @@ Namespace ByteExts
             Dim NumberDigits() As Byte = IntNum.ListDigits
             Dim SumOfCubesOfDigits As Byte
             For i As Byte = 0 To NumberDigits.Length - 1
+                SumOfCubesOfDigits += Math.Pow(NumberDigits(i), 3)
+            Next
+            Return IntNum = SumOfCubesOfDigits
+        End Function
+
+        ''' <summary>
+        ''' Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+        ''' </summary>
+        ''' <param name="Number">Number</param>
+        ''' <returns>True if the number is an Armstrong number; False if not.</returns>
+        <Extension>
+        Public Function IsArmstrong(ByVal Number As SByte) As Boolean
+            Dim IntNum As SByte = Number
+            Dim NumberDigits() As SByte = IntNum.ListDigits
+            Dim SumOfCubesOfDigits As SByte
+            For i As SByte = 0 To NumberDigits.Length - 1
                 SumOfCubesOfDigits += Math.Pow(NumberDigits(i), 3)
             Next
             Return IntNum = SumOfCubesOfDigits
