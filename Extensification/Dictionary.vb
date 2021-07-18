@@ -207,6 +207,363 @@ Namespace DictionaryExts
         End Sub
 
         ''' <summary>
+        ''' Adds or renames an entry to dictionary to identify the copy number
+        ''' </summary>
+        ''' <typeparam name="TValue">Value</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry</param>
+        <Extension>
+        Public Sub AddOrRename(Of TValue)(Dict As Dictionary(Of String, TValue), EntryKey As String, EntryValue As TValue)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict.Add(EntryKey & " [" & (Dict.Count + 1) & "]", EntryValue)
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, Integer), EntryKey As TKey, EntryValue As Integer)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, UInteger), EntryKey As TKey, EntryValue As UInteger)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, Byte), EntryKey As TKey, EntryValue As Byte)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, SByte), EntryKey As TKey, EntryValue As SByte)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, Double), EntryKey As TKey, EntryValue As Double)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, Long), EntryKey As TKey, EntryValue As Long)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, ULong), EntryKey As TKey, EntryValue As ULong)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, Short), EntryKey As TKey, EntryValue As Short)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, UShort), EntryKey As TKey, EntryValue As UShort)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or increments a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrIncrement(Of TKey)(Dict As Dictionary(Of TKey, Single), EntryKey As TKey, EntryValue As Single)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) += EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, Integer), EntryKey As TKey, EntryValue As Integer)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, UInteger), EntryKey As TKey, EntryValue As UInteger)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, Byte), EntryKey As TKey, EntryValue As Byte)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, SByte), EntryKey As TKey, EntryValue As SByte)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, Double), EntryKey As TKey, EntryValue As Double)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, Long), EntryKey As TKey, EntryValue As Long)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, ULong), EntryKey As TKey, EntryValue As ULong)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, Short), EntryKey As TKey, EntryValue As Short)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, UShort), EntryKey As TKey, EntryValue As UShort)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Adds an entry or decrements a value of an already-existing entry to dictionary
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be added</param>
+        ''' <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        <Extension>
+        Public Sub AddOrDecrement(Of TKey)(Dict As Dictionary(Of TKey, Single), EntryKey As TKey, EntryValue As Single)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then
+                Dict.Add(EntryKey, EntryValue)
+            Else
+                Dict(EntryKey) -= EntryValue
+            End If
+        End Sub
+
+        ''' <summary>
         ''' Increments number value in key. The key will be created if not found.
         ''' </summary>
         ''' <typeparam name="TKey">Key</typeparam>
@@ -279,6 +636,32 @@ Namespace DictionaryExts
         ''' <param name="EntryKey">A key entry to be incremented</param>
         <Extension>
         Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, UShort), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Byte), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) += 1
+        End Sub
+
+        ''' <summary>
+        ''' Increments number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be incremented</param>
+        <Extension>
+        Public Sub IncrementNumber(Of TKey)(Dict As Dictionary(Of TKey, SByte), EntryKey As TKey)
             If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
             If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
             Dict(EntryKey) += 1
@@ -383,6 +766,32 @@ Namespace DictionaryExts
         ''' <param name="EntryKey">A key entry to be decremented</param>
         <Extension>
         Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, UShort), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, Byte), EntryKey As TKey)
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
+            Dict(EntryKey) -= 1
+        End Sub
+
+        ''' <summary>
+        ''' Decrements number value in key. The key will be created if not found.
+        ''' </summary>
+        ''' <typeparam name="TKey">Key</typeparam>
+        ''' <param name="Dict">Target dictionary</param>
+        ''' <param name="EntryKey">A key entry to be decremented</param>
+        <Extension>
+        Public Sub DecrementNumber(Of TKey)(Dict As Dictionary(Of TKey, SByte), EntryKey As TKey)
             If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
             If Not Dict.ContainsKey(EntryKey) Then Dict.Add(EntryKey, 0)
             Dict(EntryKey) -= 1

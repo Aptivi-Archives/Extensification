@@ -16,6 +16,11 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+#If Not NETCOREAPP2_1 Then
+Imports Microsoft.VisualBasic.FileIO
+Imports System.IO
+Imports System.Text
+#End If
 #If NET45 Then
 Imports System.CodeDom.Compiler
 Imports System.Reflection
@@ -551,6 +556,33 @@ ParseSequence:
         Public Function SplitNewLinesCr(ByVal Str As String) As String()
             Return Str.Replace(ChrW(10), "").Split(ChrW(13))
         End Function
+
+        '-- Version specific functions --
+
+#If Not NETCOREAPP2_1 Then
+        ''' <summary>
+        ''' Splits the string enclosed in double quotes
+        ''' </summary>
+        ''' <param name="Str">Target string</param>
+        ''' <param name="Delims">Delimiters</param>
+        <Extension>
+        Public Function SplitEncloseDoubleQuotes(ByVal Str As String, ParamArray Delims As String()) As String()
+            Dim Result() As String
+            Dim TStream As New MemoryStream(Encoding.Default.GetBytes(Str))
+            Dim Parser As New TextFieldParser(TStream) With {
+                .Delimiters = Delims,
+                .HasFieldsEnclosedInQuotes = True,
+                .TrimWhiteSpace = False
+            }
+            Result = Parser.ReadFields
+            If Result IsNot Nothing Then
+                For i As Integer = 0 To Result.Length - 1
+                    Result(i).Replace("""", "")
+                Next
+            End If
+            Return Result
+        End Function
+#End If
 
 #If NET45 Then
         ''' <summary>

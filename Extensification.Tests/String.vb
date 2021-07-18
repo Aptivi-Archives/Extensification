@@ -378,6 +378,17 @@ Public Class StringTests
         Assert.IsTrue(TargetArray.Length = 3)
     End Sub
 
+#If Not NETCOREAPP2_1 Then
+    ''' <summary>
+    ''' Tests splitting a string with double quotes enclosed
+    ''' </summary>
+    <TestMethod> Public Sub TestSplitEncloseDoubleQuotes()
+        Dim TargetString As String = "First ""Second Third"" Fourth"
+        Dim TargetArray() As String = TargetString.SplitEncloseDoubleQuotes(" ")
+        Assert.IsTrue(TargetArray.Length = 3)
+    End Sub
+#End If
+
 #If NET45 Then
     ''' <summary>
     ''' Tests removing letters from a string
