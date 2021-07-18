@@ -16,26 +16,27 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports System.IO
-Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports System.Runtime.CompilerServices
 
-<TestClass>
-Public Class StreamReaderTests
-
-#Region "Reading"
+Namespace ArrayExts
     ''' <summary>
-    ''' Tests reading a line from the stream reader with the newline characters
+    ''' Provides the array extensions related to removal
     ''' </summary>
-    <TestMethod>
-    Public Sub TestReadLineWithNewLine()
-        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
-                                   "You've reached the second line!"
-        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
-        Dim TextStreamReader As New StreamReader(TextStream)
-        Dim ParsedText As String = TextStreamReader.ReadLineWithNewLine
-        Assert.IsTrue(ParsedText.EndsWith(Environment.NewLine))
-    End Sub
-#End Region
+    Public Module Removal
 
-End Class
+        ''' <summary>
+        ''' Removes an entry from array
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetArray">Target array</param>
+        ''' <param name="Item">Any item</param>
+        <Extension>
+        Public Sub Remove(Of T)(ByRef TargetArray() As T, ByVal Item As T)
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
+            Dim TargetArrayList As List(Of T) = TargetArray.ToList
+            TargetArrayList.Remove(Item)
+            TargetArray = TargetArrayList.ToArray()
+        End Sub
+
+    End Module
+End Namespace

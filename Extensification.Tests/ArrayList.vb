@@ -22,6 +22,7 @@ Imports Extensification.ArrayListExts
 <TestClass>
 Public Class ArrayListTests
 
+#Region "Conversion"
     ''' <summary>
     ''' Tests converting array list to list
     ''' </summary>
@@ -32,17 +33,9 @@ Public Class ArrayListTests
         Assert.IsNotNull(TargetList)
         Assert.IsTrue(TargetList.Count > 0)
     End Sub
+#End Region
 
-    ''' <summary>
-    ''' Tests getting index from entry
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestGetIndexOfEntry()
-        Dim TargetList As New ArrayList From {"Test getting", "index from", "array list entry."}
-        Dim ExpectedIndex As Integer = 1
-        Assert.AreEqual(ExpectedIndex, TargetList.GetIndexOfEntry("index from")(0))
-    End Sub
-
+#Region "Counts"
     ''' <summary>
     ''' Tests counting full entries
     ''' </summary>
@@ -63,6 +56,18 @@ Public Class ArrayListTests
         Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
         Assert.AreEqual(CLng(3), TargetArray.CountEmptyEntries)
         Assert.AreEqual(CLng(2), TargetArrayObjects.CountEmptyEntries)
+    End Sub
+#End Region
+
+#Region "Getting"
+    ''' <summary>
+    ''' Tests getting index from entry
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexOfEntry()
+        Dim TargetList As New ArrayList From {"Test getting", "index from", "array list entry."}
+        Dim ExpectedIndex As Integer = 1
+        Assert.AreEqual(ExpectedIndex, TargetList.GetIndexOfEntry("index from")(0))
     End Sub
 
     ''' <summary>
@@ -94,17 +99,9 @@ Public Class ArrayListTests
         Assert.IsTrue(TargetArray.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
         Assert.IsTrue(TargetArrayObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
+#End Region
 
-    ''' <summary>
-    ''' Tests trying to remove an entry from array list
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestTryRemove()
-        Dim TargetArray As New ArrayList From {"Test"}
-        Assert.IsTrue(TargetArray.TryRemove("Test"))
-        Assert.IsFalse(TargetArray.TryRemove("Test2"))
-    End Sub
-
+#Region "Querying"
     ''' <summary>
     ''' Tests seeing if the array list contains any of the specified clauses
     ''' </summary>
@@ -124,5 +121,18 @@ Public Class ArrayListTests
         Assert.IsTrue(TargetArray.ContainsAllOf(New ArrayList From {"Hello and Test", "Test"}))
         Assert.IsFalse(TargetArray.ContainsAllOf(New ArrayList From {"Goodbye", "Works"}))
     End Sub
+#End Region
+
+#Region "Removal"
+    ''' <summary>
+    ''' Tests trying to remove an entry from array list
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryRemove()
+        Dim TargetArray As New ArrayList From {"Test"}
+        Assert.IsTrue(TargetArray.TryRemove("Test"))
+        Assert.IsFalse(TargetArray.TryRemove("Test2"))
+    End Sub
+#End Region
 
 End Class

@@ -16,26 +16,23 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports System.IO
-Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports System.Runtime.CompilerServices
 
-<TestClass>
-Public Class StreamReaderTests
-
-#Region "Reading"
+Namespace CharExts
     ''' <summary>
-    ''' Tests reading a line from the stream reader with the newline characters
+    ''' Provides the character extensions related to querying
     ''' </summary>
-    <TestMethod>
-    Public Sub TestReadLineWithNewLine()
-        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
-                                   "You've reached the second line!"
-        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
-        Dim TextStreamReader As New StreamReader(TextStream)
-        Dim ParsedText As String = TextStreamReader.ReadLineWithNewLine
-        Assert.IsTrue(ParsedText.EndsWith(Environment.NewLine))
-    End Sub
-#End Region
+    Public Module Querying
 
-End Class
+        ''' <summary>
+        ''' Gets an ASCII code of a character
+        ''' </summary>
+        ''' <param name="Character">Character</param>
+        ''' <returns>ASCII code of a character</returns>
+        <Extension>
+        Public Function GetAsciiCode(ByVal Character As Char) As Integer
+            Return AscW(Character)
+        End Function
+
+    End Module
+End Namespace

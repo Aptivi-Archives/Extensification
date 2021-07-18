@@ -16,26 +16,26 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports System.IO
-Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports System.Runtime.CompilerServices
 
-<TestClass>
-Public Class StreamReaderTests
-
-#Region "Reading"
+Namespace ListExts
     ''' <summary>
-    ''' Tests reading a line from the stream reader with the newline characters
+    ''' Provides the list extensions related to addition
     ''' </summary>
-    <TestMethod>
-    Public Sub TestReadLineWithNewLine()
-        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
-                                   "You've reached the second line!"
-        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
-        Dim TextStreamReader As New StreamReader(TextStream)
-        Dim ParsedText As String = TextStreamReader.ReadLineWithNewLine
-        Assert.IsTrue(ParsedText.EndsWith(Environment.NewLine))
-    End Sub
-#End Region
+    Public Module Addition
 
-End Class
+        ''' <summary>
+        ''' Adds an entry to list if not found
+        ''' </summary>
+        ''' <typeparam name="T">Type</typeparam>
+        ''' <param name="TargetList">Target list</param>
+        ''' <param name="Entry">An entry to be added</param>
+        <Extension>
+        Public Sub AddIfNotFound(Of T)(TargetList As List(Of T), Entry As T)
+            If Not TargetList.Contains(Entry) Then
+                TargetList.Add(Entry)
+            End If
+        End Sub
+
+    End Module
+End Namespace

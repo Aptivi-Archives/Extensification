@@ -22,6 +22,7 @@ Imports Extensification.LongExts
 <TestClass>
 Public Class LongTests
 
+#Region "Manipulation"
     ''' <summary>
     ''' Tests long integer incrementation
     ''' </summary>
@@ -31,6 +32,17 @@ Public Class LongTests
         Dim TargetLong As Long = 3
         TargetLong = TargetLong.Increment(2)
         Assert.AreEqual(ExpectedLong, TargetLong)
+    End Sub
+
+    ''' <summary>
+    ''' Tests unsigned long integer incrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestIncrementUnsigned()
+        Dim ExpectedULong As ULong = 5
+        Dim TargetULong As ULong = 3
+        TargetULong = TargetULong.Increment(2)
+        Assert.AreEqual(ExpectedULong, TargetULong)
     End Sub
 
     ''' <summary>
@@ -44,6 +56,19 @@ Public Class LongTests
         Assert.AreEqual(ExpectedLong, TargetLong)
     End Sub
 
+    ''' <summary>
+    ''' Tests unsigned long integer decrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrementUnsigned()
+        Dim ExpectedULong As ULong = 3
+        Dim TargetULong As ULong = 5
+        TargetULong = TargetULong.Decrement(2)
+        Assert.AreEqual(ExpectedULong, TargetULong)
+    End Sub
+#End Region
+
+#Region "Conversion"
     ''' <summary>
     ''' Tests converting data size to human readable
     ''' </summary>
@@ -105,28 +130,6 @@ Public Class LongTests
     End Sub
 
     ''' <summary>
-    ''' Tests unsigned long integer incrementation
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestIncrementUnsigned()
-        Dim ExpectedULong As ULong = 5
-        Dim TargetULong As ULong = 3
-        TargetULong = TargetULong.Increment(2)
-        Assert.AreEqual(ExpectedULong, TargetULong)
-    End Sub
-
-    ''' <summary>
-    ''' Tests unsigned long integer decrementation
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestDecrementUnsigned()
-        Dim ExpectedULong As ULong = 3
-        Dim TargetULong As ULong = 5
-        TargetULong = TargetULong.Decrement(2)
-        Assert.AreEqual(ExpectedULong, TargetULong)
-    End Sub
-
-    ''' <summary>
     ''' Tests converting data size to human readable (Unsigned long)
     ''' </summary>
     <TestMethod>
@@ -185,7 +188,9 @@ Public Class LongTests
         Dim Number As ULong = 4
         Assert.AreEqual(Expected, Number.ToHumanReadable(HumanFormats.VolumeImperial))
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests long integer digit listing
     ''' </summary>
@@ -223,5 +228,6 @@ Public Class LongTests
         Dim TargetNumber As ULong = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
+#End Region
 
 End Class

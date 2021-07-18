@@ -22,6 +22,7 @@ Imports Extensification.ShortExts
 <TestClass>
 Public Class ShortTests
 
+#Region "Manipulation"
     ''' <summary>
     ''' Tests short integer incrementation
     ''' </summary>
@@ -30,17 +31,6 @@ Public Class ShortTests
         Dim ExpectedShort As Short = 5
         Dim TargetShort As Short = 3
         TargetShort = TargetShort.Increment(2)
-        Assert.AreEqual(ExpectedShort, TargetShort)
-    End Sub
-
-    ''' <summary>
-    ''' Tests short integer decrementation
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestDecrement()
-        Dim ExpectedShort As Short = 3
-        Dim TargetShort As Short = 5
-        TargetShort = TargetShort.Decrement(2)
         Assert.AreEqual(ExpectedShort, TargetShort)
     End Sub
 
@@ -56,6 +46,17 @@ Public Class ShortTests
     End Sub
 
     ''' <summary>
+    ''' Tests short integer decrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrement()
+        Dim ExpectedShort As Short = 3
+        Dim TargetShort As Short = 5
+        TargetShort = TargetShort.Decrement(2)
+        Assert.AreEqual(ExpectedShort, TargetShort)
+    End Sub
+
+    ''' <summary>
     ''' Tests unsigned short integer decrementation
     ''' </summary>
     <TestMethod>
@@ -65,7 +66,9 @@ Public Class ShortTests
         TargetUShort = TargetUShort.Decrement(2)
         Assert.AreEqual(ExpectedUShort, TargetUShort)
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests short integer digit listing
     ''' </summary>
@@ -103,5 +106,6 @@ Public Class ShortTests
         Dim TargetNumber As UShort = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
+#End Region
 
 End Class

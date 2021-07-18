@@ -19,41 +19,10 @@
 Imports System.Runtime.CompilerServices
 
 Namespace LongExts
-    Public Module Enums
-
-        ''' <summary>
-        ''' Human-readable formats
-        ''' </summary>
-        Public Enum HumanFormats
-            ''' <summary>
-            ''' Computer data size (KB, MB, GB, TB, PB, EB, ...)
-            ''' </summary>
-            DataSize
-            ''' <summary>
-            ''' Body measurements in metric units (mm, cm, m, km, ...)
-            ''' </summary>
-            MeasurementsMetric
-            ''' <summary>
-            ''' Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Decameters), hm (Hectameters), km, ...)
-            ''' </summary>
-            MeasurementsMetricUnusual
-            ''' <summary>
-            ''' Body measurements in imperial units (feet, yards, miles, ...)
-            ''' </summary>
-            MeasurementsImperial
-            ''' <summary>
-            ''' Body volume in metric units (mL, L, kL (Kiloliters))
-            ''' </summary>
-            VolumeMetric
-            ''' <summary>
-            ''' Body volume in imperial units (pints, quarts, gallons, ...)
-            ''' </summary>
-            VolumeImperial
-        End Enum
-
-    End Module
-
-    Public Module Extensions
+    ''' <summary>
+    ''' Provides the 64-bit integer extensions related to conversion
+    ''' </summary>
+    Public Module Conversion
 
         ''' <summary>
         ''' Converts number to a human readable format with units used
@@ -161,32 +130,6 @@ Namespace LongExts
         End Function
 
         ''' <summary>
-        ''' Increments the number
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <param name="IncrementThreshold">How many times to increment</param>
-        ''' <returns>Incremented number</returns>
-        <Extension>
-        Public Function Increment(ByVal Number As Long, ByVal IncrementThreshold As Long) As Long
-            If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
-            Number += IncrementThreshold
-            Return Number
-        End Function
-
-        ''' <summary>
-        ''' Decrements the number
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <param name="DecrementThreshold">How many times to decrement</param>
-        ''' <returns>Decremented number</returns>
-        <Extension>
-        Public Function Decrement(ByVal Number As Long, ByVal DecrementThreshold As Long) As Long
-            If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
-            Number -= DecrementThreshold
-            Return Number
-        End Function
-
-        ''' <summary>
         ''' Converts number to a human readable format with units used
         ''' </summary>
         ''' <param name="Num">Number</param>
@@ -289,88 +232,6 @@ Namespace LongExts
                     End If
             End Select
             Return HumanString
-        End Function
-
-        ''' <summary>
-        ''' Increments the number
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <param name="IncrementThreshold">How many times to increment</param>
-        ''' <returns>Incremented number</returns>
-        <Extension>
-        Public Function Increment(ByVal Number As ULong, ByVal IncrementThreshold As Long) As Long
-            If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
-            Number += IncrementThreshold
-            Return Number
-        End Function
-
-        ''' <summary>
-        ''' Decrements the number
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <param name="DecrementThreshold">How many times to decrement</param>
-        ''' <returns>Decremented number</returns>
-        <Extension>
-        Public Function Decrement(ByVal Number As ULong, ByVal DecrementThreshold As Long) As Long
-            If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
-            Number -= DecrementThreshold
-            Return Number
-        End Function
-
-        ''' <summary>
-        ''' Makes a list of digits
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <returns>Array of digits</returns>
-        <Extension>
-        Public Function ListDigits(ByVal Number As Long) As Long()
-            Dim StrNum As String = Number.ToString
-            Dim NumList As Long() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToInt64(x.ToString))
-            Return NumList
-        End Function
-
-        ''' <summary>
-        ''' Makes a list of digits
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <returns>Array of digits</returns>
-        <Extension>
-        Public Function ListDigits(ByVal Number As ULong) As ULong()
-            Dim StrNum As String = Number.ToString
-            Dim NumList As ULong() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToUInt64(x.ToString))
-            Return NumList
-        End Function
-
-        ''' <summary>
-        ''' Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <returns>True if the number is an Armstrong number; False if not.</returns>
-        <Extension>
-        Public Function IsArmstrong(ByVal Number As Long) As Boolean
-            Dim Num As Long = Number
-            Dim NumberDigits() As Long = Num.ListDigits
-            Dim SumOfCubesOfDigits As Long
-            For i As Integer = 0 To NumberDigits.Length - 1
-                SumOfCubesOfDigits += Math.Pow(NumberDigits(i), 3)
-            Next
-            Return Num = SumOfCubesOfDigits
-        End Function
-
-        ''' <summary>
-        ''' Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
-        ''' </summary>
-        ''' <param name="Number">Number</param>
-        ''' <returns>True if the number is an Armstrong number; False if not.</returns>
-        <Extension>
-        Public Function IsArmstrong(ByVal Number As ULong) As Boolean
-            Dim Num As ULong = Number
-            Dim NumberDigits() As ULong = Num.ListDigits
-            Dim SumOfCubesOfDigits As ULong
-            For i As Integer = 0 To NumberDigits.Length - 1
-                SumOfCubesOfDigits += Math.Pow(NumberDigits(i), 3)
-            Next
-            Return Num = SumOfCubesOfDigits
         End Function
 
     End Module

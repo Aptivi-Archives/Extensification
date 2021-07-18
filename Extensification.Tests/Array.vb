@@ -22,6 +22,7 @@ Imports Extensification.ArrayExts
 <TestClass>
 Public Class ArrayTests
 
+#Region "Addition"
     ''' <summary>
     ''' Tests adding an entry to array
     ''' </summary>
@@ -33,6 +34,19 @@ Public Class ArrayTests
     End Sub
 
     ''' <summary>
+    ''' Tests adding a range of entries to array
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddRange()
+        Dim TargetArray() As Integer = {2, 3}
+        Dim Range() As Integer = {4, 5, 6, 7, 8, 9}
+        TargetArray.AddRange(Range)
+        Assert.IsTrue(TargetArray.Length = 8)
+    End Sub
+#End Region
+
+#Region "Removal"
+    ''' <summary>
     ''' Tests removing an entry to array
     ''' </summary>
     <TestMethod>
@@ -41,7 +55,9 @@ Public Class ArrayTests
         TargetArray.Remove(4)
         Assert.IsTrue(TargetArray.Length = 2)
     End Sub
+#End Region
 
+#Region "Conversion"
     ''' <summary>
     ''' Tests converting array to array list
     ''' </summary>
@@ -52,7 +68,9 @@ Public Class ArrayTests
         Assert.IsNotNull(TargetList)
         Assert.IsTrue(TargetList.Count > 0)
     End Sub
+#End Region
 
+#Region "Getting"
     ''' <summary>
     ''' Tests getting index from entry
     ''' </summary>
@@ -62,28 +80,6 @@ Public Class ArrayTests
         Dim ExpectedIndex As Integer = 1
         Dim ActualIndex As Integer() = TargetArray.GetIndexFromEntry("index from")
         Assert.AreEqual(ExpectedIndex, ActualIndex(0))
-    End Sub
-
-    ''' <summary>
-    ''' Tests counting full entries
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestCountFullEntries()
-        Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
-        Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
-        Assert.AreEqual(CLng(2), TargetArray.CountFullEntries)
-        Assert.AreEqual(CLng(1), TargetArrayObjects.CountFullEntries)
-    End Sub
-
-    ''' <summary>
-    ''' Tests counting empty entries
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestCountEmptyEntries()
-        Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
-        Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
-        Assert.AreEqual(CLng(3), TargetArray.CountEmptyEntries)
-        Assert.AreEqual(CLng(2), TargetArrayObjects.CountEmptyEntries)
     End Sub
 
     ''' <summary>
@@ -115,7 +111,33 @@ Public Class ArrayTests
         Assert.IsTrue(TargetArray.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
         Assert.IsTrue(TargetArrayObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
+#End Region
 
+#Region "Counts"
+    ''' <summary>
+    ''' Tests counting full entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestCountFullEntries()
+        Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
+        Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
+        Assert.AreEqual(CLng(2), TargetArray.CountFullEntries)
+        Assert.AreEqual(CLng(1), TargetArrayObjects.CountFullEntries)
+    End Sub
+
+    ''' <summary>
+    ''' Tests counting empty entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestCountEmptyEntries()
+        Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
+        Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
+        Assert.AreEqual(CLng(3), TargetArray.CountEmptyEntries)
+        Assert.AreEqual(CLng(2), TargetArrayObjects.CountEmptyEntries)
+    End Sub
+#End Region
+
+#Region "Querying"
     ''' <summary>
     ''' Tests seeing if the array contains any of the specified clauses
     ''' </summary>
@@ -135,18 +157,9 @@ Public Class ArrayTests
         Assert.IsTrue(TargetArray.ContainsAllOf({"Hello and Test", "Test"}))
         Assert.IsFalse(TargetArray.ContainsAllOf({"Goodbye", "Works"}))
     End Sub
+#End Region
 
-    ''' <summary>
-    ''' Tests adding a range of entries to array
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestAddRange()
-        Dim TargetArray() As Integer = {2, 3}
-        Dim Range() As Integer = {4, 5, 6, 7, 8, 9}
-        TargetArray.AddRange(Range)
-        Assert.IsTrue(TargetArray.Length = 8)
-    End Sub
-
+#Region "Manipulation"
     ''' <summary>
     ''' Tests stringifying a char array
     ''' </summary>
@@ -155,5 +168,6 @@ Public Class ArrayTests
         Dim TargetArray() As Char = {"H", "e", "l", "l", "o"}
         Assert.AreEqual("Hello", TargetArray.Stringify)
     End Sub
+#End Region
 
 End Class

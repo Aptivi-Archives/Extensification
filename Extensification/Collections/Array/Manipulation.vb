@@ -16,33 +16,21 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports System.IO
 Imports System.Runtime.CompilerServices
-Imports System.Text
 
-Namespace StreamReaderExts
-    Public Module Extensions
+Namespace ArrayExts
+    ''' <summary>
+    ''' Provides the array extensions related to manipulation
+    ''' </summary>
+    Public Module Manipulation
 
         ''' <summary>
-        ''' Reads a line from the stream with the newline characters
+        ''' Stringifies the character array (making a string from the character entries found inside the array)
         ''' </summary>
-        ''' <param name="reader">The stream reader</param>
+        ''' <param name="TargetCharArray">Character array</param>
         <Extension>
-        Public Function ReadLineWithNewLine(ByVal reader As StreamReader) As String
-            'Define a new string builder
-            Dim strBuilder As New StringBuilder()
-
-            'Read files as character numbers and convert them to string
-            While Not reader.EndOfStream
-                Dim readFile As Integer = reader.Read
-                strBuilder.Append(ChrW(readFile))
-                If readFile = 10 Then
-                    Exit While
-                End If
-            End While
-
-            'Return the final result
-            Return strBuilder.ToString()
+        Public Function Stringify(ByRef TargetCharArray() As Char) As String
+            Return String.Join("", TargetCharArray)
         End Function
 
     End Module

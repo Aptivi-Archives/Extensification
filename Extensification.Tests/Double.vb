@@ -22,6 +22,7 @@ Imports Extensification.DoubleExts
 <TestClass>
 Public Class DoubleTests
 
+#Region "Manipulation"
     ''' <summary>
     ''' Tests double-precision number incrementation
     ''' </summary>
@@ -43,7 +44,9 @@ Public Class DoubleTests
         TargetDouble = TargetDouble.Decrement(2)
         Assert.AreEqual(ExpectedDouble, TargetDouble)
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests double digit listing (before the decimal point)
     ''' </summary>
@@ -72,5 +75,6 @@ Public Class DoubleTests
         Dim TargetNumber As Double = 153.4
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
+#End Region
 
 End Class

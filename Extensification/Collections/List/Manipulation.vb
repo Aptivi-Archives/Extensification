@@ -16,26 +16,22 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports System.IO
-Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports System.Runtime.CompilerServices
 
-<TestClass>
-Public Class StreamReaderTests
-
-#Region "Reading"
+Namespace ListExts
     ''' <summary>
-    ''' Tests reading a line from the stream reader with the newline characters
+    ''' Provides the list extensions related to manipulation
     ''' </summary>
-    <TestMethod>
-    Public Sub TestReadLineWithNewLine()
-        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
-                                   "You've reached the second line!"
-        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
-        Dim TextStreamReader As New StreamReader(TextStream)
-        Dim ParsedText As String = TextStreamReader.ReadLineWithNewLine
-        Assert.IsTrue(ParsedText.EndsWith(Environment.NewLine))
-    End Sub
-#End Region
+    Public Module Manipulation
 
-End Class
+        ''' <summary>
+        ''' Stringifies the character array (making a string from the character entries found inside the array)
+        ''' </summary>
+        ''' <param name="TargetCharArray">Character array</param>
+        <Extension>
+        Public Function Stringify(ByRef TargetCharArray As List(Of Char)) As String
+            Return String.Join("", TargetCharArray)
+        End Function
+
+    End Module
+End Namespace

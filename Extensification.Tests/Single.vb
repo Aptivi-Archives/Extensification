@@ -22,6 +22,7 @@ Imports Extensification.SingleExts
 <TestClass>
 Public Class SingleTests
 
+#Region "Manipulation"
     ''' <summary>
     ''' Tests Single-precision number incrementation
     ''' </summary>
@@ -43,7 +44,9 @@ Public Class SingleTests
         TargetSingle = TargetSingle.Decrement(2)
         Assert.AreEqual(ExpectedSingle, TargetSingle)
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests Single digit listing (before the decimal point)
     ''' </summary>
@@ -72,5 +75,6 @@ Public Class SingleTests
         Dim TargetNumber As Single = 153.4
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
+#End Region
 
 End Class

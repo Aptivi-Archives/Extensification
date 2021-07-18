@@ -23,102 +23,7 @@ Imports System.IO
 <TestClass>
 Public Class DictionaryTests
 
-    ''' <summary>
-    ''' Tests getting key from value
-    ''' </summary>
-    <TestMethod>
-    Sub TestGetKeyFromValue()
-        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
-        Dim NeededNumber As Integer = 2
-        Dim Returned As String = TargetDictionary.GetKeyFromValue(NeededNumber)
-        Assert.AreEqual("awesome!", Returned, "Failed to get key from value. Got {0}", Returned)
-    End Sub
-
-    ''' <summary>
-    ''' Tests getting index of a key in dictionary that has keys of type <see cref="String"/>
-    ''' </summary>
-    <TestMethod>
-    Sub TestGetIndexOfKey()
-        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
-        Dim NeededKey As String = "awesome!"
-        Dim Returned As Integer = TargetDictionary.GetIndexOfKey(NeededKey)
-        Assert.AreEqual(2, Returned, "Failed to get index of key. Got {0}", Returned)
-    End Sub
-
-    ''' <summary>
-    ''' Tests getting index of a value in dictionary that has keys of type <see cref="String"/>
-    ''' </summary>
-    <TestMethod>
-    Sub TestGetIndexOfValue()
-        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
-        Dim NeededValue As Integer = 1
-        Dim Returned As Integer = TargetDictionary.GetIndexOfValue(NeededValue)
-        Assert.AreEqual(1, Returned, "Failed to get index of key. Got {0}", Returned)
-    End Sub
-
-    ''' <summary>
-    ''' Tests getting index of a key in dictionary that has keys of a type that can't be compared using the "=" operator.
-    ''' </summary>
-    <TestMethod>
-    Sub TestGetIndexOfKeyNonString()
-        Dim NeededKey As New MemoryStream(16)
-        Dim TargetDictionary As New Dictionary(Of Stream, Integer) From {{New MemoryStream(8), 0}, {NeededKey, 1}, {New MemoryStream(32), 2}}
-        Dim Returned As Integer = TargetDictionary.GetIndexOfKey(NeededKey)
-        Assert.AreEqual(1, Returned, "Failed to get index of key. Got {0}", Returned)
-    End Sub
-
-    ''' <summary>
-    ''' Tests counting full entries
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestCountFullEntries()
-        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
-        Dim TargetDictObjects As New Dictionary(Of String, String) From {{"Object 1", 68}, {"Object 2", Nothing}}
-        Assert.AreEqual(2, TargetDict.CountFullEntries)
-        Assert.AreEqual(1, TargetDictObjects.CountFullEntries)
-    End Sub
-
-    ''' <summary>
-    ''' Tests counting empty entries
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestCountEmptyEntries()
-        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
-        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
-        Assert.AreEqual(1, TargetDict.CountEmptyEntries)
-        Assert.AreEqual(1, TargetDictObjects.CountEmptyEntries)
-    End Sub
-
-    ''' <summary>
-    ''' Tests getting indexes of full entries
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestGetIndexesOfFullEntries()
-        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
-        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
-        Dim ExpectedIndexes() As Integer = {1, 2}
-        Dim ExpectedIndexesObjects() As Integer = {0}
-        Assert.IsNotNull(TargetDict.GetIndexesOfFullEntries)
-        Assert.IsNotNull(TargetDictObjects.GetIndexesOfFullEntries)
-        Assert.IsTrue(TargetDict.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexes))
-        Assert.IsTrue(TargetDictObjects.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexesObjects))
-    End Sub
-
-    ''' <summary>
-    ''' Tests getting indexes of empty entries
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestGetIndexesOfEmptyEntries()
-        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
-        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
-        Dim ExpectedIndexes() As Integer = {0}
-        Dim ExpectedIndexesObjects() As Integer = {1}
-        Assert.IsNotNull(TargetDict.GetIndexesOfEmptyEntries)
-        Assert.IsNotNull(TargetDictObjects.GetIndexesOfEmptyEntries)
-        Assert.IsTrue(TargetDict.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
-        Assert.IsTrue(TargetDictObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
-    End Sub
-
+#Region "Addition"
     ''' <summary>
     ''' Tests adding an entry to dictionary if not found
     ''' </summary>
@@ -372,6 +277,120 @@ Public Class DictionaryTests
         Assert.IsTrue(TargetDict("String 1") = 32)
     End Sub
 
+#If NET45 Then
+    ''' <summary>
+    ''' Tests trying to add an entry to dictionary
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryAdd()
+        Dim TargetDict As New Dictionary(Of String, Integer)
+        Assert.IsTrue(TargetDict.TryAdd("Document number", 12))
+        Assert.IsFalse(TargetDict.TryAdd("Document number", 13))
+    End Sub
+#End If
+#End Region
+
+#Region "Counts"
+    ''' <summary>
+    ''' Tests counting full entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestCountFullEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, String) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Assert.AreEqual(2, TargetDict.CountFullEntries)
+        Assert.AreEqual(1, TargetDictObjects.CountFullEntries)
+    End Sub
+
+    ''' <summary>
+    ''' Tests counting empty entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestCountEmptyEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Assert.AreEqual(1, TargetDict.CountEmptyEntries)
+        Assert.AreEqual(1, TargetDictObjects.CountEmptyEntries)
+    End Sub
+#End Region
+
+#Region "Getting"
+    ''' <summary>
+    ''' Tests getting key from value
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetKeyFromValue()
+        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
+        Dim NeededNumber As Integer = 2
+        Dim Returned As String = TargetDictionary.GetKeyFromValue(NeededNumber)
+        Assert.AreEqual("awesome!", Returned, "Failed to get key from value. Got {0}", Returned)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting index of a key in dictionary that has keys of type <see cref="String"/>
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetIndexOfKey()
+        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
+        Dim NeededKey As String = "awesome!"
+        Dim Returned As Integer = TargetDictionary.GetIndexOfKey(NeededKey)
+        Assert.AreEqual(2, Returned, "Failed to get index of key. Got {0}", Returned)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting index of a value in dictionary that has keys of type <see cref="String"/>
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetIndexOfValue()
+        Dim TargetDictionary As New Dictionary(Of String, Integer) From {{"Extensification", 0}, {"is", 1}, {"awesome!", 2}}
+        Dim NeededValue As Integer = 1
+        Dim Returned As Integer = TargetDictionary.GetIndexOfValue(NeededValue)
+        Assert.AreEqual(1, Returned, "Failed to get index of key. Got {0}", Returned)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting index of a key in dictionary that has keys of a type that can't be compared using the "=" operator.
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetIndexOfKeyNonString()
+        Dim NeededKey As New MemoryStream(16)
+        Dim TargetDictionary As New Dictionary(Of Stream, Integer) From {{New MemoryStream(8), 0}, {NeededKey, 1}, {New MemoryStream(32), 2}}
+        Dim Returned As Integer = TargetDictionary.GetIndexOfKey(NeededKey)
+        Assert.AreEqual(1, Returned, "Failed to get index of key. Got {0}", Returned)
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting indexes of full entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexesOfFullEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Dim ExpectedIndexes() As Integer = {1, 2}
+        Dim ExpectedIndexesObjects() As Integer = {0}
+        Assert.IsNotNull(TargetDict.GetIndexesOfFullEntries)
+        Assert.IsNotNull(TargetDictObjects.GetIndexesOfFullEntries)
+        Assert.IsTrue(TargetDict.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexes))
+        Assert.IsTrue(TargetDictObjects.GetIndexesOfFullEntries.SequenceEqual(ExpectedIndexesObjects))
+    End Sub
+
+    ''' <summary>
+    ''' Tests getting indexes of empty entries
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexesOfEmptyEntries()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Full", ""}, {"", "entry"}, {"Index", "5"}}
+        Dim TargetDictObjects As New Dictionary(Of String, Object) From {{"Object 1", 68}, {"Object 2", Nothing}}
+        Dim ExpectedIndexes() As Integer = {0}
+        Dim ExpectedIndexesObjects() As Integer = {1}
+        Assert.IsNotNull(TargetDict.GetIndexesOfEmptyEntries)
+        Assert.IsNotNull(TargetDictObjects.GetIndexesOfEmptyEntries)
+        Assert.IsTrue(TargetDict.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
+        Assert.IsTrue(TargetDictObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
+    End Sub
+#End Region
+
+#Region "Manipulation"
     ''' <summary>
     ''' Tests incrementing a number
     ''' </summary>
@@ -613,6 +632,18 @@ Public Class DictionaryTests
     End Sub
 
     ''' <summary>
+    ''' Tests renaming key
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestRenameKey()
+        Dim TargetDict As New Dictionary(Of String, String) From {{"Name", "Extensification"}, {"Tyoe", "Library"}}
+        TargetDict.RenameKey("Tyoe", "Type")
+        Assert.IsTrue(TargetDict.ContainsKey("Type"))
+    End Sub
+#End Region
+
+#Region "Querying"
+    ''' <summary>
     ''' Tests seeing if the dictionary contains any of the specified clauses
     ''' </summary>
     <TestMethod>
@@ -651,25 +682,7 @@ Public Class DictionaryTests
         Assert.IsTrue(TargetDict.ContainsAllOfInValues({1, 3}))
         Assert.IsFalse(TargetDict.ContainsAllOfInValues({5, 7}))
     End Sub
-
-    <TestMethod>
-    Public Sub TestRenameKey()
-        Dim TargetDict As New Dictionary(Of String, String) From {{"Name", "Extensification"}, {"Tyoe", "Library"}}
-        TargetDict.RenameKey("Tyoe", "Type")
-        Assert.IsTrue(TargetDict.ContainsKey("Type"))
-    End Sub
-
-#If NET45 Then
-    ''' <summary>
-    ''' Tests trying to add an entry to dictionary
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestTryAdd()
-        Dim TargetDict As New Dictionary(Of String, Integer)
-        Assert.IsTrue(TargetDict.TryAdd("Document number", 12))
-        Assert.IsFalse(TargetDict.TryAdd("Document number", 13))
-    End Sub
-#End If
+#End Region
 
 End Class
 

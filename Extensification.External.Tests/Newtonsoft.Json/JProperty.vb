@@ -23,6 +23,7 @@ Imports Extensification.External.Newtonsoft.Json.JPropertyExts
 <TestClass>
 Public Class JPropertyTests
 
+#Region "Getting"
     ''' <summary>
     ''' Tests getting property name ending with a specified string
     ''' </summary>
@@ -88,7 +89,9 @@ Public Class JPropertyTests
         Dim JsonProperty As String = JsonToken.First.GetPropertyNameContaining("sion")
         Assert.AreEqual("", JsonProperty)
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests selecting a token that has its key ending with a specified string
     ''' </summary>
@@ -220,5 +223,6 @@ Public Class JPropertyTests
         Dim JsonProperty As JToken = JsonToken.First.SelectTokenKeyContaining("sion")
         Assert.IsNull(JsonProperty)
     End Sub
+#End Region
 
 End Class

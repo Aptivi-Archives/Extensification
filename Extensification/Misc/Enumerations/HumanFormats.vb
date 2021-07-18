@@ -16,43 +16,32 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
-Imports Extensification.CharExts
-
-<TestClass>
-Public Class CharTests
-
-#Region "Manipulation"
+''' <summary>
+''' Human-readable formats
+''' </summary>
+Public Enum HumanFormats
     ''' <summary>
-    ''' Tests character incrementation
+    ''' Computer data size (KB, MB, GB, TB, PB, EB, ...)
     ''' </summary>
-    <TestMethod>
-    Public Sub TestIncrement()
-        Dim Target As Char = "A"
-        Target = Target.Increment(4)
-        Assert.AreEqual("E"c, Target)
-    End Sub
-
+    DataSize
     ''' <summary>
-    ''' Tests character decrementation
+    ''' Body measurements in metric units (mm, cm, m, km, ...)
     ''' </summary>
-    <TestMethod>
-    Public Sub TestDecrement()
-        Dim Target As Char = "E"
-        Target = Target.Decrement(4)
-        Assert.AreEqual("A"c, Target)
-    End Sub
-#End Region
-
-#Region "Querying"
+    MeasurementsMetric
     ''' <summary>
-    ''' Tests character ASCII code fetching
+    ''' Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Decameters), hm (Hectameters), km, ...)
     ''' </summary>
-    <TestMethod>
-    Public Sub TestGetAsciiCode()
-        Dim Target As Char = "E"
-        Assert.AreEqual(69, Target.GetAsciiCode)
-    End Sub
-#End Region
-
-End Class
+    MeasurementsMetricUnusual
+    ''' <summary>
+    ''' Body measurements in imperial units (feet, yards, miles, ...)
+    ''' </summary>
+    MeasurementsImperial
+    ''' <summary>
+    ''' Body volume in metric units (mL, L, kL (Kiloliters))
+    ''' </summary>
+    VolumeMetric
+    ''' <summary>
+    ''' Body volume in imperial units (pints, quarts, gallons, ...)
+    ''' </summary>
+    VolumeImperial
+End Enum

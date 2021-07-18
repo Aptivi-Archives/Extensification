@@ -16,26 +16,26 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports System.IO
-Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports System.Runtime.CompilerServices
 
-<TestClass>
-Public Class StreamReaderTests
-
-#Region "Reading"
+Namespace ArrayListExts
     ''' <summary>
-    ''' Tests reading a line from the stream reader with the newline characters
+    ''' Provides the array list extensions related to conversion
     ''' </summary>
-    <TestMethod>
-    Public Sub TestReadLineWithNewLine()
-        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
-                                   "You've reached the second line!"
-        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
-        Dim TextStreamReader As New StreamReader(TextStream)
-        Dim ParsedText As String = TextStreamReader.ReadLineWithNewLine
-        Assert.IsTrue(ParsedText.EndsWith(Environment.NewLine))
-    End Sub
-#End Region
+    Public Module Conversion
 
-End Class
+        ''' <summary>
+        ''' Converts an array list to list of <see cref="Object"/>.
+        ''' </summary>
+        ''' <param name="TargetArray">Target array list</param>
+        ''' <returns>A list from array list</returns>
+        <Extension>
+        Public Function ToList(ByVal TargetArray As ArrayList) As List(Of Object)
+            If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
+            Dim ArrayValues As New List(Of Object)
+            ArrayValues.AddRange(TargetArray.ToArray)
+            Return ArrayValues
+        End Function
+
+    End Module
+End Namespace

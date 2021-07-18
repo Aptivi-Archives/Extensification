@@ -19,7 +19,10 @@
 Imports System.Runtime.CompilerServices
 
 Namespace CharExts
-    Public Module Extensions
+    ''' <summary>
+    ''' Provides the character extensions related to manipulation
+    ''' </summary>
+    Public Module Manipulation
 
         ''' <summary>
         ''' Increments the character
@@ -43,16 +46,6 @@ Namespace CharExts
         Public Function Decrement(ByVal Character As Char, ByVal DecrementThreshold As Integer) As Char
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Return ChrW(AscW(Character) - DecrementThreshold)
-        End Function
-
-        ''' <summary>
-        ''' Gets an ASCII code of a character
-        ''' </summary>
-        ''' <param name="Character">Character</param>
-        ''' <returns>ASCII code of a character</returns>
-        <Extension>
-        Public Function GetAsciiCode(ByVal Character As Char) As Integer
-            Return AscW(Character)
         End Function
 
     End Module

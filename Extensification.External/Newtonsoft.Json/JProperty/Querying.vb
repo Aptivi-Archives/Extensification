@@ -1,4 +1,4 @@
-
+﻿
 '    Extensification  Copyright (C) 2020-2021  EoflaOE
 '
 '    This file is part of Extensification
@@ -21,55 +21,10 @@ Imports Newtonsoft.Json.Linq
 Imports Extensification.StringExts
 
 Namespace Newtonsoft.Json.JPropertyExts
-    Public Module Extensions
-
-        ''' <summary>
-        ''' Gets a property name that starts with specified string
-        ''' </summary>
-        ''' <param name="Token">JSON token</param>
-        ''' <param name="Containing">String to find at the beginning of string</param>
-        ''' <returns>A property name if found; nothing if not found</returns>
-        <Extension>
-        Public Function GetPropertyNameStartingWith(ByVal Token As JToken, ByVal Containing As String) As String
-            For Each TokenProperty As JProperty In Token
-                If TokenProperty.Name.StartsWith(Containing) Then
-                    Return TokenProperty.Name
-                End If
-            Next
-            Return ""
-        End Function
-
-        ''' <summary>
-        ''' Gets a property name that ends with specified string
-        ''' </summary>
-        ''' <param name="Token">JSON token</param>
-        ''' <param name="Containing">String to find at the end of string</param>
-        ''' <returns>A property name if found; nothing if not found</returns>
-        <Extension>
-        Public Function GetPropertyNameEndingWith(ByVal Token As JToken, ByVal Containing As String) As String
-            For Each TokenProperty As JProperty In Token
-                If TokenProperty.Name.EndsWith(Containing) Then
-                    Return TokenProperty.Name
-                End If
-            Next
-            Return ""
-        End Function
-
-        ''' <summary>
-        ''' Gets a property name that contains the specified string
-        ''' </summary>
-        ''' <param name="Token">JSON token</param>
-        ''' <param name="Containing">String to find in string</param>
-        ''' <returns>A property name if found; nothing if not found</returns>
-        <Extension>
-        Public Function GetPropertyNameContaining(ByVal Token As JToken, ByVal Containing As String) As String
-            For Each TokenProperty As JProperty In Token
-                If TokenProperty.Name.Contains(Containing) Then
-                    Return TokenProperty.Name
-                End If
-            Next
-            Return ""
-        End Function
+    ''' <summary>
+    ''' Provides the JProperty extensions related to querying
+    ''' </summary>
+    Public Module Querying
 
         ''' <summary>
         ''' Selects a token that has its key containing the specified string

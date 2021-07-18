@@ -22,6 +22,7 @@ Imports Extensification.ByteExts
 <TestClass>
 Public Class ByteTests
 
+#Region "Manipulation"
     ''' <summary>
     ''' Tests byte incrementation
     ''' </summary>
@@ -43,7 +44,9 @@ Public Class ByteTests
         TargetByte = TargetByte.Decrement(2)
         Assert.AreEqual(ExpectedByte, TargetByte)
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests byte digit listing
     ''' </summary>
@@ -62,5 +65,6 @@ Public Class ByteTests
         Dim TargetNumber As Byte = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
+#End Region
 
 End Class

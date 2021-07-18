@@ -22,6 +22,20 @@ Imports Extensification.ListExts
 <TestClass>
 Public Class ListTests
 
+#Region "Addition"
+    ''' <summary>
+    ''' Tests adding an entry to list if not found
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestAddIfNotFound()
+        Dim TargetList As New List(Of String)
+        TargetList.AddIfNotFound("String 1")
+        TargetList.AddIfNotFound("String 1")
+        Assert.IsTrue(TargetList.Count = 1)
+    End Sub
+#End Region
+
+#Region "Conversion"
     ''' <summary>
     ''' Tests converting list to array list
     ''' </summary>
@@ -32,17 +46,9 @@ Public Class ListTests
         Assert.IsNotNull(TargetArrayList)
         Assert.IsTrue(TargetArrayList.Count > 0)
     End Sub
+#End Region
 
-    ''' <summary>
-    ''' Tests getting index from entry
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestGetIndexFromEntry()
-        Dim TargetList As New List(Of String) From {"Test getting", "index from", "array list entry."}
-        Dim ExpectedIndex As Integer = 1
-        Assert.AreEqual(ExpectedIndex, TargetList.GetIndexFromEntry("index from")(0))
-    End Sub
-
+#Region "Counts"
     ''' <summary>
     ''' Tests counting full entries
     ''' </summary>
@@ -63,6 +69,18 @@ Public Class ListTests
         Dim TargetListObjects As New List(Of Object) From {12, Nothing, 32, 48}
         Assert.AreEqual(4, TargetList.CountEmptyEntries)
         Assert.AreEqual(1, TargetListObjects.CountEmptyEntries)
+    End Sub
+#End Region
+
+#Region "Getting"
+    ''' <summary>
+    ''' Tests getting index from entry
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestGetIndexFromEntry()
+        Dim TargetList As New List(Of String) From {"Test getting", "index from", "array list entry."}
+        Dim ExpectedIndex As Integer = 1
+        Assert.AreEqual(ExpectedIndex, TargetList.GetIndexFromEntry("index from")(0))
     End Sub
 
     ''' <summary>
@@ -94,28 +112,20 @@ Public Class ListTests
         Assert.IsTrue(TargetList.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexes))
         Assert.IsTrue(TargetListObjects.GetIndexesOfEmptyEntries.SequenceEqual(ExpectedIndexesObjects))
     End Sub
+#End Region
 
+#Region "Manipulation"
     ''' <summary>
-    ''' Tests adding an entry to list if not found
+    ''' Tests stringifying a char array
     ''' </summary>
     <TestMethod>
-    Public Sub TestAddIfNotFound()
-        Dim TargetList As New List(Of String)
-        TargetList.AddIfNotFound("String 1")
-        TargetList.AddIfNotFound("String 1")
-        Assert.IsTrue(TargetList.Count = 1)
+    Public Sub TestStringify()
+        Dim TargetArray As New List(Of Char) From {"H", "e", "l", "l", "o"}
+        Assert.AreEqual("Hello", TargetArray.Stringify)
     End Sub
+#End Region
 
-    ''' <summary>
-    ''' Tests trying to remove an entry from list
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestTryRemove()
-        Dim TargetList As New List(Of String) From {"Test"}
-        Assert.IsTrue(TargetList.TryRemove("Test"))
-        Assert.IsFalse(TargetList.TryRemove("Test2"))
-    End Sub
-
+#Region "Querying"
     ''' <summary>
     ''' Tests seeing if the list contains any of the specified clauses
     ''' </summary>
@@ -135,14 +145,18 @@ Public Class ListTests
         Assert.IsTrue(TargetList.ContainsAllOf({"Hello and Test", "Test"}))
         Assert.IsFalse(TargetList.ContainsAllOf({"Goodbye", "Works"}))
     End Sub
+#End Region
 
+#Region "Removal"
     ''' <summary>
-    ''' Tests stringifying a char array
+    ''' Tests trying to remove an entry from list
     ''' </summary>
     <TestMethod>
-    Public Sub TestStringify()
-        Dim TargetArray As New List(Of Char) From {"H", "e", "l", "l", "o"}
-        Assert.AreEqual("Hello", TargetArray.Stringify)
+    Public Sub TestTryRemove()
+        Dim TargetList As New List(Of String) From {"Test"}
+        Assert.IsTrue(TargetList.TryRemove("Test"))
+        Assert.IsFalse(TargetList.TryRemove("Test2"))
     End Sub
+#End Region
 
 End Class

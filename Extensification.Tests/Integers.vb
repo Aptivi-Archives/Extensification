@@ -22,6 +22,7 @@ Imports Extensification.IntegerExts
 <TestClass>
 Public Class IntegerTests
 
+#Region "Manipulation"
     ''' <summary>
     ''' Tests integer incrementation
     ''' </summary>
@@ -30,17 +31,6 @@ Public Class IntegerTests
         Dim ExpectedInteger As Integer = 5
         Dim TargetInteger As Integer = 3
         TargetInteger = TargetInteger.Increment(2)
-        Assert.AreEqual(ExpectedInteger, TargetInteger)
-    End Sub
-
-    ''' <summary>
-    ''' Tests integer decrementation
-    ''' </summary>
-    <TestMethod>
-    Public Sub TestDecrement()
-        Dim ExpectedInteger As Integer = 3
-        Dim TargetInteger As Integer = 5
-        TargetInteger = TargetInteger.Decrement(2)
         Assert.AreEqual(ExpectedInteger, TargetInteger)
     End Sub
 
@@ -56,6 +46,17 @@ Public Class IntegerTests
     End Sub
 
     ''' <summary>
+    ''' Tests integer decrementation
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestDecrement()
+        Dim ExpectedInteger As Integer = 3
+        Dim TargetInteger As Integer = 5
+        TargetInteger = TargetInteger.Decrement(2)
+        Assert.AreEqual(ExpectedInteger, TargetInteger)
+    End Sub
+
+    ''' <summary>
     ''' Tests unsigned integer decrementation
     ''' </summary>
     <TestMethod>
@@ -65,7 +66,9 @@ Public Class IntegerTests
         TargetUInteger = TargetUInteger.Decrement(2)
         Assert.AreEqual(ExpectedUInteger, TargetUInteger)
     End Sub
+#End Region
 
+#Region "Querying"
     ''' <summary>
     ''' Tests integer digit listing
     ''' </summary>
@@ -103,5 +106,6 @@ Public Class IntegerTests
         Dim TargetNumber As UInteger = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
     End Sub
+#End Region
 
 End Class
