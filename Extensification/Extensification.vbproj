@@ -21,6 +21,8 @@
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.6:
 - Added SByte support for Byte extension
+- Added Enumerable extensions
+- Incompatible types fixed
 
 2021.5.2:
 - Added new dictionary extensions

@@ -89,6 +89,39 @@ Public Class JPropertyTests
         Dim JsonProperty As String = JsonToken.First.GetPropertyNameContaining("sion")
         Assert.AreEqual("", JsonProperty)
     End Sub
+
+    ''' <summary>
+    ''' Tests the logic of getting properties that has the specific type in value
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetPropertiesTypeInValue()
+        Dim JsonString As String = My.Resources.JSON_PropertyTest1
+        Dim JsonToken As JToken = JToken.Parse(JsonString)
+        Dim JsonProperty As List(Of JToken) = JsonToken.First.GetPropertiesTypeInValue(JTokenType.String)
+        Assert.IsTrue(JsonProperty.Count <> 0)
+    End Sub
+
+    ''' <summary>
+    ''' Tests the logic of getting properties that has the specific type in value should return nothing if the property of specific type doesn't exist
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetPropertiesTypeInValueShouldReturnNothingIfNotExists()
+        Dim JsonString As String = My.Resources.JSON_PropertyTest1
+        Dim JsonToken As JToken = JToken.Parse(JsonString)
+        Dim JsonProperty As List(Of JToken) = JsonToken.First.GetPropertiesTypeInValue(JTokenType.Boolean)
+        Assert.IsTrue(JsonProperty.Count = 0)
+    End Sub
+
+    ''' <summary>
+    ''' Tests the logic of getting properties that has the specific type in value should return everything if the type is set to <see cref="JTokenType.None"/>
+    ''' </summary>
+    <TestMethod>
+    Sub TestGetPropertiesTypeInValueShouldReturnEverythingIfNoTokenTypeSpecified()
+        Dim JsonString As String = My.Resources.JSON_PropertyTest1
+        Dim JsonToken As JToken = JToken.Parse(JsonString)
+        Dim JsonProperty As List(Of JToken) = JsonToken.First.GetPropertiesTypeInValue(JTokenType.None)
+        Assert.IsTrue(JsonProperty.Count = 4)
+    End Sub
 #End Region
 
 #Region "Querying"

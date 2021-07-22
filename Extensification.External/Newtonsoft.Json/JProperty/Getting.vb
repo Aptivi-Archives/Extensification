@@ -73,5 +73,22 @@ Namespace Newtonsoft.Json.JPropertyExts
             Return ""
         End Function
 
+        ''' <summary>
+        ''' Gets properties that have the specific type in value.
+        ''' </summary>
+        ''' <param name="Token">JSON token</param>
+        ''' <param name="Type">JSON token type to search. If the type is <see cref="JTokenType.None"/>, returns all properties.</param>
+        ''' <returns>A property list if properties with specific type is found; empty list if nothing is found</returns>
+        <Extension>
+        Public Function GetPropertiesTypeInValue(ByVal Token As JToken, ByVal Type As JTokenType) As List(Of JToken)
+            Dim TokenList As New List(Of JToken)
+            For Each TokenProperty As JProperty In Token
+                If TokenProperty.Value.Type = Type Or Type = JTokenType.None Then
+                    TokenList.Add(TokenProperty)
+                End If
+            Next
+            Return TokenList
+        End Function
+
     End Module
 End Namespace

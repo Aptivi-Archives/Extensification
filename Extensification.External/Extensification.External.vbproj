@@ -21,6 +21,7 @@ This package is for extensions for external libraries.</Description>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.6:
 - Broke the code to separate code files
+- Added new extension
 
 2021.4.1:
 - Fixed no code documentation
