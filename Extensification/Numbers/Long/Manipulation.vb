@@ -44,7 +44,7 @@ Namespace LongExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As ULong, ByVal IncrementThreshold As Long) As Long
+        Public Function Increment(ByVal Number As ULong, ByVal IncrementThreshold As ULong) As ULong
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -70,7 +70,7 @@ Namespace LongExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As ULong, ByVal DecrementThreshold As Long) As Long
+        Public Function Decrement(ByVal Number As ULong, ByVal DecrementThreshold As ULong) As ULong
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number

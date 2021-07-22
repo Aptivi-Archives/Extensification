@@ -44,7 +44,7 @@ Namespace IntegerExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As UInteger, ByVal IncrementThreshold As Integer) As Integer
+        Public Function Increment(ByVal Number As UInteger, ByVal IncrementThreshold As UInteger) As UInteger
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -70,7 +70,7 @@ Namespace IntegerExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As UInteger, ByVal DecrementThreshold As Integer) As Integer
+        Public Function Decrement(ByVal Number As UInteger, ByVal DecrementThreshold As UInteger) As UInteger
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number
