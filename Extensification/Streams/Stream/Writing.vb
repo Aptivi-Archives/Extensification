@@ -20,19 +20,19 @@ Imports System.IO
 Imports System.Runtime.CompilerServices
 
 Namespace StreamExts
-    Public Module Manipulation
+    Public Module Writing
 
         ''' <summary>
-        ''' Tries seeking the stream
+        ''' Tries writing to the stream
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>
         <Extension>
-        Public Function TrySeek(ByVal TargetStream As Stream, Offset As Long, Origin As SeekOrigin) As Boolean
+        Public Function TryWrite(ByVal TargetStream As Stream, Buffer() As Byte, Offset As Integer, Count As Integer) As Boolean
             Dim Success As Boolean = True
 
-            'Try to seek
+            'Try to read
             Try
-                TargetStream.Seek(Offset, Origin)
+                TargetStream.Write(Buffer, Offset, Count)
             Catch ex As Exception
                 Success = False
             End Try
@@ -42,16 +42,16 @@ Namespace StreamExts
         End Function
 
         ''' <summary>
-        ''' Tries setting the length of the stream
+        ''' Tries writing to the stream
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>
         <Extension>
-        Public Function TrySetLength(ByVal TargetStream As Stream, Length As Long) As Boolean
+        Public Function TryWriteByte(ByVal TargetStream As Stream, Value As Byte) As Boolean
             Dim Success As Boolean = True
 
-            'Try to set the length
+            'Try to read
             Try
-                TargetStream.SetLength(Length)
+                TargetStream.WriteByte(Value)
             Catch ex As Exception
                 Success = False
             End Try

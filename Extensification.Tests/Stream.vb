@@ -35,6 +35,65 @@ Public Class StreamTests
         Assert.IsTrue(TextStream.TrySeek(4, SeekOrigin.Begin))
         Assert.IsTrue(TextStream.Position = 4)
     End Sub
+
+    ''' <summary>
+    ''' Tests trying to seek in a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTrySetLength()
+        Dim TextStream As New MemoryStream(8)
+        Assert.IsTrue(TextStream.TrySetLength(16))
+        Assert.IsTrue(TextStream.Length = 16)
+    End Sub
+#End Region
+#Region "Reading"
+    ''' <summary>
+    ''' Tests trying to read from a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryRead()
+        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
+                                   "You've reached the second line!"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
+        Dim ArrayBuffer(8) As Byte
+        Assert.IsTrue(TextStream.TryRead(ArrayBuffer, 0, 8))
+    End Sub
+
+    ''' <summary>
+    ''' Tests trying to read a byte from a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryReadByte()
+        Dim TargetText As String = "Hello!"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
+        Dim ActualByte As Integer = TextStream.TryReadByte
+        Assert.AreEqual(72, ActualByte)
+    End Sub
+#End Region
+#Region "Writing"
+    ''' <summary>
+    ''' Tests trying to write to a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryWrite()
+        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
+                                   "You've reached the second line!"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText & "    "))
+        Dim ArrayBuffer() As Byte = {1, 2, 3, 4}
+        TextStream.Seek(-4, SeekOrigin.End)
+        Assert.IsTrue(TextStream.TryWrite(ArrayBuffer, 0, 4))
+    End Sub
+
+    ''' <summary>
+    ''' Tests trying to write a byte to a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryWriteByte()
+        Dim TargetText As String = "Hello"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText & " "))
+        TextStream.Seek(-1, SeekOrigin.End)
+        Assert.IsTrue(TextStream.TryWriteByte(Text.Encoding.Default.GetBytes({"!"})(0)))
+    End Sub
 #End Region
 
 End Class
