@@ -49,6 +49,18 @@ Public Class StreamReaderTests
         Dim ParsedText As String() = TextStreamReader.ReadLines
         Assert.IsTrue(ParsedText.Length = 2)
     End Sub
+
+    ''' <summary>
+    ''' Tests reading to end and seeking
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestReadToEndAndSeek()
+        Dim TargetText As String = "Hello! This is Extensification."
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
+        Dim TextStreamReader As New StreamReader(TextStream)
+        Dim ParsedText As String = TextStreamReader.ReadToEndAndSeek
+        Assert.IsTrue(TextStreamReader.BaseStream.Position = 0)
+    End Sub
 #End Region
 
 End Class

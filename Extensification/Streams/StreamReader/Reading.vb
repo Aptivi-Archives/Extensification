@@ -62,5 +62,16 @@ Namespace StreamReaderExts
             Return StreamLines.ToArray
         End Function
 
+        ''' <summary>
+        ''' Reads all the characters in the stream until the end and seek the stream to the beginning, if possible.
+        ''' </summary>
+        ''' <param name="reader">The stream reader</param>
+        <Extension>
+        Public Function ReadToEndAndSeek(ByVal reader As StreamReader) As String
+            Dim StreamString As String = reader.ReadToEnd
+            If reader.BaseStream.CanSeek Then reader.BaseStream.Seek(0, SeekOrigin.Begin)
+            Return StreamString
+        End Function
+
     End Module
 End Namespace
