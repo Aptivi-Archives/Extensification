@@ -36,6 +36,19 @@ Public Class StreamReaderTests
         Dim ParsedText As String = TextStreamReader.ReadLineWithNewLine
         Assert.IsTrue(ParsedText.EndsWith(Environment.NewLine))
     End Sub
+
+    ''' <summary>
+    ''' Tests reading lines
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestReadLines()
+        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
+                                   "You've reached the second line!"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
+        Dim TextStreamReader As New StreamReader(TextStream)
+        Dim ParsedText As String() = TextStreamReader.ReadLines
+        Assert.IsTrue(ParsedText.Length = 2)
+    End Sub
 #End Region
 
 End Class

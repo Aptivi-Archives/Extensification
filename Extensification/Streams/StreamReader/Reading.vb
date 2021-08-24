@@ -45,5 +45,22 @@ Namespace StreamReaderExts
             Return strBuilder.ToString()
         End Function
 
+        ''' <summary>
+        ''' Reads all the lines and returns the string array
+        ''' </summary>
+        ''' <param name="reader">The stream reader</param>
+        <Extension>
+        Public Function ReadLines(ByVal reader As StreamReader) As String()
+            Dim StreamLines As New List(Of String)
+
+            'Read the lines while not end of stream
+            While Not reader.EndOfStream
+                StreamLines.Add(reader.ReadLine)
+            End While
+
+            'Return the final result
+            Return StreamLines.ToArray
+        End Function
+
     End Module
 End Namespace
