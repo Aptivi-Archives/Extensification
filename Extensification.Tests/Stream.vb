@@ -45,6 +45,16 @@ Public Class StreamTests
         Assert.IsTrue(TextStream.TrySetLength(16))
         Assert.IsTrue(TextStream.Length = 16)
     End Sub
+
+    ''' <summary>
+    ''' Tests trying to flush a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryFlush()
+        Dim TextStream As New MemoryStream(8)
+        TextStream.Write(Text.Encoding.Default.GetBytes("Hello!!!"), 0, 8)
+        Assert.IsTrue(TextStream.TryFlush)
+    End Sub
 #End Region
 #Region "Reading"
     ''' <summary>

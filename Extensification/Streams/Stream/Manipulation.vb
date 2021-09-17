@@ -60,5 +60,24 @@ Namespace StreamExts
             Return Success
         End Function
 
+        ''' <summary>
+        ''' Tries flushing the stream
+        ''' </summary>
+        ''' <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function TryFlush(TargetStream As Stream) As Boolean
+            Dim Success As Boolean = True
+
+            'Try to seek
+            Try
+                TargetStream.Flush()
+            Catch ex As Exception
+                Success = False
+            End Try
+
+            'Return the result
+            Return Success
+        End Function
+
     End Module
 End Namespace
