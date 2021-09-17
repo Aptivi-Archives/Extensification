@@ -30,7 +30,7 @@ Namespace LongExts
         ''' <param name="Number">Number</param>
         ''' <returns>Array of digits</returns>
         <Extension>
-        Public Function ListDigits(ByVal Number As Long) As Long()
+        Public Function ListDigits(Number As Long) As Long()
             Dim StrNum As String = Number.ToString
             Dim NumList As Long() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToInt64(x.ToString))
             Return NumList
@@ -42,7 +42,7 @@ Namespace LongExts
         ''' <param name="Number">Number</param>
         ''' <returns>Array of digits</returns>
         <Extension>
-        Public Function ListDigits(ByVal Number As ULong) As ULong()
+        Public Function ListDigits(Number As ULong) As ULong()
             Dim StrNum As String = Number.ToString
             Dim NumList As ULong() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToUInt64(x.ToString))
             Return NumList
@@ -54,7 +54,7 @@ Namespace LongExts
         ''' <param name="Number">Number</param>
         ''' <returns>True if the number is an Armstrong number; False if not.</returns>
         <Extension>
-        Public Function IsArmstrong(ByVal Number As Long) As Boolean
+        Public Function IsArmstrong(Number As Long) As Boolean
             Dim Num As Long = Number
             Dim NumberDigits() As Long = Num.ListDigits
             Dim SumOfCubesOfDigits As Long
@@ -70,7 +70,7 @@ Namespace LongExts
         ''' <param name="Number">Number</param>
         ''' <returns>True if the number is an Armstrong number; False if not.</returns>
         <Extension>
-        Public Function IsArmstrong(ByVal Number As ULong) As Boolean
+        Public Function IsArmstrong(Number As ULong) As Boolean
             Dim Num As ULong = Number
             Dim NumberDigits() As ULong = Num.ListDigits
             Dim SumOfCubesOfDigits As ULong

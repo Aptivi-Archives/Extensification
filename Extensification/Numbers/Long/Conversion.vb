@@ -31,7 +31,7 @@ Namespace LongExts
         ''' <param name="Type">Measurement types</param>
         ''' <returns>A string containing the processed number and unit</returns>
         <Extension>
-        Public Function ToHumanReadable(ByVal Num As Long, ByVal Type As HumanFormats) As String
+        Public Function ToHumanReadable(Num As Long, Type As HumanFormats) As String
             Dim HumanString As String = ""
             Dim HumanNum As Double
             Select Case Type
@@ -136,7 +136,7 @@ Namespace LongExts
         ''' <param name="Type">Measurement types</param>
         ''' <returns>A string containing the processed number and unit</returns>
         <Extension>
-        Public Function ToHumanReadable(ByVal Num As ULong, ByVal Type As HumanFormats) As String
+        Public Function ToHumanReadable(Num As ULong, Type As HumanFormats) As String
             Dim HumanString As String = ""
             Dim HumanNum As Double
             Select Case Type

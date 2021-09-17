@@ -30,7 +30,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <returns>Modified string</returns>
         <Extension>
-        Public Function RemoveSpacesFromBeginning(ByVal Str As String) As String
+        Public Function RemoveSpacesFromBeginning(Str As String) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars() As Char = Str.ToCharArray
             Dim CharNum As Integer = 0
@@ -46,7 +46,7 @@ Namespace StringExts
         ''' </summary>
         ''' <param name="CharacterNum">A zero-based character number</param>
         <Extension>
-        Public Function RemoveLetter(ByVal Str As String, ByVal CharacterNum As Integer) As String
+        Public Function RemoveLetter(Str As String, CharacterNum As Integer) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars As List(Of Char) = Str.ToCharArray.ToList
             StrChars.RemoveAt(CharacterNum)
@@ -58,7 +58,7 @@ Namespace StringExts
         ''' </summary>
         ''' <param name="Characters">Array of characters to be remove</param>
         <Extension>
-        Public Function RemoveLettersRange(ByVal Str As String, ByVal Characters() As Char) As String
+        Public Function RemoveLettersRange(Str As String, Characters() As Char) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             If Characters Is Nothing Then Throw New ArgumentNullException(NameOf(Characters))
             Dim StrChars As List(Of Char) = Str.ToCharArray.ToList

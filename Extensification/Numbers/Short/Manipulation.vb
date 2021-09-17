@@ -31,7 +31,7 @@ Namespace ShortExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As Short, ByVal IncrementThreshold As Short) As Short
+        Public Function Increment(Number As Short, IncrementThreshold As Short) As Short
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -44,7 +44,7 @@ Namespace ShortExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As UShort, ByVal IncrementThreshold As UShort) As UShort
+        Public Function Increment(Number As UShort, IncrementThreshold As UShort) As UShort
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -57,7 +57,7 @@ Namespace ShortExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As Short, ByVal DecrementThreshold As Short) As Short
+        Public Function Decrement(Number As Short, DecrementThreshold As Short) As Short
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number
@@ -70,7 +70,7 @@ Namespace ShortExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As UShort, ByVal DecrementThreshold As UShort) As UShort
+        Public Function Decrement(Number As UShort, DecrementThreshold As UShort) As UShort
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number

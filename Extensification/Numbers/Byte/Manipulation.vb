@@ -31,7 +31,7 @@ Namespace ByteExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As Byte, ByVal IncrementThreshold As Byte) As Byte
+        Public Function Increment(Number As Byte, IncrementThreshold As Byte) As Byte
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -44,7 +44,7 @@ Namespace ByteExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As SByte, ByVal IncrementThreshold As SByte) As SByte
+        Public Function Increment(Number As SByte, IncrementThreshold As SByte) As SByte
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -57,7 +57,7 @@ Namespace ByteExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As Byte, ByVal DecrementThreshold As Byte) As Byte
+        Public Function Decrement(Number As Byte, DecrementThreshold As Byte) As Byte
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number
@@ -70,7 +70,7 @@ Namespace ByteExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As SByte, ByVal DecrementThreshold As SByte) As SByte
+        Public Function Decrement(Number As SByte, DecrementThreshold As SByte) As SByte
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number

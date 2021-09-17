@@ -42,7 +42,7 @@ Namespace StringExts
         ''' <param name="value">A value</param>
         ''' <returns>Indexes of strings</returns>
         <Extension>
-        Public Iterator Function AllIndexesOf(ByVal Str As String, ByVal value As String) As IEnumerable(Of Integer)
+        Public Iterator Function AllIndexesOf(Str As String, value As String) As IEnumerable(Of Integer)
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             If String.IsNullOrEmpty(value) Then
                 Throw New ArgumentException("Empty string specified", NameOf(value))
@@ -62,7 +62,7 @@ Namespace StringExts
         ''' Gets list of ASCII codes from a string
         ''' </summary>
         <Extension>
-        Public Function GetAsciiCodes(ByVal Str As String) As Byte()
+        Public Function GetAsciiCodes(Str As String) As Byte()
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars As Char() = Str.ToCharArray
 #If NET45 Then
@@ -82,7 +82,7 @@ Namespace StringExts
         ''' </summary>
         ''' <param name="CharacterNum">A zero-based character number</param>
         <Extension>
-        Public Function GetAsciiCode(ByVal Str As String, ByVal CharacterNum As Integer) As Byte
+        Public Function GetAsciiCode(Str As String, CharacterNum As Integer) As Byte
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars As Char() = Str.ToCharArray
             Return AscW(StrChars(CharacterNum))
@@ -93,7 +93,7 @@ Namespace StringExts
         ''' </summary>
         ''' <param name="Str">Target string</param>
         <Extension>
-        Public Function GetListOfRepeatedLetters(ByVal Str As String) As Dictionary(Of String, Integer)
+        Public Function GetListOfRepeatedLetters(Str As String) As Dictionary(Of String, Integer)
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim Letters As New Dictionary(Of String, Integer)
             Dim StrChars() As Char = Str.ToCharArray
@@ -110,7 +110,7 @@ Namespace StringExts
         ''' <param name="Targets">Target strings</param>
         ''' <returns>True if one of them is found; else, false.</returns>
         <Extension>
-        Public Function ContainsAnyOf(ByVal Str As String, ByVal Targets() As String) As Boolean
+        Public Function ContainsAnyOf(Str As String, Targets() As String) As Boolean
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             For Each Target As String In Targets
                 If Str.Contains(Target) Then Return True
@@ -125,7 +125,7 @@ Namespace StringExts
         ''' <param name="Targets">Target strings</param>
         ''' <returns>True if all of them are found; else, false.</returns>
         <Extension>
-        Public Function ContainsAllOf(ByVal Str As String, ByVal Targets() As String) As Boolean
+        Public Function ContainsAllOf(Str As String, Targets() As String) As Boolean
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
 #If NET45 Then
             Dim Done() As String = {}
@@ -144,7 +144,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Steps">Number of characters to step on</param>
         <Extension>
-        Public Function LRP(ByVal Str As String, ByVal Steps As Integer) As Integer
+        Public Function LRP(Str As String, Steps As Integer) As Integer
             If Steps <= 0 Then Throw New ArgumentException("Can't step zero or negative characters.", NameOf(Steps))
             Dim LastPosition As Integer
             Dim StringLength As Integer = Str.Length
@@ -171,7 +171,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Values">Values</param>
         <Extension>
-        Public Function StartsWithAnyOf(ByVal Str As String, ByVal Values() As String) As Boolean
+        Public Function StartsWithAnyOf(Str As String, Values() As String) As Boolean
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim Started As Boolean
             For Each Value As String In Values
@@ -186,7 +186,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Values">Values</param>
         <Extension>
-        Public Function StartsWithAllOf(ByVal Str As String, ByVal Values() As String) As Boolean
+        Public Function StartsWithAllOf(Str As String, Values() As String) As Boolean
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
 #If NET45 Then
             Dim Done() As String = {}
@@ -205,7 +205,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Values">Values</param>
         <Extension>
-        Public Function EndsWithAnyOf(ByVal Str As String, ByVal Values() As String) As Boolean
+        Public Function EndsWithAnyOf(Str As String, Values() As String) As Boolean
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim Started As Boolean
             For Each Value As String In Values
@@ -220,7 +220,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Values">Values</param>
         <Extension>
-        Public Function EndsWithAllOf(ByVal Str As String, ByVal Values() As String) As Boolean
+        Public Function EndsWithAllOf(Str As String, Values() As String) As Boolean
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
 #If NET45 Then
             Dim Done() As String = {}
@@ -239,7 +239,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <returns></returns>
         <Extension>
-        Public Function SplitNewLines(ByVal Str As String) As String()
+        Public Function SplitNewLines(Str As String) As String()
             Return Str.Replace(ChrW(13), "").Split(ChrW(10))
         End Function
 
@@ -249,7 +249,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <returns></returns>
         <Extension>
-        Public Function SplitNewLinesCr(ByVal Str As String) As String()
+        Public Function SplitNewLinesCr(Str As String) As String()
             Return Str.Replace(ChrW(10), "").Split(ChrW(13))
         End Function
 
@@ -260,7 +260,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Delims">Delimiters</param>
         <Extension>
-        Public Function SplitEncloseDoubleQuotes(ByVal Str As String, ParamArray Delims As String()) As String()
+        Public Function SplitEncloseDoubleQuotes(Str As String, ParamArray Delims As String()) As String()
             Dim Result() As String
             Dim TStream As New MemoryStream(Encoding.Default.GetBytes(Str))
             Dim Parser As New TextFieldParser(TStream) With {
@@ -285,7 +285,7 @@ Namespace StringExts
         ''' <param name="Str">A string</param>
         ''' <returns></returns>
         <Extension>
-        Public Function Evaluate(ByVal Str As String) As Object
+        Public Function Evaluate(Str As String) As Object
             Dim EvalP As New VBCodeProvider
             Dim EvalCP As New CompilerParameters With {.GenerateExecutable = False,
                                                        .GenerateInMemory = True}

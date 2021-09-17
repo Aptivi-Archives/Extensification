@@ -28,7 +28,7 @@ Namespace StreamReaderExts
         ''' </summary>
         ''' <param name="reader">The stream reader</param>
         <Extension>
-        Public Function ReadLineWithNewLine(ByVal reader As StreamReader) As String
+        Public Function ReadLineWithNewLine(reader As StreamReader) As String
             'Define a new string builder
             Dim strBuilder As New StringBuilder()
 
@@ -50,7 +50,7 @@ Namespace StreamReaderExts
         ''' </summary>
         ''' <param name="reader">The stream reader</param>
         <Extension>
-        Public Function ReadLines(ByVal reader As StreamReader) As String()
+        Public Function ReadLines(reader As StreamReader) As String()
             Dim StreamLines As New List(Of String)
 
             'Read the lines while not end of stream
@@ -63,11 +63,11 @@ Namespace StreamReaderExts
         End Function
 
         ''' <summary>
-        ''' Reads all the characters in the stream until the end and seek the stream to the beginning, if possible.
+        ''' Reads all the characters in the stream until the end and seeks the stream to the beginning, if possible.
         ''' </summary>
         ''' <param name="reader">The stream reader</param>
         <Extension>
-        Public Function ReadToEndAndSeek(ByVal reader As StreamReader) As String
+        Public Function ReadToEndAndSeek(reader As StreamReader) As String
             Dim StreamString As String = reader.ReadToEnd
             If reader.BaseStream.CanSeek Then reader.BaseStream.Seek(0, SeekOrigin.Begin)
             Return StreamString

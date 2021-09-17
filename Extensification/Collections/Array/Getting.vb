@@ -32,7 +32,7 @@ Namespace ArrayExts
         ''' <param name="Entry">An entry from array</param>
         ''' <returns>List of indexes. If none is found, returns an empty array list</returns>
         <Extension>
-        Public Function GetIndexFromEntry(Of T)(ByVal TargetArray() As T, ByVal Entry As T) As Integer()
+        Public Function GetIndexFromEntry(Of T)(TargetArray() As T, Entry As T) As Integer()
             If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim Indexes As New ArrayList
             For Index As Integer = 0 To TargetArray.Length - 1

@@ -37,6 +37,18 @@ Public Class StreamWriterTests
         Dim TextStreamReader As New StreamReader(TextStreamWriter.BaseStream)
         Assert.IsTrue(TextStreamReader.ReadLines.Length = 2)
     End Sub
+    ''' <summary>
+    ''' Tests reading lines
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestWriteLineAndSeek()
+        Dim NewText As String = "One, two"
+        Dim TextStream As New MemoryStream()
+        Dim TextStreamWriter As New StreamWriter(TextStream)
+        TextStreamWriter.WriteLineAndSeek(NewText)
+        Dim TextStreamReader As New StreamReader(TextStreamWriter.BaseStream)
+        Assert.IsTrue(TextStreamReader.ReadLine.Length = NewText.Length)
+    End Sub
 #End Region
 
 End Class

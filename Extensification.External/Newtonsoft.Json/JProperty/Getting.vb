@@ -32,7 +32,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Containing">String to find at the beginning of string</param>
         ''' <returns>A property name if found; nothing if not found</returns>
         <Extension>
-        Public Function GetPropertyNameStartingWith(ByVal Token As JToken, ByVal Containing As String) As String
+        Public Function GetPropertyNameStartingWith(Token As JToken, Containing As String) As String
             For Each TokenProperty As JProperty In Token
                 If TokenProperty.Name.StartsWith(Containing) Then
                     Return TokenProperty.Name
@@ -48,7 +48,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Containing">String to find at the end of string</param>
         ''' <returns>A property name if found; nothing if not found</returns>
         <Extension>
-        Public Function GetPropertyNameEndingWith(ByVal Token As JToken, ByVal Containing As String) As String
+        Public Function GetPropertyNameEndingWith(Token As JToken, Containing As String) As String
             For Each TokenProperty As JProperty In Token
                 If TokenProperty.Name.EndsWith(Containing) Then
                     Return TokenProperty.Name
@@ -64,7 +64,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Containing">String to find in string</param>
         ''' <returns>A property name if found; nothing if not found</returns>
         <Extension>
-        Public Function GetPropertyNameContaining(ByVal Token As JToken, ByVal Containing As String) As String
+        Public Function GetPropertyNameContaining(Token As JToken, Containing As String) As String
             For Each TokenProperty As JProperty In Token
                 If TokenProperty.Name.Contains(Containing) Then
                     Return TokenProperty.Name
@@ -80,7 +80,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Type">JSON token type to search. If the type is <see cref="JTokenType.None"/>, returns all properties.</param>
         ''' <returns>A property list if properties with specific type is found; empty list if nothing is found</returns>
         <Extension>
-        Public Function GetPropertiesTypeInValue(ByVal Token As JToken, ByVal Type As JTokenType) As List(Of JToken)
+        Public Function GetPropertiesTypeInValue(Token As JToken, Type As JTokenType) As List(Of JToken)
             Dim TokenList As New List(Of JToken)
             For Each TokenProperty As JProperty In Token
                 If TokenProperty.Value.Type = Type Or Type = JTokenType.None Then

@@ -30,7 +30,7 @@ Namespace ListExts
         ''' <typeparam name="T">Type</typeparam>
         ''' <param name="TargetList">Target list</param>
         <Extension>
-        Public Function ToArrayList(Of T)(ByVal TargetList As List(Of T)) As ArrayList
+        Public Function ToArrayList(Of T)(TargetList As List(Of T)) As ArrayList
             Dim ResultList As New ArrayList
             ResultList.AddRange(TargetList)
             Return ResultList

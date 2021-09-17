@@ -32,7 +32,7 @@ Namespace ListExts
         ''' <param name="Entry">An entry</param>
         ''' <returns>List of indexes from entry</returns>
         <Extension>
-        Public Function GetIndexFromEntry(Of T)(ByVal TargetList As List(Of T), ByVal Entry As T) As List(Of Integer)
+        Public Function GetIndexFromEntry(Of T)(TargetList As List(Of T), Entry As T) As List(Of Integer)
             Dim Indexes As New List(Of Integer)
             For Index As Integer = 0 To TargetList.Count - 1
                 If TargetList(Index).Equals(Entry) Then

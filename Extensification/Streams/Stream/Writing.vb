@@ -27,7 +27,7 @@ Namespace StreamExts
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>
         <Extension>
-        Public Function TryWrite(ByVal TargetStream As Stream, Buffer() As Byte, Offset As Integer, Count As Integer) As Boolean
+        Public Function TryWrite(TargetStream As Stream, Buffer() As Byte, Offset As Integer, Count As Integer) As Boolean
             Dim Success As Boolean = True
 
             'Try to read
@@ -46,7 +46,7 @@ Namespace StreamExts
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>
         <Extension>
-        Public Function TryWriteByte(ByVal TargetStream As Stream, Value As Byte) As Boolean
+        Public Function TryWriteByte(TargetStream As Stream, Value As Byte) As Boolean
             Dim Success As Boolean = True
 
             'Try to read

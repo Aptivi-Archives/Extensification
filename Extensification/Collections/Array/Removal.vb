@@ -31,7 +31,7 @@ Namespace ArrayExts
         ''' <param name="TargetArray">Target array</param>
         ''' <param name="Item">Any item</param>
         <Extension>
-        Public Sub Remove(Of T)(ByRef TargetArray() As T, ByVal Item As T)
+        Public Sub Remove(Of T)(ByRef TargetArray() As T, Item As T)
             If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim TargetArrayList As List(Of T) = TargetArray.ToList
             TargetArrayList.Remove(Item)

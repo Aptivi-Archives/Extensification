@@ -30,7 +30,7 @@ Namespace CharExts
         ''' <param name="Character">Character</param>
         ''' <returns>ASCII code of a character</returns>
         <Extension>
-        Public Function GetAsciiCode(ByVal Character As Char) As Integer
+        Public Function GetAsciiCode(Character As Char) As Integer
             Return AscW(Character)
         End Function
 

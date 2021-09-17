@@ -31,7 +31,7 @@ Namespace SingleExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As Single, ByVal IncrementThreshold As Single) As Single
+        Public Function Increment(Number As Single, IncrementThreshold As Single) As Single
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -44,7 +44,7 @@ Namespace SingleExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As Single, ByVal DecrementThreshold As Single) As Single
+        Public Function Decrement(Number As Single, DecrementThreshold As Single) As Single
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number

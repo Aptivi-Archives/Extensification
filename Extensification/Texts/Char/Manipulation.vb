@@ -31,7 +31,7 @@ Namespace CharExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented character</returns>
         <Extension>
-        Public Function Increment(ByVal Character As Char, ByVal IncrementThreshold As Integer) As Char
+        Public Function Increment(Character As Char, IncrementThreshold As Integer) As Char
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Return ChrW(AscW(Character) + IncrementThreshold)
         End Function
@@ -43,7 +43,7 @@ Namespace CharExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented character</returns>
         <Extension>
-        Public Function Decrement(ByVal Character As Char, ByVal DecrementThreshold As Integer) As Char
+        Public Function Decrement(Character As Char, DecrementThreshold As Integer) As Char
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Return ChrW(AscW(Character) - DecrementThreshold)
         End Function

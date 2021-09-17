@@ -33,7 +33,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Containing">String to find in the key string</param>
         ''' <returns>A token if found; nothing if not found</returns>
         <Extension>
-        Public Function SelectTokenKeyContaining(ByVal Token As JToken, ByVal Containing As String) As JToken
+        Public Function SelectTokenKeyContaining(Token As JToken, Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameContaining(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
                 Return Token.SelectToken("['" + PropertyName.ReplaceAllRange({"\", "/", "'", """"}, {"\\", "\/", "\'", "\"""}) + "']")
@@ -49,7 +49,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Containing">String to find at the end of key string</param>
         ''' <returns>A token if found; nothing if not found</returns>
         <Extension>
-        Public Function SelectTokenKeyEndingWith(ByVal Token As JToken, ByVal Containing As String) As JToken
+        Public Function SelectTokenKeyEndingWith(Token As JToken, Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameEndingWith(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
                 Return Token.SelectToken("['" + PropertyName.ReplaceAllRange({"\", "/", "'", """"}, {"\\", "\/", "\'", "\"""}) + "']")
@@ -65,7 +65,7 @@ Namespace Newtonsoft.Json.JPropertyExts
         ''' <param name="Containing">String to find at the beginning of key string</param>
         ''' <returns>A token if found; nothing if not found</returns>
         <Extension>
-        Public Function SelectTokenKeyStartingWith(ByVal Token As JToken, ByVal Containing As String) As JToken
+        Public Function SelectTokenKeyStartingWith(Token As JToken, Containing As String) As JToken
             Dim PropertyName As String = Token.GetPropertyNameStartingWith(Containing)
             If Not String.IsNullOrEmpty(PropertyName) Then
                 Return Token.SelectToken("['" + PropertyName.ReplaceAllRange({"\", "/", "'", """"}, {"\\", "\/", "\'", "\"""}) + "']")

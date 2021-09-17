@@ -30,7 +30,7 @@ Namespace ByteExts
         ''' <param name="Number">Number</param>
         ''' <returns>Array of digits</returns>
         <Extension>
-        Public Function ListDigits(ByVal Number As Byte) As Byte()
+        Public Function ListDigits(Number As Byte) As Byte()
             Dim StrNum As String = Number.ToString
             Dim NumList As Byte() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToByte(x.ToString))
             Return NumList
@@ -42,7 +42,7 @@ Namespace ByteExts
         ''' <param name="Number">Number</param>
         ''' <returns>Array of digits</returns>
         <Extension>
-        Public Function ListDigits(ByVal Number As SByte) As SByte()
+        Public Function ListDigits(Number As SByte) As SByte()
             Dim StrNum As String = Number.ToString
             Dim NumList As SByte() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToSByte(x.ToString))
             Return NumList
@@ -54,7 +54,7 @@ Namespace ByteExts
         ''' <param name="Number">Number</param>
         ''' <returns>True if the number is an Armstrong number; False if not.</returns>
         <Extension>
-        Public Function IsArmstrong(ByVal Number As Byte) As Boolean
+        Public Function IsArmstrong(Number As Byte) As Boolean
             Dim IntNum As Byte = Number
             Dim NumberDigits() As Byte = IntNum.ListDigits
             Dim SumOfCubesOfDigits As Byte
@@ -70,7 +70,7 @@ Namespace ByteExts
         ''' <param name="Number">Number</param>
         ''' <returns>True if the number is an Armstrong number; False if not.</returns>
         <Extension>
-        Public Function IsArmstrong(ByVal Number As SByte) As Boolean
+        Public Function IsArmstrong(Number As SByte) As Boolean
             Dim IntNum As SByte = Number
             Dim NumberDigits() As SByte = IntNum.ListDigits
             Dim SumOfCubesOfDigits As SByte

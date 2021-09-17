@@ -24,15 +24,26 @@ Namespace StreamWriterExts
     Public Module Writing
 
         ''' <summary>
-        ''' Writes all the lines to the stream
+        ''' Writes all the lines to the stream and seeks to the beginning, if possible.
         ''' </summary>
         ''' <param name="writer">The stream writer</param>
         <Extension>
-        Public Sub WriteLines(ByRef writer As StreamWriter, ByVal Lines() As String)
+        Public Sub WriteLines(ByRef writer As StreamWriter, Lines() As String)
             For Each Line As String In Lines
                 writer.WriteLine(Line)
                 If Not writer.AutoFlush Then writer.Flush()
             Next
+            If writer.BaseStream.CanSeek Then writer.BaseStream.Seek(0, SeekOrigin.Begin)
+        End Sub
+
+        ''' <summary>
+        ''' Writes the line to the stream and seeks to the beginning, if possible.
+        ''' </summary>
+        ''' <param name="writer">The stream writer</param>
+        <Extension>
+        Public Sub WriteLineAndSeek(ByRef writer As StreamWriter, Line As String)
+            writer.WriteLine(Line)
+            If Not writer.AutoFlush Then writer.Flush()
             If writer.BaseStream.CanSeek Then writer.BaseStream.Seek(0, SeekOrigin.Begin)
         End Sub
 

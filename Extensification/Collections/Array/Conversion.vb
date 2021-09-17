@@ -31,7 +31,7 @@ Namespace ArrayExts
         ''' <param name="TargetArray">Target array</param>
         ''' <returns>An array list of an array</returns>
         <Extension>
-        Public Function ToArrayList(Of T)(ByVal TargetArray() As T) As ArrayList
+        Public Function ToArrayList(Of T)(TargetArray() As T) As ArrayList
             If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim ArrayValues As New ArrayList
             ArrayValues.AddRange(TargetArray)

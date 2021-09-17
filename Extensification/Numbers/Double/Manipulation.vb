@@ -31,7 +31,7 @@ Namespace DoubleExts
         ''' <param name="IncrementThreshold">How many times to increment</param>
         ''' <returns>Incremented number</returns>
         <Extension>
-        Public Function Increment(ByVal Number As Double, ByVal IncrementThreshold As Double) As Double
+        Public Function Increment(Number As Double, IncrementThreshold As Double) As Double
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
             Number += IncrementThreshold
             Return Number
@@ -44,7 +44,7 @@ Namespace DoubleExts
         ''' <param name="DecrementThreshold">How many times to decrement</param>
         ''' <returns>Decremented number</returns>
         <Extension>
-        Public Function Decrement(ByVal Number As Double, ByVal DecrementThreshold As Double) As Double
+        Public Function Decrement(Number As Double, DecrementThreshold As Double) As Double
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
             Number -= DecrementThreshold
             Return Number

@@ -31,7 +31,7 @@ Namespace ArrayExts
         ''' <param name="TargetArray">Target array</param>
         ''' <param name="Item">Any item</param>
         <Extension>
-        Public Sub Add(Of T)(ByRef TargetArray() As T, ByVal Item As T)
+        Public Sub Add(Of T)(ByRef TargetArray() As T, Item As T)
             If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Array.Resize(TargetArray, TargetArray.Length + 1)
             TargetArray(TargetArray.Length - 1) = Item
@@ -44,7 +44,7 @@ Namespace ArrayExts
         ''' <param name="TargetArray">Target array</param>
         ''' <param name="ToBeAdded">Range of entries in an array</param>
         <Extension>
-        Public Sub AddRange(Of T)(ByRef TargetArray() As T, ByVal ToBeAdded() As T)
+        Public Sub AddRange(Of T)(ByRef TargetArray() As T, ToBeAdded() As T)
             If TargetArray Is Nothing Then Throw New ArgumentNullException(NameOf(TargetArray))
             Dim OldIndex As Integer = TargetArray.Length - 1
             Array.Resize(TargetArray, TargetArray.Length + ToBeAdded.Length)

@@ -32,7 +32,7 @@ Namespace StringExts
         ''' <param name="replace">A string to replace</param>
         ''' <returns>String that has its last occurrence of text replaced</returns>
         <Extension>
-        Public Function ReplaceLastOccurrence(ByVal source As String, ByVal searchText As String, ByVal replace As String) As String
+        Public Function ReplaceLastOccurrence(source As String, searchText As String, replace As String) As String
             If source Is Nothing Then Throw New ArgumentNullException(NameOf(source))
             If searchText Is Nothing Then Throw New ArgumentNullException(NameOf(searchText))
             Dim position = source.LastIndexOf(searchText)
@@ -50,7 +50,7 @@ Namespace StringExts
         ''' <returns>Modified string</returns>
         ''' <exception cref="ArgumentNullException"></exception>
         <Extension>
-        Public Function ReplaceAll(ByVal Str As String, ByVal ToBeReplaced() As String, ByVal ToReplace As String) As String
+        Public Function ReplaceAll(Str As String, ToBeReplaced() As String, ToReplace As String) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             If ToBeReplaced Is Nothing Then Throw New ArgumentNullException(NameOf(ToBeReplaced))
             If ToBeReplaced.Length = 0 Then Throw New ArgumentNullException(NameOf(ToBeReplaced))
@@ -70,7 +70,7 @@ Namespace StringExts
         ''' <exception cref="ArgumentNullException"></exception>
         ''' <exception cref="ArgumentException"></exception>
         <Extension>
-        Public Function ReplaceAllRange(ByVal Str As String, ByVal ToBeReplaced() As String, ByVal ToReplace() As String) As String
+        Public Function ReplaceAllRange(Str As String, ToBeReplaced() As String, ToReplace() As String) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             If ToBeReplaced Is Nothing Then Throw New ArgumentNullException(NameOf(ToBeReplaced))
             If ToBeReplaced.Length = 0 Then Throw New ArgumentNullException(NameOf(ToBeReplaced))
@@ -90,7 +90,7 @@ Namespace StringExts
         ''' <param name="threshold">Max number of string characters</param>
         ''' <returns>Truncated string</returns>
         <Extension>
-        Public Function Truncate(ByVal str As String, ByVal threshold As Integer) As String
+        Public Function Truncate(str As String, threshold As Integer) As String
             If str Is Nothing Then Throw New ArgumentNullException(NameOf(str))
             Dim result As String
             If str.Length > threshold Then
@@ -108,7 +108,7 @@ Namespace StringExts
         ''' <param name="Variables">Variables being used</param>
         ''' <returns>Formatted string</returns>
         <Extension>
-        Public Function FormatString(ByVal Str As String, ByVal ParamArray Variables() As Object) As String
+        Public Function FormatString(Str As String, ParamArray Variables() As Object) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             If Variables Is Nothing Then Throw New ArgumentNullException(NameOf(Variables))
             For v As Integer = 0 To Variables.Length - 1
@@ -128,7 +128,7 @@ Namespace StringExts
         ''' <param name="ShiftThreshold">How many times to shift. If the threshold is negative, the shifting will go backwards. If the threshold is positive, the shifting will go forward.</param>
         ''' <returns>Shifted string</returns>
         <Extension>
-        Public Function ShiftLetters(ByVal Str As String, ByVal ShiftThreshold As Integer) As String
+        Public Function ShiftLetters(Str As String, ShiftThreshold As Integer) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars As Char() = Str.ToCharArray
             For Character As Integer = 0 To StrChars.Length - 1
@@ -142,7 +142,7 @@ Namespace StringExts
         ''' </summary>
         ''' <param name="Str">Target string</param>
         <Extension>
-        Public Function Reverse(ByVal Str As String) As String
+        Public Function Reverse(Str As String) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Return String.Join("", Str.ToCharArray.Reverse)
         End Function
@@ -153,7 +153,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <param name="Times">Number of times to be repeated</param>
         <Extension>
-        Public Function Repeat(ByVal Str As String, ByVal Times As Long) As String
+        Public Function Repeat(Str As String, Times As Long) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             If Times <= 0 Then Throw New ArgumentException("Zero or negative times aren't allowed.", NameOf(Str))
             Dim Target As String = ""
@@ -170,7 +170,7 @@ Namespace StringExts
         ''' <param name="Start">Start position</param>
         ''' <param name="Finish">Finish position</param>
         <Extension>
-        Public Function Substring(ByVal Str As String, ByVal Start As Integer, ByVal Finish As Integer) As String
+        Public Function Substring(Str As String, Start As Integer, Finish As Integer) As String
             If Finish < Start Then Throw New ArgumentException("Finish position couldn't be before the start position")
             Dim Length As Integer = Finish - Start
             Return Str.Substring(Start, length:=Length + 1)
@@ -182,7 +182,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <returns>Enclosed string</returns>
         <Extension>
-        Public Function EncloseByDoubleQuotes(ByVal Str As String) As String
+        Public Function EncloseByDoubleQuotes(Str As String) As String
             Return """" + Str + """"
         End Function
 
@@ -192,7 +192,7 @@ Namespace StringExts
         ''' <param name="Str">Target string</param>
         ''' <returns>Released string</returns>
         <Extension>
-        Public Function ReleaseDoubleQuotes(ByVal Str As String) As String
+        Public Function ReleaseDoubleQuotes(Str As String) As String
             Dim ReleasedString As String = Str
             If Str.StartsWith("""") And Str.EndsWith("""") Then
                 ReleasedString = ReleasedString.Remove(0, 1)

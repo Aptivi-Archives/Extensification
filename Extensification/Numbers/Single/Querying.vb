@@ -31,7 +31,7 @@ Namespace SingleExts
         ''' <param name="Number">Number</param>
         ''' <returns>Array of digits</returns>
         <Extension>
-        Public Function ListDigitsBeforeDecimal(ByVal Number As Single) As Single()
+        Public Function ListDigitsBeforeDecimal(Number As Single) As Single()
             Dim StrNum As String = Number.ToString.Substring(0, Number.ToString.IndexOf("."))
             Dim NumList As Single() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToSingle(x.ToString))
             Return NumList
@@ -43,7 +43,7 @@ Namespace SingleExts
         ''' <param name="Number">Number</param>
         ''' <returns>Array of digits</returns>
         <Extension>
-        Public Function ListDigitsAfterDecimal(ByVal Number As Single) As Single()
+        Public Function ListDigitsAfterDecimal(Number As Single) As Single()
             Dim StrNum As String = Number.ToString.Substring(Number.ToString.IndexOf(".") + 1)
             Dim NumList As Single() = Array.ConvertAll(StrNum.ToCharArray, Function(x) Convert.ToSingle(x.ToString))
             Return NumList
@@ -55,7 +55,7 @@ Namespace SingleExts
         ''' <param name="Number">Number</param>
         ''' <returns>True if the number is an Armstrong number; False if not.</returns>
         <Extension>
-        Public Function IsArmstrong(ByVal Number As Single) As Boolean
+        Public Function IsArmstrong(Number As Single) As Boolean
             Dim IntNum As Integer = Number
             Dim NumberDigits() As Integer = IntNum.ListDigits
             Dim SumOfCubesOfDigits As Integer

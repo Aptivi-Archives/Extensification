@@ -27,7 +27,7 @@ Namespace StreamExts
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>
         <Extension>
-        Public Function TrySeek(ByVal TargetStream As Stream, Offset As Long, Origin As SeekOrigin) As Boolean
+        Public Function TrySeek(TargetStream As Stream, Offset As Long, Origin As SeekOrigin) As Boolean
             Dim Success As Boolean = True
 
             'Try to seek
@@ -46,7 +46,7 @@ Namespace StreamExts
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>
         <Extension>
-        Public Function TrySetLength(ByVal TargetStream As Stream, Length As Long) As Boolean
+        Public Function TrySetLength(TargetStream As Stream, Length As Long) As Boolean
             Dim Success As Boolean = True
 
             'Try to set the length

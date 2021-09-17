@@ -20,7 +20,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2021.8:
-- 
+- Added new extensions
 
 2021.7:
 - Added new extensions
