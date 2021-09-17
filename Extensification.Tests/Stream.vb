@@ -83,6 +83,19 @@ Public Class StreamTests
     End Sub
 
     ''' <summary>
+    ''' Tests reading and seeking
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestReadAndSeek()
+        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
+                                   "You've reached the second line!"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
+        Dim ArrayBuffer(8) As Byte
+        TextStream.ReadAndSeek(ArrayBuffer, 0, 8)
+        Assert.IsTrue(TextStream.Position = 0)
+    End Sub
+
+    ''' <summary>
     ''' Tests trying to read a byte from a stream
     ''' </summary>
     <TestMethod>
@@ -105,6 +118,19 @@ Public Class StreamTests
         Dim ArrayBuffer() As Byte = {1, 2, 3, 4}
         TextStream.Seek(-4, SeekOrigin.End)
         Assert.IsTrue(TextStream.TryWrite(ArrayBuffer, 0, 4))
+    End Sub
+
+    ''' <summary>
+    ''' Tests writing and seeking
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestWriteAndSeek()
+        Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
+                                   "You've reached the second line!"
+        Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
+        Dim ArrayBuffer(8) As Byte
+        TextStream.WriteAndSeek(ArrayBuffer, 0, 8)
+        Assert.IsTrue(TextStream.Position = 0)
     End Sub
 
     ''' <summary>

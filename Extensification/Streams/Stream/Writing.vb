@@ -42,6 +42,15 @@ Namespace StreamExts
         End Function
 
         ''' <summary>
+        ''' Writes to the stream and seeks the stream to the beginning, if possible.
+        ''' </summary>
+        <Extension>
+        Public Sub WriteAndSeek(TargetStream As Stream, Buffer() As Byte, Offset As Integer, Count As Integer)
+            TargetStream.Write(Buffer, Offset, Count)
+            If TargetStream.CanSeek Then TargetStream.Seek(0, SeekOrigin.Begin)
+        End Sub
+
+        ''' <summary>
         ''' Tries writing to the stream
         ''' </summary>
         ''' <returns>True if successful; False if unsuccessful</returns>

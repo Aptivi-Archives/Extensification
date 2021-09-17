@@ -42,6 +42,17 @@ Namespace StreamExts
         End Function
 
         ''' <summary>
+        ''' Reads from the stream and seeks the stream to the beginning, if possible.
+        ''' </summary>
+        ''' <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function ReadAndSeek(TargetStream As Stream, Buffer() As Byte, Offset As Integer, Count As Integer) As Integer
+            Dim Result As Integer = TargetStream.Read(Buffer, Offset, Count)
+            If TargetStream.CanSeek Then TargetStream.Seek(0, SeekOrigin.Begin)
+            Return Result
+        End Function
+
+        ''' <summary>
         ''' Tries reading a byte from the stream
         ''' </summary>
         ''' <returns>Byte number if successful; -1 if at end of stream; -2 if error occurred</returns>
