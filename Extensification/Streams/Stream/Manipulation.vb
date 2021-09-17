@@ -79,5 +79,31 @@ Namespace StreamExts
             Return Success
         End Function
 
+#If NET45 Then
+        ''' <summary>
+        ''' Tries to return the array of unsigned bytes from which this stream was created.
+        ''' </summary>
+        ''' <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function TryGetBuffer(TargetStream As Stream, ByRef Buffer As ArraySegment(Of Byte)) As Boolean
+            Dim Success As Boolean = True
+
+            'Try to seek
+            Try
+                Dim Chars As New List(Of Byte)
+                Dim CharByte As Integer
+                Do Until CharByte = -1
+                    CharByte = TargetStream.ReadByte()
+                    If Not CharByte = -1 Then Chars.Add(Convert.ToByte(CharByte))
+                Loop
+                Buffer = New ArraySegment(Of Byte)(Chars.ToArray)
+            Catch ex As Exception
+                Success = False
+            End Try
+
+            'Return the result
+            Return Success
+        End Function
+#End If
     End Module
 End Namespace

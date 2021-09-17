@@ -55,6 +55,19 @@ Public Class StreamTests
         TextStream.Write(Text.Encoding.Default.GetBytes("Hello!!!"), 0, 8)
         Assert.IsTrue(TextStream.TryFlush)
     End Sub
+
+    ''' <summary>
+    ''' Tests trying to get buffer from a stream
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestTryGetBuffer()
+        Dim TextStream As New MemoryStream(8)
+        Dim TextStreamArray As New ArraySegment(Of Byte)
+        TextStream.Write(Text.Encoding.Default.GetBytes("Hello!!!"), 0, 8)
+        TextStream.Seek(0, SeekOrigin.Begin)
+        Assert.IsTrue(TextStream.TryGetBuffer(TextStreamArray))
+        Assert.IsTrue(TextStreamArray.Count = 8)
+    End Sub
 #End Region
 #Region "Reading"
     ''' <summary>
