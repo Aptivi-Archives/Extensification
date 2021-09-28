@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification.External</RootNamespace>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net45;net5.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net45;net5.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <PackageOutputPath>../Extensification.Bin</PackageOutputPath>
