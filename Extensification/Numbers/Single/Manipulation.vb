@@ -50,5 +50,48 @@ Namespace SingleExts
             Return Number
         End Function
 
+        ''' <summary>
+        ''' Swaps the two numbers
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub Swap(ByRef SourceNumber As Single, ByRef TargetNumber As Single)
+            Dim Source As Single = SourceNumber
+            Dim Target As Single = TargetNumber
+            SourceNumber = Target
+            TargetNumber = Source
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the source is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfSourceLarger(ByRef SourceNumber As Single, ByRef TargetNumber As Single)
+            Dim Source As Single = SourceNumber
+            Dim Target As Single = TargetNumber
+            If SourceNumber > TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the target is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfTargetLarger(ByRef SourceNumber As Single, ByRef TargetNumber As Single)
+            Dim Source As Single = SourceNumber
+            Dim Target As Single = TargetNumber
+            If SourceNumber < TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
     End Module
 End Namespace

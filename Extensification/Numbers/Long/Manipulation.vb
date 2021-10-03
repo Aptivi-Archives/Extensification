@@ -76,5 +76,91 @@ Namespace LongExts
             Return Number
         End Function
 
+        ''' <summary>
+        ''' Swaps the two numbers
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub Swap(ByRef SourceNumber As Long, ByRef TargetNumber As Long)
+            Dim Source As Long = SourceNumber
+            Dim Target As Long = TargetNumber
+            SourceNumber = Target
+            TargetNumber = Source
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the source is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfSourceLarger(ByRef SourceNumber As Long, ByRef TargetNumber As Long)
+            Dim Source As Long = SourceNumber
+            Dim Target As Long = TargetNumber
+            If SourceNumber > TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the target is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfTargetLarger(ByRef SourceNumber As Long, ByRef TargetNumber As Long)
+            Dim Source As Long = SourceNumber
+            Dim Target As Long = TargetNumber
+            If SourceNumber < TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub Swap(ByRef SourceNumber As ULong, ByRef TargetNumber As ULong)
+            Dim Source As ULong = SourceNumber
+            Dim Target As ULong = TargetNumber
+            SourceNumber = Target
+            TargetNumber = Source
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the source is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfSourceLarger(ByRef SourceNumber As ULong, ByRef TargetNumber As ULong)
+            Dim Source As ULong = SourceNumber
+            Dim Target As ULong = TargetNumber
+            If SourceNumber > TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the target is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfTargetLarger(ByRef SourceNumber As ULong, ByRef TargetNumber As ULong)
+            Dim Source As ULong = SourceNumber
+            Dim Target As ULong = TargetNumber
+            If SourceNumber < TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
     End Module
 End Namespace

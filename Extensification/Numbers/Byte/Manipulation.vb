@@ -76,5 +76,91 @@ Namespace ByteExts
             Return Number
         End Function
 
+        ''' <summary>
+        ''' Swaps the two numbers
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub Swap(ByRef SourceNumber As Byte, ByRef TargetNumber As Byte)
+            Dim Source As Byte = SourceNumber
+            Dim Target As Byte = TargetNumber
+            SourceNumber = Target
+            TargetNumber = Source
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the source is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfSourceLarger(ByRef SourceNumber As Byte, ByRef TargetNumber As Byte)
+            Dim Source As Byte = SourceNumber
+            Dim Target As Byte = TargetNumber
+            If SourceNumber > TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the target is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfTargetLarger(ByRef SourceNumber As Byte, ByRef TargetNumber As Byte)
+            Dim Source As Byte = SourceNumber
+            Dim Target As Byte = TargetNumber
+            If SourceNumber < TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub Swap(ByRef SourceNumber As SByte, ByRef TargetNumber As SByte)
+            Dim Source As SByte = SourceNumber
+            Dim Target As SByte = TargetNumber
+            SourceNumber = Target
+            TargetNumber = Source
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the source is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfSourceLarger(ByRef SourceNumber As SByte, ByRef TargetNumber As SByte)
+            Dim Source As SByte = SourceNumber
+            Dim Target As SByte = TargetNumber
+            If SourceNumber > TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
+        ''' <summary>
+        ''' Swaps the two numbers if the target is larger than the target
+        ''' </summary>
+        ''' <param name="SourceNumber">Number</param>
+        ''' <param name="TargetNumber">Number</param>
+        <Extension>
+        Public Sub SwapIfTargetLarger(ByRef SourceNumber As SByte, ByRef TargetNumber As SByte)
+            Dim Source As SByte = SourceNumber
+            Dim Target As SByte = TargetNumber
+            If SourceNumber < TargetNumber Then
+                SourceNumber = Target
+                TargetNumber = Source
+            End If
+        End Sub
+
     End Module
 End Namespace

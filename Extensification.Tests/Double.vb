@@ -44,6 +44,48 @@ Public Class DoubleTests
         TargetDouble = TargetDouble.Decrement(2)
         Assert.AreEqual(ExpectedDouble, TargetDouble)
     End Sub
+
+    ''' <summary>
+    ''' Tests byte swap
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwap()
+        Dim ExpectedFirstByte As Double = 9
+        Dim ExpectedSecondByte As Double = 8
+        Dim TargetFirstByte As Double = 8
+        Dim TargetSecondByte As Double = 9
+        TargetFirstByte.Swap(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests byte swap if source is larger
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapIfSourceLarger()
+        Dim ExpectedFirstByte As Double = 8
+        Dim ExpectedSecondByte As Double = 10
+        Dim TargetFirstByte As Double = 10
+        Dim TargetSecondByte As Double = 8
+        TargetFirstByte.SwapIfSourceLarger(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests byte swap if target is larger
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapIfTargetLarger()
+        Dim ExpectedFirstByte As Double = 10
+        Dim ExpectedSecondByte As Double = 8
+        Dim TargetFirstByte As Double = 8
+        Dim TargetSecondByte As Double = 10
+        TargetFirstByte.SwapIfTargetLarger(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
 #End Region
 
 #Region "Querying"

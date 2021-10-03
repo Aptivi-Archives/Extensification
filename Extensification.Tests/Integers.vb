@@ -66,6 +66,90 @@ Public Class IntegerTests
         TargetUInteger = TargetUInteger.Decrement(2)
         Assert.AreEqual(ExpectedUInteger, TargetUInteger)
     End Sub
+
+    ''' <summary>
+    ''' Tests byte swap
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwap()
+        Dim ExpectedFirstByte As Integer = 9
+        Dim ExpectedSecondByte As Integer = 8
+        Dim TargetFirstByte As Integer = 8
+        Dim TargetSecondByte As Integer = 9
+        TargetFirstByte.Swap(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests signed byte swap
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapSigned()
+        Dim ExpectedFirstByte As UInteger = 9
+        Dim ExpectedSecondByte As UInteger = 8
+        Dim TargetFirstByte As UInteger = 8
+        Dim TargetSecondByte As UInteger = 9
+        TargetFirstByte.Swap(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests byte swap if source is larger
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapIfSourceLarger()
+        Dim ExpectedFirstByte As Integer = 8
+        Dim ExpectedSecondByte As Integer = 10
+        Dim TargetFirstByte As Integer = 10
+        Dim TargetSecondByte As Integer = 8
+        TargetFirstByte.SwapIfSourceLarger(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests signed byte swap if source is larger
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapIfSourceLargerSigned()
+        Dim ExpectedFirstByte As UInteger = 8
+        Dim ExpectedSecondByte As UInteger = 10
+        Dim TargetFirstByte As UInteger = 10
+        Dim TargetSecondByte As UInteger = 8
+        TargetFirstByte.SwapIfSourceLarger(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests byte swap if target is larger
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapIfTargetLarger()
+        Dim ExpectedFirstByte As Integer = 10
+        Dim ExpectedSecondByte As Integer = 8
+        Dim TargetFirstByte As Integer = 8
+        Dim TargetSecondByte As Integer = 10
+        TargetFirstByte.SwapIfTargetLarger(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
+
+    ''' <summary>
+    ''' Tests signed byte swap if target is larger
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestSwapIfTargetLargerSigned()
+        Dim ExpectedFirstByte As UInteger = 10
+        Dim ExpectedSecondByte As UInteger = 8
+        Dim TargetFirstByte As UInteger = 8
+        Dim TargetSecondByte As UInteger = 10
+        TargetFirstByte.SwapIfTargetLarger(TargetSecondByte)
+        Assert.AreEqual(ExpectedFirstByte, TargetFirstByte)
+        Assert.AreEqual(ExpectedSecondByte, TargetSecondByte)
+    End Sub
 #End Region
 
 #Region "Querying"
