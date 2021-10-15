@@ -161,11 +161,19 @@ Public Class StringTests
     End Sub
 
     ''' <summary>
-    ''' Tests reserving orders of characters in a string
+    ''' Tests repeating the string
     ''' </summary>
     <TestMethod> Public Sub TestRepeat()
         Dim TargetString As String = "Hi! "
         Assert.AreEqual("Hi! Hi! Hi! ", TargetString.Repeat(3))
+    End Sub
+
+    ''' <summary>
+    ''' Tests repeating the string zero times
+    ''' </summary>
+    <TestMethod> Public Sub TestRepeatZero()
+        Dim TargetString As String = "Hi! "
+        Assert.AreEqual("", TargetString.Repeat(0))
     End Sub
 
     ''' <summary>

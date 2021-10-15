@@ -155,9 +155,9 @@ Namespace StringExts
         <Extension>
         Public Function Repeat(Str As String, Times As Long) As String
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
-            If Times <= 0 Then Throw New ArgumentException("Zero or negative times aren't allowed.", NameOf(Str))
+            If Times < 0 Then Throw New ArgumentException("Negative times isn't allowed.", NameOf(Str))
             Dim Target As String = ""
-            For i As Long = 1 To Times
+            For i As Long = 0 To Times - 1
                 Target += Str
             Next
             Return Target
