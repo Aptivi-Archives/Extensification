@@ -33,7 +33,7 @@ Namespace CharExts
         <Extension>
         Public Function Increment(Character As Char, IncrementThreshold As Integer) As Char
             If IncrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Decrement().")
-            Return ChrW(AscW(Character) + IncrementThreshold)
+            Return Convert.ToChar(Convert.ToInt32(Character) + IncrementThreshold)
         End Function
 
         ''' <summary>
@@ -45,7 +45,7 @@ Namespace CharExts
         <Extension>
         Public Function Decrement(Character As Char, DecrementThreshold As Integer) As Char
             If DecrementThreshold < 0 Then Throw New InvalidOperationException("Threshold is negative. Use Increment().")
-            Return ChrW(AscW(Character) - DecrementThreshold)
+            Return Convert.ToChar(Convert.ToInt32(Character) - DecrementThreshold)
         End Function
 
     End Module

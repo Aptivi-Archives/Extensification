@@ -132,7 +132,7 @@ Namespace StringExts
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars As Char() = Str.ToCharArray
             For Character As Integer = 0 To StrChars.Length - 1
-                StrChars(Character) = ChrW(AscW(StrChars(Character)) + ShiftThreshold)
+                StrChars(Character) = Convert.ToChar(Convert.ToInt32(StrChars(Character)) + ShiftThreshold)
             Next
             Return StrChars
         End Function

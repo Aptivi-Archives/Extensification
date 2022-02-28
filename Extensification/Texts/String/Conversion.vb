@@ -26,7 +26,7 @@ Namespace StringExts
 
         ''' <summary>
         ''' Converts all of the VT sequence numbers enclosed in &lt; and &gt; marks to their appropriate VT sequence.
-        ''' For example, &lt;38;5;5&gt; will be converted to ChrW(&amp;H1B)[38;5;5. Note that if you write spaces between &lt; and &gt; marks,
+        ''' For example, &lt;38;5;5&gt; will be converted to Convert.ToChar(&amp;H1B)[38;5;5. Note that if you write spaces between &lt; and &gt; marks,
         ''' it will not parse it.
         ''' </summary>
         ''' <param name="Str">Target string</param>
@@ -50,22 +50,22 @@ ParseSequence:
                         If Sequence.StartsWithAnyOf({"<A", "<B", "<C", "<D", "<M", "<E", "<7", "<8", "<=", "<>", "<H", "<N", "<O", "<5n", "<6n"}) And
                            Not Sequence.EndsWithAnyOf({"F>", "G>", "H>", "d>", "f>", "S>", "T>", "@>", "P>", "X>", "L>", "M>", "J>", "K>", "m>", "I>", "Z>", "r>"}) Then
                             'These sequences don't need any of '[' and ']'.
-                            StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + Sequence.ReplaceAll({"<", ">"}, ""))
+                            StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, Convert.ToChar(&H1B) + Sequence.ReplaceAll({"<", ">"}, ""))
                         ElseIf Sequence.StartsWithAnyOf({"<4", "<0", "<2"}) And (Not Sequence.StartsWithAnyOf({"<2~", "<20", "<21", "<23", "<24", "<48"}) And Not Sequence.EndsWith("0m>")) Then
                             'These sequences need ']' as they are OSC sequences.
                             If Sequence.StartsWithAnyOf({"<0", "<2"}) Then
                                 'They each need a BELL character &H07
-                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, "") + ChrW(&H7))
+                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, Convert.ToChar(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, "") + Convert.ToChar(&H7))
                             ElseIf Sequence.StartsWith("<4") Then
                                 'This needs an ESC character &H1B
-                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, "") + ChrW(&H1B))
+                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, Convert.ToChar(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, "") + Convert.ToChar(&H1B))
                             Else
                                 'No special suffixes needed
-                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, ""))
+                                StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, Convert.ToChar(&H1B) + "]" + Sequence.ReplaceAll({"<", ">"}, ""))
                             End If
                         Else
                             'These sequences need '[' as they are CSI sequences.
-                            StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, ChrW(&H1B) + "[" + Sequence.ReplaceAll({"<", ">"}, ""))
+                            StrArrayWords(WordNumber) = StrArrayWords(WordNumber).Replace(Sequence, Convert.ToChar(&H1B) + "[" + Sequence.ReplaceAll({"<", ">"}, ""))
                         End If
                     End If
 

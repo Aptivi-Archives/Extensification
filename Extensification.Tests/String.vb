@@ -328,7 +328,6 @@ Public Class StringTests
         Assert.IsTrue(TargetArray.Length = 3)
     End Sub
 
-#If Not NETCOREAPP2_1 Then
     ''' <summary>
     ''' Tests splitting a string with double quotes enclosed
     ''' </summary>
@@ -337,18 +336,6 @@ Public Class StringTests
         Dim TargetArray() As String = TargetString.SplitEncloseDoubleQuotes(" ")
         Assert.IsTrue(TargetArray.Length = 3)
     End Sub
-#End If
-
-#If NET45 Then
-    ''' <summary>
-    ''' Tests removing letters from a string
-    ''' </summary>
-    <TestMethod> Public Sub TestEvaluate()
-        Dim TargetString As String = "2 + 5"
-        Dim ExpectedEvaluated As Integer = 7
-        Assert.AreEqual(ExpectedEvaluated, TargetString.Evaluate)
-    End Sub
-#End If
 #End Region
 
 #Region "Removal"

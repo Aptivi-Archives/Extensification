@@ -28,6 +28,7 @@ Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports Extensification.ArrayExts
 Imports Extensification.DictionaryExts
+Imports NotVisualBasic.FileIO
 
 Namespace StringExts
     ''' <summary>
@@ -71,7 +72,7 @@ Namespace StringExts
             Dim StrAscii As Byte() = Array.Empty(Of Byte)
 #End If
             For Character As Integer = 0 To StrChars.Length - 1
-                Dim AsciiCode As Integer = AscW(StrChars(Character))
+                Dim AsciiCode As Integer = Convert.ToInt32(StrChars(Character))
                 StrAscii.Add(AsciiCode)
             Next
             Return StrAscii
@@ -85,7 +86,7 @@ Namespace StringExts
         Public Function GetAsciiCode(Str As String, CharacterNum As Integer) As Byte
             If Str Is Nothing Then Throw New ArgumentNullException(NameOf(Str))
             Dim StrChars As Char() = Str.ToCharArray
-            Return AscW(StrChars(CharacterNum))
+            Return Convert.ToInt32(StrChars(CharacterNum))
         End Function
 
         ''' <summary>
@@ -240,7 +241,7 @@ Namespace StringExts
         ''' <returns></returns>
         <Extension>
         Public Function SplitNewLines(Str As String) As String()
-            Return Str.Replace(ChrW(13), "").Split(ChrW(10))
+            Return Str.Replace(Convert.ToChar(13), "").Split(Convert.ToChar(10))
         End Function
 
         ''' <summary>
@@ -250,10 +251,9 @@ Namespace StringExts
         ''' <returns></returns>
         <Extension>
         Public Function SplitNewLinesCr(Str As String) As String()
-            Return Str.Replace(ChrW(10), "").Split(ChrW(13))
+            Return Str.Replace(Convert.ToChar(10), "").Split(Convert.ToChar(13))
         End Function
 
-#If Not NETCOREAPP2_1 Then
         ''' <summary>
         ''' Splits the string enclosed in double quotes
         ''' </summary>
@@ -263,7 +263,7 @@ Namespace StringExts
         Public Function SplitEncloseDoubleQuotes(Str As String, ParamArray Delims As String()) As String()
             Dim Result() As String
             Dim TStream As New MemoryStream(Encoding.Default.GetBytes(Str))
-            Dim Parser As New TextFieldParser(TStream) With {
+            Dim Parser As New CsvTextFieldParser(TStream) With {
                 .Delimiters = Delims,
                 .HasFieldsEnclosedInQuotes = True,
                 .TrimWhiteSpace = False
@@ -276,40 +276,6 @@ Namespace StringExts
             End If
             Return Result
         End Function
-#End If
-
-#If NET45 Then
-        ''' <summary>
-        ''' Evaluates a string
-        ''' </summary>
-        ''' <param name="Str">A string</param>
-        ''' <returns></returns>
-        <Extension>
-        Public Function Evaluate(Str As String) As Object
-            Dim EvalP As New VBCodeProvider
-            Dim EvalCP As New CompilerParameters With {.GenerateExecutable = False,
-                                                       .GenerateInMemory = True}
-            EvalCP.ReferencedAssemblies.Add(Assembly.GetExecutingAssembly.Location) 'It should reference itself
-            EvalCP.ReferencedAssemblies.Add("System.dll")
-            EvalCP.ReferencedAssemblies.Add("System.Core.dll")
-            EvalCP.ReferencedAssemblies.Add("System.Data.dll")
-            EvalCP.ReferencedAssemblies.Add("System.DirectoryServices.dll")
-            EvalCP.ReferencedAssemblies.Add("System.Xml.dll")
-            EvalCP.ReferencedAssemblies.Add("System.Xml.Linq.dll")
-            Dim EvalCode As String = "Imports System" & Environment.NewLine &
-                                     "Public Class Eval" & Environment.NewLine &
-                                     "Public Shared Function Evaluate()" & Environment.NewLine &
-                                     "Return " & Str & Environment.NewLine &
-                                     "End Function" & Environment.NewLine &
-                                     "End Class"
-            Dim cr As CompilerResults = EvalP.CompileAssemblyFromSource(EvalCP, EvalCode)
-            If cr.Errors.Count = 0 Then
-                Dim methInfo As MethodInfo = cr.CompiledAssembly.GetType("Eval").GetMethod("Evaluate")
-                Return methInfo.Invoke(Nothing, Nothing)
-            End If
-            Return Nothing
-        End Function
-#End If
 
     End Module
 End Namespace

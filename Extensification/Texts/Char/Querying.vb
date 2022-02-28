@@ -31,7 +31,7 @@ Namespace CharExts
         ''' <returns>ASCII code of a character</returns>
         <Extension>
         Public Function GetAsciiCode(Character As Char) As Integer
-            Return AscW(Character)
+            Return Convert.ToInt32(Character)
         End Function
 
     End Module

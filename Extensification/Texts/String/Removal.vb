@@ -38,7 +38,7 @@ Namespace StringExts
                 StrChars(CharNum) = ""
                 CharNum += 1
             Loop
-            Return String.Join("", StrChars).Replace(vbNullChar, "")
+            Return String.Join("", StrChars).Replace(Convert.ToChar(0), "")
         End Function
 
         ''' <summary>

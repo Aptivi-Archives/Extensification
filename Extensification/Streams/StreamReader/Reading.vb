@@ -35,7 +35,7 @@ Namespace StreamReaderExts
             'Read files as character numbers and convert them to string
             While Not reader.EndOfStream
                 Dim readFile As Integer = reader.Read
-                strBuilder.Append(ChrW(readFile))
+                strBuilder.Append(Convert.ToChar(readFile))
                 If readFile = 10 Then
                     Exit While
                 End If
