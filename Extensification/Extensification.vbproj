@@ -20,7 +20,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2022.0:
-- 
+- Isolated Microsoft.VisualBasic
 
 2021.9.1:
 - Repeat is no longer strict about zeroes
