@@ -78,5 +78,25 @@ ParseSequence:
             Str = String.Join(" ", StrArrayWords)
         End Sub
 
+        ''' <summary>
+        ''' Converts from hexadecimal string representation of color to RGB values
+        ''' </summary>
+        ''' <param name="source">A string which has the specified text to replace</param>
+        ''' <param name="R">Red level to be filled</param>
+        ''' <param name="G">Green level to be filled</param>
+        ''' <param name="B">Blue level to be filled</param>
+        <Extension>
+        Public Sub ConvertFromHexToRgb(source As String, ByRef R As Integer, ByRef G As Integer, ByRef B As Integer)
+            If source.StartsWith("#") Then
+                'Get the color decimal number
+                Dim ColorDecimal As Integer = Convert.ToInt32(source.RemoveLetter(0), 16)
+
+                'Convert the RGB values to numbers
+                R = CByte((ColorDecimal And &HFF0000) >> &H10)
+                G = CByte((ColorDecimal And &HFF00) >> 8)
+                B = CByte(ColorDecimal And &HFF)
+            End If
+        End Sub
+
     End Module
 End Namespace

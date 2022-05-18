@@ -65,6 +65,21 @@ Public Class StringTests
         Assert.IsFalse(TargetString.ContainsAnyOf({"<A>"}))
         Assert.IsTrue(TargetString = ChrW(&H1B) + "A")
     End Sub
+
+    ''' <summary>
+    ''' Tests converting from color hex to RGB
+    ''' </summary>
+    <TestMethod> Public Sub TestConvertFromHexToRgb()
+        Dim ExpectedR As Integer = 15
+        Dim ExpectedG As Integer = 15
+        Dim ExpectedB As Integer = 15
+        Dim ActualR, ActualG, ActualB As Integer
+        Dim Color As String = "#0F0F0F"
+        Color.ConvertFromHexToRgb(ActualR, ActualG, ActualB)
+        Assert.AreEqual(ExpectedR, ActualR)
+        Assert.AreEqual(ExpectedG, ActualG)
+        Assert.AreEqual(ExpectedB, ActualB)
+    End Sub
 #End Region
 
 #Region "Manipulation"
