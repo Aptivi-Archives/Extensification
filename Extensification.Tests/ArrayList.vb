@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.ArrayListExts
 
-<TestClass>
+<TestFixture>
 Public Class ArrayListTests
 
 #Region "Conversion"
     ''' <summary>
     ''' Tests converting array list to list
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestToArrayList()
         Dim TargetArrayList As New ArrayList From {"Test converting", "target array list", "to list."}
         Dim TargetList As List(Of Object) = TargetArrayList.ToList
@@ -39,7 +39,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests counting full entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestCountFullEntries()
         Dim TargetArray As New ArrayList From {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
@@ -50,7 +50,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests counting empty entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestCountEmptyEntries()
         Dim TargetArray As New ArrayList From {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
@@ -63,7 +63,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests getting index from entry
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexOfEntry()
         Dim TargetList As New ArrayList From {"Test getting", "index from", "array list entry."}
         Dim ExpectedIndex As Integer = 1
@@ -73,7 +73,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests getting indexes of full entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexesOfFullEntries()
         Dim TargetArray As New ArrayList From {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
@@ -88,7 +88,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests getting indexes of empty entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexesOfEmptyEntries()
         Dim TargetArray As New ArrayList From {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As New ArrayList From {4, Nothing, Nothing}
@@ -105,7 +105,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests seeing if the array list contains any of the specified clauses
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestContainsAnyOf()
         Dim TargetArray As New ArrayList From {"Test", "Hello and Test", "Tester! Hello!"}
         Assert.IsTrue(TargetArray.ContainsAnyOf(New ArrayList From {"Hello and Test", "Test"}))
@@ -115,7 +115,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests seeing if the array list contains all of the specified clauses
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestContainsAllOf()
         Dim TargetArray As New ArrayList From {"Test", "Hello and Test", "Tester! Hello!"}
         Assert.IsTrue(TargetArray.ContainsAllOf(New ArrayList From {"Hello and Test", "Test"}))
@@ -127,7 +127,7 @@ Public Class ArrayListTests
     ''' <summary>
     ''' Tests trying to remove an entry from array list
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryRemove()
         Dim TargetArray As New ArrayList From {"Test"}
         Assert.IsTrue(TargetArray.TryRemove("Test"))

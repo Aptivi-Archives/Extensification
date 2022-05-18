@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.CharExts
 
-<TestClass>
+<TestFixture>
 Public Class CharTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests character incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim Target As Char = "A"
         Target = Target.Increment(4)
@@ -36,7 +36,7 @@ Public Class CharTests
     ''' <summary>
     ''' Tests character decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim Target As Char = "E"
         Target = Target.Decrement(4)
@@ -48,7 +48,7 @@ Public Class CharTests
     ''' <summary>
     ''' Tests character ASCII code fetching
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetAsciiCode()
         Dim Target As Char = "E"
         Assert.AreEqual(69, Target.GetAsciiCode)
@@ -57,7 +57,7 @@ Public Class CharTests
     ''' <summary>
     ''' Tests converting character to console key info
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestToConsoleKeyInfo()
         Dim ExpectedKeyInfo As New ConsoleKeyInfo("E"c, ConsoleKey.E, False, False, False)
         Dim ActualConsoleKeyInfo As ConsoleKeyInfo = "E"c.ToConsoleKeyInfo
@@ -67,7 +67,7 @@ Public Class CharTests
     ''' <summary>
     ''' Tests converting character to console key info with custom handler
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestToConsoleKeyInfoWithCustomHandler()
         Dim CustomHandler As New Dictionary(Of Char, Tuple(Of ConsoleKey, ConsoleModifiers)) From {{Convert.ToChar(10), Tuple.Create(ConsoleKey.Enter, ConsoleModifiers.Control)}}
         Dim ExpectedKeyInfo As New ConsoleKeyInfo(Convert.ToChar(10), ConsoleKey.Enter, False, False, True)

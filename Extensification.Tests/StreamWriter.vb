@@ -19,16 +19,16 @@
 Imports System.IO
 Imports Extensification.StreamWriterExts
 Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 
-<TestClass>
+<TestFixture>
 Public Class StreamWriterTests
 
 #Region "Writing"
     ''' <summary>
     ''' Tests reading lines
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestWriteLines()
         Dim NewTexts As String() = {"One, two", "three, four"}
         Dim TextStream As New MemoryStream()
@@ -40,7 +40,7 @@ Public Class StreamWriterTests
     ''' <summary>
     ''' Tests reading lines
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestWriteLineAndSeek()
         Dim NewText As String = "One, two"
         Dim TextStream As New MemoryStream()

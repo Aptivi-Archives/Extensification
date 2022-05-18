@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.ByteExts
 
-<TestClass>
+<TestFixture>
 Public Class ByteTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests byte incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim ExpectedByte As Byte = 5
         Dim TargetByte As Byte = 3
@@ -37,7 +37,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrementSigned()
         Dim ExpectedByte As SByte = 5
         Dim TargetByte As SByte = 3
@@ -48,7 +48,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests byte decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim ExpectedByte As Byte = 3
         Dim TargetByte As Byte = 5
@@ -59,7 +59,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrementSigned()
         Dim ExpectedByte As SByte = 3
         Dim TargetByte As SByte = 5
@@ -70,7 +70,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwap()
         Dim ExpectedFirstByte As Byte = 9
         Dim ExpectedSecondByte As Byte = 8
@@ -84,7 +84,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapSigned()
         Dim ExpectedFirstByte As SByte = 9
         Dim ExpectedSecondByte As SByte = 8
@@ -98,7 +98,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLarger()
         Dim ExpectedFirstByte As Byte = 8
         Dim ExpectedSecondByte As Byte = 10
@@ -112,7 +112,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLargerSigned()
         Dim ExpectedFirstByte As SByte = 8
         Dim ExpectedSecondByte As SByte = 10
@@ -126,7 +126,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLarger()
         Dim ExpectedFirstByte As Byte = 10
         Dim ExpectedSecondByte As Byte = 8
@@ -140,7 +140,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLargerSigned()
         Dim ExpectedFirstByte As SByte = 10
         Dim ExpectedSecondByte As SByte = 8
@@ -156,7 +156,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests byte digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigits()
         Dim ExpectedDigits() As Byte = {7, 5}
         Dim TargetNumber As Byte = 75
@@ -166,7 +166,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsSigned()
         Dim ExpectedDigits() As SByte = {7, 5}
         Dim TargetNumber As SByte = 75
@@ -176,7 +176,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests byte Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Byte = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
@@ -185,7 +185,7 @@ Public Class ByteTests
     ''' <summary>
     ''' Tests signed byte Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrongSigned()
         Dim TargetNumber As SByte = 1
         Assert.IsTrue(TargetNumber.IsArmstrong)

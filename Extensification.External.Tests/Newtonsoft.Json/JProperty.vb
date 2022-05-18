@@ -16,18 +16,18 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Newtonsoft.Json.Linq
 Imports Extensification.External.Newtonsoft.Json.JPropertyExts
 
-<TestClass>
+<TestFixture>
 Public Class JPropertyTests
 
 #Region "Getting"
     ''' <summary>
     ''' Tests getting property name ending with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertyNameEndingWith()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -38,7 +38,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of getting property name ending with a specified string should return nothing if the property doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertyNameEndingWithShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -49,7 +49,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests getting property name beginning with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertyNameStartingWith()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -60,7 +60,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of getting property name beginning with a specified string should return nothing if the property doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertyNameStartingWithShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -71,7 +71,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests getting property name containing a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertyNameContaining()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -82,7 +82,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of getting property name containing a specified string should return nothing if the property doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertyNameContainingShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -93,7 +93,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of getting properties that has the specific type in value
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertiesTypeInValue()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -104,7 +104,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of getting properties that has the specific type in value should return nothing if the property of specific type doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertiesTypeInValueShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -115,7 +115,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of getting properties that has the specific type in value should return everything if the type is set to <see cref="JTokenType.None"/>
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestGetPropertiesTypeInValueShouldReturnEverythingIfNoTokenTypeSpecified()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -128,7 +128,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key ending with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyEndingWith()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -139,7 +139,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key that contains the whitespace ending with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyThatHasWhitespaceEndingWith()
         Dim JsonString As String = My.Resources.JSON_InxiExample
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -150,7 +150,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key that contains the special character ending with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyThatHasSpecialCharacterEndingWith()
         Dim JsonString As String = My.Resources.JSON_PropertyTest2
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -161,7 +161,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of selecting a token that has its key ending with a specified string should return nothing if the property doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyEndingWithShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -172,7 +172,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key beginning with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyStartingWith()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -183,7 +183,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key that contains the whitespace beginning with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyThatHasWhitespaceStartingWith()
         Dim JsonString As String = My.Resources.JSON_InxiExample
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -194,7 +194,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key that contains the special character beginning with a specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyThatHasSpecialCharacterStartingWith()
         Dim JsonString As String = My.Resources.JSON_PropertyTest2
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -205,7 +205,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of selecting a token that has its key beginning with a specified string should return nothing if the property doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyStartingWithShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -216,7 +216,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key containing the specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyContaining()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -227,7 +227,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key that contains the whitespace containing the specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyThatHasWhitespaceContaining()
         Dim JsonString As String = My.Resources.JSON_InxiExample
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -238,7 +238,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests selecting a token that has its key that contains the special character containing the specified string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyThatHasSpecialCharacterContaining()
         Dim JsonString As String = My.Resources.JSON_PropertyTest2
         Dim JsonToken As JToken = JToken.Parse(JsonString)
@@ -249,7 +249,7 @@ Public Class JPropertyTests
     ''' <summary>
     ''' Tests the logic of selecting a token that has its key containing the specified string should return nothing if the property doesn't exist
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestSelectTokenKeyContainingShouldReturnNothingIfNotExists()
         Dim JsonString As String = My.Resources.JSON_PropertyTest1
         Dim JsonToken As JToken = JToken.Parse(JsonString)

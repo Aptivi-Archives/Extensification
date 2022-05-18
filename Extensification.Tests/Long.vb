@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.LongExts
 
-<TestClass>
+<TestFixture>
 Public Class LongTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests long integer incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim ExpectedLong As Long = 5
         Dim TargetLong As Long = 3
@@ -37,7 +37,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests unsigned long integer incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrementUnsigned()
         Dim ExpectedULong As ULong = 5
         Dim TargetULong As ULong = 3
@@ -48,7 +48,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests long integer decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim ExpectedLong As Long = 3
         Dim TargetLong As Long = 5
@@ -59,7 +59,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests unsigned long integer decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrementUnsigned()
         Dim ExpectedULong As ULong = 3
         Dim TargetULong As ULong = 5
@@ -70,7 +70,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwap()
         Dim ExpectedFirstByte As Long = 9
         Dim ExpectedSecondByte As Long = 8
@@ -84,7 +84,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests signed byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapSigned()
         Dim ExpectedFirstByte As ULong = 9
         Dim ExpectedSecondByte As ULong = 8
@@ -98,7 +98,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLarger()
         Dim ExpectedFirstByte As Long = 8
         Dim ExpectedSecondByte As Long = 10
@@ -112,7 +112,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests signed byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLargerSigned()
         Dim ExpectedFirstByte As ULong = 8
         Dim ExpectedSecondByte As ULong = 10
@@ -126,7 +126,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLarger()
         Dim ExpectedFirstByte As Long = 10
         Dim ExpectedSecondByte As Long = 8
@@ -140,7 +140,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests signed byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLargerSigned()
         Dim ExpectedFirstByte As ULong = 10
         Dim ExpectedSecondByte As ULong = 8
@@ -156,7 +156,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting data size to human readable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDataToHumanReadable()
         Dim Expected As String = "4.2 MB"
         Dim Number As Long = 4200000
@@ -166,7 +166,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric measurement without unusual measurements to human readable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestMetricMeasurementToHumanReadable()
         Dim Expected As String = "12.5 centimeters"
         Dim Number As Long = 125
@@ -176,7 +176,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric measurement with unusual measurements to human readable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestMetricMeasurementUnusualToHumanReadable()
         Dim Expected As String = "1.25 decimeters"
         Dim Number As Long = 125
@@ -186,7 +186,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting imperial measurement to human readable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestImperialMeasurementToHumanReadable()
         Dim Expected As String = "1.10479797979798 miles"
         Dim Number As Long = 70000
@@ -196,7 +196,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric volume measurement to human readable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestMetricVolumeToHumanReadable()
         Dim Expected As String = "2.5 liters"
         Dim Number As Long = 2500
@@ -206,7 +206,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric volume measurement to human readable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestImperialVolumeToHumanReadable()
         Dim Expected As String = "2 quarts"
         Dim Number As Long = 4
@@ -216,7 +216,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting data size to human readable (Unsigned long)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDataToHumanReadableUnsigned()
         Dim Expected As String = "4.2 MB"
         Dim Number As ULong = 4200000
@@ -226,7 +226,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric measurement without unusual measurements to human readable (Unsigned long)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestMetricMeasurementToHumanReadableUnsigned()
         Dim Expected As String = "12.5 centimeters"
         Dim Number As ULong = 125
@@ -236,7 +236,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric measurement with unusual measurements to human readable (Unsigned long)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestMetricMeasurementUnusualToHumanReadableUnsigned()
         Dim Expected As String = "1.25 decimeters"
         Dim Number As ULong = 125
@@ -246,7 +246,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting imperial measurement to human readable (Unsigned long)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestImperialMeasurementToHumanReadableUnsigned()
         Dim Expected As String = "1.10479797979798 miles"
         Dim Number As ULong = 70000
@@ -256,7 +256,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric volume measurement to human readable (Unsigned long)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestMetricVolumeToHumanReadableUnsigned()
         Dim Expected As String = "2.5 liters"
         Dim Number As ULong = 2500
@@ -266,7 +266,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests converting metric volume measurement to human readable (Unsigned long)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestImperialVolumeToHumanReadableUnsigned()
         Dim Expected As String = "2 quarts"
         Dim Number As ULong = 4
@@ -278,7 +278,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests long integer digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigits()
         Dim ExpectedDigits() As Long = {7, 5}
         Dim TargetNumber As Long = 75
@@ -288,7 +288,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests unsigned long integer digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsUnsigned()
         Dim ExpectedDigits() As ULong = {7, 5}
         Dim TargetNumber As ULong = 75
@@ -298,7 +298,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests long integer Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Long = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
@@ -307,7 +307,7 @@ Public Class LongTests
     ''' <summary>
     ''' Tests unsigned long integer Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrongUnsigned()
         Dim TargetNumber As ULong = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)

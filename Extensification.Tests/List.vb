@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.ListExts
 
-<TestClass>
+<TestFixture>
 Public Class ListTests
 
 #Region "Addition"
     ''' <summary>
     ''' Tests adding an entry to list if not found
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestAddIfNotFound()
         Dim TargetList As New List(Of String)
         TargetList.AddIfNotFound("String 1")
@@ -39,7 +39,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests converting list to array list
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestToArrayList()
         Dim TargetList As New List(Of String) From {"Test converting", "target list", "to array list."}
         Dim TargetArrayList As ArrayList = TargetList.ToArrayList
@@ -52,7 +52,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests counting full entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestCountFullEntries()
         Dim TargetList As New List(Of String) From {"Full", "", "", "entry", "", "5"}
         Dim TargetListObjects As New List(Of Object) From {12, Nothing, 32, 48}
@@ -63,7 +63,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests counting empty entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestCountEmptyEntries()
         Dim TargetList As New List(Of String) From {"Full", "", "", "entry", "", "", "6"}
         Dim TargetListObjects As New List(Of Object) From {12, Nothing, 32, 48}
@@ -76,7 +76,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests getting index from entry
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexFromEntry()
         Dim TargetList As New List(Of String) From {"Test getting", "index from", "array list entry."}
         Dim ExpectedIndex As Integer = 1
@@ -86,7 +86,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests getting indexes of full entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexesOfFullEntries()
         Dim TargetList As New List(Of String) From {"", "Full", "", "Entry", ""}
         Dim TargetListObjects As New List(Of Object) From {4, Nothing, Nothing}
@@ -101,7 +101,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests getting indexes of empty entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexesOfEmptyEntries()
         Dim TargetList As New List(Of String) From {"", "Full", "", "Entry", ""}
         Dim TargetListObjects As New List(Of Object) From {4, Nothing, Nothing}
@@ -118,7 +118,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests stringifying a char array
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestStringify()
         Dim TargetArray As New List(Of Char) From {"H", "e", "l", "l", "o"}
         Assert.AreEqual("Hello", TargetArray.Stringify)
@@ -129,7 +129,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests seeing if the list contains any of the specified clauses
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestContainsAnyOf()
         Dim TargetList As New List(Of String) From {"Test", "Hello and Test", "Tester! Hello!"}
         Assert.IsTrue(TargetList.ContainsAnyOf({"Hello and Test", "Test"}))
@@ -139,7 +139,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests seeing if the list contains all of the specified clauses
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestContainsAllOf()
         Dim TargetList As New List(Of String) From {"Test", "Hello and Test", "Tester! Hello!"}
         Assert.IsTrue(TargetList.ContainsAllOf({"Hello and Test", "Test"}))
@@ -151,7 +151,7 @@ Public Class ListTests
     ''' <summary>
     ''' Tests trying to remove an entry from list
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryRemove()
         Dim TargetList As New List(Of String) From {"Test"}
         Assert.IsTrue(TargetList.TryRemove("Test"))

@@ -1,14 +1,15 @@
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.Legacy.StringExts
 
 Namespace Extensification.Legacy.Tests
 
-    <TestClass>
+    <TestFixture>
     Public Class StringTests
+
         ''' <summary>
         ''' Tests splitting a string with double quotes enclosed
         ''' </summary>
-        <TestMethod> Public Sub TestSplitEncloseDoubleQuotes()
+        <Test> Public Sub TestSplitEncloseDoubleQuotes()
             Dim TargetString As String = "First ""Second Third"" Fourth"
             Dim TargetArray() As String = TargetString.SplitEncloseDoubleQuotes(" ")
             Assert.IsTrue(TargetArray.Length = 3)
@@ -18,12 +19,13 @@ Namespace Extensification.Legacy.Tests
         ''' <summary>
         ''' Tests removing letters from a string
         ''' </summary>
-        <TestMethod> Public Sub TestEvaluate()
+        <Test> Public Sub TestEvaluate()
             Dim TargetString As String = "2 + 5"
             Dim ExpectedEvaluated As Integer = 7
             Assert.AreEqual(ExpectedEvaluated, TargetString.Evaluate)
         End Sub
 #End If
+
     End Class
 
 End Namespace

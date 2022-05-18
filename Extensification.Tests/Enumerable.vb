@@ -16,10 +16,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.EnumerableExts
 
-<TestClass>
+<TestFixture>
 Public Class EnumerableTests
 
 #Region "Addition"
@@ -27,7 +27,7 @@ Public Class EnumerableTests
     ''' <summary>
     ''' Tests appending a value to the end of a list
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestAppendList()
         Dim TargetEnum As New List(Of String) From {"Welcome", "to"}
         TargetEnum = TargetEnum.Append("Extensification").ToList
@@ -36,7 +36,7 @@ Public Class EnumerableTests
     ''' <summary>
     ''' Tests appending a value to the end of a string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestAppendString()
         Dim TargetString As String = "Welcom"
         TargetString = String.Join("", TargetString.Append("e"))
@@ -49,7 +49,7 @@ Public Class EnumerableTests
     ''' <summary>
     ''' Tests stringifying a char enumerable
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestStringify()
         Dim TargetArray As IEnumerable(Of Char) = {"H", "e", "l", "l", "o"}
         Assert.AreEqual("Hello", TargetArray.Stringify)

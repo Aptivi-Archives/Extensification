@@ -18,16 +18,16 @@
 
 Imports System.IO
 Imports Extensification.StreamExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 
-<TestClass>
+<TestFixture>
 Public Class StreamTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests trying to seek in a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTrySeek()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -39,7 +39,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to seek in a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTrySetLength()
         Dim TextStream As New MemoryStream(8)
         Assert.IsTrue(TextStream.TrySetLength(16))
@@ -49,7 +49,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to flush a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryFlush()
         Dim TextStream As New MemoryStream(8)
         TextStream.Write(Text.Encoding.Default.GetBytes("Hello!!!"), 0, 8)
@@ -59,7 +59,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to get buffer from a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryGetBuffer()
         Dim TextStream As New MemoryStream(8)
         Dim TextStreamArray As New ArraySegment(Of Byte)
@@ -73,7 +73,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to read from a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryRead()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -85,7 +85,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests reading and seeking
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestReadAndSeek()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -98,7 +98,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to read a byte from a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryReadByte()
         Dim TargetText As String = "Hello!"
         Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))
@@ -110,7 +110,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to write to a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryWrite()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -123,7 +123,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests writing and seeking
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestWriteAndSeek()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -136,7 +136,7 @@ Public Class StreamTests
     ''' <summary>
     ''' Tests trying to write a byte to a stream
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestTryWriteByte()
         Dim TargetText As String = "Hello"
         Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText & " "))

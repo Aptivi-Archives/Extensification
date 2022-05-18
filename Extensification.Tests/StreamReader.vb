@@ -18,16 +18,16 @@
 
 Imports System.IO
 Imports Extensification.StreamReaderExts
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 
-<TestClass>
+<TestFixture>
 Public Class StreamReaderTests
 
 #Region "Reading"
     ''' <summary>
     ''' Tests reading a line from the stream reader with the newline characters
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestReadLineWithNewLine()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -40,7 +40,7 @@ Public Class StreamReaderTests
     ''' <summary>
     ''' Tests reading lines
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestReadLines()
         Dim TargetText As String = "Hello! This is Extensification." + Environment.NewLine +
                                    "You've reached the second line!"
@@ -53,7 +53,7 @@ Public Class StreamReaderTests
     ''' <summary>
     ''' Tests reading to end and seeking
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestReadToEndAndSeek()
         Dim TargetText As String = "Hello! This is Extensification."
         Dim TextStream As New MemoryStream(Text.Encoding.Default.GetBytes(TargetText))

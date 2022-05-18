@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.IntegerExts
 
-<TestClass>
+<TestFixture>
 Public Class IntegerTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests integer incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim ExpectedInteger As Integer = 5
         Dim TargetInteger As Integer = 3
@@ -37,7 +37,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests unsigned integer incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrementUnsigned()
         Dim ExpectedUInteger As UInteger = 5
         Dim TargetUInteger As UInteger = 3
@@ -48,7 +48,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests integer decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim ExpectedInteger As Integer = 3
         Dim TargetInteger As Integer = 5
@@ -59,7 +59,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests unsigned integer decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrementUnsigned()
         Dim ExpectedUInteger As UInteger = 3
         Dim TargetUInteger As UInteger = 5
@@ -70,7 +70,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwap()
         Dim ExpectedFirstByte As Integer = 9
         Dim ExpectedSecondByte As Integer = 8
@@ -84,7 +84,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests signed byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapSigned()
         Dim ExpectedFirstByte As UInteger = 9
         Dim ExpectedSecondByte As UInteger = 8
@@ -98,7 +98,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLarger()
         Dim ExpectedFirstByte As Integer = 8
         Dim ExpectedSecondByte As Integer = 10
@@ -112,7 +112,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests signed byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLargerSigned()
         Dim ExpectedFirstByte As UInteger = 8
         Dim ExpectedSecondByte As UInteger = 10
@@ -126,7 +126,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLarger()
         Dim ExpectedFirstByte As Integer = 10
         Dim ExpectedSecondByte As Integer = 8
@@ -140,7 +140,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests signed byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLargerSigned()
         Dim ExpectedFirstByte As UInteger = 10
         Dim ExpectedSecondByte As UInteger = 8
@@ -156,7 +156,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests integer digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigits()
         Dim ExpectedDigits() As Integer = {7, 5}
         Dim TargetNumber As Integer = 75
@@ -166,7 +166,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests unsigned integer digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsUnsigned()
         Dim ExpectedDigits() As UInteger = {7, 5}
         Dim TargetNumber As UInteger = 75
@@ -176,7 +176,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests integer Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Integer = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
@@ -185,7 +185,7 @@ Public Class IntegerTests
     ''' <summary>
     ''' Tests unsigned integer Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrongUnsigned()
         Dim TargetNumber As UInteger = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)

@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.ArrayExts
 
-<TestClass>
+<TestFixture>
 Public Class ArrayTests
 
 #Region "Addition"
     ''' <summary>
     ''' Tests adding an entry to array
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestAdd()
         Dim TargetArray() As Integer = {2, 3}
         TargetArray.Add(4)
@@ -36,7 +36,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests adding a range of entries to array
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestAddRange()
         Dim TargetArray() As Integer = {2, 3}
         Dim Range() As Integer = {4, 5, 6, 7, 8, 9}
@@ -49,7 +49,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests removing an entry to array
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestRemove()
         Dim TargetArray() As Integer = {2, 3, 4}
         TargetArray.Remove(4)
@@ -61,7 +61,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests converting array to array list
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestToArrayList()
         Dim TargetArray As String() = {"Test converting", "target array", "to array list."}
         Dim TargetList As ArrayList = TargetArray.ToArrayList
@@ -74,7 +74,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests getting index from entry
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexFromEntry()
         Dim TargetArray As String() = {"Test getting", "index from", "array entry."}
         Dim ExpectedIndex As Integer = 1
@@ -85,7 +85,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests getting indexes of full entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexesOfFullEntries()
         Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
@@ -100,7 +100,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests getting indexes of empty entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestGetIndexesOfEmptyEntries()
         Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
@@ -117,7 +117,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests counting full entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestCountFullEntries()
         Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
@@ -128,7 +128,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests counting empty entries
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestCountEmptyEntries()
         Dim TargetArray() As String = {"", "Full", "", "Entry", ""}
         Dim TargetArrayObjects As Object() = {4, Nothing, Nothing}
@@ -141,7 +141,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests seeing if the array contains any of the specified clauses
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestContainsAnyOf()
         Dim TargetArray() As String = {"Test", "Hello and Test", "Tester! Hello!"}
         Assert.IsTrue(TargetArray.ContainsAnyOf({"Hello and Test", "Test"}))
@@ -151,7 +151,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests seeing if the array contains all of the specified clauses
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestContainsAllOf()
         Dim TargetArray() As String = {"Test", "Hello and Test", "Tester! Hello!"}
         Assert.IsTrue(TargetArray.ContainsAllOf({"Hello and Test", "Test"}))
@@ -163,7 +163,7 @@ Public Class ArrayTests
     ''' <summary>
     ''' Tests stringifying a char array
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestStringify()
         Dim TargetArray() As Char = {"H", "e", "l", "l", "o"}
         Assert.AreEqual("Hello", TargetArray.Stringify)

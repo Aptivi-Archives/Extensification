@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.SingleExts
 
-<TestClass>
+<TestFixture>
 Public Class SingleTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests Single-precision number incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim ExpectedSingle As Single = 5
         Dim TargetSingle As Single = 3
@@ -37,7 +37,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests Single-precision number decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim ExpectedSingle As Single = 3
         Dim TargetSingle As Single = 5
@@ -48,7 +48,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwap()
         Dim ExpectedFirstByte As Single = 9
         Dim ExpectedSecondByte As Single = 8
@@ -62,7 +62,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLarger()
         Dim ExpectedFirstByte As Single = 8
         Dim ExpectedSecondByte As Single = 10
@@ -76,7 +76,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLarger()
         Dim ExpectedFirstByte As Single = 10
         Dim ExpectedSecondByte As Single = 8
@@ -92,7 +92,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests Single digit listing (before the decimal point)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsBeforeDecimal()
         Dim ExpectedDigits() As Single = {3, 2}
         Dim TargetNumber As Single = 32.9
@@ -102,7 +102,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests Single digit listing (after the decimal point)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsAfterDecimal()
         Dim ExpectedDigits() As Single = {9}
         Dim TargetNumber As Single = 32.9
@@ -112,7 +112,7 @@ Public Class SingleTests
     ''' <summary>
     ''' Tests Single Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Single = 153.4
         Assert.IsTrue(TargetNumber.IsArmstrong)

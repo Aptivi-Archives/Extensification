@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.ShortExts
 
-<TestClass>
+<TestFixture>
 Public Class ShortTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests short integer incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim ExpectedShort As Short = 5
         Dim TargetShort As Short = 3
@@ -37,7 +37,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests unsigned short integer incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrementUnsigned()
         Dim ExpectedUShort As UShort = 5
         Dim TargetUShort As UShort = 3
@@ -48,7 +48,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests short integer decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim ExpectedShort As Short = 3
         Dim TargetShort As Short = 5
@@ -59,7 +59,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests unsigned short integer decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrementUnsigned()
         Dim ExpectedUShort As UShort = 3
         Dim TargetUShort As UShort = 5
@@ -70,7 +70,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwap()
         Dim ExpectedFirstByte As Short = 9
         Dim ExpectedSecondByte As Short = 8
@@ -84,7 +84,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests signed byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapSigned()
         Dim ExpectedFirstByte As UShort = 9
         Dim ExpectedSecondByte As UShort = 8
@@ -98,7 +98,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLarger()
         Dim ExpectedFirstByte As Short = 8
         Dim ExpectedSecondByte As Short = 10
@@ -112,7 +112,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests signed byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLargerSigned()
         Dim ExpectedFirstByte As UShort = 8
         Dim ExpectedSecondByte As UShort = 10
@@ -126,7 +126,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLarger()
         Dim ExpectedFirstByte As Short = 10
         Dim ExpectedSecondByte As Short = 8
@@ -140,7 +140,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests signed byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLargerSigned()
         Dim ExpectedFirstByte As UShort = 10
         Dim ExpectedSecondByte As UShort = 8
@@ -156,7 +156,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests short integer digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigits()
         Dim ExpectedDigits() As Short = {7, 5}
         Dim TargetNumber As Short = 75
@@ -166,7 +166,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests unsigned short integer digit listing
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsUnsigned()
         Dim ExpectedDigits() As UShort = {7, 5}
         Dim TargetNumber As UShort = 75
@@ -176,7 +176,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests short integer Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Short = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)
@@ -185,7 +185,7 @@ Public Class ShortTests
     ''' <summary>
     ''' Tests unsigned short integer Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrongUnsigned()
         Dim TargetNumber As UShort = 153
         Assert.IsTrue(TargetNumber.IsArmstrong)

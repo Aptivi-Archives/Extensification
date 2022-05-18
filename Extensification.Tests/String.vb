@@ -16,18 +16,18 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.StringExts
 Imports Extensification.ArrayExts
 
-<TestClass>
+<TestFixture>
 Public Class StringTests
 
 #Region "Conversion"
     ''' <summary>
     ''' Tests parsing VT sequences (normal CSI ones).
     ''' </summary>
-    <TestMethod> Public Sub TestConvertVTSequencesNormal()
+    <Test> Public Sub TestConvertVTSequencesNormal()
         Dim TargetString As String = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<48;5;2m>Colors!"
         TargetString.ConvertVTSequences
         Assert.IsFalse(TargetString.ContainsAnyOf({"<38;5;6m>", "<38;5;7m>", "<0m>", "<48;5;2m>"}))
@@ -37,7 +37,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests parsing VT sequences (OSC title one).
     ''' </summary>
-    <TestMethod> Public Sub TestConvertVTSequencesOSCTitle()
+    <Test> Public Sub TestConvertVTSequencesOSCTitle()
         Dim TargetString As String = "<0;Hi!>"
         TargetString.ConvertVTSequences
         Assert.IsFalse(TargetString.ContainsAnyOf({"<0;Hi!>"}))
@@ -48,7 +48,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests parsing VT sequences (OSC screen color one).
     ''' </summary>
-    <TestMethod> Public Sub TestConvertVTSequencesOSCScreenColor()
+    <Test> Public Sub TestConvertVTSequencesOSCScreenColor()
         Dim TargetString As String = "<4;15;rgb:ff/ff/ff>"
         TargetString.ConvertVTSequences
         Assert.IsFalse(TargetString.ContainsAnyOf({"<0;Hi!>"}))
@@ -59,7 +59,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests parsing VT sequences (simple cursor positioning).
     ''' </summary>
-    <TestMethod> Public Sub TestConvertVTSequencesSimpleCursorPositioning()
+    <Test> Public Sub TestConvertVTSequencesSimpleCursorPositioning()
         Dim TargetString As String = "<A>"
         TargetString.ConvertVTSequences
         Assert.IsFalse(TargetString.ContainsAnyOf({"<A>"}))
@@ -69,7 +69,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests converting from color hex to RGB
     ''' </summary>
-    <TestMethod> Public Sub TestConvertFromHexToRgb()
+    <Test> Public Sub TestConvertFromHexToRgb()
         Dim ExpectedR As Integer = 15
         Dim ExpectedG As Integer = 15
         Dim ExpectedB As Integer = 15
@@ -86,7 +86,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests replacing last occurrence of a string
     ''' </summary>
-    <TestMethod>
+    <Test>
     Sub TestReplaceLastOccurrence()
         Dim Source As String = "Extensification is awesome and is great!"
         Dim Target As String = "is"
@@ -97,7 +97,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests replacing all specified occurrences of strings with a single string
     ''' </summary>
-    <TestMethod> Public Sub TestReplaceAll()
+    <Test> Public Sub TestReplaceAll()
         Dim ExpectedString As String = "Please test Extensification. This sub is a unit test."
         Dim TargetString As String = "Please <replace> Extensification. This sub is a unit <replace2>."
         TargetString = TargetString.ReplaceAll({"<replace>", "<replace2>"}, "test")
@@ -107,7 +107,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests replacing all specified occurrences of strings with multiple strings
     ''' </summary>
-    <TestMethod> Public Sub TestReplaceAllRange()
+    <Test> Public Sub TestReplaceAllRange()
         Dim ExpectedString As String = "Please test the integrity of Extensification. This sub is a unit test."
         Dim TargetString As String = "Please <replace> Extensification. This sub is a unit <replace2>."
         TargetString = TargetString.ReplaceAllRange({"<replace>", "<replace2>"}, {"test the integrity of", "test"})
@@ -150,7 +150,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests shifting letters backwards in a string
     ''' </summary>
-    <TestMethod> Public Sub TestShiftLettersBackwards()
+    <Test> Public Sub TestShiftLettersBackwards()
         Dim ExpectedString As String = "Beha"
         Dim TargetString As String = "File"
         TargetString = TargetString.ShiftLetters(-4)
@@ -160,7 +160,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests shifting letters forward in a string
     ''' </summary>
-    <TestMethod> Public Sub TestShiftLettersForward()
+    <Test> Public Sub TestShiftLettersForward()
         Dim ExpectedString As String = "File"
         Dim TargetString As String = "Beha"
         TargetString = TargetString.ShiftLetters(4)
@@ -170,7 +170,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests reserving orders of characters in a string
     ''' </summary>
-    <TestMethod> Public Sub TestReverse()
+    <Test> Public Sub TestReverse()
         Dim TargetString As String = "olleH"
         Assert.AreEqual("Hello", TargetString.Reverse)
     End Sub
@@ -178,7 +178,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests repeating the string
     ''' </summary>
-    <TestMethod> Public Sub TestRepeat()
+    <Test> Public Sub TestRepeat()
         Dim TargetString As String = "Hi! "
         Assert.AreEqual("Hi! Hi! Hi! ", TargetString.Repeat(3))
     End Sub
@@ -186,7 +186,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests repeating the string zero times
     ''' </summary>
-    <TestMethod> Public Sub TestRepeatZero()
+    <Test> Public Sub TestRepeatZero()
         Dim TargetString As String = "Hi! "
         Assert.AreEqual("", TargetString.Repeat(0))
     End Sub
@@ -194,7 +194,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests retrieving substring
     ''' </summary>
-    <TestMethod> Public Sub TestSubstring()
+    <Test> Public Sub TestSubstring()
         Dim TargetString = "Hello!"
         Assert.AreEqual("llo", TargetString.Substring(2, length:=3))
         Assert.AreEqual("llo", TargetString.Substring(2, Finish:=4))
@@ -203,7 +203,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests enclosing a string by double quotes
     ''' </summary>
-    <TestMethod> Public Sub TestEncloseByDoubleQuotes()
+    <Test> Public Sub TestEncloseByDoubleQuotes()
         Dim TargetString = "Hi!"
         Assert.AreEqual("""Hi!""", TargetString.EncloseByDoubleQuotes)
     End Sub
@@ -211,7 +211,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests releasing a string from double quotes
     ''' </summary>
-    <TestMethod> Public Sub TestReleaseDoubleQuotes()
+    <Test> Public Sub TestReleaseDoubleQuotes()
         Dim TargetString = """Hi!"""
         Assert.AreEqual("Hi!", TargetString.ReleaseDoubleQuotes)
     End Sub
@@ -231,7 +231,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests getting ASCII codes for a string
     ''' </summary>
-    <TestMethod> Public Sub TestGetAsciiCodes()
+    <Test> Public Sub TestGetAsciiCodes()
         Dim TargetString As String = "File"
         Dim TargetStringAscii() As Byte = TargetString.GetAsciiCodes
         Assert.IsNotNull(TargetStringAscii, "Array is null.")
@@ -242,7 +242,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests getting an ASCII code for a letter in a string
     ''' </summary>
-    <TestMethod> Public Sub TestGetAsciiCode()
+    <Test> Public Sub TestGetAsciiCode()
         Dim TargetString As String = "File"
         Dim TargetStringAscii As Byte = TargetString.GetAsciiCode(3)
         Assert.IsNotNull(TargetStringAscii, "Byte is null.")
@@ -252,7 +252,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing letters from a string
     ''' </summary>
-    <TestMethod> Public Sub TestGetListOfRepeatedLetters()
+    <Test> Public Sub TestGetListOfRepeatedLetters()
         Dim TargetString As String = "Extensification"
         Dim ExpectedReps As New Dictionary(Of String, Integer) From {{"E", 1}, {"x", 1}, {"t", 2}, {"e", 1}, {"n", 2}, {"s", 1}, {"i", 3}, {"f", 1}, {"c", 1}, {"a", 1}, {"o", 1}}
         Assert.IsTrue(TargetString.GetListOfRepeatedLetters.SequenceEqual(ExpectedReps))
@@ -261,7 +261,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests checking if the string contains any of the target strings.
     ''' </summary>
-    <TestMethod> Public Sub TestContainsAnyOf()
+    <Test> Public Sub TestContainsAnyOf()
         Dim TargetString As String = "Hello, Extensification users!"
         Assert.IsTrue(TargetString.ContainsAnyOf({"Extensification", "users"}))
         Assert.IsFalse(TargetString.ContainsAnyOf({"Awesome", "developers"}))
@@ -270,7 +270,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests checking if the string contains all of the target strings.
     ''' </summary>
-    <TestMethod> Public Sub TestContainsAllOf()
+    <Test> Public Sub TestContainsAllOf()
         Dim TargetString As String = "Hello, Extensification users!"
         Assert.IsTrue(TargetString.ContainsAllOf({"Extensification", "users"}))
         Assert.IsFalse(TargetString.ContainsAllOf({"Awesome", "developers"}))
@@ -279,7 +279,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests getting LRP from string
     ''' </summary>
-    <TestMethod> Public Sub TestLRP()
+    <Test> Public Sub TestLRP()
         Dim TargetString = "Hello!"
         Assert.AreEqual(3, TargetString.LRP(4))
     End Sub
@@ -287,7 +287,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests checking to see if the string starts with any of the values
     ''' </summary>
-    <TestMethod> Public Sub TestStartsWithAnyOf()
+    <Test> Public Sub TestStartsWithAnyOf()
         Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
         Assert.IsTrue(TargetString.StartsWithAnyOf({"dotnet", "sdk"}))
     End Sub
@@ -295,7 +295,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests checking to see if the string starts with all of the values
     ''' </summary>
-    <TestMethod> Public Sub TestStartsWithAllOf()
+    <Test> Public Sub TestStartsWithAllOf()
         Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
         Assert.IsTrue(TargetString.StartsWithAllOf({"dotnet", "dotnet-hostfxr"}))
     End Sub
@@ -303,7 +303,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests checking to see if the string ends with any of the values
     ''' </summary>
-    <TestMethod> Public Sub TestEndsWithAnyOf()
+    <Test> Public Sub TestEndsWithAnyOf()
         Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
         Assert.IsTrue(TargetString.EndsWithAnyOf({"5.0", "3.1"}))
     End Sub
@@ -311,7 +311,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests checking to see if the string ends with all of the values
     ''' </summary>
-    <TestMethod> Public Sub TestEndsWithAllOf()
+    <Test> Public Sub TestEndsWithAllOf()
         Dim TargetString As String = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0"
         Assert.IsTrue(TargetString.EndsWithAllOf({"5.0", "sdk-5.0"}))
     End Sub
@@ -319,7 +319,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests splitting a string with new lines (vbCrLf)
     ''' </summary>
-    <TestMethod> Public Sub TestSplitNewLinesCrLf()
+    <Test> Public Sub TestSplitNewLinesCrLf()
         Dim TargetString As String = "First line" + vbCrLf + "Second line" + vbCrLf + "Third line"
         Dim TargetArray() As String = TargetString.SplitNewLines
         Assert.IsTrue(TargetArray.Length = 3)
@@ -328,7 +328,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests splitting a string with new lines (vbCr)
     ''' </summary>
-    <TestMethod> Public Sub TestSplitNewLinesCr()
+    <Test> Public Sub TestSplitNewLinesCr()
         Dim TargetString As String = "First line" + vbCr + "Second line" + vbCr + "Third line"
         Dim TargetArray() As String = TargetString.SplitNewLinesCr
         Assert.IsTrue(TargetArray.Length = 3)
@@ -337,7 +337,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests splitting a string with new lines (vbLf)
     ''' </summary>
-    <TestMethod> Public Sub TestSplitNewLinesLf()
+    <Test> Public Sub TestSplitNewLinesLf()
         Dim TargetString As String = "First line" + vbLf + "Second line" + vbLf + "Third line"
         Dim TargetArray() As String = TargetString.SplitNewLines
         Assert.IsTrue(TargetArray.Length = 3)
@@ -346,7 +346,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests splitting a string with double quotes enclosed
     ''' </summary>
-    <TestMethod> Public Sub TestSplitEncloseDoubleQuotes()
+    <Test> Public Sub TestSplitEncloseDoubleQuotes()
         Dim TargetString As String = "First ""Second Third"" Fourth"
         Dim TargetArray() As String = TargetString.SplitEncloseDoubleQuotes(" ")
         Assert.IsTrue(TargetArray.Length = 3)
@@ -357,7 +357,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing spaces from the beginning of the string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveSpacesFromBeginning()
+    <Test> Public Sub TestRemoveSpacesFromBeginning()
         Dim ExpectedString As String = "Extensification is awesome and is great!"
         Dim TargetString As String = "     Extensification is awesome and is great!"
         TargetString = TargetString.RemoveSpacesFromBeginning
@@ -367,7 +367,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing a letter from a string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveLetter()
+    <Test> Public Sub TestRemoveLetter()
         Dim TargetString As String = "Helllo"
         TargetString = TargetString.RemoveLetter(4)
         Assert.AreEqual("Hello", TargetString)
@@ -376,7 +376,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing letters from a string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveLettersRange()
+    <Test> Public Sub TestRemoveLettersRange()
         Dim TargetString As String = "Helllo"
         Dim CharRange() As Char = {"l"c, "o"c}
         TargetString = TargetString.RemoveLettersRange(CharRange)
@@ -386,7 +386,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing null characters or whitespaces at the end of the string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheEnd()
+    <Test> Public Sub TestRemoveNullsOrWhitespacesAtTheEnd()
         Dim TargetString As String = "Hi!   "
         TargetString.RemoveNullsOrWhitespacesAtTheEnd
         Assert.AreEqual("Hi!", TargetString)
@@ -395,7 +395,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing null characters or whitespaces at the end of the empty string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheEndOnEmptyString()
+    <Test> Public Sub TestRemoveNullsOrWhitespacesAtTheEndOnEmptyString()
         Dim TargetString As String = ""
         TargetString.RemoveNullsOrWhitespacesAtTheEnd
     End Sub
@@ -403,7 +403,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing null characters or whitespaces at the beginning of the string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginning()
+    <Test> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginning()
         Dim TargetString As String = "   Hi!"
         TargetString.RemoveNullsOrWhitespacesAtTheBeginning
         Assert.AreEqual("Hi!", TargetString)
@@ -412,7 +412,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests removing null characters or whitespaces at the beginning of the empty string
     ''' </summary>
-    <TestMethod> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginningOnEmptyString()
+    <Test> Public Sub TestRemoveNullsOrWhitespacesAtTheBeginningOnEmptyString()
         Dim TargetString As String = ""
         TargetString.RemoveNullsOrWhitespacesAtTheBeginning
     End Sub

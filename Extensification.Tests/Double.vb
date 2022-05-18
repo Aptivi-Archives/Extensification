@@ -16,17 +16,17 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports NUnit.Framework
 Imports Extensification.DoubleExts
 
-<TestClass>
+<TestFixture>
 Public Class DoubleTests
 
 #Region "Manipulation"
     ''' <summary>
     ''' Tests double-precision number incrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIncrement()
         Dim ExpectedDouble As Double = 5
         Dim TargetDouble As Double = 3
@@ -37,7 +37,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests double-precision number decrementation
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestDecrement()
         Dim ExpectedDouble As Double = 3
         Dim TargetDouble As Double = 5
@@ -48,7 +48,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests byte swap
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwap()
         Dim ExpectedFirstByte As Double = 9
         Dim ExpectedSecondByte As Double = 8
@@ -62,7 +62,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests byte swap if source is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfSourceLarger()
         Dim ExpectedFirstByte As Double = 8
         Dim ExpectedSecondByte As Double = 10
@@ -76,7 +76,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests byte swap if target is larger
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestSwapIfTargetLarger()
         Dim ExpectedFirstByte As Double = 10
         Dim ExpectedSecondByte As Double = 8
@@ -92,7 +92,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests double digit listing (before the decimal point)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsBeforeDecimal()
         Dim ExpectedDigits() As Double = {3, 2}
         Dim TargetNumber As Double = 32.9
@@ -102,7 +102,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests double digit listing (after the decimal point)
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestListDigitsAfterDecimal()
         Dim ExpectedDigits() As Double = {9}
         Dim TargetNumber As Double = 32.9
@@ -112,7 +112,7 @@ Public Class DoubleTests
     ''' <summary>
     ''' Tests double Armstrong number detection
     ''' </summary>
-    <TestMethod>
+    <Test>
     Public Sub TestIsArmstrong()
         Dim TargetNumber As Double = 153.4
         Assert.IsTrue(TargetNumber.IsArmstrong)
