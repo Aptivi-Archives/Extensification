@@ -626,6 +626,25 @@ references:
   isSpec: "True"
   fullName: Extensification.CharExts.Querying.GetAsciiCode
   nameWithType: Querying.GetAsciiCode
+- uid: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char)
+  name: ToConsoleKeyInfo(Char)
+  href: api/Extensification.CharExts.Querying.html#Extensification_CharExts_Querying_ToConsoleKeyInfo_System_Char_
+  commentId: M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char)
+  fullName: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char)
+  nameWithType: Querying.ToConsoleKeyInfo(Char)
+- uid: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,Dictionary)
+  name: ToConsoleKeyInfo(Char, Dictionary)
+  href: api/Extensification.CharExts.Querying.html#Extensification_CharExts_Querying_ToConsoleKeyInfo_System_Char_Dictionary_
+  commentId: M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,Dictionary)
+  fullName: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char, Dictionary)
+  nameWithType: Querying.ToConsoleKeyInfo(Char, Dictionary)
+- uid: Extensification.CharExts.Querying.ToConsoleKeyInfo*
+  name: ToConsoleKeyInfo
+  href: api/Extensification.CharExts.Querying.html#Extensification_CharExts_Querying_ToConsoleKeyInfo_
+  commentId: Overload:Extensification.CharExts.Querying.ToConsoleKeyInfo
+  isSpec: "True"
+  fullName: Extensification.CharExts.Querying.ToConsoleKeyInfo
+  nameWithType: Querying.ToConsoleKeyInfo
 - uid: Extensification.DictionaryExts
   name: Extensification.DictionaryExts
   href: api/Extensification.DictionaryExts.html
