@@ -2654,6 +2654,22 @@ references:
   commentId: T:Extensification.StringExts.Conversion
   fullName: Extensification.StringExts.Conversion
   nameWithType: Conversion
+- uid: Extensification.StringExts.Conversion.ConvertFromHexToRgb(System.String,System.Int32@,System.Int32@,System.Int32@)
+  name: ConvertFromHexToRgb(String, ref Int32, ref Int32, ref Int32)
+  href: api/Extensification.StringExts.Conversion.html#Extensification_StringExts_Conversion_ConvertFromHexToRgb_System_String_System_Int32__System_Int32__System_Int32__
+  commentId: M:Extensification.StringExts.Conversion.ConvertFromHexToRgb(System.String,System.Int32@,System.Int32@,System.Int32@)
+  name.vb: ConvertFromHexToRgb(String, ByRef Int32, ByRef Int32, ByRef Int32)
+  fullName: Extensification.StringExts.Conversion.ConvertFromHexToRgb(System.String, ref System.Int32, ref System.Int32, ref System.Int32)
+  fullName.vb: Extensification.StringExts.Conversion.ConvertFromHexToRgb(System.String, ByRef System.Int32, ByRef System.Int32, ByRef System.Int32)
+  nameWithType: Conversion.ConvertFromHexToRgb(String, ref Int32, ref Int32, ref Int32)
+  nameWithType.vb: Conversion.ConvertFromHexToRgb(String, ByRef Int32, ByRef Int32, ByRef Int32)
+- uid: Extensification.StringExts.Conversion.ConvertFromHexToRgb*
+  name: ConvertFromHexToRgb
+  href: api/Extensification.StringExts.Conversion.html#Extensification_StringExts_Conversion_ConvertFromHexToRgb_
+  commentId: Overload:Extensification.StringExts.Conversion.ConvertFromHexToRgb
+  isSpec: "True"
+  fullName: Extensification.StringExts.Conversion.ConvertFromHexToRgb
+  nameWithType: Conversion.ConvertFromHexToRgb
 - uid: Extensification.StringExts.Conversion.ConvertVTSequences(System.String@)
   name: ConvertVTSequences(ref String)
   href: api/Extensification.StringExts.Conversion.html#Extensification_StringExts_Conversion_ConvertVTSequences_System_String__
