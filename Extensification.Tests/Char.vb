@@ -53,6 +53,27 @@ Public Class CharTests
         Dim Target As Char = "E"
         Assert.AreEqual(69, Target.GetAsciiCode)
     End Sub
+
+    ''' <summary>
+    ''' Tests converting character to console key info
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestToConsoleKeyInfo()
+        Dim ExpectedKeyInfo As New ConsoleKeyInfo("E"c, ConsoleKey.E, False, False, False)
+        Dim ActualConsoleKeyInfo As ConsoleKeyInfo = "E"c.ToConsoleKeyInfo
+        Assert.IsTrue(ExpectedKeyInfo.Equals(ActualConsoleKeyInfo))
+    End Sub
+
+    ''' <summary>
+    ''' Tests converting character to console key info with custom handler
+    ''' </summary>
+    <TestMethod>
+    Public Sub TestToConsoleKeyInfoWithCustomHandler()
+        Dim CustomHandler As New Dictionary(Of Char, Tuple(Of ConsoleKey, ConsoleModifiers)) From {{Convert.ToChar(10), Tuple.Create(ConsoleKey.Enter, ConsoleModifiers.Control)}}
+        Dim ExpectedKeyInfo As New ConsoleKeyInfo(Convert.ToChar(10), ConsoleKey.Enter, False, False, True)
+        Dim ActualConsoleKeyInfo As ConsoleKeyInfo = Convert.ToChar(10).ToConsoleKeyInfo(CustomHandler)
+        Assert.IsTrue(ExpectedKeyInfo.Equals(ActualConsoleKeyInfo))
+    End Sub
 #End Region
 
 End Class
