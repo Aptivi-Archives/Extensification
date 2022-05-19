@@ -117,7 +117,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests truncating...
     ''' </summary>
-    <TestMethod()> Public Sub TestTruncate()
+    <Test> Public Sub TestTruncate()
         Dim Source As String = "Extensification is awesome and is great!"
         Dim Target As Integer = 20
         Source = Source.Truncate(Target)
@@ -127,7 +127,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests string formatting
     ''' </summary>
-    <TestMethod()> Public Sub TestFormatString()
+    <Test> Public Sub TestFormatString()
         Dim Expected As String = "Kernel Simulator 0.0.1 first launched 2/22/2018."
         Dim Actual As String = "Kernel Simulator 0.0.1 first launched {0}/{1}/{2}."
         Dim Day As Integer = 22
@@ -140,7 +140,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests string formatting with reference to null
     ''' </summary>
-    <TestMethod()> Public Sub TestFormatStringNullReference()
+    <Test> Public Sub TestFormatStringNullReference()
         Dim Expected As String = "Nothing is ((Null))"
         Dim Actual As String = "{0} is {1}"
         Actual = Actual.FormatString("Nothing", Nothing)
@@ -221,7 +221,7 @@ Public Class StringTests
     ''' <summary>
     ''' Tests getting all indexes of a character
     ''' </summary>
-    <TestMethod()> Public Sub TestAllIndexesOf()
+    <Test> Public Sub TestAllIndexesOf()
         Dim Source As String = "Extensification is awesome and is great!"
         Dim Target As String = "a"
         Dim Indexes As Integer = Source.AllIndexesOf(Target).Count
