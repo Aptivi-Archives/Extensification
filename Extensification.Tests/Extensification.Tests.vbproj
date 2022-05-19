@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification.Tests</RootNamespace>
-    <TargetFrameworks>netcoreapp3.1;net461;net5.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net48;net6.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

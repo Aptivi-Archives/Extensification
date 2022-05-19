@@ -95,7 +95,7 @@ Namespace DictionaryExts
         <Extension>
         Public Function GetIndexesOfFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
             Dim FullIndexes As New List(Of Integer)
-            For i As Long = 0 To Dict.Count - 1
+            For i As Integer = 0 To Dict.Count - 1
                 If Dict.Values(i) IsNot Nothing Then
                     If TypeOf Dict.Values(i) Is String Then
                         If Not Dict.Values(i).Equals("") Then
@@ -119,7 +119,7 @@ Namespace DictionaryExts
         <Extension>
         Public Function GetIndexesOfEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer()
             Dim EmptyIndexes As New List(Of Integer)
-            For i As Long = 0 To Dict.Count - 1
+            For i As Integer = 0 To Dict.Count - 1
                 If Dict.Values(i) Is Nothing Then
                     EmptyIndexes.Add(i)
                 ElseIf TypeOf Dict.Values(i) Is String And Dict.Values(i).Equals("") Then

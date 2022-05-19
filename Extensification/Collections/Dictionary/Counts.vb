@@ -34,7 +34,7 @@ Namespace DictionaryExts
         <Extension>
         Public Function CountFullEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer
             Dim FullEntries As Integer
-            For i As Long = 0 To Dict.Count - 1
+            For i As Integer = 0 To Dict.Count - 1
                 If Dict.Values(i) IsNot Nothing Then
                     If TypeOf Dict.Values(i) Is String Then
                         If Not Dict.Values(i).Equals("") Then
@@ -58,7 +58,7 @@ Namespace DictionaryExts
         <Extension>
         Public Function CountEmptyEntries(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue)) As Integer
             Dim EmptyEntries As Integer
-            For i As Long = 0 To Dict.Count - 1
+            For i As Integer = 0 To Dict.Count - 1
                 If Dict.Values(i) Is Nothing Then
                     EmptyEntries += 1
                 ElseIf TypeOf Dict.Values(i) Is String And Dict.Values(i).Equals("") Then
