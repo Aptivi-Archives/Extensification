@@ -20,7 +20,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <PackageReleaseNotes>2022.1:
-- 
+- Added char to ConsoleKeyInfo (adapted from ReadLine, thanks tornedo!)
+- Updated unit tests to use another framework
 
 2022.0:
 - Isolated Microsoft.VisualBasic
