@@ -8,6 +8,7 @@
 	  <PackageOutputPath>../Extensification.Bin</PackageOutputPath>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Version>2022.0</Version>
+    <PackageVersion>2022.0.0.0</PackageVersion>
     <Authors>EoflaOE</Authors>
     <Company>EoflaOE</Company>
     <Product>Extensification</Product>
