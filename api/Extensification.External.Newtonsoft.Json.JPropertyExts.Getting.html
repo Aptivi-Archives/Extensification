@@ -112,7 +112,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List GetPropertiesTypeInValue(JToken Token, JTokenType Type)</code></pre>
+    <pre><code class="lang-csharp hljs">[Extension]
+public static List&lt;JToken&gt; GetPropertiesTypeInValue(this JToken Token, JTokenType Type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +149,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span></td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">JToken</span>&gt;</td>
         <td><p>A property list if properties with specific type is found; empty list if nothing is found</p>
 </td>
       </tr>
@@ -168,7 +169,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetPropertyNameContaining(JToken Token, string Containing)</code></pre>
+    <pre><code class="lang-csharp hljs">[Extension]
+public static string GetPropertyNameContaining(this JToken Token, string Containing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,7 +226,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetPropertyNameEndingWith(JToken Token, string Containing)</code></pre>
+    <pre><code class="lang-csharp hljs">[Extension]
+public static string GetPropertyNameEndingWith(this JToken Token, string Containing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,7 +283,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetPropertyNameStartingWith(JToken Token, string Containing)</code></pre>
+    <pre><code class="lang-csharp hljs">[Extension]
+public static string GetPropertyNameStartingWith(this JToken Token, string Containing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
