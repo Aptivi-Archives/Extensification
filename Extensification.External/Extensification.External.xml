@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Extensification.External</name>
+    </assembly>
+    <members>
+        <member name="T:Extensification.External.Newtonsoft.Json.JPropertyExts.Getting">
+            <summary>
+            Provides the JProperty extensions related to getting
+            </summary>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Getting.GetPropertyNameStartingWith(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Gets a property name that starts with specified string
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Containing">String to find at the beginning of string</param>
+            <returns>A property name if found; nothing if not found</returns>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Getting.GetPropertyNameEndingWith(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Gets a property name that ends with specified string
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Containing">String to find at the end of string</param>
+            <returns>A property name if found; nothing if not found</returns>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Getting.GetPropertyNameContaining(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Gets a property name that contains the specified string
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Containing">String to find in string</param>
+            <returns>A property name if found; nothing if not found</returns>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Getting.GetPropertiesTypeInValue(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JTokenType)">
+            <summary>
+            Gets properties that have the specific type in value.
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Type">JSON token type to search. If the type is <see cref="F:Newtonsoft.Json.Linq.JTokenType.None"/>, returns all properties.</param>
+            <returns>A property list if properties with specific type is found; empty list if nothing is found</returns>
+        </member>
+        <member name="T:Extensification.External.Newtonsoft.Json.JPropertyExts.Querying">
+            <summary>
+            Provides the JProperty extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Querying.SelectTokenKeyContaining(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Selects a token that has its key containing the specified string
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Containing">String to find in the key string</param>
+            <returns>A token if found; nothing if not found</returns>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Querying.SelectTokenKeyEndingWith(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Selects a token that has its key ending with the specified string
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Containing">String to find at the end of key string</param>
+            <returns>A token if found; nothing if not found</returns>
+        </member>
+        <member name="M:Extensification.External.Newtonsoft.Json.JPropertyExts.Querying.SelectTokenKeyStartingWith(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Selects a token that has its key starting with the specified string
+            </summary>
+            <param name="Token">JSON token</param>
+            <param name="Containing">String to find at the beginning of key string</param>
+            <returns>A token if found; nothing if not found</returns>
+        </member>
+    </members>
+</doc>
