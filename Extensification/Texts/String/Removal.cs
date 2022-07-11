@@ -1,6 +1,23 @@
-﻿using System;
+﻿
+// Extensification  Copyright (C) 2020-2021  EoflaOE
+// 
+// This file is part of Extensification
+// 
+// Extensification is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// Extensification is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+using System;
 using System.Linq;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Extensification.StringExts
 {
@@ -21,12 +38,12 @@ namespace Extensification.StringExts
                 throw new ArgumentNullException(nameof(Str));
             var StrChars = Str.ToCharArray();
             int CharNum = 0;
-            while (Conversions.ToString(StrChars[CharNum]) == " ")
+            while (StrChars[CharNum] == ' ')
             {
-                StrChars[CharNum] = Conversions.ToChar("");
+                StrChars[CharNum] = default;
                 CharNum += 1;
             }
-            return string.Join("", Conversions.ToString(StrChars)).Replace(Conversions.ToString(Convert.ToChar(0)), "");
+            return string.Join("", StrChars).Replace(Convert.ToChar(0), default);
         }
 
         /// <summary>
@@ -69,7 +86,7 @@ namespace Extensification.StringExts
             int CharIndex = Str.Length - 1;
             if (!(StrList.Count == 0))
             {
-                while (string.IsNullOrWhiteSpace(Conversions.ToString(StrList[CharIndex])))
+                while (char.IsWhiteSpace(StrList[CharIndex]) | StrList[CharIndex] == default)
                 {
                     StrList.RemoveAt(CharIndex);
                     CharIndex -= 1;
@@ -89,7 +106,7 @@ namespace Extensification.StringExts
             var StrList = Str.ToCharArray().ToList();
             if (!(StrList.Count == 0))
             {
-                while (string.IsNullOrWhiteSpace(Conversions.ToString(StrList[0])))
+                while (char.IsWhiteSpace(StrList[0]) | StrList[0] == default)
                     StrList.RemoveAt(0);
             }
             Str = string.Join("", StrList);

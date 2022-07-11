@@ -28,11 +28,14 @@ This package is for extensions that use the Microsoft.VisualBasic namespace.</De
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <None Include="OfficialAppIcon-Extensification-512.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
   </ItemGroup>
 
 </Project>

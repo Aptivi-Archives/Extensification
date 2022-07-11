@@ -1,10 +1,27 @@
-﻿using System;
+﻿
+// Extensification  Copyright (C) 2020-2021  EoflaOE
+// 
+// This file is part of Extensification
+// 
+// Extensification is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// Extensification is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using Extensification.DictionaryExts;
-using Microsoft.VisualBasic.CompilerServices;
 using NotVisualBasic.FileIO;
 
 namespace Extensification.StringExts
@@ -86,14 +103,14 @@ namespace Extensification.StringExts
         /// Gets the list of repeated letters
         /// </summary>
         /// <param name="Str">Target string</param>
-        public static Dictionary<string, int> GetListOfRepeatedLetters(this string Str)
+        public static Dictionary<char, int> GetListOfRepeatedLetters(this string Str)
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
-            var Letters = new Dictionary<string, int>();
+            var Letters = new Dictionary<char, int>();
             var StrChars = Str.ToCharArray();
             foreach (char Chr in StrChars)
-                Letters.IncrementNumber(Conversions.ToString(Chr));
+                Letters.IncrementNumber(Chr);
             return Letters;
         }
 
@@ -274,7 +291,7 @@ namespace Extensification.StringExts
         /// <returns></returns>
         public static string[] SplitNewLines(this string Str)
         {
-            return Str.Replace(Conversions.ToString(Convert.ToChar(13)), "").Split(Convert.ToChar(10));
+            return Str.Replace(Convert.ToChar(13), default).Split(Convert.ToChar(10));
         }
 
         /// <summary>
@@ -284,7 +301,7 @@ namespace Extensification.StringExts
         /// <returns></returns>
         public static string[] SplitNewLinesCr(this string Str)
         {
-            return Str.Replace(Conversions.ToString(Convert.ToChar(10)), "").Split(Convert.ToChar(13));
+            return Str.Replace(Convert.ToChar(10), default).Split(Convert.ToChar(13));
         }
 
         /// <summary>

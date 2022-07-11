@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.CompilerServices;
-
+﻿
 namespace Extensification.ArrayExts
 {
     /// <summary>
@@ -21,7 +20,7 @@ namespace Extensification.ArrayExts
             {
                 if (TargetArray[(int)i] is not null)
                 {
-                    if (Conversions.ToBoolean(TargetArray[(int)i] is string))
+                    if (TargetArray[(int)i] is string)
                     {
                         if (!TargetArray[(int)i].Equals(""))
                         {
@@ -52,7 +51,7 @@ namespace Extensification.ArrayExts
                 {
                     EmptyEntries += 1L;
                 }
-                else if (Conversions.ToBoolean(TargetArray[(int)i] is string) & TargetArray[(int)i].Equals(""))
+                else if (TargetArray[(int)i] is string & TargetArray[(int)i].Equals(""))
                 {
                     EmptyEntries += 1L;
                 }

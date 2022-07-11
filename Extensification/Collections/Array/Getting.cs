@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Extensification.ArrayExts
 {
@@ -26,7 +25,7 @@ namespace Extensification.ArrayExts
             for (int Index = 0, loopTo = TargetArray.Length - 1; Index <= loopTo; Index++)
             {
                 object ArrayEntry = TargetArray[Index];
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(ArrayEntry, Entry, false)))
+                if (ArrayEntry.Equals(Entry))
                 {
                     Indexes.Add(Index);
                 }
@@ -47,7 +46,7 @@ namespace Extensification.ArrayExts
             {
                 if (TargetArray[(int)i] is not null)
                 {
-                    if (Conversions.ToBoolean(TargetArray[(int)i] is string))
+                    if (TargetArray[(int)i] is string)
                     {
                         if (!TargetArray[(int)i].Equals(""))
                         {
@@ -78,7 +77,7 @@ namespace Extensification.ArrayExts
                 {
                     EmptyIndexes.Add((int)i);
                 }
-                else if (Conversions.ToBoolean(TargetArray[(int)i] is string) & TargetArray[(int)i].Equals(""))
+                else if (TargetArray[(int)i] is string & TargetArray[(int)i].Equals(""))
                 {
                     EmptyIndexes.Add((int)i);
                 }

@@ -1,5 +1,4 @@
 ﻿
-
 // Extensification  Copyright (C) 2020-2021  EoflaOE
 // 
 // This file is part of Extensification
@@ -17,8 +16,6 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-using Microsoft.VisualBasic.CompilerServices;
-
 namespace Extensification.ArrayExts
 {
     /// <summary>
@@ -31,9 +28,9 @@ namespace Extensification.ArrayExts
         /// Stringifies the character array (making a string from the character entries found inside the array)
         /// </summary>
         /// <param name="TargetCharArray">Character array</param>
-        public static string Stringify(ref char[] TargetCharArray)
+        public static string Stringify(this char[] TargetCharArray)
         {
-            return string.Join("", Conversions.ToString(TargetCharArray));
+            return string.Join("", TargetCharArray);
         }
 
     }

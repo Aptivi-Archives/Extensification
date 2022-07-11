@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
@@ -22,6 +21,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Extensification.Legacy\Extensification.Legacy.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
   </ItemGroup>
 
 </Project>

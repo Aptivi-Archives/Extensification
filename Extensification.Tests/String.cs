@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Extensification.ArrayExts;
-using Extensification.StringExts;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
-
+﻿
 // Extensification  Copyright (C) 2020-2021  EoflaOE
 // 
 // This file is part of Extensification
@@ -23,6 +16,11 @@ using Microsoft.VisualBasic.CompilerServices;
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Extensification.ArrayExts;
+using Extensification.StringExts;
 using NUnit.Framework;
 
 namespace Extensification.Tests
@@ -34,28 +32,28 @@ namespace Extensification.Tests
 
         #region Conversion
         /// <summary>
-    /// Tests parsing VT sequences (normal CSI ones).
-    /// </summary>
+        /// Tests parsing VT sequences (normal CSI ones).
+        /// </summary>
         [Test]
         public void TestConvertVTSequencesNormal()
         {
             string TargetString = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<48;5;2m>Colors!";
             StringExts.Conversion.ConvertVTSequences(ref TargetString);
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<38;5;6m>", "<38;5;7m>", "<0m>", "<48;5;2m>" }));
-            Assert.IsTrue(TargetString.Contains(Conversions.ToString('\u001b') + "["));
+            Assert.IsTrue(TargetString.Contains('\u001b' + "["));
         }
 
         /// <summary>
-    /// Tests parsing VT sequences (OSC title one).
-    /// </summary>
+        /// Tests parsing VT sequences (OSC title one).
+        /// </summary>
         [Test]
         public void TestConvertVTSequencesOSCTitle()
         {
             string TargetString = "<0;Hi!>";
             StringExts.Conversion.ConvertVTSequences(ref TargetString);
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<0;Hi!>" }));
-            Assert.IsTrue(TargetString.Contains(Conversions.ToString('\u001b') + "]"));
-            Assert.IsTrue(TargetString.EndsWith('\a'));
+            Assert.IsTrue(TargetString.Contains('\u001b' + "]"));
+            Assert.IsTrue(TargetString.EndsWith("\a"));
         }
 
         /// <summary>
@@ -67,25 +65,25 @@ namespace Extensification.Tests
             string TargetString = "<4;15;rgb:ff/ff/ff>";
             StringExts.Conversion.ConvertVTSequences(ref TargetString);
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<0;Hi!>" }));
-            Assert.IsTrue(TargetString.Contains(Conversions.ToString('\u001b') + "]"));
-            Assert.IsTrue(TargetString.EndsWith('\u001b'));
+            Assert.IsTrue(TargetString.Contains('\u001b' + "]"));
+            Assert.IsTrue(TargetString.EndsWith("\u001b"));
         }
 
         /// <summary>
-    /// Tests parsing VT sequences (simple cursor positioning).
-    /// </summary>
+        /// Tests parsing VT sequences (simple cursor positioning).
+        /// </summary>
         [Test]
         public void TestConvertVTSequencesSimpleCursorPositioning()
         {
             string TargetString = "<A>";
             StringExts.Conversion.ConvertVTSequences(ref TargetString);
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<A>" }));
-            Assert.IsTrue((TargetString ?? "") == Conversions.ToString('\u001b') + "A");
+            Assert.IsTrue((TargetString ?? "") == '\u001b' + "A");
         }
 
         /// <summary>
-    /// Tests converting from color hex to RGB
-    /// </summary>
+        /// Tests converting from color hex to RGB
+        /// </summary>
         [Test]
         public void TestConvertFromHexToRgb()
         {
@@ -302,17 +300,6 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests removing letters from a string
-    /// </summary>
-        [Test]
-        public void TestGetListOfRepeatedLetters()
-        {
-            string TargetString = "Extensification";
-            var ExpectedReps = new Dictionary<string, int>() { { "E", 1 }, { "x", 1 }, { "t", 2 }, { "e", 1 }, { "n", 2 }, { "s", 1 }, { "i", 3 }, { "f", 1 }, { "c", 1 }, { "a", 1 }, { "o", 1 } };
-            Assert.IsTrue(TargetString.GetListOfRepeatedLetters().SequenceEqual(ExpectedReps));
-        }
-
-        /// <summary>
     /// Tests checking if the string contains any of the target strings.
     /// </summary>
         [Test]
@@ -390,7 +377,7 @@ namespace Extensification.Tests
         [Test]
         public void TestSplitNewLinesCrLf()
         {
-            string TargetString = "First line" + Constants.vbCrLf + "Second line" + Constants.vbCrLf + "Third line";
+            string TargetString = "First line\r\nSecond line\r\nThird line";
             var TargetArray = TargetString.SplitNewLines();
             Assert.IsTrue(TargetArray.Length == 3);
         }
@@ -401,7 +388,7 @@ namespace Extensification.Tests
         [Test]
         public void TestSplitNewLinesCr()
         {
-            string TargetString = "First line" + Constants.vbCr + "Second line" + Constants.vbCr + "Third line";
+            string TargetString = "First line\rSecond line\rThird line";
             var TargetArray = TargetString.SplitNewLinesCr();
             Assert.IsTrue(TargetArray.Length == 3);
         }
@@ -412,7 +399,7 @@ namespace Extensification.Tests
         [Test]
         public void TestSplitNewLinesLf()
         {
-            string TargetString = "First line" + Constants.vbLf + "Second line" + Constants.vbLf + "Third line";
+            string TargetString = "First line\nSecond line\nThird line";
             var TargetArray = TargetString.SplitNewLines();
             Assert.IsTrue(TargetArray.Length == 3);
         }

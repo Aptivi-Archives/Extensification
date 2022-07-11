@@ -1,6 +1,4 @@
-﻿using Extensification.External.Newtonsoft.Json.JPropertyExts;
-using Newtonsoft.Json.Linq;
-
+﻿
 // Extensification  Copyright (C) 2020-2021  EoflaOE
 // 
 // This file is part of Extensification
@@ -18,6 +16,8 @@ using Newtonsoft.Json.Linq;
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using Extensification.External.Newtonsoft.Json.JPropertyExts;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
 namespace Extensification.External.Tests

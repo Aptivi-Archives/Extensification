@@ -1,5 +1,22 @@
-﻿using System;
-using Microsoft.VisualBasic.CompilerServices;
+﻿
+// Extensification  Copyright (C) 2020-2021  EoflaOE
+// 
+// This file is part of Extensification
+// 
+// Extensification is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// Extensification is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+using System;
 
 namespace Extensification.StringExts
 {
@@ -19,7 +36,7 @@ namespace Extensification.StringExts
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
-            var StrArrayWords = Str.Split(" ");
+            var StrArrayWords = Str.Split(' ');
             string Sequence;
             for (int WordNumber = 0, loopTo = StrArrayWords.Length - 1; WordNumber <= loopTo; WordNumber++)
             {
@@ -35,37 +52,37 @@ namespace Extensification.StringExts
                     // Replace placeholder sequence with the parsable sequence.
                     if (StartIndex != -1 & EndIndex != -1)
                     {
-                        ph3c1352ae12ad455284ba4a498ba7b7e7 = StrArrayWords[WordNumber].Substring(StartIndex, EndIndex - StartIndex);
+                        Sequence = StrArrayWords[WordNumber].Substring(StartIndex, EndIndex - StartIndex);
 
                         // Check if the sequence needs special beginning
-                        if (ph3c1352ae12ad455284ba4a498ba7b7e7.StartsWithAnyOf(new[] { "<A", "<B", "<C", "<D", "<M", "<E", "<7", "<8", "<=", "<>", "<H", "<N", "<O", "<5n", "<6n" }) & !ph3c1352ae12ad455284ba4a498ba7b7e7.EndsWithAnyOf(new[] { "F>", "G>", "H>", "d>", "f>", "S>", "T>", "@>", "P>", "X>", "L>", "M>", "J>", "K>", "m>", "I>", "Z>", "r>" }))
+                        if (Sequence.StartsWithAnyOf(new[] { "<A", "<B", "<C", "<D", "<M", "<E", "<7", "<8", "<=", "<>", "<H", "<N", "<O", "<5n", "<6n" }) & !Sequence.EndsWithAnyOf(new[] { "F>", "G>", "H>", "d>", "f>", "S>", "T>", "@>", "P>", "X>", "L>", "M>", "J>", "K>", "m>", "I>", "Z>", "r>" }))
                         {
                             // These sequences don't need any of '[' and ']'.
-                            StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(ph3c1352ae12ad455284ba4a498ba7b7e7, Conversions.ToString(Convert.ToChar(0x1B)) + ph3c1352ae12ad455284ba4a498ba7b7e7.ReplaceAll(new[] { "<", ">" }, ""));
+                            StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(Sequence, Convert.ToChar(0x1B).ToString() + Sequence.ReplaceAll(new[] { "<", ">" }, ""));
                         }
-                        else if (ph3c1352ae12ad455284ba4a498ba7b7e7.StartsWithAnyOf(new[] { "<4", "<0", "<2" }) & (!ph3c1352ae12ad455284ba4a498ba7b7e7.StartsWithAnyOf(new[] { "<2~", "<20", "<21", "<23", "<24", "<48" }) & !ph3c1352ae12ad455284ba4a498ba7b7e7.EndsWith("0m>")))
+                        else if (Sequence.StartsWithAnyOf(new[] { "<4", "<0", "<2" }) & (!Sequence.StartsWithAnyOf(new[] { "<2~", "<20", "<21", "<23", "<24", "<48" }) & !Sequence.EndsWith("0m>")))
                         {
                             // These sequences need ']' as they are OSC sequences.
-                            if (ph3c1352ae12ad455284ba4a498ba7b7e7.StartsWithAnyOf(new[] { "<0", "<2" }))
+                            if (Sequence.StartsWithAnyOf(new[] { "<0", "<2" }))
                             {
                                 // They each need a BELL character &H07
-                                StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(ph3c1352ae12ad455284ba4a498ba7b7e7, Conversions.ToString(Convert.ToChar(0x1B)) + "]" + ph3c1352ae12ad455284ba4a498ba7b7e7.ReplaceAll(new[] { "<", ">" }, "") + Conversions.ToString(Convert.ToChar(0x7)));
+                                StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(Sequence, Convert.ToChar(0x1B).ToString() + "]" + Sequence.ReplaceAll(new[] { "<", ">" }, "") + Convert.ToChar(0x7).ToString());
                             }
-                            else if (ph3c1352ae12ad455284ba4a498ba7b7e7.StartsWith("<4"))
+                            else if (Sequence.StartsWith("<4"))
                             {
                                 // This needs an ESC character &H1B
-                                StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(ph3c1352ae12ad455284ba4a498ba7b7e7, Conversions.ToString(Convert.ToChar(0x1B)) + "]" + ph3c1352ae12ad455284ba4a498ba7b7e7.ReplaceAll(new[] { "<", ">" }, "") + Conversions.ToString(Convert.ToChar(0x1B)));
+                                StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(Sequence, Convert.ToChar(0x1B).ToString() + "]" + Sequence.ReplaceAll(new[] { "<", ">" }, "") + Convert.ToChar(0x1B).ToString());
                             }
                             else
                             {
                                 // No special suffixes needed
-                                StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(ph3c1352ae12ad455284ba4a498ba7b7e7, Conversions.ToString(Convert.ToChar(0x1B)) + "]" + ph3c1352ae12ad455284ba4a498ba7b7e7.ReplaceAll(new[] { "<", ">" }, ""));
+                                StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(Sequence, Convert.ToChar(0x1B).ToString() + "]" + Sequence.ReplaceAll(new[] { "<", ">" }, ""));
                             }
                         }
                         else
                         {
                             // These sequences need '[' as they are CSI sequences.
-                            StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(ph3c1352ae12ad455284ba4a498ba7b7e7, Conversions.ToString(Convert.ToChar(0x1B)) + "[" + ph3c1352ae12ad455284ba4a498ba7b7e7.ReplaceAll(new[] { "<", ">" }, ""));
+                            StrArrayWords[WordNumber] = StrArrayWords[WordNumber].Replace(Sequence, Convert.ToChar(0x1B).ToString() + "[" + Sequence.ReplaceAll(new[] { "<", ">" }, ""));
                         }
                     }
 

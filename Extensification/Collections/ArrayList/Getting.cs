@@ -1,7 +1,24 @@
-﻿using System;
+﻿
+// Extensification  Copyright (C) 2020-2021  EoflaOE
+// 
+// This file is part of Extensification
+// 
+// Extensification is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// Extensification is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Extensification.ArrayListExts
 {
@@ -25,10 +42,8 @@ namespace Extensification.ArrayListExts
             for (int Index = 0, loopTo = TargetArray.Count - 1; Index <= loopTo; Index++)
             {
                 var ArrayEntry = TargetArray[Index];
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(ArrayEntry, Entry, false)))
-                {
+                if (ArrayEntry.Equals(Entry))
                     Indexes.Add(Index);
-                }
             }
             return Indexes;
         }

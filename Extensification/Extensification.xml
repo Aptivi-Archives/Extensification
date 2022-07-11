@@ -1,0 +1,1906 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Extensification</name>
+    </assembly>
+    <members>
+        <member name="T:Extensification.ArrayListExts.Conversion">
+            <summary>
+            Provides the array list extensions related to conversion
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Conversion.ToList(System.Collections.ArrayList)">
+            <summary>
+            Converts an array list to list of <see cref="T:System.Object"/>.
+            </summary>
+            <param name="TargetArray">Target array list</param>
+            <returns>A list from array list</returns>
+        </member>
+        <member name="T:Extensification.ArrayListExts.Counts">
+            <summary>
+            Provides the array list extensions related to counting
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Counts.CountFullEntries(System.Collections.ArrayList)">
+            <summary>
+            Gets how many non-empty items are there
+            </summary>
+            <param name="TargetArray">Target array</param>
+            <returns>Count of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Counts.CountEmptyEntries(System.Collections.ArrayList)">
+            <summary>
+            Gets how many empty items are there
+            </summary>
+            <param name="TargetArray">Target array</param>
+            <returns>Count of empty items</returns>
+        </member>
+        <member name="T:Extensification.ArrayListExts.Getting">
+            <summary>
+            Provides the array list extensions related to getting
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Getting.GetIndexOfEntry(System.Collections.ArrayList,System.Object)">
+            <summary>
+            Gets index of an entry from the list
+            </summary>
+            <param name="TargetArray">Target array list</param>
+            <param name="Entry">An entry found in the list</param>
+            <returns>List of indexes. If none is found, returns an empty array list</returns>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(System.Collections.ArrayList)">
+            <summary>
+            Gets indexes of non-empty items
+            </summary>
+            <param name="TargetArray">Target array</param>
+            <returns>Indexes of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(System.Collections.ArrayList)">
+            <summary>
+            Gets indexes of empty items
+            </summary>
+            <param name="TargetArray">Target array</param>
+            <returns>Indexes of empty items</returns>
+        </member>
+        <member name="T:Extensification.ArrayListExts.Querying">
+            <summary>
+            Provides the array list extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Querying.ContainsAnyOf(System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            Checks to see if the array contains any of the targets.
+            </summary>
+            <param name="TargetArray">Source array</param>
+            <param name="Targets">Target array</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Querying.ContainsAllOf(System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            Checks to see if the array contains all of the targets.
+            </summary>
+            <param name="TargetArray">Source array</param>
+            <param name="Targets">Target array</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="T:Extensification.ArrayListExts.Removal">
+            <summary>
+            Provides the array list extensions related to removal
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayListExts.Removal.TryRemove(System.Collections.ArrayList,System.Object)">
+            <summary>
+            Tries to remove an entry from the array list
+            </summary>
+            <param name="TargetArray">Target array list</param>
+            <param name="Entry">An entry to be removed</param>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="T:Extensification.ArrayExts.Addition">
+            <summary>
+            Provides the array extensions related to addition
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Addition.Add``1(``0[]@,``0)">
+            <summary>
+            Adds an entry to array
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <param name="Item">Any item</param>
+        </member>
+        <member name="M:Extensification.ArrayExts.Addition.AddRange``1(``0[]@,``0[])">
+            <summary>
+            Adds a range of entries to array
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <param name="ToBeAdded">Range of entries in an array</param>
+        </member>
+        <member name="T:Extensification.ArrayExts.Conversion">
+            <summary>
+            Provides the array extensions related to conversion
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Conversion.ToArrayList``1(``0[])">
+            <summary>
+            Converts array to array list
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <returns>An array list of an array</returns>
+        </member>
+        <member name="T:Extensification.ArrayExts.Counts">
+            <summary>
+            Provides the array extensions related to counting
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Counts.CountFullEntries``1(``0[])">
+            <summary>
+            Gets how many non-empty items are there
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <returns>Count of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.ArrayExts.Counts.CountEmptyEntries``1(``0[])">
+            <summary>
+            Gets how many empty items are there
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <returns>Count of empty items</returns>
+        </member>
+        <member name="T:Extensification.ArrayExts.Getting">
+            <summary>
+            Provides the array extensions related to getting
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Getting.GetIndexFromEntry``1(``0[],``0)">
+            <summary>
+            Gets index from entry
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <param name="Entry">An entry from array</param>
+            <returns>List of indexes. If none is found, returns an empty array list</returns>
+        </member>
+        <member name="M:Extensification.ArrayExts.Getting.GetIndexesOfFullEntries``1(``0[])">
+            <summary>
+            Gets indexes of non-empty items
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <returns>Indexes of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.ArrayExts.Getting.GetIndexesOfEmptyEntries``1(``0[])">
+            <summary>
+            Gets indexes of empty items
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <returns>Indexes of empty items</returns>
+        </member>
+        <member name="T:Extensification.ArrayExts.Manipulation">
+            <summary>
+            Provides the array extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Manipulation.Stringify(System.Char[])">
+            <summary>
+            Stringifies the character array (making a string from the character entries found inside the array)
+            </summary>
+            <param name="TargetCharArray">Character array</param>
+        </member>
+        <member name="T:Extensification.ArrayExts.Querying">
+            <summary>
+            Provides the array extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Querying.ContainsAnyOf``1(``0[],``0[])">
+            <summary>
+            Checks to see if the array contains any of the targets.
+            </summary>
+            <param name="TargetArray">Source array</param>
+            <param name="Targets">Target array</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.ArrayExts.Querying.ContainsAllOf``1(``0[],``0[])">
+            <summary>
+            Checks to see if the array contains all of the targets.
+            </summary>
+            <param name="TargetArray">Source array</param>
+            <param name="Targets">Target array</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="T:Extensification.ArrayExts.Removal">
+            <summary>
+            Provides the array extensions related to removal
+            </summary>
+        </member>
+        <member name="M:Extensification.ArrayExts.Removal.Remove``1(``0[]@,``0)">
+            <summary>
+            Removes an entry from array
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetArray">Target array</param>
+            <param name="Item">Any item</param>
+        </member>
+        <member name="T:Extensification.DictionaryExts.Addition">
+            <summary>
+            Provides the dictionary extensions related to addition
+            </summary>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddIfNotFound``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            Adds an entry to dictionary if not found
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrModify``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            Adds or modifies an entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrRename``1(System.Collections.Generic.Dictionary{System.String,``0},System.String,``0)">
+            <summary>
+            Adds or renames an entry to dictionary to identify the copy number
+            </summary>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0,System.Int32)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0,System.UInt32)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0,System.Byte)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0,System.SByte)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Double},``0,System.Double)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0,System.Int64)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0,System.UInt64)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0,System.Int16)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0,System.UInt16)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Single},``0,System.Single)">
+            <summary>
+            Adds an entry or increments a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to add to an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0,System.Int32)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0,System.UInt32)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0,System.Byte)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0,System.SByte)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Double},``0,System.Double)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0,System.Int64)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0,System.UInt64)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0,System.Int16)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0,System.UInt16)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Single},``0,System.Single)">
+            <summary>
+            Adds an entry or decrements a value of an already-existing entry to dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be added</param>
+            <param name="EntryValue">A value of entry, or a value to subtract from an already-existing entry</param>
+        </member>
+        <member name="T:Extensification.DictionaryExts.Counts">
+            <summary>
+            Provides the dictionary extensions related to counting
+            </summary>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Counts.CountFullEntries``2(System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Gets how many non-empty values are there (Empty keys are not counted)
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <returns>Count of non-empty values</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Counts.CountEmptyEntries``2(System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Gets how many empty values are there (Empty keys are not counted)
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <returns>Count of empty values</returns>
+        </member>
+        <member name="T:Extensification.DictionaryExts.Getting">
+            <summary>
+            Provides the dictionary extensions related to getting
+            </summary>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Getting.GetKeyFromValue``2(System.Collections.Generic.Dictionary{``0,``1},``1)">
+            <summary>
+            Gets a key from a value in the dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Source dictionary</param>
+            <param name="Value">Value</param>
+            <returns>Key from value</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Getting.GetIndexOfKey``2(System.Collections.Generic.Dictionary{``0,``1},``0)">
+            <summary>
+            Gets an index from a key in the dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Source dictionary</param>
+            <param name="Key">Key</param>
+            <returns>Index of key</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Getting.GetIndexOfValue``2(System.Collections.Generic.Dictionary{``0,``1},``1)">
+            <summary>
+            Gets an index from a value in the dictionary
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Source dictionary</param>
+            <param name="Value">Value</param>
+            <returns>Index of value</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries``2(System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Gets indexes of non-empty items
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <returns>Indexes of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries``2(System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Gets indexes of empty items
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <returns>Indexes of empty items</returns>
+        </member>
+        <member name="T:Extensification.DictionaryExts.Manipulation">
+            <summary>
+            Provides the dictionary extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.RenameKey``1(System.Collections.Generic.Dictionary{System.String,``0},System.String,System.String)">
+            <summary>
+            Renames a key in a dictionary that has the key type of string
+            </summary>
+            <typeparam name="TValue">Value</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="OldName">Original key name</param>
+            <param name="NewName">New key name</param>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Single},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Double},``0)">
+            <summary>
+            Increments number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be incremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Single},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Double},``0)">
+            <summary>
+            Decrements number value in key. The key will be created if not found.
+            </summary>
+            <typeparam name="TKey">Key</typeparam>
+            <param name="Dict">Target dictionary</param>
+            <param name="EntryKey">A key entry to be decremented</param>
+        </member>
+        <member name="T:Extensification.DictionaryExts.Querying">
+            <summary>
+            Provides the dictionary extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys``2(System.Collections.Generic.Dictionary{``0,``1},``0[])">
+            <summary>
+            Checks to see if the keys in dictionary contains any of the targets.
+            </summary>
+            <param name="Dict">Source dictionary</param>
+            <param name="Targets">Target dictionary</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Querying.ContainsAnyOfInValues``2(System.Collections.Generic.Dictionary{``0,``1},``1[])">
+            <summary>
+            Checks to see if the values in dictionary contains any of the targets.
+            </summary>
+            <param name="Dict">Source dictionary</param>
+            <param name="Targets">Target dictionary</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Querying.ContainsAllOfInKeys``2(System.Collections.Generic.Dictionary{``0,``1},``0[])">
+            <summary>
+            Checks to see if the keys in dictionary contains all of the targets.
+            </summary>
+            <param name="Dict">Source dictionary</param>
+            <param name="Targets">Target dictionary</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.DictionaryExts.Querying.ContainsAllOfInValues``2(System.Collections.Generic.Dictionary{``0,``1},``1[])">
+            <summary>
+            Checks to see if the values in dictionary contains all of the targets.
+            </summary>
+            <param name="Dict">Source dictionary</param>
+            <param name="Targets">Target dictionary</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="T:Extensification.EnumerableExts.Addition">
+            <summary>
+            Provides the enumerable extensions related to addition
+            </summary>
+        </member>
+        <member name="T:Extensification.EnumerableExts.Manipulation">
+            <summary>
+            Provides the enumerable extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.EnumerableExts.Manipulation.Stringify(System.Collections.Generic.IEnumerable{System.Char})">
+            <summary>
+            Stringifies the character enumerable (making a string from the character entries found inside the enumerable)
+            </summary>
+            <param name="TargetCharArray">Character enumerable</param>
+        </member>
+        <member name="T:Extensification.ListExts.Addition">
+            <summary>
+            Provides the list extensions related to addition
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Addition.AddIfNotFound``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            Adds an entry to list if not found
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <param name="Entry">An entry to be added</param>
+        </member>
+        <member name="T:Extensification.ListExts.Conversion">
+            <summary>
+            Provides the list extensions related to conversion
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Conversion.ToArrayList``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Converts list to array list
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+        </member>
+        <member name="T:Extensification.ListExts.Counts">
+            <summary>
+            Provides the list extensions related to counting
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Counts.CountFullEntries``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Gets how many non-empty items are there
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <returns>Count of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.ListExts.Counts.CountEmptyEntries``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Gets how many empty items are there
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <returns>Count of empty items</returns>
+        </member>
+        <member name="T:Extensification.ListExts.Getting">
+            <summary>
+            Provides the list extensions related to getting
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Getting.GetIndexFromEntry``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            Gets indexes from entry
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <param name="Entry">An entry</param>
+            <returns>List of indexes from entry</returns>
+        </member>
+        <member name="M:Extensification.ListExts.Getting.GetIndexesOfFullEntries``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Gets indexes of non-empty items
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <returns>Indexes of non-empty items</returns>
+        </member>
+        <member name="M:Extensification.ListExts.Getting.GetIndexesOfEmptyEntries``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Gets indexes of empty items
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <returns>Indexes of empty items</returns>
+        </member>
+        <member name="T:Extensification.ListExts.Manipulation">
+            <summary>
+            Provides the list extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Manipulation.Stringify(System.Collections.Generic.List{System.Char})">
+            <summary>
+            Stringifies the character array (making a string from the character entries found inside the array)
+            </summary>
+            <param name="TargetCharArray">Character array</param>
+        </member>
+        <member name="T:Extensification.ListExts.Querying">
+            <summary>
+            Provides the list extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Querying.ContainsAnyOf``1(System.Collections.Generic.List{``0},``0[])">
+            <summary>
+            Checks to see if the array contains any of the targets.
+            </summary>
+            <param name="TargetArray">Source array</param>
+            <param name="Targets">Target array</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.ListExts.Querying.ContainsAllOf``1(System.Collections.Generic.List{``0},``0[])">
+            <summary>
+            Checks to see if the array contains all of the targets.
+            </summary>
+            <param name="TargetArray">Source array</param>
+            <param name="Targets">Target array</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="T:Extensification.ListExts.Removal">
+            <summary>
+            Provides the list extensions related to removal
+            </summary>
+        </member>
+        <member name="M:Extensification.ListExts.Removal.TryRemove``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            Tries to remove an entry from the list
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="TargetList">Target list</param>
+            <param name="Entry">An entry to be removed</param>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="T:Extensification.HumanFormats">
+            <summary>
+            Human-readable formats
+            </summary>
+        </member>
+        <member name="F:Extensification.HumanFormats.DataSize">
+            <summary>
+            Computer data size (KB, MB, GB, TB, PB, EB, ...)
+            </summary>
+        </member>
+        <member name="F:Extensification.HumanFormats.MeasurementsMetric">
+            <summary>
+            Body measurements in metric units (mm, cm, m, km, ...)
+            </summary>
+        </member>
+        <member name="F:Extensification.HumanFormats.MeasurementsMetricUnusual">
+            <summary>
+            Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Decameters), hm (Hectameters), km, ...)
+            </summary>
+        </member>
+        <member name="F:Extensification.HumanFormats.MeasurementsImperial">
+            <summary>
+            Body measurements in imperial units (feet, yards, miles, ...)
+            </summary>
+        </member>
+        <member name="F:Extensification.HumanFormats.VolumeMetric">
+            <summary>
+            Body volume in metric units (mL, L, kL (Kiloliters))
+            </summary>
+        </member>
+        <member name="F:Extensification.HumanFormats.VolumeImperial">
+            <summary>
+            Body volume in imperial units (pints, quarts, gallons, ...)
+            </summary>
+        </member>
+        <member name="T:Extensification.ByteExts.Manipulation">
+            <summary>
+            Provides the byte extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.Increment(System.Byte,System.Byte)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.Increment(System.SByte,System.SByte)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.Decrement(System.Byte,System.Byte)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.Decrement(System.SByte,System.SByte)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.Swap(System.Byte@,System.Byte@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.SwapIfSourceLarger(System.Byte@,System.Byte@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.SwapIfTargetLarger(System.Byte@,System.Byte@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.Swap(System.SByte@,System.SByte@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.SwapIfSourceLarger(System.SByte@,System.SByte@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ByteExts.Manipulation.SwapIfTargetLarger(System.SByte@,System.SByte@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="T:Extensification.ByteExts.Querying">
+            <summary>
+            Provides the byte extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.ByteExts.Querying.ListDigits(System.Byte)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Querying.ListDigits(System.SByte)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Querying.IsArmstrong(System.Byte)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="M:Extensification.ByteExts.Querying.IsArmstrong(System.SByte)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="T:Extensification.DoubleExts.Manipulation">
+            <summary>
+            Provides the double-precision number extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.DoubleExts.Manipulation.Increment(System.Double,System.Double)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.DoubleExts.Manipulation.Decrement(System.Double,System.Double)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.DoubleExts.Manipulation.Swap(System.Double@,System.Double@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.DoubleExts.Manipulation.SwapIfSourceLarger(System.Double@,System.Double@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.DoubleExts.Manipulation.SwapIfTargetLarger(System.Double@,System.Double@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="T:Extensification.DoubleExts.Querying">
+            <summary>
+            Provides the double-precision number extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.DoubleExts.Querying.ListDigitsBeforeDecimal(System.Double)">
+            <summary>
+            Makes a list of digits before the decimal point
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.DoubleExts.Querying.ListDigitsAfterDecimal(System.Double)">
+            <summary>
+            Makes a list of digits after the decimal point
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.DoubleExts.Querying.IsArmstrong(System.Double)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="T:Extensification.IntegerExts.Manipulation">
+            <summary>
+            Provides the integer extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.Increment(System.Int32,System.Int32)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.Increment(System.UInt32,System.UInt32)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.Decrement(System.Int32,System.Int32)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.Decrement(System.UInt32,System.UInt32)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.Swap(System.Int32@,System.Int32@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.SwapIfSourceLarger(System.Int32@,System.Int32@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.SwapIfTargetLarger(System.Int32@,System.Int32@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.Swap(System.UInt32@,System.UInt32@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.SwapIfSourceLarger(System.UInt32@,System.UInt32@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.IntegerExts.Manipulation.SwapIfTargetLarger(System.UInt32@,System.UInt32@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="T:Extensification.IntegerExts.Querying">
+            <summary>
+            Provides the integer extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.IntegerExts.Querying.ListDigits(System.Int32)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Querying.ListDigits(System.UInt32)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Querying.IsArmstrong(System.Int32)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="M:Extensification.IntegerExts.Querying.IsArmstrong(System.UInt32)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="T:Extensification.LongExts.Conversion">
+            <summary>
+            Provides the 64-bit integer extensions related to conversion
+            </summary>
+        </member>
+        <member name="M:Extensification.LongExts.Conversion.ToHumanReadable(System.Int64,Extensification.HumanFormats)">
+            <summary>
+            Converts number to a human readable format with units used
+            </summary>
+            <param name="Num">Number</param>
+            <param name="Type">Measurement types</param>
+            <returns>A string containing the processed number and unit</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Conversion.ToHumanReadable(System.UInt64,Extensification.HumanFormats)">
+            <summary>
+            Converts number to a human readable format with units used
+            </summary>
+            <param name="Num">Number</param>
+            <param name="Type">Measurement types</param>
+            <returns>A string containing the processed number and unit</returns>
+        </member>
+        <member name="T:Extensification.LongExts.Manipulation">
+            <summary>
+            Provides the 64-bit integer extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.Increment(System.Int64,System.Int64)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.Increment(System.UInt64,System.UInt64)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.Decrement(System.Int64,System.Int64)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.Decrement(System.UInt64,System.UInt64)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.Swap(System.Int64@,System.Int64@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.SwapIfSourceLarger(System.Int64@,System.Int64@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.SwapIfTargetLarger(System.Int64@,System.Int64@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.Swap(System.UInt64@,System.UInt64@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.SwapIfSourceLarger(System.UInt64@,System.UInt64@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.LongExts.Manipulation.SwapIfTargetLarger(System.UInt64@,System.UInt64@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="T:Extensification.LongExts.Querying">
+            <summary>
+            Provides the 64-bit integer extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.LongExts.Querying.ListDigits(System.Int64)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Querying.ListDigits(System.UInt64)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Querying.IsArmstrong(System.Int64)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="M:Extensification.LongExts.Querying.IsArmstrong(System.UInt64)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="T:Extensification.ShortExts.Manipulation">
+            <summary>
+            Provides the 16-bit integer extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.Increment(System.Int16,System.Int16)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.Increment(System.UInt16,System.UInt16)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.Decrement(System.Int16,System.Int16)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.Decrement(System.UInt16,System.UInt16)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.Swap(System.Int16@,System.Int16@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.SwapIfSourceLarger(System.Int16@,System.Int16@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.SwapIfTargetLarger(System.Int16@,System.Int16@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.Swap(System.UInt16@,System.UInt16@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.SwapIfSourceLarger(System.UInt16@,System.UInt16@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.ShortExts.Manipulation.SwapIfTargetLarger(System.UInt16@,System.UInt16@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="T:Extensification.ShortExts.Querying">
+            <summary>
+            Provides the 16-bit integer extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.ShortExts.Querying.ListDigits(System.Int16)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Querying.ListDigits(System.UInt16)">
+            <summary>
+            Makes a list of digits
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Querying.IsArmstrong(System.Int16)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="M:Extensification.ShortExts.Querying.IsArmstrong(System.UInt16)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="T:Extensification.SingleExts.Manipulation">
+            <summary>
+            Provides the single-precision number extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.SingleExts.Manipulation.Increment(System.Single,System.Single)">
+            <summary>
+            Increments the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented number</returns>
+        </member>
+        <member name="M:Extensification.SingleExts.Manipulation.Decrement(System.Single,System.Single)">
+            <summary>
+            Decrements the number
+            </summary>
+            <param name="Number">Number</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented number</returns>
+        </member>
+        <member name="M:Extensification.SingleExts.Manipulation.Swap(System.Single@,System.Single@)">
+            <summary>
+            Swaps the two numbers
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.SingleExts.Manipulation.SwapIfSourceLarger(System.Single@,System.Single@)">
+            <summary>
+            Swaps the two numbers if the source is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="M:Extensification.SingleExts.Manipulation.SwapIfTargetLarger(System.Single@,System.Single@)">
+            <summary>
+            Swaps the two numbers if the target is larger than the target
+            </summary>
+            <param name="SourceNumber">Number</param>
+            <param name="TargetNumber">Number</param>
+        </member>
+        <member name="T:Extensification.SingleExts.Querying">
+            <summary>
+            Provides the single-precision number extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.SingleExts.Querying.ListDigitsBeforeDecimal(System.Single)">
+            <summary>
+            Makes a list of digits before the decimal point
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.SingleExts.Querying.ListDigitsAfterDecimal(System.Single)">
+            <summary>
+            Makes a list of digits after the decimal point
+            </summary>
+            <param name="Number">Number</param>
+            <returns>Array of digits</returns>
+        </member>
+        <member name="M:Extensification.SingleExts.Querying.IsArmstrong(System.Single)">
+            <summary>
+            Checks to see if the number is an Armstrong number (sum of cube of each digit of number equals the number itself)
+            </summary>
+            <param name="Number">Number</param>
+            <returns>True if the number is an Armstrong number; False if not.</returns>
+        </member>
+        <member name="M:Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(System.IO.StreamReader)">
+            <summary>
+            Reads a line from the stream with the newline characters
+            </summary>
+            <param name="reader">The stream reader</param>
+        </member>
+        <member name="M:Extensification.StreamReaderExts.Reading.ReadLines(System.IO.StreamReader)">
+            <summary>
+            Reads all the lines and returns the string array
+            </summary>
+            <param name="reader">The stream reader</param>
+        </member>
+        <member name="M:Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(System.IO.StreamReader)">
+            <summary>
+            Reads all the characters in the stream until the end and seeks the stream to the beginning, if possible.
+            </summary>
+            <param name="reader">The stream reader</param>
+        </member>
+        <member name="M:Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter@,System.String[])">
+            <summary>
+            Writes all the lines to the stream and seeks to the beginning, if possible.
+            </summary>
+            <param name="writer">The stream writer</param>
+        </member>
+        <member name="M:Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter@,System.String)">
+            <summary>
+            Writes the line to the stream and seeks to the beginning, if possible.
+            </summary>
+            <param name="writer">The stream writer</param>
+        </member>
+        <member name="M:Extensification.StreamExts.Manipulation.TrySeek(System.IO.Stream,System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Tries seeking the stream
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Manipulation.TrySetLength(System.IO.Stream,System.Int64)">
+            <summary>
+            Tries setting the length of the stream
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Manipulation.TryFlush(System.IO.Stream)">
+            <summary>
+            Tries flushing the stream
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Reading.TryRead(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Tries reading from the stream
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Reading.ReadAndSeek(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads from the stream and seeks the stream to the beginning, if possible.
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Reading.TryReadByte(System.IO.Stream)">
+            <summary>
+            Tries reading a byte from the stream
+            </summary>
+            <returns>Byte number if successful; -1 if at end of stream; -2 if error occurred</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Writing.TryWrite(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Tries writing to the stream
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="M:Extensification.StreamExts.Writing.WriteAndSeek(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes to the stream and seeks the stream to the beginning, if possible.
+            </summary>
+        </member>
+        <member name="M:Extensification.StreamExts.Writing.TryWriteByte(System.IO.Stream,System.Byte)">
+            <summary>
+            Tries writing to the stream
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="T:Extensification.CharExts.Manipulation">
+            <summary>
+            Provides the character extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.CharExts.Manipulation.Increment(System.Char,System.Int32)">
+            <summary>
+            Increments the character
+            </summary>
+            <param name="Character">Character</param>
+            <param name="IncrementThreshold">How many times to increment</param>
+            <returns>Incremented character</returns>
+        </member>
+        <member name="M:Extensification.CharExts.Manipulation.Decrement(System.Char,System.Int32)">
+            <summary>
+            Decrements the character
+            </summary>
+            <param name="Character">Character</param>
+            <param name="DecrementThreshold">How many times to decrement</param>
+            <returns>Decremented character</returns>
+        </member>
+        <member name="T:Extensification.CharExts.Querying">
+            <summary>
+            Provides the character extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.CharExts.Querying.GetAsciiCode(System.Char)">
+            <summary>
+            		''' Gets an ASCII code of a character
+            		''' </summary>
+            		''' <param name="Character">Character</param>
+            		''' <returns>ASCII code of a character</returns>
+        </member>
+        <member name="M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char)">
+            <summary>
+            		''' Converts the character to the instance of ConsoleKeyInfo
+            		''' </summary>
+            		''' <param name="c">The character</param>
+        </member>
+        <member name="M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,System.Collections.Generic.Dictionary{System.Char,System.Tuple{System.ConsoleKey,System.ConsoleModifiers}})">
+            <summary>
+            		''' Converts the character to the instance of ConsoleKeyInfo
+            		''' </summary>
+            		''' <param name="c">The character</param>
+            		''' <param name="KeyCharMap">Key character map</param>
+        </member>
+        <member name="M:Extensification.CharExts.Querying.ParseKeyInfo(System.Char)">
+            <summary>
+            		''' Parses the key information
+            		''' </summary>
+            		''' <param name="c">Character to parse</param>
+        </member>
+        <member name="M:Extensification.CharExts.Querying.ParseKeyInfo(System.Char,System.Collections.Generic.Dictionary{System.Char,System.Tuple{System.ConsoleKey,System.ConsoleModifiers}})">
+            <summary>
+            		''' Parses the key information
+            		''' </summary>
+            		''' <param name="c">Character to parse</param>
+            		''' <param name="KeyCharMap">Key character map</param>
+        </member>
+        <member name="T:Extensification.StringExts.Conversion">
+            <summary>
+            Provides the string extensions related to conversion
+            </summary>
+        </member>
+        <member name="M:Extensification.StringExts.Conversion.ConvertVTSequences(System.String@)">
+            <summary>
+            Converts all of the VT sequence numbers enclosed in &lt; and &gt; marks to their appropriate VT sequence.
+            For example, &lt;38;5;5&gt; will be converted to Convert.ToChar(&amp;H1B)[38;5;5. Note that if you write spaces between &lt; and &gt; marks,
+            it will not parse it.
+            </summary>
+            <param name="Str">Target string</param>
+        </member>
+        <member name="M:Extensification.StringExts.Conversion.ConvertFromHexToRgb(System.String,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            Converts from hexadecimal string representation of color to RGB values
+            </summary>
+            <param name="source">A string which has the specified text to replace</param>
+            <param name="R">Red level to be filled</param>
+            <param name="G">Green level to be filled</param>
+            <param name="B">Blue level to be filled</param>
+        </member>
+        <member name="T:Extensification.StringExts.Manipulation">
+            <summary>
+            Provides the string extensions related to manipulation
+            </summary>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.ReplaceLastOccurrence(System.String,System.String,System.String)">
+            <summary>
+            Replaces last occurrence of a text in source string with the replacement
+            </summary>
+            <param name="source">A string which has the specified text to replace</param>
+            <param name="searchText">A string to be replaced</param>
+            <param name="replace">A string to replace</param>
+            <returns>String that has its last occurrence of text replaced</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.ReplaceAll(System.String,System.String[],System.String)">
+            <summary>
+            Replaces all the instances of strings with a string
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="ToBeReplaced">Strings to be replaced</param>
+            <param name="ToReplace">String to replace with</param>
+            <returns>Modified string</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.ReplaceAllRange(System.String,System.String[],System.String[])">
+            <summary>
+            Replaces all the instances of strings with a string assigned to each entry
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="ToBeReplaced">Strings to be replaced</param>
+            <param name="ToReplace">Strings to replace with</param>
+            <returns>Modified string</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.Truncate(System.String,System.Int32)">
+            <summary>
+            Truncates the string if the string is larger than the threshold, otherwise, returns an unchanged string
+            </summary>
+            <param name="str">Source string to truncate</param>
+            <param name="threshold">Max number of string characters</param>
+            <returns>Truncated string</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.FormatString(System.String,System.Object[])">
+            <summary>
+            Formats the string
+            </summary>
+            <param name="Str">Target string that has {0}, {1}, ...</param>
+            <param name="Variables">Variables being used</param>
+            <returns>Formatted string</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.ShiftLetters(System.String,System.Int32)">
+            <summary>
+            Shifts letters in a string either backwards or forward.
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="ShiftThreshold">How many times to shift. If the threshold is negative, the shifting will go backwards. If the threshold is positive, the shifting will go forward.</param>
+            <returns>Shifted string</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.Reverse(System.String)">
+            <summary>
+            Reverses the order of characters in a string
+            </summary>
+            <param name="Str">Target string</param>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.Repeat(System.String,System.Int64)">
+            <summary>
+            Repeats a string 'n' times
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Times">Number of times to be repeated</param>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.Substring(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retrieves a substring from this instance. The substring starts at a specified starting position and ends at a specified ending position
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Start">Start position</param>
+            <param name="Finish">Finish position</param>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.EncloseByDoubleQuotes(System.String)">
+            <summary>
+            Encloses a string by double quotations
+            </summary>
+            <param name="Str">Target string</param>
+            <returns>Enclosed string</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Manipulation.ReleaseDoubleQuotes(System.String)">
+            <summary>
+            Releases a string from double quotations
+            </summary>
+            <param name="Str">Target string</param>
+            <returns>Released string</returns>
+        </member>
+        <member name="T:Extensification.StringExts.Querying">
+            <summary>
+            Provides the string extensions related to querying
+            </summary>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.AllIndexesOf(System.String,System.String)">
+            <summary>
+            Get all indexes of a value in string
+            </summary>
+            <param name="Str">Source string</param>
+            <param name="value">A value</param>
+            <returns>Indexes of strings</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.GetAsciiCodes(System.String)">
+            <summary>
+            Gets list of ASCII codes from a string
+            </summary>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.GetAsciiCode(System.String,System.Int32)">
+            <summary>
+            Gets an ASCII code for a character
+            </summary>
+            <param name="CharacterNum">A zero-based character number</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.GetListOfRepeatedLetters(System.String)">
+            <summary>
+            Gets the list of repeated letters
+            </summary>
+            <param name="Str">Target string</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.ContainsAnyOf(System.String,System.String[])">
+            <summary>
+            Checks to see if the string contains any of the target strings.
+            </summary>
+            <param name="Str">Source string</param>
+            <param name="Targets">Target strings</param>
+            <returns>True if one of them is found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.ContainsAllOf(System.String,System.String[])">
+            <summary>
+            Checks to see if the string contains all of the target strings.
+            </summary>
+            <param name="Str">Source string</param>
+            <param name="Targets">Target strings</param>
+            <returns>True if all of them are found; else, false.</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.LRP(System.String,System.Int32)">
+            <summary>
+            Gets how many times does the program need to step n times on the string until it reaches the end of string.
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Steps">Number of characters to step on</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.StartsWithAnyOf(System.String,System.String[])">
+            <summary>
+            Checks to see if the string starts with any of the values
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Values">Values</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.StartsWithAllOf(System.String,System.String[])">
+            <summary>
+            Checks to see if the string starts with all of the values
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Values">Values</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.EndsWithAnyOf(System.String,System.String[])">
+            <summary>
+            Checks to see if the string ends with any of the values
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Values">Values</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.EndsWithAllOf(System.String,System.String[])">
+            <summary>
+            Checks to see if the string ends with all of the values
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Values">Values</param>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.SplitNewLines(System.String)">
+            <summary>
+            Makes a string array with new line as delimiter
+            </summary>
+            <param name="Str">Target string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.SplitNewLinesCr(System.String)">
+            <summary>
+            Makes a string array with new line (vbCr) as delimiter
+            </summary>
+            <param name="Str">Target string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Extensification.StringExts.Querying.SplitEncloseDoubleQuotes(System.String,System.String[])">
+            <summary>
+            Splits the string enclosed in double quotes
+            </summary>
+            <param name="Str">Target string</param>
+            <param name="Delims">Delimiters</param>
+        </member>
+        <member name="T:Extensification.StringExts.Removal">
+            <summary>
+            Provides the string extensions related to removal
+            </summary>
+        </member>
+        <member name="M:Extensification.StringExts.Removal.RemoveSpacesFromBeginning(System.String)">
+            <summary>
+            Removes spaces from the beginning of the string
+            </summary>
+            <param name="Str">Target string</param>
+            <returns>Modified string</returns>
+        </member>
+        <member name="M:Extensification.StringExts.Removal.RemoveLetter(System.String,System.Int32)">
+            <summary>
+            Removes a letter from a string
+            </summary>
+            <param name="CharacterNum">A zero-based character number</param>
+        </member>
+        <member name="M:Extensification.StringExts.Removal.RemoveLettersRange(System.String,System.Char[])">
+            <summary>
+            Removes a range of letters from a string
+            </summary>
+            <param name="Characters">Array of characters to be remove</param>
+        </member>
+        <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheEnd(System.String@)">
+            <summary>
+            Removes null characters or whitespaces at the end of the string
+            </summary>
+            <param name="Str">Target string</param>
+        </member>
+        <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheBeginning(System.String@)">
+            <summary>
+            Removes null characters or whitespaces at the beginning of the string
+            </summary>
+            <param name="Str">Target string</param>
+        </member>
+    </members>
+</doc>

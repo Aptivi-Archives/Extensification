@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Extensification.CharExts;
-
+﻿
 // Extensification  Copyright (C) 2020-2021  EoflaOE
 // 
 // This file is part of Extensification
@@ -19,6 +16,9 @@ using Extensification.CharExts;
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using System;
+using System.Collections.Generic;
+using Extensification.CharExts;
 using NUnit.Framework;
 
 namespace Extensification.Tests

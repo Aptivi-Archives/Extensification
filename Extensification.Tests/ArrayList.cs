@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Linq;
-using Extensification.ArrayListExts;
-
+﻿
 // Extensification  Copyright (C) 2020-2021  EoflaOE
 // 
 // This file is part of Extensification
@@ -20,6 +16,10 @@ using Extensification.ArrayListExts;
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using System;
+using System.Collections;
+using System.Linq;
+using Extensification.ArrayListExts;
 using NUnit.Framework;
 
 namespace Extensification.Tests
