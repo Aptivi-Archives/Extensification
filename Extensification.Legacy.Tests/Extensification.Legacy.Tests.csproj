@@ -6,6 +6,7 @@
 
     <IsPackable>false</IsPackable>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <OutputPath>../Extensification.Bin.Tests/</OutputPath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 

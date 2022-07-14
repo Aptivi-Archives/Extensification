@@ -24,6 +24,7 @@ This package is for extensions that use the Microsoft.VisualBasic namespace.</De
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <OutputPath>../Extensification.Bin/</OutputPath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
