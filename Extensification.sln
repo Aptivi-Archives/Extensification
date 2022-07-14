@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensification.External", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensification.External.Tests", "Extensification.External.Tests\Extensification.External.Tests.csproj", "{54507746-8153-0905-1427-BE79F6CF5E4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensification.Legacy", "Extensification.Legacy\Extensification.Legacy.csproj", "{D3528E16-F6B6-0AB3-0B79-D4B0C9C8B20D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensification.Legacy", "Extensification.Legacy\Extensification.Legacy.csproj", "{D3528E16-F6B6-0AB3-0B79-D4B0C9C8B20D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensification.Legacy.Tests", "Extensification.Legacy.Tests\Extensification.Legacy.Tests.csproj", "{C1EC5646-E666-0943-197C-C0EF03EFC5AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensification.Legacy.Tests", "Extensification.Legacy.Tests\Extensification.Legacy.Tests.csproj", "{C1EC5646-E666-0943-197C-C0EF03EFC5AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7054999E-42E0-46E3-AFB6-C4F548E4894B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{80756792-C0C2-4C5B-9C17-B6E5C3375C91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F75CB34-838D-0720-0D38-A9A826221565} = {80756792-C0C2-4C5B-9C17-B6E5C3375C91}
+		{6174F457-1291-01C1-3EFF-1B9173C06C14} = {7054999E-42E0-46E3-AFB6-C4F548E4894B}
+		{3C1ED5E7-386B-011D-3EAF-E4EE71E345D8} = {80756792-C0C2-4C5B-9C17-B6E5C3375C91}
+		{54507746-8153-0905-1427-BE79F6CF5E4D} = {7054999E-42E0-46E3-AFB6-C4F548E4894B}
+		{D3528E16-F6B6-0AB3-0B79-D4B0C9C8B20D} = {80756792-C0C2-4C5B-9C17-B6E5C3375C91}
+		{C1EC5646-E666-0943-197C-C0EF03EFC5AD} = {7054999E-42E0-46E3-AFB6-C4F548E4894B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9148F21B-D149-4D61-9D89-8DE106F9EC99}
