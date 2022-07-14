@@ -1866,6 +1866,12 @@
             <param name="Str">Target string</param>
             <param name="Delims">Delimiters</param>
         </member>
+        <member name="M:Extensification.StringExts.Querying.SplitSpacesEncloseDoubleQuotes(System.String)">
+            <summary>
+            Splits the string enclosed in double quotes delimited by spaces using regular expression formula
+            </summary>
+            <param name="Str">Target string</param>
+        </member>
         <member name="T:Extensification.StringExts.Removal">
             <summary>
             Provides the string extensions related to removal

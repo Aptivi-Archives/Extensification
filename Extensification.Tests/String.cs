@@ -405,13 +405,24 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests splitting a string with double quotes enclosed
-    /// </summary>
+        /// Tests splitting a string with double quotes enclosed
+        /// </summary>
         [Test]
         public void TestSplitEncloseDoubleQuotes()
         {
             string TargetString = "First \"Second Third\" Fourth";
             var TargetArray = TargetString.SplitEncloseDoubleQuotes(" ");
+            Assert.IsTrue(TargetArray.Length == 3);
+        }
+
+        /// <summary>
+        /// Tests splitting a space-delimited string with double quotes enclosed
+        /// </summary>
+        [Test]
+        public void TestSplitSpacesEncloseDoubleQuotes()
+        {
+            string TargetString = "First \"Second Third\" Fourth";
+            var TargetArray = TargetString.SplitSpacesEncloseDoubleQuotes();
             Assert.IsTrue(TargetArray.Length == 3);
         }
         #endregion

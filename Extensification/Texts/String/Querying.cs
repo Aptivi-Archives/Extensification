@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Extensification.DictionaryExts;
 using NotVisualBasic.FileIO;
 
@@ -326,6 +327,17 @@ namespace Extensification.StringExts
                     Result[i].Replace("\"", "");
             }
             return Result;
+        }
+
+        /// <summary>
+        /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
+        /// </summary>
+        /// <param name="Str">Target string</param>
+        public static string[] SplitSpacesEncloseDoubleQuotes(this string Str)
+        {
+            return Regex.Split(Str, "(?<=^[^\"]*(?:\"[^\"]*\"[^\"]*)*) (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)")
+                        .Select((m) => (m.StartsWith("\"") && m.EndsWith("\"")) ? m.ReleaseDoubleQuotes() : m)
+                        .ToArray();
         }
 
     }
