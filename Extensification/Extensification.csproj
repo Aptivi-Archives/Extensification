@@ -40,14 +40,6 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Extensification.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>Extensification.xml</DocumentationFile>
-  </PropertyGroup>
-
   <ItemGroup>
     <None Include="OfficialAppIcon-Extensification-512.png">
       <Pack>True</Pack>
