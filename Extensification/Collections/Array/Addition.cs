@@ -32,7 +32,7 @@ namespace Extensification.ArrayExts
         /// <typeparam name="T">Type</typeparam>
         /// <param name="TargetArray">Target array</param>
         /// <param name="Item">Any item</param>
-        public static void Add<T>(ref T[] TargetArray, T Item)
+        public static void Add<T>(this T[] TargetArray, T Item)
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));
@@ -46,7 +46,7 @@ namespace Extensification.ArrayExts
         /// <typeparam name="T">Type</typeparam>
         /// <param name="TargetArray">Target array</param>
         /// <param name="ToBeAdded">Range of entries in an array</param>
-        public static void AddRange<T>(ref T[] TargetArray, T[] ToBeAdded)
+        public static void AddRange<T>(this T[] TargetArray, T[] ToBeAdded)
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));

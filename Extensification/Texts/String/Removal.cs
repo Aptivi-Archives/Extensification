@@ -78,7 +78,7 @@ namespace Extensification.StringExts
         /// Removes null characters or whitespaces at the end of the string
         /// </summary>
         /// <param name="Str">Target string</param>
-        public static void RemoveNullsOrWhitespacesAtTheEnd(ref string Str)
+        public static void RemoveNullsOrWhitespacesAtTheEnd(this string Str)
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
@@ -99,7 +99,7 @@ namespace Extensification.StringExts
         /// Removes null characters or whitespaces at the beginning of the string
         /// </summary>
         /// <param name="Str">Target string</param>
-        public static void RemoveNullsOrWhitespacesAtTheBeginning(ref string Str)
+        public static void RemoveNullsOrWhitespacesAtTheBeginning(this string Str)
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));

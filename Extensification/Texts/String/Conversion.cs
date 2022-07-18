@@ -32,7 +32,7 @@ namespace Extensification.StringExts
         /// it will not parse it.
         /// </summary>
         /// <param name="Str">Target string</param>
-        public static void ConvertVTSequences(ref string Str)
+        public static void ConvertVTSequences(this string Str)
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));

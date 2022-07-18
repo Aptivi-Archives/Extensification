@@ -30,38 +30,38 @@ namespace Extensification.Tests
 
         #region Addition
         /// <summary>
-    /// Tests adding an entry to array
-    /// </summary>
+        /// Tests adding an entry to array
+        /// </summary>
         [Test]
         public void TestAdd()
         {
             var TargetArray = new int[] { 2, 3 };
-            Addition.Add(ref TargetArray, 4);
+            TargetArray.Add(4);
             Assert.IsTrue(TargetArray.Length == 3);
         }
 
         /// <summary>
-    /// Tests adding a range of entries to array
-    /// </summary>
+        /// Tests adding a range of entries to array
+        /// </summary>
         [Test]
         public void TestAddRange()
         {
-            var TargetArray = new int[] { 2, 3 };
-            var Range = new int[] { 4, 5, 6, 7, 8, 9 };
-            Addition.AddRange(ref TargetArray, Range);
+            int[] TargetArray = { 2, 3 };
+            int[] Range = { 4, 5, 6, 7, 8, 9 };
+            TargetArray.AddRange(Range);
             Assert.IsTrue(TargetArray.Length == 8);
         }
         #endregion
 
         #region Removal
         /// <summary>
-    /// Tests removing an entry to array
-    /// </summary>
+        /// Tests removing an entry to array
+        /// </summary>
         [Test]
         public void TestRemove()
         {
             var TargetArray = new int[] { 2, 3, 4 };
-            Removal.Remove(ref TargetArray, 4);
+            TargetArray.Remove(4);
             Assert.IsTrue(TargetArray.Length == 2);
         }
         #endregion

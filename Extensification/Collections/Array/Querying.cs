@@ -59,7 +59,7 @@ namespace Extensification.ArrayExts
             foreach (T Target in Targets)
             {
                 if (TargetArray.Contains(Target))
-                    Addition.Add(ref Done, Target);
+                    Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }

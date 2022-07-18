@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using Extensification.ArrayExts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,21 +57,11 @@ namespace Extensification.ListExts
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As T = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<T>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (T Target in Targets)
             {
                 if (TargetArray.Contains(Target))
-                    ArrayExts.Addition.Add(ref Done, Target);
+                    Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }

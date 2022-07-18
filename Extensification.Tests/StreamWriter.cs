@@ -38,7 +38,7 @@ namespace Extensification.Tests
             var NewTexts = new[] { "One, two", "three, four" };
             var TextStream = new MemoryStream();
             var TextStreamWriter = new StreamWriter(TextStream);
-            Writing.WriteLines(ref TextStreamWriter, NewTexts);
+            TextStreamWriter.WriteLines(NewTexts);
             var TextStreamReader = new StreamReader(TextStreamWriter.BaseStream);
             Assert.IsTrue(TextStreamReader.ReadLines().Length == 2);
         }
@@ -51,7 +51,7 @@ namespace Extensification.Tests
             string NewText = "One, two";
             var TextStream = new MemoryStream();
             var TextStreamWriter = new StreamWriter(TextStream);
-            Writing.WriteLineAndSeek(ref TextStreamWriter, NewText);
+            TextStreamWriter.WriteLineAndSeek(NewText);
             var TextStreamReader = new StreamReader(TextStreamWriter.BaseStream);
             Assert.IsTrue(TextStreamReader.ReadLine().Length == NewText.Length);
         }

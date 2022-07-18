@@ -17,7 +17,6 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Extensification.ArrayExts;
 using Extensification.StringExts;
@@ -38,7 +37,7 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesNormal()
         {
             string TargetString = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<48;5;2m>Colors!";
-            StringExts.Conversion.ConvertVTSequences(ref TargetString);
+            TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<38;5;6m>", "<38;5;7m>", "<0m>", "<48;5;2m>" }));
             Assert.IsTrue(TargetString.Contains('\u001b' + "["));
         }
@@ -50,20 +49,20 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesOSCTitle()
         {
             string TargetString = "<0;Hi!>";
-            StringExts.Conversion.ConvertVTSequences(ref TargetString);
+            TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<0;Hi!>" }));
             Assert.IsTrue(TargetString.Contains('\u001b' + "]"));
             Assert.IsTrue(TargetString.EndsWith("\a"));
         }
 
         /// <summary>
-    /// Tests parsing VT sequences (OSC screen color one).
-    /// </summary>
+        /// Tests parsing VT sequences (OSC screen color one).
+        /// </summary>
         [Test]
         public void TestConvertVTSequencesOSCScreenColor()
         {
             string TargetString = "<4;15;rgb:ff/ff/ff>";
-            StringExts.Conversion.ConvertVTSequences(ref TargetString);
+            TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<0;Hi!>" }));
             Assert.IsTrue(TargetString.Contains('\u001b' + "]"));
             Assert.IsTrue(TargetString.EndsWith("\u001b"));
@@ -76,7 +75,7 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesSimpleCursorPositioning()
         {
             string TargetString = "<A>";
-            StringExts.Conversion.ConvertVTSequences(ref TargetString);
+            TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<A>" }));
             Assert.IsTrue((TargetString ?? "") == '\u001b' + "A");
         }
@@ -101,8 +100,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests replacing last occurrence of a string
-    /// </summary>
+        /// Tests replacing last occurrence of a string
+        /// </summary>
         [Test]
         public void TestReplaceLastOccurrence()
         {
@@ -113,8 +112,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests replacing all specified occurrences of strings with a single string
-    /// </summary>
+        /// Tests replacing all specified occurrences of strings with a single string
+        /// </summary>
         [Test]
         public void TestReplaceAll()
         {
@@ -125,8 +124,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests replacing all specified occurrences of strings with multiple strings
-    /// </summary>
+        /// Tests replacing all specified occurrences of strings with multiple strings
+        /// </summary>
         [Test]
         public void TestReplaceAllRange()
         {
@@ -137,8 +136,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests truncating...
-    /// </summary>
+        /// Tests truncating...
+        /// </summary>
         [Test]
         public void TestTruncate()
         {
@@ -149,8 +148,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests string formatting
-    /// </summary>
+        /// Tests string formatting
+        /// </summary>
         [Test]
         public void TestFormatString()
         {
@@ -164,8 +163,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests string formatting with reference to null
-    /// </summary>
+        /// Tests string formatting with reference to null
+        /// </summary>
         [Test]
         public void TestFormatStringNullReference()
         {
@@ -176,8 +175,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests shifting letters backwards in a string
-    /// </summary>
+        /// Tests shifting letters backwards in a string
+        /// </summary>
         [Test]
         public void TestShiftLettersBackwards()
         {
@@ -188,8 +187,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests shifting letters forward in a string
-    /// </summary>
+        /// Tests shifting letters forward in a string
+        /// </summary>
         [Test]
         public void TestShiftLettersForward()
         {
@@ -200,8 +199,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests reserving orders of characters in a string
-    /// </summary>
+        /// Tests reserving orders of characters in a string
+        /// </summary>
         [Test]
         public void TestReverse()
         {
@@ -210,8 +209,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests repeating the string
-    /// </summary>
+        /// Tests repeating the string
+        /// </summary>
         [Test]
         public void TestRepeat()
         {
@@ -220,8 +219,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests repeating the string zero times
-    /// </summary>
+        /// Tests repeating the string zero times
+        /// </summary>
         [Test]
         public void TestRepeatZero()
         {
@@ -230,8 +229,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests retrieving substring
-    /// </summary>
+        /// Tests retrieving substring
+        /// </summary>
         [Test]
         public void TestSubstring()
         {
@@ -241,8 +240,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests enclosing a string by double quotes
-    /// </summary>
+        /// Tests enclosing a string by double quotes
+        /// </summary>
         [Test]
         public void TestEncloseByDoubleQuotes()
         {
@@ -251,8 +250,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests releasing a string from double quotes
-    /// </summary>
+        /// Tests releasing a string from double quotes
+        /// </summary>
         [Test]
         public void TestReleaseDoubleQuotes()
         {
@@ -263,8 +262,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests getting all indexes of a character
-    /// </summary>
+        /// Tests getting all indexes of a character
+        /// </summary>
         [Test]
         public void TestAllIndexesOf()
         {
@@ -275,8 +274,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting ASCII codes for a string
-    /// </summary>
+        /// Tests getting ASCII codes for a string
+        /// </summary>
         [Test]
         public void TestGetAsciiCodes()
         {
@@ -288,8 +287,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting an ASCII code for a letter in a string
-    /// </summary>
+        /// Tests getting an ASCII code for a letter in a string
+        /// </summary>
         [Test]
         public void TestGetAsciiCode()
         {
@@ -300,8 +299,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests checking if the string contains any of the target strings.
-    /// </summary>
+        /// Tests checking if the string contains any of the target strings.
+        /// </summary>
         [Test]
         public void TestContainsAnyOf()
         {
@@ -311,8 +310,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests checking if the string contains all of the target strings.
-    /// </summary>
+        /// Tests checking if the string contains all of the target strings.
+        /// </summary>
         [Test]
         public void TestContainsAllOf()
         {
@@ -322,8 +321,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting LRP from string
-    /// </summary>
+        /// Tests getting LRP from string
+        /// </summary>
         [Test]
         public void TestLRP()
         {
@@ -332,8 +331,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests checking to see if the string starts with any of the values
-    /// </summary>
+        /// Tests checking to see if the string starts with any of the values
+        /// </summary>
         [Test]
         public void TestStartsWithAnyOf()
         {
@@ -342,8 +341,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests checking to see if the string starts with all of the values
-    /// </summary>
+        /// Tests checking to see if the string starts with all of the values
+        /// </summary>
         [Test]
         public void TestStartsWithAllOf()
         {
@@ -352,8 +351,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests checking to see if the string ends with any of the values
-    /// </summary>
+        /// Tests checking to see if the string ends with any of the values
+        /// </summary>
         [Test]
         public void TestEndsWithAnyOf()
         {
@@ -362,8 +361,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests checking to see if the string ends with all of the values
-    /// </summary>
+        /// Tests checking to see if the string ends with all of the values
+        /// </summary>
         [Test]
         public void TestEndsWithAllOf()
         {
@@ -372,8 +371,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests splitting a string with new lines (vbCrLf)
-    /// </summary>
+        /// Tests splitting a string with new lines (vbCrLf)
+        /// </summary>
         [Test]
         public void TestSplitNewLinesCrLf()
         {
@@ -383,8 +382,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests splitting a string with new lines (vbCr)
-    /// </summary>
+        /// Tests splitting a string with new lines (vbCr)
+        /// </summary>
         [Test]
         public void TestSplitNewLinesCr()
         {
@@ -394,8 +393,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests splitting a string with new lines (vbLf)
-    /// </summary>
+        /// Tests splitting a string with new lines (vbLf)
+        /// </summary>
         [Test]
         public void TestSplitNewLinesLf()
         {
@@ -429,8 +428,8 @@ namespace Extensification.Tests
 
         #region Removal
         /// <summary>
-    /// Tests removing spaces from the beginning of the string
-    /// </summary>
+        /// Tests removing spaces from the beginning of the string
+        /// </summary>
         [Test]
         public void TestRemoveSpacesFromBeginning()
         {
@@ -441,8 +440,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests removing a letter from a string
-    /// </summary>
+        /// Tests removing a letter from a string
+        /// </summary>
         [Test]
         public void TestRemoveLetter()
         {
@@ -452,8 +451,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests removing letters from a string
-    /// </summary>
+        /// Tests removing letters from a string
+        /// </summary>
         [Test]
         public void TestRemoveLettersRange()
         {
@@ -464,45 +463,45 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests removing null characters or whitespaces at the end of the string
-    /// </summary>
+        /// Tests removing null characters or whitespaces at the end of the string
+        /// </summary>
         [Test]
         public void TestRemoveNullsOrWhitespacesAtTheEnd()
         {
             string TargetString = "Hi!   ";
-            StringExts.Removal.RemoveNullsOrWhitespacesAtTheEnd(ref TargetString);
+            TargetString.RemoveNullsOrWhitespacesAtTheEnd();
             Assert.AreEqual("Hi!", TargetString);
         }
 
         /// <summary>
-    /// Tests removing null characters or whitespaces at the end of the empty string
-    /// </summary>
+        /// Tests removing null characters or whitespaces at the end of the empty string
+        /// </summary>
         [Test]
         public void TestRemoveNullsOrWhitespacesAtTheEndOnEmptyString()
         {
             string TargetString = "";
-            StringExts.Removal.RemoveNullsOrWhitespacesAtTheEnd(ref TargetString);
+            TargetString.RemoveNullsOrWhitespacesAtTheEnd();
         }
 
         /// <summary>
-    /// Tests removing null characters or whitespaces at the beginning of the string
-    /// </summary>
+        /// Tests removing null characters or whitespaces at the beginning of the string
+        /// </summary>
         [Test]
         public void TestRemoveNullsOrWhitespacesAtTheBeginning()
         {
             string TargetString = "   Hi!";
-            StringExts.Removal.RemoveNullsOrWhitespacesAtTheBeginning(ref TargetString);
+            TargetString.RemoveNullsOrWhitespacesAtTheBeginning();
             Assert.AreEqual("Hi!", TargetString);
         }
 
         /// <summary>
-    /// Tests removing null characters or whitespaces at the beginning of the empty string
-    /// </summary>
+        /// Tests removing null characters or whitespaces at the beginning of the empty string
+        /// </summary>
         [Test]
         public void TestRemoveNullsOrWhitespacesAtTheBeginningOnEmptyString()
         {
             string TargetString = "";
-            StringExts.Removal.RemoveNullsOrWhitespacesAtTheBeginning(ref TargetString);
+            TargetString.RemoveNullsOrWhitespacesAtTheBeginning();
         }
         #endregion
 

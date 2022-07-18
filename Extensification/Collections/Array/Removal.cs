@@ -33,7 +33,7 @@ namespace Extensification.ArrayExts
         /// <typeparam name="T">Type</typeparam>
         /// <param name="TargetArray">Target array</param>
         /// <param name="Item">Any item</param>
-        public static void Remove<T>(ref T[] TargetArray, T Item)
+        public static void Remove<T>(this T[] TargetArray, T Item)
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));

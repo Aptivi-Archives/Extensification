@@ -22,6 +22,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Extensification.ArrayExts;
 using Extensification.DictionaryExts;
 using NotVisualBasic.FileIO;
 
@@ -69,21 +70,11 @@ namespace Extensification.StringExts
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
             var StrChars = Str.ToCharArray();
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim StrAscii As Byte() = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var StrAscii = Array.Empty<byte>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             for (int Character = 0, loopTo = StrChars.Length - 1; Character <= loopTo; Character++)
             {
                 int AsciiCode = Convert.ToInt32(StrChars[Character]);
-                ArrayExts.Addition.Add(ref StrAscii, (byte)AsciiCode);
+                StrAscii.Add((byte)AsciiCode);
             }
             return StrAscii;
         }
@@ -91,6 +82,7 @@ namespace Extensification.StringExts
         /// <summary>
         /// Gets an ASCII code for a character
         /// </summary>
+        /// <param name="Str">Target string</param>
         /// <param name="CharacterNum">A zero-based character number</param>
         public static byte GetAsciiCode(this string Str, int CharacterNum)
         {
@@ -143,21 +135,11 @@ namespace Extensification.StringExts
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As String = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<string>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (string Target in Targets)
             {
                 if (Str.Contains(Target))
-                    ArrayExts.Addition.Add(ref Done, Target);
+                    Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }
@@ -190,7 +172,6 @@ namespace Extensification.StringExts
                 if (LastPosition == StringLength)
                     return RepeatTimes;
             }
-            return 0;
         }
 
         /// <summary>
@@ -220,21 +201,11 @@ namespace Extensification.StringExts
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As String = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<string>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (string Value in Values)
             {
                 if (Str.StartsWith(Value))
-                    ArrayExts.Addition.Add(ref Done, Value);
+                    Done.Add(Value);
             }
             return Done.SequenceEqual(Values);
         }
@@ -266,21 +237,11 @@ namespace Extensification.StringExts
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As String = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<string>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (string Value in Values)
             {
                 if (Str.EndsWith(Value))
-                    ArrayExts.Addition.Add(ref Done, Value);
+                    Done.Add(Value);
             }
             return Done.SequenceEqual(Values);
         }

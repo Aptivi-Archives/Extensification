@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using Extensification.ArrayExts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,21 +75,11 @@ namespace Extensification.DictionaryExts
         {
             if (Dict is null)
                 throw new ArgumentNullException(nameof(Dict));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As TKey = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<TKey>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (var Target in Targets)
             {
                 if (Dict.ContainsKey(Target))
-                    ArrayExts.Addition.Add(ref Done, Target);
+                    Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }
@@ -103,21 +94,11 @@ namespace Extensification.DictionaryExts
         {
             if (Dict is null)
                 throw new ArgumentNullException(nameof(Dict));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As TValue = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<TValue>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (var Target in Targets)
             {
                 if (Dict.ContainsValue(Target))
-                    ArrayExts.Addition.Add(ref Done, Target);
+                    Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }

@@ -57,21 +57,11 @@ namespace Extensification.ArrayListExts
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));
-            /* TODO ERROR: Skipped IfDirectiveTrivia
-            #If NET45 Then
-            *//* TODO ERROR: Skipped DisabledTextTrivia
-                        Dim Done() As Object = {}
-            *//* TODO ERROR: Skipped ElseDirectiveTrivia
-            #Else
-            */
             var Done = Array.Empty<object>();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia
-            #End If
-            */
             foreach (var Target in Targets)
             {
                 if (TargetArray.Contains(Target))
-                    Addition.Add(ref Done, Target);
+                    Done.Add(Target);
             }
             return Done.SequenceEqual(Targets.ToArray());
         }

@@ -27,7 +27,7 @@ namespace Extensification.StreamWriterExts
         /// Writes all the lines to the stream and seeks to the beginning, if possible.
         /// </summary>
         /// <param name="writer">The stream writer</param>
-        public static void WriteLines(ref StreamWriter writer, string[] Lines)
+        public static void WriteLines(this StreamWriter writer, string[] Lines)
         {
             foreach (string Line in Lines)
             {
@@ -43,7 +43,7 @@ namespace Extensification.StreamWriterExts
         /// Writes the line to the stream and seeks to the beginning, if possible.
         /// </summary>
         /// <param name="writer">The stream writer</param>
-        public static void WriteLineAndSeek(ref StreamWriter writer, string Line)
+        public static void WriteLineAndSeek(this StreamWriter writer, string Line)
         {
             writer.WriteLine(Line);
             if (!writer.AutoFlush)

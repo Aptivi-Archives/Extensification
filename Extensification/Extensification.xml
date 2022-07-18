@@ -101,7 +101,7 @@
             Provides the array extensions related to addition
             </summary>
         </member>
-        <member name="M:Extensification.ArrayExts.Addition.Add``1(``0[]@,``0)">
+        <member name="M:Extensification.ArrayExts.Addition.Add``1(``0[],``0)">
             <summary>
             Adds an entry to array
             </summary>
@@ -109,7 +109,7 @@
             <param name="TargetArray">Target array</param>
             <param name="Item">Any item</param>
         </member>
-        <member name="M:Extensification.ArrayExts.Addition.AddRange``1(``0[]@,``0[])">
+        <member name="M:Extensification.ArrayExts.Addition.AddRange``1(``0[],``0[])">
             <summary>
             Adds a range of entries to array
             </summary>
@@ -218,7 +218,7 @@
             Provides the array extensions related to removal
             </summary>
         </member>
-        <member name="M:Extensification.ArrayExts.Removal.Remove``1(``0[]@,``0)">
+        <member name="M:Extensification.ArrayExts.Removal.Remove``1(``0[],``0)">
             <summary>
             Removes an entry from array
             </summary>
@@ -1524,13 +1524,13 @@
             </summary>
             <param name="reader">The stream reader</param>
         </member>
-        <member name="M:Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter@,System.String[])">
+        <member name="M:Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter,System.String[])">
             <summary>
             Writes all the lines to the stream and seeks to the beginning, if possible.
             </summary>
             <param name="writer">The stream writer</param>
         </member>
-        <member name="M:Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter@,System.String)">
+        <member name="M:Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter,System.String)">
             <summary>
             Writes the line to the stream and seeks to the beginning, if possible.
             </summary>
@@ -1653,7 +1653,7 @@
             Provides the string extensions related to conversion
             </summary>
         </member>
-        <member name="M:Extensification.StringExts.Conversion.ConvertVTSequences(System.String@)">
+        <member name="M:Extensification.StringExts.Conversion.ConvertVTSequences(System.String)">
             <summary>
             Converts all of the VT sequence numbers enclosed in &lt; and &gt; marks to their appropriate VT sequence.
             For example, &lt;38;5;5&gt; will be converted to Convert.ToChar(&amp;H1B)[38;5;5. Note that if you write spaces between &lt; and &gt; marks,
@@ -1786,6 +1786,7 @@
             <summary>
             Gets an ASCII code for a character
             </summary>
+            <param name="Str">Target string</param>
             <param name="CharacterNum">A zero-based character number</param>
         </member>
         <member name="M:Extensification.StringExts.Querying.GetListOfRepeatedLetters(System.String)">
@@ -1896,13 +1897,13 @@
             </summary>
             <param name="Characters">Array of characters to be remove</param>
         </member>
-        <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheEnd(System.String@)">
+        <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheEnd(System.String)">
             <summary>
             Removes null characters or whitespaces at the end of the string
             </summary>
             <param name="Str">Target string</param>
         </member>
-        <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheBeginning(System.String@)">
+        <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheBeginning(System.String)">
             <summary>
             Removes null characters or whitespaces at the beginning of the string
             </summary>
