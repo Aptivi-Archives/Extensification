@@ -43,7 +43,7 @@ namespace Extensification.StringExts
                 StrChars[CharNum] = default;
                 CharNum += 1;
             }
-            return string.Join("", StrChars).Replace(Convert.ToChar(0), default);
+            return string.Join("", StrChars).Replace(Convert.ToChar(0).ToString(), "");
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Extensification.StringExts
         /// Removes null characters or whitespaces at the end of the string
         /// </summary>
         /// <param name="Str">Target string</param>
-        public static void RemoveNullsOrWhitespacesAtTheEnd(this string Str)
+        public static string RemoveNullsOrWhitespacesAtTheEnd(this string Str)
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
@@ -92,14 +92,14 @@ namespace Extensification.StringExts
                     CharIndex -= 1;
                 }
             }
-            Str = string.Join("", StrList);
+            return string.Join("", StrList);
         }
 
         /// <summary>
         /// Removes null characters or whitespaces at the beginning of the string
         /// </summary>
         /// <param name="Str">Target string</param>
-        public static void RemoveNullsOrWhitespacesAtTheBeginning(this string Str)
+        public static string RemoveNullsOrWhitespacesAtTheBeginning(this string Str)
         {
             if (Str is null)
                 throw new ArgumentNullException(nameof(Str));
@@ -109,7 +109,7 @@ namespace Extensification.StringExts
                 while (char.IsWhiteSpace(StrList[0]) | StrList[0] == default)
                     StrList.RemoveAt(0);
             }
-            Str = string.Join("", StrList);
+            return string.Join("", StrList);
         }
 
     }

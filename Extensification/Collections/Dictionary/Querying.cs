@@ -79,7 +79,7 @@ namespace Extensification.DictionaryExts
             foreach (var Target in Targets)
             {
                 if (Dict.ContainsKey(Target))
-                    Done.Add(Target);
+                    Done = Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }
@@ -98,7 +98,7 @@ namespace Extensification.DictionaryExts
             foreach (var Target in Targets)
             {
                 if (Dict.ContainsValue(Target))
-                    Done.Add(Target);
+                    Done = Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }

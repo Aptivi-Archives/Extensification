@@ -37,7 +37,7 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesNormal()
         {
             string TargetString = "Hi. We have <38;5;6m>new improvements. <0m>Well, we'll have to do this: <38;5;7m>Yay!<48;5;2m>Colors!";
-            TargetString.ConvertVTSequences();
+            TargetString = TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<38;5;6m>", "<38;5;7m>", "<0m>", "<48;5;2m>" }));
             Assert.IsTrue(TargetString.Contains('\u001b' + "["));
         }
@@ -49,7 +49,7 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesOSCTitle()
         {
             string TargetString = "<0;Hi!>";
-            TargetString.ConvertVTSequences();
+            TargetString = TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<0;Hi!>" }));
             Assert.IsTrue(TargetString.Contains('\u001b' + "]"));
             Assert.IsTrue(TargetString.EndsWith("\a"));
@@ -62,7 +62,7 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesOSCScreenColor()
         {
             string TargetString = "<4;15;rgb:ff/ff/ff>";
-            TargetString.ConvertVTSequences();
+            TargetString = TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<0;Hi!>" }));
             Assert.IsTrue(TargetString.Contains('\u001b' + "]"));
             Assert.IsTrue(TargetString.EndsWith("\u001b"));
@@ -75,7 +75,7 @@ namespace Extensification.Tests
         public void TestConvertVTSequencesSimpleCursorPositioning()
         {
             string TargetString = "<A>";
-            TargetString.ConvertVTSequences();
+            TargetString = TargetString.ConvertVTSequences();
             Assert.IsFalse(TargetString.ContainsAnyOf(new[] { "<A>" }));
             Assert.IsTrue((TargetString ?? "") == '\u001b' + "A");
         }
@@ -469,7 +469,7 @@ namespace Extensification.Tests
         public void TestRemoveNullsOrWhitespacesAtTheEnd()
         {
             string TargetString = "Hi!   ";
-            TargetString.RemoveNullsOrWhitespacesAtTheEnd();
+            TargetString = TargetString.RemoveNullsOrWhitespacesAtTheEnd();
             Assert.AreEqual("Hi!", TargetString);
         }
 
@@ -490,7 +490,7 @@ namespace Extensification.Tests
         public void TestRemoveNullsOrWhitespacesAtTheBeginning()
         {
             string TargetString = "   Hi!";
-            TargetString.RemoveNullsOrWhitespacesAtTheBeginning();
+            TargetString = TargetString.RemoveNullsOrWhitespacesAtTheBeginning();
             Assert.AreEqual("Hi!", TargetString);
         }
 
@@ -501,7 +501,7 @@ namespace Extensification.Tests
         public void TestRemoveNullsOrWhitespacesAtTheBeginningOnEmptyString()
         {
             string TargetString = "";
-            TargetString.RemoveNullsOrWhitespacesAtTheBeginning();
+            TargetString = TargetString.RemoveNullsOrWhitespacesAtTheBeginning();
         }
         #endregion
 

@@ -32,12 +32,13 @@ namespace Extensification.ArrayExts
         /// <typeparam name="T">Type</typeparam>
         /// <param name="TargetArray">Target array</param>
         /// <param name="Item">Any item</param>
-        public static void Add<T>(this T[] TargetArray, T Item)
+        public static T[] Add<T>(this T[] TargetArray, T Item)
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));
             Array.Resize(ref TargetArray, TargetArray.Length + 1);
             TargetArray[TargetArray.Length - 1] = Item;
+            return TargetArray;
         }
 
         /// <summary>
@@ -46,7 +47,7 @@ namespace Extensification.ArrayExts
         /// <typeparam name="T">Type</typeparam>
         /// <param name="TargetArray">Target array</param>
         /// <param name="ToBeAdded">Range of entries in an array</param>
-        public static void AddRange<T>(this T[] TargetArray, T[] ToBeAdded)
+        public static T[] AddRange<T>(this T[] TargetArray, T[] ToBeAdded)
         {
             if (TargetArray is null)
                 throw new ArgumentNullException(nameof(TargetArray));
@@ -59,6 +60,7 @@ namespace Extensification.ArrayExts
                 TargetArray[CurrIndex] = ToBeAdded[AddedIndex];
                 AddedIndex += 1;
             }
+            return TargetArray;
         }
 
     }

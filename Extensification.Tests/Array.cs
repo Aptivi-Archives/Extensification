@@ -36,7 +36,7 @@ namespace Extensification.Tests
         public void TestAdd()
         {
             var TargetArray = new int[] { 2, 3 };
-            TargetArray.Add(4);
+            TargetArray = TargetArray.Add(4);
             Assert.IsTrue(TargetArray.Length == 3);
         }
 
@@ -48,7 +48,7 @@ namespace Extensification.Tests
         {
             int[] TargetArray = { 2, 3 };
             int[] Range = { 4, 5, 6, 7, 8, 9 };
-            TargetArray.AddRange(Range);
+            TargetArray = TargetArray.AddRange(Range);
             Assert.IsTrue(TargetArray.Length == 8);
         }
         #endregion
@@ -61,7 +61,7 @@ namespace Extensification.Tests
         public void TestRemove()
         {
             var TargetArray = new int[] { 2, 3, 4 };
-            TargetArray.Remove(4);
+            TargetArray = TargetArray.Remove(4);
             Assert.IsTrue(TargetArray.Length == 2);
         }
         #endregion

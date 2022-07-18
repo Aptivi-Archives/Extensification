@@ -74,7 +74,7 @@ namespace Extensification.StringExts
             for (int Character = 0, loopTo = StrChars.Length - 1; Character <= loopTo; Character++)
             {
                 int AsciiCode = Convert.ToInt32(StrChars[Character]);
-                StrAscii.Add((byte)AsciiCode);
+                StrAscii = StrAscii.Add((byte)AsciiCode);
             }
             return StrAscii;
         }
@@ -139,7 +139,7 @@ namespace Extensification.StringExts
             foreach (string Target in Targets)
             {
                 if (Str.Contains(Target))
-                    Done.Add(Target);
+                    Done = Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }
@@ -205,7 +205,7 @@ namespace Extensification.StringExts
             foreach (string Value in Values)
             {
                 if (Str.StartsWith(Value))
-                    Done.Add(Value);
+                    Done = Done.Add(Value);
             }
             return Done.SequenceEqual(Values);
         }
@@ -241,7 +241,7 @@ namespace Extensification.StringExts
             foreach (string Value in Values)
             {
                 if (Str.EndsWith(Value))
-                    Done.Add(Value);
+                    Done = Done.Add(Value);
             }
             return Done.SequenceEqual(Values);
         }

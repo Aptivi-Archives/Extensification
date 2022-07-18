@@ -61,7 +61,7 @@ namespace Extensification.ListExts
             foreach (T Target in Targets)
             {
                 if (TargetArray.Contains(Target))
-                    Done.Add(Target);
+                    Done = Done.Add(Target);
             }
             return Done.SequenceEqual(Targets);
         }
