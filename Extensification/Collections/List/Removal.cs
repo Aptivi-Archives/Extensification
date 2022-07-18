@@ -42,7 +42,7 @@ namespace Extensification.ListExts
             {
                 return TargetList.Remove(Entry);
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }

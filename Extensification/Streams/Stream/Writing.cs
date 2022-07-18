@@ -21,6 +21,9 @@ using System.IO;
 
 namespace Extensification.StreamExts
 {
+    /// <summary>
+    /// Provides writing extenstions to <see cref="Stream"/>
+    /// </summary>
     public static class Writing
     {
 
@@ -37,7 +40,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.Write(Buffer, Offset, Count);
             }
-            catch (Exception ex)
+            catch 
             {
                 Success = false;
             }
@@ -69,7 +72,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.WriteByte(Value);
             }
-            catch (Exception ex)
+            catch 
             {
                 Success = false;
             }

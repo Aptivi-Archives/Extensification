@@ -20,6 +20,9 @@ using System.IO;
 
 namespace Extensification.StreamWriterExts
 {
+    /// <summary>
+    /// Provides writing extenstions to <see cref="StreamWriter"/>
+    /// </summary>
     public static class Writing
     {
 
@@ -27,6 +30,7 @@ namespace Extensification.StreamWriterExts
         /// Writes all the lines to the stream and seeks to the beginning, if possible.
         /// </summary>
         /// <param name="writer">The stream writer</param>
+        /// <param name="Lines">Lines to write</param>
         public static void WriteLines(this StreamWriter writer, string[] Lines)
         {
             foreach (string Line in Lines)
@@ -43,6 +47,7 @@ namespace Extensification.StreamWriterExts
         /// Writes the line to the stream and seeks to the beginning, if possible.
         /// </summary>
         /// <param name="writer">The stream writer</param>
+        /// <param name="Line">Line to write</param>
         public static void WriteLineAndSeek(this StreamWriter writer, string Line)
         {
             writer.WriteLine(Line);

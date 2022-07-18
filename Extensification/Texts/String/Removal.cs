@@ -49,6 +49,7 @@ namespace Extensification.StringExts
         /// <summary>
         /// Removes a letter from a string
         /// </summary>
+        /// <param name="Str">Target string</param>
         /// <param name="CharacterNum">A zero-based character number</param>
         public static string RemoveLetter(this string Str, int CharacterNum)
         {
@@ -62,6 +63,7 @@ namespace Extensification.StringExts
         /// <summary>
         /// Removes a range of letters from a string
         /// </summary>
+        /// <param name="Str">Target string</param>
         /// <param name="Characters">Array of characters to be remove</param>
         public static string RemoveLettersRange(this string Str, char[] Characters)
         {

@@ -23,6 +23,9 @@ using System.Text;
 
 namespace Extensification.StreamReaderExts
 {
+    /// <summary>
+    /// Provides reading extenstions to <see cref="StreamReader"/>
+    /// </summary>
     public static class Reading
     {
 

@@ -17,10 +17,14 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Extensification.StreamExts
 {
+    /// <summary>
+    /// Provides manipulation extenstions to <see cref="Stream"/>
+    /// </summary>
     public static class Manipulation
     {
 
@@ -37,7 +41,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.Seek(Offset, Origin);
             }
-            catch (Exception ex)
+            catch
             {
                 Success = false;
             }
@@ -59,7 +63,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.SetLength(Length);
             }
-            catch (Exception ex)
+            catch
             {
                 Success = false;
             }
@@ -81,7 +85,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.Flush();
             }
-            catch (Exception ex)
+            catch
             {
                 Success = false;
             }
@@ -90,35 +94,38 @@ namespace Extensification.StreamExts
             return Success;
         }
 
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If NET45 Then
-        *//* TODO ERROR: Skipped DisabledTextTrivia
-                ''' <summary>
-                ''' Tries to return the array of unsigned bytes from which this stream was created.
-                ''' </summary>
-                ''' <returns>True if successful; False if unsuccessful</returns>
-                <Extension>
-                Public Function TryGetBuffer(TargetStream As Stream, ByRef Buffer As ArraySegment(Of Byte)) As Boolean
-                    Dim Success As Boolean = True
+#if NET48_OR_GREATER
+        /// <summary>
+        /// Tries to return the array of unsigned bytes from which this stream was created.
+        /// </summary>
+        /// <returns>True if successful; False if unsuccessful</returns>
+        public static bool TryGetBuffer(this Stream TargetStream, ref ArraySegment<byte> Buffer)
+		{
+		    bool Success = true;
 
-                    'Try to seek
-                    Try
-                        Dim Chars As New List(Of Byte)
-                        Dim CharByte As Integer
-                        Do Until CharByte = -1
-                            CharByte = TargetStream.ReadByte()
-                            If Not CharByte = -1 Then Chars.Add(Convert.ToByte(CharByte))
-                        Loop
-                        Buffer = New ArraySegment(Of Byte)(Chars.ToArray)
-                    Catch ex As Exception
-                        Success = False
-                    End Try
+			// Try to seek
+			try
+			{
+				List<byte> Chars = new List<byte>();
+				int CharByte = 0;
+				while (!(CharByte == -1))
+				{
+					CharByte = TargetStream.ReadByte();
+					if (!(CharByte == -1))
+					{
+						Chars.Add(Convert.ToByte(CharByte));
+					}
+				}
+				Buffer = new ArraySegment<byte>(Chars.ToArray());
+			}
+			catch
+			{
+				Success = false;
+			}
 
-                    'Return the result
-                    Return Success
-                End Function
-        *//* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
+			//Return the result
+			return Success;
+		}
+#endif
     }
 }

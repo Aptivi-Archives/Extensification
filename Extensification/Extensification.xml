@@ -1506,6 +1506,11 @@
             <param name="Number">Number</param>
             <returns>True if the number is an Armstrong number; False if not.</returns>
         </member>
+        <member name="T:Extensification.StreamReaderExts.Reading">
+            <summary>
+            Provides reading extenstions to <see cref="T:System.IO.StreamReader"/>
+            </summary>
+        </member>
         <member name="M:Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(System.IO.StreamReader)">
             <summary>
             Reads a line from the stream with the newline characters
@@ -1524,17 +1529,29 @@
             </summary>
             <param name="reader">The stream reader</param>
         </member>
+        <member name="T:Extensification.StreamWriterExts.Writing">
+            <summary>
+            Provides writing extenstions to <see cref="T:System.IO.StreamWriter"/>
+            </summary>
+        </member>
         <member name="M:Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter,System.String[])">
             <summary>
             Writes all the lines to the stream and seeks to the beginning, if possible.
             </summary>
             <param name="writer">The stream writer</param>
+            <param name="Lines">Lines to write</param>
         </member>
         <member name="M:Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter,System.String)">
             <summary>
             Writes the line to the stream and seeks to the beginning, if possible.
             </summary>
             <param name="writer">The stream writer</param>
+            <param name="Line">Line to write</param>
+        </member>
+        <member name="T:Extensification.StreamExts.Manipulation">
+            <summary>
+            Provides manipulation extenstions to <see cref="T:System.IO.Stream"/>
+            </summary>
         </member>
         <member name="M:Extensification.StreamExts.Manipulation.TrySeek(System.IO.Stream,System.Int64,System.IO.SeekOrigin)">
             <summary>
@@ -1554,6 +1571,17 @@
             </summary>
             <returns>True if successful; False if unsuccessful</returns>
         </member>
+        <member name="M:Extensification.StreamExts.Manipulation.TryGetBuffer(System.IO.Stream,System.ArraySegment{System.Byte}@)">
+            <summary>
+            Tries to return the array of unsigned bytes from which this stream was created.
+            </summary>
+            <returns>True if successful; False if unsuccessful</returns>
+        </member>
+        <member name="T:Extensification.StreamExts.Reading">
+            <summary>
+            Provides reading extenstions to <see cref="T:System.IO.Stream"/>
+            </summary>
+        </member>
         <member name="M:Extensification.StreamExts.Reading.TryRead(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
             <summary>
             Tries reading from the stream
@@ -1571,6 +1599,11 @@
             Tries reading a byte from the stream
             </summary>
             <returns>Byte number if successful; -1 if at end of stream; -2 if error occurred</returns>
+        </member>
+        <member name="T:Extensification.StreamExts.Writing">
+            <summary>
+            Provides writing extenstions to <see cref="T:System.IO.Stream"/>
+            </summary>
         </member>
         <member name="M:Extensification.StreamExts.Writing.TryWrite(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
             <summary>
@@ -1889,12 +1922,14 @@
             <summary>
             Removes a letter from a string
             </summary>
+            <param name="Str">Target string</param>
             <param name="CharacterNum">A zero-based character number</param>
         </member>
         <member name="M:Extensification.StringExts.Removal.RemoveLettersRange(System.String,System.Char[])">
             <summary>
             Removes a range of letters from a string
             </summary>
+            <param name="Str">Target string</param>
             <param name="Characters">Array of characters to be remove</param>
         </member>
         <member name="M:Extensification.StringExts.Removal.RemoveNullsOrWhitespacesAtTheEnd(System.String)">

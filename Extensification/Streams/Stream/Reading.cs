@@ -21,6 +21,9 @@ using System.IO;
 
 namespace Extensification.StreamExts
 {
+    /// <summary>
+    /// Provides reading extenstions to <see cref="Stream"/>
+    /// </summary>
     public static class Reading
     {
 
@@ -37,7 +40,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.Read(Buffer, Offset, Count);
             }
-            catch (Exception ex)
+            catch
             {
                 Success = false;
             }
@@ -71,7 +74,7 @@ namespace Extensification.StreamExts
             {
                 ByteNumber = TargetStream.ReadByte();
             }
-            catch (Exception ex)
+            catch
             {
                 return -2;
             }
