@@ -1,9 +1,12 @@
-version: v2022-{build}-{branch}
+version: 'v2022-{build}-{branch}'
 image: Visual Studio 2022
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
-  package_version: 2022.3.0-build{build}
+  version: ''
+  package_version: '2022.3.0-build{build}'
+  assembly_version: ''
+  file_version: ''
 environment:
   WEBHOOK_URL:
     secure: p3nnkhnWtqFFH8UJ1eaKFfRjFPlOVhNtmLjd94R7+KSAugTDz6Z96xxEb1ra5yjC3ooW75TDWaxqyhQ3g9TGv3ZCkmaEYZu5H8QJGfbn/5p5gNluexFCDWYNR5MqSWhEb8n05S3+2bC+14oiOMe2bvoMBcC0XnP0oufLuPKCBhg=
