@@ -9,18 +9,18 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Version>2022.0</Version>
     <PackageVersion>2022.0.0.0</PackageVersion>
-    <Authors>EoflaOE</Authors>
-    <Company>EoflaOE</Company>
+    <Authors>Aptivi</Authors>
+    <Company>Aptivi</Company>
     <Product>Extensification</Product>
     <Description>Extensification is an extension pack to .NET Framework that extends your ability to use more functions on strings, integers, and objects. Initially, it started with the string, integer, double, long, dictionary, array, arraylist, and list extensions, and inherited from Kernel Simulator. Over time, it grows with support for more objects.
 
 This package is for extensions that use the Microsoft.VisualBasic namespace.</Description>
-    <Copyright>Copyright © 2020-2022 EoflaOE and its companies</Copyright>
+    <Copyright>Copyright © 2020-2022 Aptivi</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/EoflaOE/Extensification</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Aptivi/Extensification</PackageProjectUrl>
     <PackageIcon>OfficialAppIcon-Extensification-512.png</PackageIcon>
     <PackageIconUrl />
-    <RepositoryUrl>https://github.com/EoflaOE/Extensification</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Aptivi/Extensification</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>

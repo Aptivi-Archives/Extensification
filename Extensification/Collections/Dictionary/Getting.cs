@@ -1,5 +1,5 @@
 ﻿
-// Extensification  Copyright (C) 2020-2021  EoflaOE
+// Extensification  Copyright (C) 2020-2021  Aptivi
 // 
 // This file is part of Extensification
 // 

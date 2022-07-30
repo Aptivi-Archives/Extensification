@@ -1,6 +1,6 @@
 # Extensification
 
-![GitHub repo size](https://img.shields.io/github/repo-size/EoflaOE/Extensification?color=purple&label=size) [![GitHub All Releases](https://img.shields.io/github/downloads/EoflaOE/Extensification/total?color=purple&label=d/l)](https://github.com/EoflaOE/Extensification/releases) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/EoflaOE/Extensification?color=purple&include_prereleases&label=github)](https://github.com/EoflaOE/Extensification/releases/latest) [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Extensification?color=purple)](https://www.nuget.org/packages/Extensification/)
+![GitHub repo size](https://img.shields.io/github/repo-size/Aptivi/Extensification?color=purple&label=size) [![GitHub All Releases](https://img.shields.io/github/downloads/Aptivi/Extensification/total?color=purple&label=d/l)](https://github.com/Aptivi/Extensification/releases) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Aptivi/Extensification?color=purple&include_prereleases&label=github)](https://github.com/Aptivi/Extensification/releases/latest) [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Extensification?color=purple)](https://www.nuget.org/packages/Extensification/)
 
 Extensification is the group of extensions that improve your experience of programming for .NET Core and .NET Framework applications.
 
@@ -10,16 +10,16 @@ Here are all the CI build status for all Extensification branches.
 
 | Branch                | AppVeyor | Travis CI
 |-----------------------|----------|------------
-| master                | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/master?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/master) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=master)](https://travis-ci.org/EoflaOE/Extensification)
-| v2021.5.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.5.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.5.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.5.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2021.4.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.4.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.4.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.4.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2021.3.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.3.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.3.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.3.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2021.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.2.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.2.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.2.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2021.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.1.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.1.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.1.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2021.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.0.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2021.0.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2021.0.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2020.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.2.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2020.2.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2020.2.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2020.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.1.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2020.1.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2020.1.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
-| v2020.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.0.x-servicing?svg=true)](https://ci.appveyor.com/project/EoflaOE/extensification/branch/v2020.0.x-servicing) | [![Build Status](https://travis-ci.org/EoflaOE/Extensification.svg?branch=v2020.0.x-servicing)](https://travis-ci.org/EoflaOE/Extensification)
+| master                | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/master?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/master) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=master)](https://travis-ci.org/Aptivi/Extensification)
+| v2021.5.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.5.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.5.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.5.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2021.4.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.4.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.4.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.4.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2021.3.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.3.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.3.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.3.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2021.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.2.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.2.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.2.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2021.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.1.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.1.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.1.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2021.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.0.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.0.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.0.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2020.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.2.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2020.2.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2020.2.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2020.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.1.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2020.1.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2020.1.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+| v2020.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.0.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2020.0.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2020.0.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
 
 ## System Requirements
 
@@ -47,7 +47,7 @@ This section covers how to install Extensification on your project. Please scrol
 
 ### Windows systems (Alternative)
 
-1. Download the Extensification library files [here](https://github.com/EoflaOE/Extensification/releases).
+1. Download the Extensification library files [here](https://github.com/Aptivi/Extensification/releases).
 2. Unzip the file to any directory
 3. Open Visual Studio to any project, and add a reference to Extensification
 
@@ -59,7 +59,7 @@ This section covers how to build Extensification on your system. Please scroll d
 
 1. Open Visual Studio
 2. Press `Clone a repository`
-3. In Repository Location, enter `https://github.com/EoflaOE/Extensification.git`
+3. In Repository Location, enter `https://github.com/Aptivi/Extensification.git`
 4. Wait until it clones. It might take a few minutes depending on your Internet connection.
 5. Press `Solution Explorer`, then press `Switch Views`
 6. Click on `Extensification.sln`
@@ -71,7 +71,7 @@ This section covers how to build Extensification on your system. Please scroll d
 2. Install JetBrains Rider.
 3. After installation, open JetBrains Rider, and follow the configuration steps.
 4. When the main menu opens, choose `Check out from Version Control` and then `Git`.
-5. Write on the URL `https://github.com/EoflaOE/Extensification.git` and press `Test` to verify your connectivity.
+5. Write on the URL `https://github.com/Aptivi/Extensification.git` and press `Test` to verify your connectivity.
 6. Press Clone, and git will download the repo, then Rider will open up. It might take a few minutes depending on your Internet connection.
 7. Click on the hammer button to build.
 
@@ -83,7 +83,7 @@ This section covers how to build Extensification on your system. Please scroll d
 
 ## Credits
 
-**EoflaOE:** Owner of Extensification
+**Aptivi:** Owner of Extensification
 
 ## Open Source Libraries
 
@@ -100,7 +100,7 @@ License (MIT): https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
 ## License
 
     Extensification - Extends your .NET methods
-    Copyright (C) 2020-2021  EoflaOE
+    Copyright (C) 2020-2021  Aptivi
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
