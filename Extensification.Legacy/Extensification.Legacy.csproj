@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification.Legacy</RootNamespace>
-    <TargetFrameworks>netcoreapp3.1;net48;net6.0</TargetFrameworks>
+    <TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <IncludeSymbols>True</IncludeSymbols>
 	  <PackageOutputPath>../Extensification.Bin</PackageOutputPath>

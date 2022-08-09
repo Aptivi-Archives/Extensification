@@ -25,32 +25,18 @@ namespace Extensification.Legacy.Tests.Extensification.Legacy.Tests
     [TestFixture]
     public class StringTests
     {
-
+#if NET48
         /// <summary>
-        /// Tests splitting a string with double quotes enclosed
+        /// Tests removing letters from a string
         /// </summary>
         [Test]
-        public void TestSplitEncloseDoubleQuotes()
+        public void TestEvaluate()
         {
-            string TargetString = "First \"Second Third\" Fourth";
-            var TargetArray = TargetString.SplitEncloseDoubleQuotes(" ");
-            Assert.IsTrue(TargetArray.Length == 3);
+            string TargetString = "2 + 5";
+            int ExpectedEvaluated = 7;
+            Assert.AreEqual(ExpectedEvaluated, TargetString.Evaluate());
         }
-
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If NET45 Then
-        *//* TODO ERROR: Skipped DisabledTextTrivia
-                ''' <summary>
-                ''' Tests removing letters from a string
-                ''' </summary>
-                <Test> Public Sub TestEvaluate()
-                    Dim TargetString As String = "2 + 5"
-                    Dim ExpectedEvaluated As Integer = 7
-                    Assert.AreEqual(ExpectedEvaluated, TargetString.Evaluate)
-                End Sub
-        *//* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
+#endif
     }
 
 }

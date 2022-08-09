@@ -16,78 +16,47 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-using System.IO;
-using System.Text;
-using Microsoft.VisualBasic.FileIO;
+#if NET48
+using Microsoft.VisualBasic;
+using System;
+using System.CodeDom.Compiler;
+using System.Reflection;
+#endif
 
 namespace Extensification.Legacy.StringExts
 {
     public static class Querying
     {
-
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If Not NETCOREAPP2_1 Then
-        */        /// <summary>
-        /// Splits the string enclosed in double quotes
+#if NET48
+        /// <summary>
+        /// Evaluates a string
         /// </summary>
-        /// <param name="Str">Target string</param>
-        /// <param name="Delims">Delimiters</param>
-        public static string[] SplitEncloseDoubleQuotes(this string Str, params string[] Delims)
+        /// <param name="Str">A string</param>
+        /// <returns></returns>
+        public static object Evaluate(this string Str)
         {
-            string[] Result;
-            var TStream = new MemoryStream(Encoding.Default.GetBytes(Str));
-            var Parser = new TextFieldParser(TStream)
+            var EvalP = new VBCodeProvider();
+            var EvalCP = new CompilerParameters()
             {
-                Delimiters = Delims,
-                HasFieldsEnclosedInQuotes = true,
-                TrimWhiteSpace = false
+                GenerateExecutable = false,
+                GenerateInMemory = true
             };
-            Result = Parser.ReadFields();
-            if (Result is not null)
+            EvalCP.ReferencedAssemblies.Add(Assembly.GetExecutingAssembly().Location); // It should reference itself
+            EvalCP.ReferencedAssemblies.Add("System.dll");
+            EvalCP.ReferencedAssemblies.Add("System.Core.dll");
+            EvalCP.ReferencedAssemblies.Add("System.Data.dll");
+            EvalCP.ReferencedAssemblies.Add("System.DirectoryServices.dll");
+            EvalCP.ReferencedAssemblies.Add("System.Xml.dll");
+            EvalCP.ReferencedAssemblies.Add("System.Xml.Linq.dll");
+            string EvalCode = "Imports System" + Environment.NewLine + "Public Class Eval" + Environment.NewLine + "Public Shared Function Evaluate()" + Environment.NewLine + "Return " + Str + Environment.NewLine + "End Function" + Environment.NewLine + "End Class";
+            CompilerResults cr = EvalP.CompileAssemblyFromSource(EvalCP, EvalCode);
+            if (cr.Errors.Count == 0)
             {
-                for (int i = 0, loopTo = Result.Length - 1; i <= loopTo; i++)
-                    Result[i].Replace("\"", "");
+                MethodInfo methInfo = cr.CompiledAssembly.GetType("Eval").GetMethod("Evaluate");
+                return methInfo.Invoke(null, null);
             }
-            return Result;
+            return null;
         }
-        /* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If NET461 Then
-        *//* TODO ERROR: Skipped DisabledTextTrivia
-                ''' <summary>
-                ''' Evaluates a string
-                ''' </summary>
-                ''' <param name="Str">A string</param>
-                ''' <returns></returns>
-                <Extension>
-                Public Function Evaluate(Str As String) As Object
-                    Dim EvalP As New VBCodeProvider
-                    Dim EvalCP As New CompilerParameters With {.GenerateExecutable = False,
-                                                               .GenerateInMemory = True}
-                    EvalCP.ReferencedAssemblies.Add(Assembly.GetExecutingAssembly.Location) 'It should reference itself
-                    EvalCP.ReferencedAssemblies.Add("System.dll")
-                    EvalCP.ReferencedAssemblies.Add("System.Core.dll")
-                    EvalCP.ReferencedAssemblies.Add("System.Data.dll")
-                    EvalCP.ReferencedAssemblies.Add("System.DirectoryServices.dll")
-                    EvalCP.ReferencedAssemblies.Add("System.Xml.dll")
-                    EvalCP.ReferencedAssemblies.Add("System.Xml.Linq.dll")
-                    Dim EvalCode As String = "Imports System" & Environment.NewLine &
-                                             "Public Class Eval" & Environment.NewLine &
-                                             "Public Shared Function Evaluate()" & Environment.NewLine &
-                                             "Return " & Str & Environment.NewLine &
-                                             "End Function" & Environment.NewLine &
-                                             "End Class"
-                    Dim cr As CompilerResults = EvalP.CompileAssemblyFromSource(EvalCP, EvalCode)
-                    If cr.Errors.Count = 0 Then
-                        Dim methInfo As MethodInfo = cr.CompiledAssembly.GetType("Eval").GetMethod("Evaluate")
-                        Return methInfo.Invoke(Nothing, Nothing)
-                    End If
-                    Return Nothing
-                End Function
-        *//* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
+#endif
     }
 }
