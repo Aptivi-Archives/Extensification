@@ -4,9 +4,9 @@
             "src": [
                 {
                     "files": [ 
-                        "Extensification/**.vbproj",
-                        "Extensification.External/**.vbproj",
-                        "Extensification.Legacy/**.vbproj"
+                        "Extensification/**.csproj",
+                        "Extensification.External/**.csproj",
+                        "Extensification.Legacy/**.csproj"
                     ],
                     "src": ".."
                 }
