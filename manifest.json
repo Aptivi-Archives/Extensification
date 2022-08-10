@@ -16,6 +16,894 @@
       "is_incremental": false
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Addition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Addition.html",
+          "hash": "SCE82VxQZVNcaRgmts4HVsDKNWEZXnAgFMozvGg15Co="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Conversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Conversion.html",
+          "hash": "oum3H3bvf1TpewysgD2RRid0f6WLvN51KmE/M25xa8Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Counts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Counts.html",
+          "hash": "6HUZllPu9FHdSbj5zPHl/cQE+WWRQf7LvPIi3+p8UX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Getting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Getting.html",
+          "hash": "J84Y8pjlKDqx3odMZJl4AyFL3kOJe6T020bxW2CtlK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Manipulation.html",
+          "hash": "lRGzceUw2O4HeEbg6JE+L4gRHkk0tUh2N92q2vSXeTc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Querying.html",
+          "hash": "sFYGnFO4AO2Tew4Hq8cs1XAaOEf0rGsg7tmCjm2FCCs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.Removal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.Removal.html",
+          "hash": "3x0VRx6b3POBxsZYMEImok79S7j4VaqHrBqGO/w9T+U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayExts.html",
+          "hash": "XYRCsU5SO/thVPh8klinBOWh6k2rFx/oZOunjO8F6gs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayListExts.Conversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayListExts.Conversion.html",
+          "hash": "Z/Z15tqIqwFudFa/Ri9foY236fUmD4Op13pxs6tqVxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayListExts.Counts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayListExts.Counts.html",
+          "hash": "cPcoCVKiPI4f1dCCBe6trL5yYkEl/6dplxoLHRcSr2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayListExts.Getting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayListExts.Getting.html",
+          "hash": "k0QO3RUSKQo//lspk+KCR/L3Cls9Ay/+f/JDk2eNAAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayListExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayListExts.Querying.html",
+          "hash": "M2WIL1L2mfMBefq311laxxtmvCAH7O1Ki50cUTcfer8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayListExts.Removal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayListExts.Removal.html",
+          "hash": "lg4mardbyHMonzjCk8/jgY89WuGSeA451StTDAmS31o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ArrayListExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ArrayListExts.html",
+          "hash": "87JKJiohaz7bOgIf4GBiOTxFOFuJpEZQlXPGgP3Oyc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ByteExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ByteExts.Manipulation.html",
+          "hash": "iuXC4AcIM52oSPau8C5q0dzmA5BhikZ7RnugRKRbwkU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ByteExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ByteExts.Querying.html",
+          "hash": "P6qRkOn/zErENMV8o5e7AqH0a2sSdEw3aN8dQ9UB4zs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ByteExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ByteExts.html",
+          "hash": "Ps2GCmWGPhuvKyOw06xfWOYkRdrfJdtlcv1Vaq08TbY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.CharExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.CharExts.Manipulation.html",
+          "hash": "PmlvOWJ4TOx3fDlbyiurhsOmLb7fBCzvgJsUMLjsQBM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.CharExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.CharExts.Querying.html",
+          "hash": "asr82VFX68zf9I+/9bCSQ+MxXvh8hFOlz0wv32WN3KU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.CharExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.CharExts.html",
+          "hash": "TVnLDNo+kAaR0rxATPAACRK29UG44RAkzPCKC8VPO64="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DictionaryExts.Addition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DictionaryExts.Addition.html",
+          "hash": "plsKThZJdXUkXv/Ni86ovnrQ5CYDBB+l8RXex2+lRww="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DictionaryExts.Counts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DictionaryExts.Counts.html",
+          "hash": "KlDehSbvc3Agdi3uPXd+YoaEFrnX4hb5kp5ZwLrzenI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DictionaryExts.Getting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DictionaryExts.Getting.html",
+          "hash": "R9IyD5OlFhsB3jZi0EDNkwC8DzYXJI6xaSWsf2Wlnnk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DictionaryExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DictionaryExts.Manipulation.html",
+          "hash": "v/PoquGqKy0yy1vuUa+e6x3v5MNAGRpkjEGT9hfQGY0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DictionaryExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DictionaryExts.Querying.html",
+          "hash": "I+Yb/rd8vRM6IQ9cz6N59CciWbKS+SBz/uSN2vOI4Wg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DictionaryExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DictionaryExts.html",
+          "hash": "2DnYF3StM9t15J0zZlP8S+G1oTl1BTFAlO9zyLShjJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DoubleExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DoubleExts.Manipulation.html",
+          "hash": "kAmWMZminKNJLahpGCocJdkIRdwxew4pZCgZoh4AH5Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DoubleExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DoubleExts.Querying.html",
+          "hash": "2pwhDbqtuIj2s5QJ3Zzc1UYBgDhunkxRddKHE8n+Khg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.DoubleExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.DoubleExts.html",
+          "hash": "lc0HKnW9uE0uSUGey7a7XSvomHc0IQwPmwSWzrORed0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.EnumerableExts.Addition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.EnumerableExts.Addition.html",
+          "hash": "wSJFAbVTqzZNL6fOBkEGlaLQBK8V3+VMNh/moDkYmv4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.EnumerableExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.EnumerableExts.Manipulation.html",
+          "hash": "akJymg0miv54QiA5NhoOFHBfDv+QwDQoZ4uMeyZ/lIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.EnumerableExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.EnumerableExts.html",
+          "hash": "+MMiIgxcj9vq7W0ZEZ+DTiI7UngnD3/xQW7WcsVxqUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.External.Newtonsoft.Json.JPropertyExts.Getting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.External.Newtonsoft.Json.JPropertyExts.Getting.html",
+          "hash": "pc/CujGC6weOjhNXjSsJjGdvj6d3ILn7Z2AoqGA4OXk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.External.Newtonsoft.Json.JPropertyExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.External.Newtonsoft.Json.JPropertyExts.Querying.html",
+          "hash": "Vi5MAOVG5uChO47zvydEZPstxLyBPD8yjVJ+ReZVhrM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.External.Newtonsoft.Json.JPropertyExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.External.Newtonsoft.Json.JPropertyExts.html",
+          "hash": "lH1YGtl0AQ2ng8ysnir1Ldk8H4ZrrGIV5KFLW85K5TM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.HumanFormats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.HumanFormats.html",
+          "hash": "aM/quQMq6cRo7LMmRXL4Pklem6WNlNPHIhzU2uvbyhA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.IntegerExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.IntegerExts.Manipulation.html",
+          "hash": "eWu5z3aiOmKhJke+FjJxbBys/Ah9OZVVtVwQ6eyDm/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.IntegerExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.IntegerExts.Querying.html",
+          "hash": "xSTXFSRGkJqT3i7uYsX9D8aDpt2mIqxI6hTAk87QOUo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.IntegerExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.IntegerExts.html",
+          "hash": "NvKM1fiFW5S6LZVEXncJrKTfnRUyOdl0n0t7p+PgYjM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.Legacy.StringExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.Legacy.StringExts.Querying.html",
+          "hash": "YYzMFvNRyM6a7EsTJAI6qJgLNreRdu2KBW/P/eI+OrE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.Legacy.StringExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.Legacy.StringExts.html",
+          "hash": "Aw3HKeLkTEissPujyft1IYQtHFaaiPyImHhGiKY/ROQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Addition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Addition.html",
+          "hash": "zPaBb4mevcVeyOaPNrFAlsdWDm/dl6EDi6jAPSWdVZ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Conversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Conversion.html",
+          "hash": "5ON4sdgy2olIrOPewAjiJM0/O4R0bRJcykxOEMxWi6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Counts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Counts.html",
+          "hash": "aHGTYAvvZq05nKdf3jLsfzCUigvS27O4WF5pRkxnxNY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Getting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Getting.html",
+          "hash": "+iCsmn8JiyfREAWJdYp9V9877Tdq2vRVl0GW8ncUhu0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Manipulation.html",
+          "hash": "M3S1OvY0feu/uforosNozsuiiHZcWkXh8GEH5fZbVdE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Querying.html",
+          "hash": "2iH7qWklmEFuMrEWgKjyMPj43ld1OcK+O6T16n12KXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.Removal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.Removal.html",
+          "hash": "mY9MYIEEb5+ukiUluECX/yR70erQjIvSaZyUq3bJ8yo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ListExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ListExts.html",
+          "hash": "wMmj04Aco8gUHFsAfLK7mvmx7Cl5gGBqjpO+ZSYX0Lk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.LongExts.Conversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.LongExts.Conversion.html",
+          "hash": "c+PvGggr8j+BmijjcOTVJBg7jBN8Ek5oP58brETneQE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.LongExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.LongExts.Manipulation.html",
+          "hash": "v8w3a4SmypOGDQ502ICkGmHQUcsIsX0Z+ubm0sfz4pI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.LongExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.LongExts.Querying.html",
+          "hash": "3Ab5wHFo1FxmQMlzxWGdWXdRm2M9w9LdoksgCg7RkLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.LongExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.LongExts.html",
+          "hash": "VQTmBAuDy1IC+Ev++9JIBVeyt4KOnZhwtMG2EhhDcOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ShortExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ShortExts.Manipulation.html",
+          "hash": "VXTCZw4eLrGJu7QPY9woZyNUzoyachwXBoabYqSd4Qw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ShortExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ShortExts.Querying.html",
+          "hash": "Wwb5KCO9B+ytq95aH9V/UpufPivsnT/bKCK11cEZAH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.ShortExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.ShortExts.html",
+          "hash": "VDRqUtj00ezBpetGP3BfKAdNTFEWSZSJkF3AReq+Pp8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.SingleExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.SingleExts.Manipulation.html",
+          "hash": "AOkkkT70lHI7KKQkwm88fdAcyuV3agpj5EXTYwLwIow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.SingleExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.SingleExts.Querying.html",
+          "hash": "pvql1mKyE/BAHC38FzcPo3dYRPe47gt6j/B9X7wq1pY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.SingleExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.SingleExts.html",
+          "hash": "ndiSk4fEX/P9k/5PxA/vqsJLMVNPrIq6d5OJQiIaYGU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamExts.Manipulation.html",
+          "hash": "Y+h8/Gjum/HvhQzO1UEli8qKngPwL51MR1NE6agBjyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamExts.Reading.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamExts.Reading.html",
+          "hash": "+Lm9wm8A5PsA6S/ZIBjf5WxI00EEWFu4aMfbmyhL4aw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamExts.Writing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamExts.Writing.html",
+          "hash": "/8Kl97ySKguRNCC22owFsKw5sBFWGteSV8BqxTBJ+hM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamExts.html",
+          "hash": "0r1tesX4z0S7qXa6BmqKT9YdrIJDJ2JsrTv/Gk3pokc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamReaderExts.Reading.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamReaderExts.Reading.html",
+          "hash": "/z929YkvA1BazG/5GKbq+F8qvYD4VzTHZq+z6sW9jUY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamReaderExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamReaderExts.html",
+          "hash": "Dwfp8ZuBAEySEQBbh6+Mle5Fipw38gOZv//bYPJ1uxc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamWriterExts.Writing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamWriterExts.Writing.html",
+          "hash": "kN6RjCcey2vgUIMURWOy2BnNV5l7eQwFZ1S3HHGD494="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StreamWriterExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StreamWriterExts.html",
+          "hash": "3Xjdf0/jSS4NRNWi2lV5pKyj9dPNlpqAslJgl7twkEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StringExts.Conversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StringExts.Conversion.html",
+          "hash": "WiWSwhYaBSj7OwNwGuSbL/lnDeYJGmLwdxYK8kW/qgA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StringExts.Manipulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StringExts.Manipulation.html",
+          "hash": "Vmy+Fweg+I4ZttvSICu1/DnWEF066nARqINL7917cdI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StringExts.Querying.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StringExts.Querying.html",
+          "hash": "6jhfV3Z2zK8XFQsLPJWo+aSaiNsMEXEovcrqp+XmKkQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StringExts.Removal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StringExts.Removal.html",
+          "hash": "BvXA8k928SzX9oWXS9lxJ7eP08CGWYMB2x2rVj2brRM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.StringExts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.StringExts.html",
+          "hash": "g0nQtZdFieX/YUGgLV0jMlDNotxZEJekMyD/6+WTeMY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Extensification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Extensification.html",
+          "hash": "tsInDDQCsu9M8tKmZhnLSyB+1wbPcxwVpXwYtxdjA04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "SrfvmDjV2tkAsEweV42MXHV6YdXWlxU+fsHmgMAtvAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
@@ -33,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Jowyw4ZvQ8f/VVB2ck8Nv8zqBoJ12dUo+PlhWLcTSKo="
+          "hash": "yystJXpdHk5+myjrS8oTzF055cbu3o0X9wqZbUDRea0="
         }
       },
       "is_incremental": false,
@@ -79,6 +967,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 73,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
