@@ -29,5 +29,5 @@ jobs:
       run: |
         $path = "Extensification.Bin"
         $FileName = Get-ChildItem -Path $path -Recurse -Name -Filter "*symbols*"
-        foreach ($file in $FileName) { nuget push "$path\$file" -source "nuget.org" }
+        foreach ($file in $FileName) { nuget push "$path\$file" -source "nuget.org" -SkipDuplicate }
         
