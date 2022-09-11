@@ -28,29 +28,29 @@ namespace Extensification.CharExts
     {
 
         /// <summary>
-		/// 		/// Gets an ASCII code of a character
-		/// 		/// </summary>
-		/// 		/// <param name="Character">Character</param>
-		/// 		/// <returns>ASCII code of a character</returns>
+		/// Gets an ASCII code of a character
+		/// </summary>
+		/// <param name="Character">Character</param>
+		/// <returns>ASCII code of a character</returns>
         public static int GetAsciiCode(this char Character)
         {
             return Convert.ToInt32(Character);
         }
 
         /// <summary>
-		/// 		/// Converts the character to the instance of ConsoleKeyInfo
-		/// 		/// </summary>
-		/// 		/// <param name="c">The character</param>
+		/// Converts the character to the instance of ConsoleKeyInfo
+		/// </summary>
+		/// <param name="c">The character</param>
         public static ConsoleKeyInfo ToConsoleKeyInfo(this char c)
         {
             return c.ToConsoleKeyInfo(null);
         }
 
         /// <summary>
-		/// 		/// Converts the character to the instance of ConsoleKeyInfo
-		/// 		/// </summary>
-		/// 		/// <param name="c">The character</param>
-		/// 		/// <param name="KeyCharMap">Key character map</param>
+		/// Converts the character to the instance of ConsoleKeyInfo
+		/// </summary>
+		/// <param name="c">The character</param>
+		/// <param name="KeyCharMap">Key character map</param>
         public static ConsoleKeyInfo ToConsoleKeyInfo(this char c, Dictionary<char, Tuple<ConsoleKey, ConsoleModifiers>> KeyCharMap)
         {
             // Parse the key information
@@ -66,19 +66,19 @@ namespace Extensification.CharExts
         }
 
         /// <summary>
-		/// 		/// Parses the key information
-		/// 		/// </summary>
-		/// 		/// <param name="c">Character to parse</param>
+		/// Parses the key information
+		/// </summary>
+		/// <param name="c">Character to parse</param>
         private static Tuple<ConsoleKey, ConsoleModifiers> ParseKeyInfo(this char c)
         {
             return c.ParseKeyInfo(null);
         }
 
         /// <summary>
-		/// 		/// Parses the key information
-		/// 		/// </summary>
-		/// 		/// <param name="c">Character to parse</param>
-		/// 		/// <param name="KeyCharMap">Key character map</param>
+		/// Parses the key information
+		/// </summary>
+		/// <param name="c">Character to parse</param>
+		/// <param name="KeyCharMap">Key character map</param>
         private static Tuple<ConsoleKey, ConsoleModifiers> ParseKeyInfo(this char c, Dictionary<char, Tuple<ConsoleKey, ConsoleModifiers>> KeyCharMap)
         {
             // Try to get the ConsoleKey from the character
