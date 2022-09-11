@@ -147,7 +147,7 @@
   "api/Extensification.EnumerableExts.Addition.html": {
     "href": "api/Extensification.EnumerableExts.Addition.html",
     "title": "Class Addition | Extensification API - Eofla Internals",
-    "keywords": "Class Addition Provides the enumerable extensions related to addition Inheritance System.Object Addition Namespace : Extensification.EnumerableExts Assembly : Extensification.dll Syntax public static class Addition"
+    "keywords": "Class Addition Provides the enumerable extensions related to addition Inheritance System.Object Addition Namespace : Extensification.EnumerableExts Assembly : Extensification.dll Syntax public static class Addition Methods | Improve this Doc View Source Append<Source>(IEnumerable<Source>, Source) Appends a value to the end of the sequence Declaration public static IEnumerable<Source> Append<Source>(IEnumerable<Source> TargetEnumerable, Source Value) Parameters Type Name Description System.Collections.Generic.IEnumerable <Source> TargetEnumerable Source Source Value Value Returns Type Description System.Collections.Generic.IEnumerable <Source> Type Parameters Name Description Source Source type"
   },
   "api/Extensification.EnumerableExts.html": {
     "href": "api/Extensification.EnumerableExts.html",

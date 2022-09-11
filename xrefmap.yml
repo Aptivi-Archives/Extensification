@@ -1455,6 +1455,22 @@ references:
   commentId: T:Extensification.EnumerableExts.Addition
   fullName: Extensification.EnumerableExts.Addition
   nameWithType: Addition
+- uid: Extensification.EnumerableExts.Addition.Append*
+  name: Append
+  href: api/Extensification.EnumerableExts.Addition.html#Extensification_EnumerableExts_Addition_Append_
+  commentId: Overload:Extensification.EnumerableExts.Addition.Append
+  isSpec: "True"
+  fullName: Extensification.EnumerableExts.Addition.Append
+  nameWithType: Addition.Append
+- uid: Extensification.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)
+  name: Append<Source>(IEnumerable<Source>, Source)
+  href: api/Extensification.EnumerableExts.Addition.html#Extensification_EnumerableExts_Addition_Append__1_System_Collections_Generic_IEnumerable___0____0_
+  commentId: M:Extensification.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)
+  name.vb: Append(Of Source)(IEnumerable(Of Source), Source)
+  fullName: Extensification.EnumerableExts.Addition.Append<Source>(System.Collections.Generic.IEnumerable<Source>, Source)
+  fullName.vb: Extensification.EnumerableExts.Addition.Append(Of Source)(System.Collections.Generic.IEnumerable(Of Source), Source)
+  nameWithType: Addition.Append<Source>(IEnumerable<Source>, Source)
+  nameWithType.vb: Addition.Append(Of Source)(IEnumerable(Of Source), Source)
 - uid: Extensification.EnumerableExts.Manipulation
   name: Manipulation
   href: api/Extensification.EnumerableExts.Manipulation.html
