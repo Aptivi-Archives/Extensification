@@ -508,9 +508,7 @@ namespace Extensification.DictionaryExts
             }
         }
 
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If NET45 Then
-        *//* TODO ERROR: Skipped DisabledTextTrivia
+#if NET48_OR_GREATER
         /// <summary>
         /// Attempts to add the specified key and value to the dictionary
         /// </summary>
@@ -520,18 +518,21 @@ namespace Extensification.DictionaryExts
         /// <param name="EntryKey">A key entry to be added</param>
         /// <param name="EntryValue">A value of entry</param>
         /// <returns>True if successful; False if unsuccessful</returns>
-        <Extension>
-        Public Function TryAdd(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), EntryKey As TKey, EntryValue As TValue) As Boolean
-            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
-            Try
-                Dict.Add(EntryKey, EntryValue)
-                Return True
-            Catch ex As Exception
-                Return False
-            End Try
-        End Function
-        *//* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
+        public static bool TryAdd<TKey, TValue>(this Dictionary<TKey, TValue> Dict, TKey EntryKey, TValue EntryValue)
+        {
+            if (EntryKey is null)
+                throw new ArgumentNullException(nameof(EntryKey));
+
+            try
+            {
+                Dict.Add(EntryKey, EntryValue);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+#endif
     }
 }

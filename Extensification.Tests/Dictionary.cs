@@ -307,21 +307,18 @@ namespace Extensification.Tests
             Assert.IsTrue(TargetDict["String 1"] == 32f);
         }
 
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If NET45 Then
-        *//* TODO ERROR: Skipped DisabledTextTrivia
-            /// <summary>
-            /// Tests trying to add an entry to dictionary
-            /// </summary>
-            <Test>
-            Public Sub TestTryAdd()
-                Dim TargetDict As New Dictionary(Of String, Integer)
-                Assert.IsTrue(TargetDict.TryAdd("Document number", 12))
-                Assert.IsFalse(TargetDict.TryAdd("Document number", 13))
-            End Sub
-        *//* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
+#if NET48_OR_GREATER
+        /// <summary>
+        /// Tests trying to add an entry to dictionary
+        /// </summary>
+        [Test]
+        public static void TestTryAdd()
+            {
+            Dictionary<string, int> TargetDict = new();
+            Assert.IsTrue(TargetDict.TryAdd("Document number", 12));
+            Assert.IsFalse(TargetDict.TryAdd("Document number", 13));
+        }
+#endif
         #endregion
 
         #region Counts

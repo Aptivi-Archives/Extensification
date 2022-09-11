@@ -19,6 +19,8 @@
 using Extensification.EnumerableExts;
 using System.Collections.Generic;
 using NUnit.Framework;
+using System;
+using System.Linq;
 
 namespace Extensification.Tests
 {
@@ -28,31 +30,29 @@ namespace Extensification.Tests
     {
 
         #region Addition
-        /* TODO ERROR: Skipped IfDirectiveTrivia
-        #If Not NETCOREAPP Then
-        *//* TODO ERROR: Skipped DisabledTextTrivia
+#if NETCOREAPP == false
             /// <summary>
             /// Tests appending a value to the end of a list
             /// </summary>
-            <Test>
-            Public Sub TestAppendList()
-                Dim TargetEnum As New List(Of String) From {"Welcome", "to"}
-                TargetEnum = TargetEnum.Append("Extensification").ToList
-                Assert.IsTrue(TargetEnum.Contains("Extensification"))
-            End Sub
+            [Test]
+            public static void TestAppendList()
+            {
+                List<string> TargetEnum = new() { "Welcome", "to" };
+                TargetEnum = TargetEnum.Append("Extensification").ToList();
+                Assert.IsTrue(TargetEnum.Contains("Extensification"));
+            }
 
             /// <summary>
             /// Tests appending a value to the end of a string
             /// </summary>
-            <Test>
-            Public Sub TestAppendString()
-                Dim TargetString As String = "Welcom"
-                TargetString = String.Join("", TargetString.Append("e"))
-                Assert.IsTrue(TargetString = "Welcome")
-            End Sub
-        *//* TODO ERROR: Skipped EndIfDirectiveTrivia
-        #End If
-        */
+            [Test]
+            public static void TestAppendString()
+            {
+                string TargetString = "Welcom";
+                TargetString = String.Join("", TargetString.Append('e'));
+                Assert.IsTrue(TargetString == "Welcome");
+            }
+#endif
         #endregion
 
         #region Manipulation
