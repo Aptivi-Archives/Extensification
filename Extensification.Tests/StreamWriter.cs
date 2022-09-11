@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Writing
         /// <summary>
-    /// Tests reading lines
-    /// </summary>
+        /// Tests reading lines
+        /// </summary>
         [Test]
         public void TestWriteLines()
         {
@@ -43,8 +43,8 @@ namespace Extensification.Tests
             Assert.IsTrue(TextStreamReader.ReadLines().Length == 2);
         }
         /// <summary>
-    /// Tests reading lines
-    /// </summary>
+        /// Tests reading lines
+        /// </summary>
         [Test]
         public void TestWriteLineAndSeek()
         {

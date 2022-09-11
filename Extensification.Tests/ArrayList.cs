@@ -31,8 +31,8 @@ namespace Extensification.Tests
 
         #region Conversion
         /// <summary>
-    /// Tests converting array list to list
-    /// </summary>
+        /// Tests converting array list to list
+        /// </summary>
         [Test]
         public void TestToArrayList()
         {
@@ -45,8 +45,8 @@ namespace Extensification.Tests
 
         #region Counts
         /// <summary>
-    /// Tests counting full entries
-    /// </summary>
+        /// Tests counting full entries
+        /// </summary>
         [Test]
         public void TestCountFullEntries()
         {
@@ -57,8 +57,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests counting empty entries
-    /// </summary>
+        /// Tests counting empty entries
+        /// </summary>
         [Test]
         public void TestCountEmptyEntries()
         {
@@ -71,8 +71,8 @@ namespace Extensification.Tests
 
         #region Getting
         /// <summary>
-    /// Tests getting index from entry
-    /// </summary>
+        /// Tests getting index from entry
+        /// </summary>
         [Test]
         public void TestGetIndexOfEntry()
         {
@@ -82,8 +82,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting indexes of full entries
-    /// </summary>
+        /// Tests getting indexes of full entries
+        /// </summary>
         [Test]
         public void TestGetIndexesOfFullEntries()
         {
@@ -98,8 +98,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting indexes of empty entries
-    /// </summary>
+        /// Tests getting indexes of empty entries
+        /// </summary>
         [Test]
         public void TestGetIndexesOfEmptyEntries()
         {
@@ -116,8 +116,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests seeing if the array list contains any of the specified clauses
-    /// </summary>
+        /// Tests seeing if the array list contains any of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAnyOf()
         {
@@ -127,8 +127,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests seeing if the array list contains all of the specified clauses
-    /// </summary>
+        /// Tests seeing if the array list contains all of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAllOf()
         {
@@ -140,8 +140,8 @@ namespace Extensification.Tests
 
         #region Removal
         /// <summary>
-    /// Tests trying to remove an entry from array list
-    /// </summary>
+        /// Tests trying to remove an entry from array list
+        /// </summary>
         [Test]
         public void TestTryRemove()
         {

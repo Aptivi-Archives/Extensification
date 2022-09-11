@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests double-precision number incrementation
-    /// </summary>
+        /// Tests double-precision number incrementation
+        /// </summary>
         [Test]
         public void TestIncrement()
         {
@@ -42,8 +42,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests double-precision number decrementation
-    /// </summary>
+        /// Tests double-precision number decrementation
+        /// </summary>
         [Test]
         public void TestDecrement()
         {
@@ -54,8 +54,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap
-    /// </summary>
+        /// Tests byte swap
+        /// </summary>
         [Test]
         public void TestSwap()
         {
@@ -69,8 +69,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap if source is larger
-    /// </summary>
+        /// Tests byte swap if source is larger
+        /// </summary>
         [Test]
         public void TestSwapIfSourceLarger()
         {
@@ -84,8 +84,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap if target is larger
-    /// </summary>
+        /// Tests byte swap if target is larger
+        /// </summary>
         [Test]
         public void TestSwapIfTargetLarger()
         {
@@ -101,8 +101,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests double digit listing (before the decimal point)
-    /// </summary>
+        /// Tests double digit listing (before the decimal point)
+        /// </summary>
         [Test]
         public void TestListDigitsBeforeDecimal()
         {
@@ -112,8 +112,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests double digit listing (after the decimal point)
-    /// </summary>
+        /// Tests double digit listing (after the decimal point)
+        /// </summary>
         [Test]
         public void TestListDigitsAfterDecimal()
         {
@@ -123,8 +123,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests double Armstrong number detection
-    /// </summary>
+        /// Tests double Armstrong number detection
+        /// </summary>
         [Test]
         public void TestIsArmstrong()
         {

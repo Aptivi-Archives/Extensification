@@ -100,32 +100,32 @@ namespace Extensification.StreamExts
         /// </summary>
         /// <returns>True if successful; False if unsuccessful</returns>
         public static bool TryGetBuffer(this Stream TargetStream, ref ArraySegment<byte> Buffer)
-		{
-		    bool Success = true;
+        {
+            bool Success = true;
 
-			// Try to seek
-			try
-			{
-				List<byte> Chars = new List<byte>();
-				int CharByte = 0;
-				while (!(CharByte == -1))
-				{
-					CharByte = TargetStream.ReadByte();
-					if (!(CharByte == -1))
-					{
-						Chars.Add(Convert.ToByte(CharByte));
-					}
-				}
-				Buffer = new ArraySegment<byte>(Chars.ToArray());
-			}
-			catch
-			{
-				Success = false;
-			}
+            // Try to seek
+            try
+            {
+                List<byte> Chars = new List<byte>();
+                int CharByte = 0;
+                while (!(CharByte == -1))
+                {
+                    CharByte = TargetStream.ReadByte();
+                    if (!(CharByte == -1))
+                    {
+                        Chars.Add(Convert.ToByte(CharByte));
+                    }
+                }
+                Buffer = new ArraySegment<byte>(Chars.ToArray());
+            }
+            catch
+            {
+                Success = false;
+            }
 
-			//Return the result
-			return Success;
-		}
+            //Return the result
+            return Success;
+        }
 #endif
     }
 }

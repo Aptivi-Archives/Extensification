@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests long integer incrementation
-    /// </summary>
+        /// Tests long integer incrementation
+        /// </summary>
         [Test]
         public void TestIncrement()
         {
@@ -42,8 +42,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests unsigned long integer incrementation
-    /// </summary>
+        /// Tests unsigned long integer incrementation
+        /// </summary>
         [Test]
         public void TestIncrementUnsigned()
         {
@@ -54,8 +54,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests long integer decrementation
-    /// </summary>
+        /// Tests long integer decrementation
+        /// </summary>
         [Test]
         public void TestDecrement()
         {
@@ -66,8 +66,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests unsigned long integer decrementation
-    /// </summary>
+        /// Tests unsigned long integer decrementation
+        /// </summary>
         [Test]
         public void TestDecrementUnsigned()
         {
@@ -78,8 +78,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap
-    /// </summary>
+        /// Tests byte swap
+        /// </summary>
         [Test]
         public void TestSwap()
         {
@@ -93,8 +93,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte swap
-    /// </summary>
+        /// Tests signed byte swap
+        /// </summary>
         [Test]
         public void TestSwapSigned()
         {
@@ -108,8 +108,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap if source is larger
-    /// </summary>
+        /// Tests byte swap if source is larger
+        /// </summary>
         [Test]
         public void TestSwapIfSourceLarger()
         {
@@ -123,8 +123,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte swap if source is larger
-    /// </summary>
+        /// Tests signed byte swap if source is larger
+        /// </summary>
         [Test]
         public void TestSwapIfSourceLargerSigned()
         {
@@ -138,8 +138,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap if target is larger
-    /// </summary>
+        /// Tests byte swap if target is larger
+        /// </summary>
         [Test]
         public void TestSwapIfTargetLarger()
         {
@@ -153,8 +153,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte swap if target is larger
-    /// </summary>
+        /// Tests signed byte swap if target is larger
+        /// </summary>
         [Test]
         public void TestSwapIfTargetLargerSigned()
         {
@@ -170,8 +170,8 @@ namespace Extensification.Tests
 
         #region Conversion
         /// <summary>
-    /// Tests converting data size to human readable
-    /// </summary>
+        /// Tests converting data size to human readable
+        /// </summary>
         [Test]
         public void TestDataToHumanReadable()
         {
@@ -181,8 +181,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric measurement without unusual measurements to human readable
-    /// </summary>
+        /// Tests converting metric measurement without unusual measurements to human readable
+        /// </summary>
         [Test]
         public void TestMetricMeasurementToHumanReadable()
         {
@@ -192,8 +192,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric measurement with unusual measurements to human readable
-    /// </summary>
+        /// Tests converting metric measurement with unusual measurements to human readable
+        /// </summary>
         [Test]
         public void TestMetricMeasurementUnusualToHumanReadable()
         {
@@ -203,8 +203,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting imperial measurement to human readable
-    /// </summary>
+        /// Tests converting imperial measurement to human readable
+        /// </summary>
         [Test]
         public void TestImperialMeasurementToHumanReadable()
         {
@@ -214,8 +214,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric volume measurement to human readable
-    /// </summary>
+        /// Tests converting metric volume measurement to human readable
+        /// </summary>
         [Test]
         public void TestMetricVolumeToHumanReadable()
         {
@@ -225,8 +225,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric volume measurement to human readable
-    /// </summary>
+        /// Tests converting metric volume measurement to human readable
+        /// </summary>
         [Test]
         public void TestImperialVolumeToHumanReadable()
         {
@@ -236,8 +236,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting data size to human readable (Unsigned long)
-    /// </summary>
+        /// Tests converting data size to human readable (Unsigned long)
+        /// </summary>
         [Test]
         public void TestDataToHumanReadableUnsigned()
         {
@@ -247,8 +247,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric measurement without unusual measurements to human readable (Unsigned long)
-    /// </summary>
+        /// Tests converting metric measurement without unusual measurements to human readable (Unsigned long)
+        /// </summary>
         [Test]
         public void TestMetricMeasurementToHumanReadableUnsigned()
         {
@@ -258,8 +258,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric measurement with unusual measurements to human readable (Unsigned long)
-    /// </summary>
+        /// Tests converting metric measurement with unusual measurements to human readable (Unsigned long)
+        /// </summary>
         [Test]
         public void TestMetricMeasurementUnusualToHumanReadableUnsigned()
         {
@@ -269,8 +269,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting imperial measurement to human readable (Unsigned long)
-    /// </summary>
+        /// Tests converting imperial measurement to human readable (Unsigned long)
+        /// </summary>
         [Test]
         public void TestImperialMeasurementToHumanReadableUnsigned()
         {
@@ -280,8 +280,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric volume measurement to human readable (Unsigned long)
-    /// </summary>
+        /// Tests converting metric volume measurement to human readable (Unsigned long)
+        /// </summary>
         [Test]
         public void TestMetricVolumeToHumanReadableUnsigned()
         {
@@ -291,8 +291,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting metric volume measurement to human readable (Unsigned long)
-    /// </summary>
+        /// Tests converting metric volume measurement to human readable (Unsigned long)
+        /// </summary>
         [Test]
         public void TestImperialVolumeToHumanReadableUnsigned()
         {
@@ -304,8 +304,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests long integer digit listing
-    /// </summary>
+        /// Tests long integer digit listing
+        /// </summary>
         [Test]
         public void TestListDigits()
         {
@@ -315,8 +315,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests unsigned long integer digit listing
-    /// </summary>
+        /// Tests unsigned long integer digit listing
+        /// </summary>
         [Test]
         public void TestListDigitsUnsigned()
         {
@@ -326,8 +326,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests long integer Armstrong number detection
-    /// </summary>
+        /// Tests long integer Armstrong number detection
+        /// </summary>
         [Test]
         public void TestIsArmstrong()
         {
@@ -336,8 +336,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests unsigned long integer Armstrong number detection
-    /// </summary>
+        /// Tests unsigned long integer Armstrong number detection
+        /// </summary>
         [Test]
         public void TestIsArmstrongUnsigned()
         {

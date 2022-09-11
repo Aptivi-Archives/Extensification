@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Reading
         /// <summary>
-    /// Tests reading a line from the stream reader with the newline characters
-    /// </summary>
+        /// Tests reading a line from the stream reader with the newline characters
+        /// </summary>
         [Test]
         public void TestReadLineWithNewLine()
         {
@@ -43,8 +43,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests reading lines
-    /// </summary>
+        /// Tests reading lines
+        /// </summary>
         [Test]
         public void TestReadLines()
         {
@@ -56,8 +56,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests reading to end and seeking
-    /// </summary>
+        /// Tests reading to end and seeking
+        /// </summary>
         [Test]
         public void TestReadToEndAndSeek()
         {

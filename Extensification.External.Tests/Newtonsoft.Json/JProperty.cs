@@ -29,8 +29,8 @@ namespace Extensification.External.Tests
 
         #region Getting
         /// <summary>
-    /// Tests getting property name ending with a specified string
-    /// </summary>
+        /// Tests getting property name ending with a specified string
+        /// </summary>
         [Test]
         public void TestGetPropertyNameEndingWith()
         {
@@ -41,8 +41,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of getting property name ending with a specified string should return nothing if the property doesn't exist
-    /// </summary>
+        /// Tests the logic of getting property name ending with a specified string should return nothing if the property doesn't exist
+        /// </summary>
         [Test]
         public void TestGetPropertyNameEndingWithShouldReturnNothingIfNotExists()
         {
@@ -53,8 +53,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests getting property name beginning with a specified string
-    /// </summary>
+        /// Tests getting property name beginning with a specified string
+        /// </summary>
         [Test]
         public void TestGetPropertyNameStartingWith()
         {
@@ -65,8 +65,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of getting property name beginning with a specified string should return nothing if the property doesn't exist
-    /// </summary>
+        /// Tests the logic of getting property name beginning with a specified string should return nothing if the property doesn't exist
+        /// </summary>
         [Test]
         public void TestGetPropertyNameStartingWithShouldReturnNothingIfNotExists()
         {
@@ -77,8 +77,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests getting property name containing a specified string
-    /// </summary>
+        /// Tests getting property name containing a specified string
+        /// </summary>
         [Test]
         public void TestGetPropertyNameContaining()
         {
@@ -89,8 +89,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of getting property name containing a specified string should return nothing if the property doesn't exist
-    /// </summary>
+        /// Tests the logic of getting property name containing a specified string should return nothing if the property doesn't exist
+        /// </summary>
         [Test]
         public void TestGetPropertyNameContainingShouldReturnNothingIfNotExists()
         {
@@ -101,8 +101,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of getting properties that has the specific type in value
-    /// </summary>
+        /// Tests the logic of getting properties that has the specific type in value
+        /// </summary>
         [Test]
         public void TestGetPropertiesTypeInValue()
         {
@@ -113,8 +113,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of getting properties that has the specific type in value should return nothing if the property of specific type doesn't exist
-    /// </summary>
+        /// Tests the logic of getting properties that has the specific type in value should return nothing if the property of specific type doesn't exist
+        /// </summary>
         [Test]
         public void TestGetPropertiesTypeInValueShouldReturnNothingIfNotExists()
         {
@@ -125,8 +125,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of getting properties that has the specific type in value should return everything if the type is set to <see cref="JTokenType.None"/>
-    /// </summary>
+        /// Tests the logic of getting properties that has the specific type in value should return everything if the type is set to <see cref="JTokenType.None"/>
+        /// </summary>
         [Test]
         public void TestGetPropertiesTypeInValueShouldReturnEverythingIfNoTokenTypeSpecified()
         {
@@ -139,8 +139,8 @@ namespace Extensification.External.Tests
 
         #region Querying
         /// <summary>
-    /// Tests selecting a token that has its key ending with a specified string
-    /// </summary>
+        /// Tests selecting a token that has its key ending with a specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyEndingWith()
         {
@@ -151,8 +151,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key that contains the whitespace ending with a specified string
-    /// </summary>
+        /// Tests selecting a token that has its key that contains the whitespace ending with a specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyThatHasWhitespaceEndingWith()
         {
@@ -163,8 +163,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key that contains the special character ending with a specified string
-    /// </summary>
+        /// Tests selecting a token that has its key that contains the special character ending with a specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyThatHasSpecialCharacterEndingWith()
         {
@@ -175,8 +175,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of selecting a token that has its key ending with a specified string should return nothing if the property doesn't exist
-    /// </summary>
+        /// Tests the logic of selecting a token that has its key ending with a specified string should return nothing if the property doesn't exist
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyEndingWithShouldReturnNothingIfNotExists()
         {
@@ -187,8 +187,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key beginning with a specified string
-    /// </summary>
+        /// Tests selecting a token that has its key beginning with a specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyStartingWith()
         {
@@ -199,8 +199,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key that contains the whitespace beginning with a specified string
-    /// </summary>
+        /// Tests selecting a token that has its key that contains the whitespace beginning with a specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyThatHasWhitespaceStartingWith()
         {
@@ -211,8 +211,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key that contains the special character beginning with a specified string
-    /// </summary>
+        /// Tests selecting a token that has its key that contains the special character beginning with a specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyThatHasSpecialCharacterStartingWith()
         {
@@ -223,8 +223,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of selecting a token that has its key beginning with a specified string should return nothing if the property doesn't exist
-    /// </summary>
+        /// Tests the logic of selecting a token that has its key beginning with a specified string should return nothing if the property doesn't exist
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyStartingWithShouldReturnNothingIfNotExists()
         {
@@ -235,8 +235,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key containing the specified string
-    /// </summary>
+        /// Tests selecting a token that has its key containing the specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyContaining()
         {
@@ -247,8 +247,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key that contains the whitespace containing the specified string
-    /// </summary>
+        /// Tests selecting a token that has its key that contains the whitespace containing the specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyThatHasWhitespaceContaining()
         {
@@ -259,8 +259,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests selecting a token that has its key that contains the special character containing the specified string
-    /// </summary>
+        /// Tests selecting a token that has its key that contains the special character containing the specified string
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyThatHasSpecialCharacterContaining()
         {
@@ -271,8 +271,8 @@ namespace Extensification.External.Tests
         }
 
         /// <summary>
-    /// Tests the logic of selecting a token that has its key containing the specified string should return nothing if the property doesn't exist
-    /// </summary>
+        /// Tests the logic of selecting a token that has its key containing the specified string should return nothing if the property doesn't exist
+        /// </summary>
         [Test]
         public void TestSelectTokenKeyContainingShouldReturnNothingIfNotExists()
         {

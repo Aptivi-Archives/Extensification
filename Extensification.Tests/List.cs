@@ -31,8 +31,8 @@ namespace Extensification.Tests
 
         #region Addition
         /// <summary>
-    /// Tests adding an entry to list if not found
-    /// </summary>
+        /// Tests adding an entry to list if not found
+        /// </summary>
         [Test]
         public void TestAddIfNotFound()
         {
@@ -45,8 +45,8 @@ namespace Extensification.Tests
 
         #region Conversion
         /// <summary>
-    /// Tests converting list to array list
-    /// </summary>
+        /// Tests converting list to array list
+        /// </summary>
         [Test]
         public void TestToArrayList()
         {
@@ -59,8 +59,8 @@ namespace Extensification.Tests
 
         #region Counts
         /// <summary>
-    /// Tests counting full entries
-    /// </summary>
+        /// Tests counting full entries
+        /// </summary>
         [Test]
         public void TestCountFullEntries()
         {
@@ -71,8 +71,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests counting empty entries
-    /// </summary>
+        /// Tests counting empty entries
+        /// </summary>
         [Test]
         public void TestCountEmptyEntries()
         {
@@ -85,8 +85,8 @@ namespace Extensification.Tests
 
         #region Getting
         /// <summary>
-    /// Tests getting index from entry
-    /// </summary>
+        /// Tests getting index from entry
+        /// </summary>
         [Test]
         public void TestGetIndexFromEntry()
         {
@@ -96,8 +96,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting indexes of full entries
-    /// </summary>
+        /// Tests getting indexes of full entries
+        /// </summary>
         [Test]
         public void TestGetIndexesOfFullEntries()
         {
@@ -112,8 +112,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting indexes of empty entries
-    /// </summary>
+        /// Tests getting indexes of empty entries
+        /// </summary>
         [Test]
         public void TestGetIndexesOfEmptyEntries()
         {
@@ -130,8 +130,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests stringifying a char array
-    /// </summary>
+        /// Tests stringifying a char array
+        /// </summary>
         [Test]
         public void TestStringify()
         {
@@ -142,8 +142,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests seeing if the list contains any of the specified clauses
-    /// </summary>
+        /// Tests seeing if the list contains any of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAnyOf()
         {
@@ -153,8 +153,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests seeing if the list contains all of the specified clauses
-    /// </summary>
+        /// Tests seeing if the list contains all of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAllOf()
         {
@@ -166,8 +166,8 @@ namespace Extensification.Tests
 
         #region Removal
         /// <summary>
-    /// Tests trying to remove an entry from list
-    /// </summary>
+        /// Tests trying to remove an entry from list
+        /// </summary>
         [Test]
         public void TestTryRemove()
         {

@@ -31,18 +31,19 @@ namespace Extensification.Tests
         /* TODO ERROR: Skipped IfDirectiveTrivia
         #If Not NETCOREAPP Then
         *//* TODO ERROR: Skipped DisabledTextTrivia
-            ''' <summary>
-            ''' Tests appending a value to the end of a list
-            ''' </summary>
+            /// <summary>
+            /// Tests appending a value to the end of a list
+            /// </summary>
             <Test>
             Public Sub TestAppendList()
                 Dim TargetEnum As New List(Of String) From {"Welcome", "to"}
                 TargetEnum = TargetEnum.Append("Extensification").ToList
                 Assert.IsTrue(TargetEnum.Contains("Extensification"))
             End Sub
-            ''' <summary>
-            ''' Tests appending a value to the end of a string
-            ''' </summary>
+
+            /// <summary>
+            /// Tests appending a value to the end of a string
+            /// </summary>
             <Test>
             Public Sub TestAppendString()
                 Dim TargetString As String = "Welcom"
@@ -56,8 +57,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests stringifying a char enumerable
-    /// </summary>
+        /// Tests stringifying a char enumerable
+        /// </summary>
         [Test]
         public void TestStringify()
         {

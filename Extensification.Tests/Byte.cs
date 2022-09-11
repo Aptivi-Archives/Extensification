@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests byte incrementation
-    /// </summary>
+        /// Tests byte incrementation
+        /// </summary>
         [Test]
         public void TestIncrement()
         {
@@ -42,8 +42,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte incrementation
-    /// </summary>
+        /// Tests signed byte incrementation
+        /// </summary>
         [Test]
         public void TestIncrementSigned()
         {
@@ -54,8 +54,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte decrementation
-    /// </summary>
+        /// Tests byte decrementation
+        /// </summary>
         [Test]
         public void TestDecrement()
         {
@@ -66,8 +66,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte decrementation
-    /// </summary>
+        /// Tests signed byte decrementation
+        /// </summary>
         [Test]
         public void TestDecrementSigned()
         {
@@ -78,8 +78,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap
-    /// </summary>
+        /// Tests byte swap
+        /// </summary>
         [Test]
         public void TestSwap()
         {
@@ -93,8 +93,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte swap
-    /// </summary>
+        /// Tests signed byte swap
+        /// </summary>
         [Test]
         public void TestSwapSigned()
         {
@@ -108,8 +108,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap if source is larger
-    /// </summary>
+        /// Tests byte swap if source is larger
+        /// </summary>
         [Test]
         public void TestSwapIfSourceLarger()
         {
@@ -123,8 +123,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte swap if source is larger
-    /// </summary>
+        /// Tests signed byte swap if source is larger
+        /// </summary>
         [Test]
         public void TestSwapIfSourceLargerSigned()
         {
@@ -138,8 +138,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte swap if target is larger
-    /// </summary>
+        /// Tests byte swap if target is larger
+        /// </summary>
         [Test]
         public void TestSwapIfTargetLarger()
         {
@@ -153,8 +153,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte swap if target is larger
-    /// </summary>
+        /// Tests signed byte swap if target is larger
+        /// </summary>
         [Test]
         public void TestSwapIfTargetLargerSigned()
         {
@@ -170,8 +170,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests byte digit listing
-    /// </summary>
+        /// Tests byte digit listing
+        /// </summary>
         [Test]
         public void TestListDigits()
         {
@@ -181,8 +181,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte digit listing
-    /// </summary>
+        /// Tests signed byte digit listing
+        /// </summary>
         [Test]
         public void TestListDigitsSigned()
         {
@@ -192,8 +192,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests byte Armstrong number detection
-    /// </summary>
+        /// Tests byte Armstrong number detection
+        /// </summary>
         [Test]
         public void TestIsArmstrong()
         {
@@ -202,8 +202,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests signed byte Armstrong number detection
-    /// </summary>
+        /// Tests signed byte Armstrong number detection
+        /// </summary>
         [Test]
         public void TestIsArmstrongSigned()
         {

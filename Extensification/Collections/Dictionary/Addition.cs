@@ -511,25 +511,25 @@ namespace Extensification.DictionaryExts
         /* TODO ERROR: Skipped IfDirectiveTrivia
         #If NET45 Then
         *//* TODO ERROR: Skipped DisabledTextTrivia
-                ''' <summary>
-                ''' Attempts to add the specified key and value to the dictionary
-                ''' </summary>
-                ''' <typeparam name="TKey">Key</typeparam>
-                ''' <typeparam name="TValue">Value</typeparam>
-                ''' <param name="Dict">Target dictionary</param>
-                ''' <param name="EntryKey">A key entry to be added</param>
-                ''' <param name="EntryValue">A value of entry</param>
-                ''' <returns>True if successful; False if unsuccessful</returns>
-                <Extension>
-                Public Function TryAdd(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), EntryKey As TKey, EntryValue As TValue) As Boolean
-                    If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
-                    Try
-                        Dict.Add(EntryKey, EntryValue)
-                        Return True
-                    Catch ex As Exception
-                        Return False
-                    End Try
-                End Function
+        /// <summary>
+        /// Attempts to add the specified key and value to the dictionary
+        /// </summary>
+        /// <typeparam name="TKey">Key</typeparam>
+        /// <typeparam name="TValue">Value</typeparam>
+        /// <param name="Dict">Target dictionary</param>
+        /// <param name="EntryKey">A key entry to be added</param>
+        /// <param name="EntryValue">A value of entry</param>
+        /// <returns>True if successful; False if unsuccessful</returns>
+        <Extension>
+        Public Function TryAdd(Of TKey, TValue)(Dict As Dictionary(Of TKey, TValue), EntryKey As TKey, EntryValue As TValue) As Boolean
+            If EntryKey Is Nothing Then Throw New ArgumentNullException(NameOf(EntryKey))
+            Try
+                Dict.Add(EntryKey, EntryValue)
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Function
         *//* TODO ERROR: Skipped EndIfDirectiveTrivia
         #End If
         */

@@ -39,7 +39,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.Write(Buffer, Offset, Count);
             }
-            catch 
+            catch
             {
                 Success = false;
             }
@@ -71,7 +71,7 @@ namespace Extensification.StreamExts
             {
                 TargetStream.WriteByte(Value);
             }
-            catch 
+            catch
             {
                 Success = false;
             }

@@ -32,8 +32,8 @@ namespace Extensification.Tests
 
         #region Addition
         /// <summary>
-    /// Tests adding an entry to dictionary if not found
-    /// </summary>
+        /// Tests adding an entry to dictionary if not found
+        /// </summary>
         [Test]
         public void TestAddIfNotFound()
         {
@@ -44,8 +44,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding or modifying an entry to dictionary
-    /// </summary>
+        /// Tests adding or modifying an entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrModify()
         {
@@ -56,8 +56,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding or renaming an entry to dictionary
-    /// </summary>
+        /// Tests adding or renaming an entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrRename()
         {
@@ -68,8 +68,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrement()
         {
@@ -80,8 +80,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementUInteger()
         {
@@ -92,8 +92,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementByte()
         {
@@ -104,8 +104,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementSByte()
         {
@@ -116,8 +116,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementDouble()
         {
@@ -128,8 +128,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementLong()
         {
@@ -140,8 +140,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementULong()
         {
@@ -152,8 +152,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementShort()
         {
@@ -164,8 +164,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementUShort()
         {
@@ -176,8 +176,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or incrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrIncrementSingle()
         {
@@ -188,8 +188,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrement()
         {
@@ -200,8 +200,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementUInteger()
         {
@@ -212,8 +212,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementByte()
         {
@@ -224,8 +224,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementSByte()
         {
@@ -236,8 +236,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementDouble()
         {
@@ -248,8 +248,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementLong()
         {
@@ -260,8 +260,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementULong()
         {
@@ -272,8 +272,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementShort()
         {
@@ -284,8 +284,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementUShort()
         {
@@ -296,8 +296,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
-    /// </summary>
+        /// Tests adding an entry or decrementing a value of an already-existing entry to dictionary
+        /// </summary>
         [Test]
         public void TestAddOrDecrementSingle()
         {
@@ -310,9 +310,9 @@ namespace Extensification.Tests
         /* TODO ERROR: Skipped IfDirectiveTrivia
         #If NET45 Then
         *//* TODO ERROR: Skipped DisabledTextTrivia
-            ''' <summary>
-            ''' Tests trying to add an entry to dictionary
-            ''' </summary>
+            /// <summary>
+            /// Tests trying to add an entry to dictionary
+            /// </summary>
             <Test>
             Public Sub TestTryAdd()
                 Dim TargetDict As New Dictionary(Of String, Integer)
@@ -326,8 +326,8 @@ namespace Extensification.Tests
 
         #region Counts
         /// <summary>
-    /// Tests counting full entries
-    /// </summary>
+        /// Tests counting full entries
+        /// </summary>
         [Test]
         public void TestCountFullEntries()
         {
@@ -338,8 +338,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests counting empty entries
-    /// </summary>
+        /// Tests counting empty entries
+        /// </summary>
         [Test]
         public void TestCountEmptyEntries()
         {
@@ -352,8 +352,8 @@ namespace Extensification.Tests
 
         #region Getting
         /// <summary>
-    /// Tests getting key from value
-    /// </summary>
+        /// Tests getting key from value
+        /// </summary>
         [Test]
         public void TestGetKeyFromValue()
         {
@@ -364,8 +364,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting index of a key in dictionary that has keys of type <see cref="String"/>
-    /// </summary>
+        /// Tests getting index of a key in dictionary that has keys of type <see cref="String"/>
+        /// </summary>
         [Test]
         public void TestGetIndexOfKey()
         {
@@ -376,8 +376,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting index of a value in dictionary that has keys of type <see cref="String"/>
-    /// </summary>
+        /// Tests getting index of a value in dictionary that has keys of type <see cref="String"/>
+        /// </summary>
         [Test]
         public void TestGetIndexOfValue()
         {
@@ -388,8 +388,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting index of a key in dictionary that has keys of a type that can't be compared using the "=" operator.
-    /// </summary>
+        /// Tests getting index of a key in dictionary that has keys of a type that can't be compared using the "=" operator.
+        /// </summary>
         [Test]
         public void TestGetIndexOfKeyNonString()
         {
@@ -400,8 +400,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting indexes of full entries
-    /// </summary>
+        /// Tests getting indexes of full entries
+        /// </summary>
         [Test]
         public void TestGetIndexesOfFullEntries()
         {
@@ -416,8 +416,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests getting indexes of empty entries
-    /// </summary>
+        /// Tests getting indexes of empty entries
+        /// </summary>
         [Test]
         public void TestGetIndexesOfEmptyEntries()
         {
@@ -434,8 +434,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumber()
         {
@@ -446,8 +446,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumber()
         {
@@ -458,8 +458,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberUInteger()
         {
@@ -470,8 +470,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberUInteger()
         {
@@ -482,8 +482,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberShort()
         {
@@ -494,8 +494,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberShort()
         {
@@ -506,8 +506,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberUShort()
         {
@@ -518,8 +518,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberUShort()
         {
@@ -530,8 +530,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberLong()
         {
@@ -542,8 +542,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberLong()
         {
@@ -554,8 +554,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberULong()
         {
@@ -566,8 +566,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberULong()
         {
@@ -578,8 +578,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberByte()
         {
@@ -590,8 +590,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberByte()
         {
@@ -602,8 +602,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberSByte()
         {
@@ -614,8 +614,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberSByte()
         {
@@ -626,8 +626,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberSingle()
         {
@@ -638,8 +638,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberSingle()
         {
@@ -650,8 +650,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests incrementing a number
-    /// </summary>
+        /// Tests incrementing a number
+        /// </summary>
         [Test]
         public void TestIncrementNumberDouble()
         {
@@ -662,8 +662,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests decrementing a number
-    /// </summary>
+        /// Tests decrementing a number
+        /// </summary>
         [Test]
         public void TestDecrementNumberDouble()
         {
@@ -674,8 +674,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests renaming key
-    /// </summary>
+        /// Tests renaming key
+        /// </summary>
         [Test]
         public void TestRenameKey()
         {
@@ -687,8 +687,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests seeing if the dictionary contains any of the specified clauses
-    /// </summary>
+        /// Tests seeing if the dictionary contains any of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAnyOfInKeys()
         {
@@ -698,8 +698,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests seeing if the dictionary contains all of the specified clauses
-    /// </summary>
+        /// Tests seeing if the dictionary contains all of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAllOfInKeys()
         {
@@ -709,8 +709,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests seeing if the dictionary contains any of the specified clauses
-    /// </summary>
+        /// Tests seeing if the dictionary contains any of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAnyOfInValues()
         {
@@ -720,8 +720,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests seeing if the dictionary contains all of the specified clauses
-    /// </summary>
+        /// Tests seeing if the dictionary contains all of the specified clauses
+        /// </summary>
         [Test]
         public void TestContainsAllOfInValues()
         {

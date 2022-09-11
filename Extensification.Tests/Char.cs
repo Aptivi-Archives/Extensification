@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests character incrementation
-    /// </summary>
+        /// Tests character incrementation
+        /// </summary>
         [Test]
         public void TestIncrement()
         {
@@ -41,8 +41,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests character decrementation
-    /// </summary>
+        /// Tests character decrementation
+        /// </summary>
         [Test]
         public void TestDecrement()
         {
@@ -54,8 +54,8 @@ namespace Extensification.Tests
 
         #region Querying
         /// <summary>
-    /// Tests character ASCII code fetching
-    /// </summary>
+        /// Tests character ASCII code fetching
+        /// </summary>
         [Test]
         public void TestGetAsciiCode()
         {
@@ -64,8 +64,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting character to console key info
-    /// </summary>
+        /// Tests converting character to console key info
+        /// </summary>
         [Test]
         public void TestToConsoleKeyInfo()
         {
@@ -75,8 +75,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests converting character to console key info with custom handler
-    /// </summary>
+        /// Tests converting character to console key info with custom handler
+        /// </summary>
         [Test]
         public void TestToConsoleKeyInfoWithCustomHandler()
         {

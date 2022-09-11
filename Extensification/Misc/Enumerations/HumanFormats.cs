@@ -21,33 +21,33 @@ namespace Extensification
 {
 
     /// <summary>
-/// Human-readable formats
-/// </summary>
+    /// Human-readable formats
+    /// </summary>
     public enum HumanFormats
     {
         /// <summary>
-    /// Computer data size (KB, MB, GB, TB, PB, EB, ...)
-    /// </summary>
+        /// Computer data size (KB, MB, GB, TB, PB, EB, ...)
+        /// </summary>
         DataSize,
         /// <summary>
-    /// Body measurements in metric units (mm, cm, m, km, ...)
-    /// </summary>
+        /// Body measurements in metric units (mm, cm, m, km, ...)
+        /// </summary>
         MeasurementsMetric,
         /// <summary>
-    /// Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Decameters), hm (Hectameters), km, ...)
-    /// </summary>
+        /// Body measurements in metric units (mm, cm, dm (Decimeters), m, dcm (Decameters), hm (Hectameters), km, ...)
+        /// </summary>
         MeasurementsMetricUnusual,
         /// <summary>
-    /// Body measurements in imperial units (feet, yards, miles, ...)
-    /// </summary>
+        /// Body measurements in imperial units (feet, yards, miles, ...)
+        /// </summary>
         MeasurementsImperial,
         /// <summary>
-    /// Body volume in metric units (mL, L, kL (Kiloliters))
-    /// </summary>
+        /// Body volume in metric units (mL, L, kL (Kiloliters))
+        /// </summary>
         VolumeMetric,
         /// <summary>
-    /// Body volume in imperial units (pints, quarts, gallons, ...)
-    /// </summary>
+        /// Body volume in imperial units (pints, quarts, gallons, ...)
+        /// </summary>
         VolumeImperial
     }
 }

@@ -30,8 +30,8 @@ namespace Extensification.Tests
 
         #region Manipulation
         /// <summary>
-    /// Tests trying to seek in a stream
-    /// </summary>
+        /// Tests trying to seek in a stream
+        /// </summary>
         [Test]
         public void TestTrySeek()
         {
@@ -42,8 +42,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests trying to seek in a stream
-    /// </summary>
+        /// Tests trying to seek in a stream
+        /// </summary>
         [Test]
         public void TestTrySetLength()
         {
@@ -53,8 +53,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests trying to flush a stream
-    /// </summary>
+        /// Tests trying to flush a stream
+        /// </summary>
         [Test]
         public void TestTryFlush()
         {
@@ -64,8 +64,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests trying to get buffer from a stream
-    /// </summary>
+        /// Tests trying to get buffer from a stream
+        /// </summary>
         [Test]
         public void TestTryGetBuffer()
         {
@@ -79,8 +79,8 @@ namespace Extensification.Tests
         #endregion
         #region Reading
         /// <summary>
-    /// Tests trying to read from a stream
-    /// </summary>
+        /// Tests trying to read from a stream
+        /// </summary>
         [Test]
         public void TestTryRead()
         {
@@ -91,8 +91,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests reading and seeking
-    /// </summary>
+        /// Tests reading and seeking
+        /// </summary>
         [Test]
         public void TestReadAndSeek()
         {
@@ -104,8 +104,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests trying to read a byte from a stream
-    /// </summary>
+        /// Tests trying to read a byte from a stream
+        /// </summary>
         [Test]
         public void TestTryReadByte()
         {
@@ -117,8 +117,8 @@ namespace Extensification.Tests
         #endregion
         #region Writing
         /// <summary>
-    /// Tests trying to write to a stream
-    /// </summary>
+        /// Tests trying to write to a stream
+        /// </summary>
         [Test]
         public void TestTryWrite()
         {
@@ -130,8 +130,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests writing and seeking
-    /// </summary>
+        /// Tests writing and seeking
+        /// </summary>
         [Test]
         public void TestWriteAndSeek()
         {
@@ -143,8 +143,8 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-    /// Tests trying to write a byte to a stream
-    /// </summary>
+        /// Tests trying to write a byte to a stream
+        /// </summary>
         [Test]
         public void TestTryWriteByte()
         {
