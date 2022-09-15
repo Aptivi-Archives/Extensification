@@ -228,5 +228,87 @@ namespace Extensification.StringExts
             return ReleasedString;
         }
 
+        /// <summary>
+        /// Makes the first character of the string uppercase
+        /// </summary>
+        /// <param name="Str">The target string</param>
+        /// <returns>A string that has its first character being made uppercase</returns>
+        public static string UpperFirst(this string Str)
+        {
+            char[] chars = Str.ToCharArray();
+            chars[0] = char.ToUpper(chars[0]);
+            return string.Join("", chars);
+        }
+
+        /// <summary>
+        /// Makes the first character of the string lowercase
+        /// </summary>
+        /// <param name="Str">The target string</param>
+        /// <returns>A string that has its first character being made lowercase</returns>
+        public static string LowerFirst(this string Str)
+        {
+            char[] chars = Str.ToCharArray();
+            chars[0] = char.ToLower(chars[0]);
+            return string.Join("", chars);
+        }
+
+        /// <summary>
+        /// Makes the string have the title case
+        /// </summary>
+        /// <param name="Str">String to be titled</param>
+        /// <returns>The titled string</returns>
+        public static string ToTitleCase(this string Str)
+        {
+            // TODO: Add more exclusions
+            string[] exclusions = new[] { "of", "the", "a", "an", "in", "on", "to", "from" };
+
+            // Split the string to words and make them the titlecase
+            string[] words = Str.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                string word = words[i];
+
+                // If the word isn't in the exclusions list, uppercase the first character
+                if (!exclusions.Contains(word))
+                    words[i] = word.UpperFirst();
+            }
+
+            // Form a final string
+            return string.Join(" ", words);
+        }
+
+        /// <summary>
+        /// Makes the string have the MoCk CaSE
+        /// </summary>
+        /// <param name="Str">String to be MoCKeD</param>
+        /// <returns>The mOcKEd string</returns>
+        public static string ToMockCase(this string Str) => ToMockCase(Str, 25);
+
+        /// <summary>
+        /// Makes the string have the MoCk CaSE
+        /// </summary>
+        /// <param name="Str">String to be MoCKeD</param>
+        /// <param name="mockProbability">Mock probability in percent (0-100)</param>
+        /// <returns>The mOcKEd string</returns>
+        public static string ToMockCase(this string Str, int mockProbability)
+        {
+            // Split the characters and process them
+            char[] chars = Str.ToCharArray();
+            Random randomDriver = new();
+            for (int i = 0; i < chars.Length; i++)
+            {
+                // Select whether to mock or not randomly
+                double Probability = (mockProbability > 100 ? 25 : mockProbability) / 100d;
+                bool MockGuaranteed = randomDriver.NextDouble() < Probability;
+
+                // If mocking, uppercase the character
+                if (MockGuaranteed)
+                    chars[i] = char.ToUpper(chars[i]);
+            }
+
+            // Form a final string
+            return string.Join("", chars);
+        }
+
     }
 }

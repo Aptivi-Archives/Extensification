@@ -258,6 +258,47 @@ namespace Extensification.Tests
             string TargetString = "\"Hi!\"";
             Assert.AreEqual("Hi!", TargetString.ReleaseDoubleQuotes());
         }
+
+        /// <summary>
+        /// Tests making the first character of the string uppercase
+        /// </summary>
+        [Test]
+        public void TestUpperFirst()
+        {
+            string TargetString = "hello";
+            Assert.AreEqual("Hello", TargetString.UpperFirst());
+        }
+
+        /// <summary>
+        /// Tests making the first character of the string lowercase
+        /// </summary>
+        [Test]
+        public void TestLowerFirst()
+        {
+            string TargetString = "Hello";
+            Assert.AreEqual("hello", TargetString.LowerFirst());
+        }
+
+        /// <summary>
+        /// Tests making the string have the title case
+        /// </summary>
+        [Test]
+        public void TestToTitleCase()
+        {
+            string TargetString = "Reconnecting your network to the work connection...";
+            Assert.AreEqual("Reconnecting Your Network to the Work Connection...", TargetString.ToTitleCase());
+        }
+
+        /// <summary>
+        /// Tests making the string have the mock case
+        /// </summary>
+        [Test]
+        public void TestToMockCase()
+        {
+            string TargetString = "Reconnecting your network";
+            TargetString = TargetString.ToMockCase();
+            Assert.IsTrue(TargetString.Where((ch) => char.IsUpper(ch)).Count() > 1);
+        }
         #endregion
 
         #region Querying
