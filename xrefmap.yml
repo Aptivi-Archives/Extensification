@@ -2877,6 +2877,19 @@ references:
   isSpec: "True"
   fullName: Extensification.StringExts.Manipulation.FormatString
   nameWithType: Manipulation.FormatString
+- uid: Extensification.StringExts.Manipulation.LowerFirst(System.String)
+  name: LowerFirst(String)
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_LowerFirst_System_String_
+  commentId: M:Extensification.StringExts.Manipulation.LowerFirst(System.String)
+  fullName: Extensification.StringExts.Manipulation.LowerFirst(System.String)
+  nameWithType: Manipulation.LowerFirst(String)
+- uid: Extensification.StringExts.Manipulation.LowerFirst*
+  name: LowerFirst
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_LowerFirst_
+  commentId: Overload:Extensification.StringExts.Manipulation.LowerFirst
+  isSpec: "True"
+  fullName: Extensification.StringExts.Manipulation.LowerFirst
+  nameWithType: Manipulation.LowerFirst
 - uid: Extensification.StringExts.Manipulation.ReleaseDoubleQuotes(System.String)
   name: ReleaseDoubleQuotes(String)
   href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_ReleaseDoubleQuotes_System_String_
@@ -2987,6 +3000,38 @@ references:
   isSpec: "True"
   fullName: Extensification.StringExts.Manipulation.Substring
   nameWithType: Manipulation.Substring
+- uid: Extensification.StringExts.Manipulation.ToMockCase(System.String)
+  name: ToMockCase(String)
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_ToMockCase_System_String_
+  commentId: M:Extensification.StringExts.Manipulation.ToMockCase(System.String)
+  fullName: Extensification.StringExts.Manipulation.ToMockCase(System.String)
+  nameWithType: Manipulation.ToMockCase(String)
+- uid: Extensification.StringExts.Manipulation.ToMockCase(System.String,System.Int32)
+  name: ToMockCase(String, Int32)
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_ToMockCase_System_String_System_Int32_
+  commentId: M:Extensification.StringExts.Manipulation.ToMockCase(System.String,System.Int32)
+  fullName: Extensification.StringExts.Manipulation.ToMockCase(System.String, System.Int32)
+  nameWithType: Manipulation.ToMockCase(String, Int32)
+- uid: Extensification.StringExts.Manipulation.ToMockCase*
+  name: ToMockCase
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_ToMockCase_
+  commentId: Overload:Extensification.StringExts.Manipulation.ToMockCase
+  isSpec: "True"
+  fullName: Extensification.StringExts.Manipulation.ToMockCase
+  nameWithType: Manipulation.ToMockCase
+- uid: Extensification.StringExts.Manipulation.ToTitleCase(System.String)
+  name: ToTitleCase(String)
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_ToTitleCase_System_String_
+  commentId: M:Extensification.StringExts.Manipulation.ToTitleCase(System.String)
+  fullName: Extensification.StringExts.Manipulation.ToTitleCase(System.String)
+  nameWithType: Manipulation.ToTitleCase(String)
+- uid: Extensification.StringExts.Manipulation.ToTitleCase*
+  name: ToTitleCase
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_ToTitleCase_
+  commentId: Overload:Extensification.StringExts.Manipulation.ToTitleCase
+  isSpec: "True"
+  fullName: Extensification.StringExts.Manipulation.ToTitleCase
+  nameWithType: Manipulation.ToTitleCase
 - uid: Extensification.StringExts.Manipulation.Truncate(System.String,System.Int32)
   name: Truncate(String, Int32)
   href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_Truncate_System_String_System_Int32_
@@ -3000,6 +3045,19 @@ references:
   isSpec: "True"
   fullName: Extensification.StringExts.Manipulation.Truncate
   nameWithType: Manipulation.Truncate
+- uid: Extensification.StringExts.Manipulation.UpperFirst(System.String)
+  name: UpperFirst(String)
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_UpperFirst_System_String_
+  commentId: M:Extensification.StringExts.Manipulation.UpperFirst(System.String)
+  fullName: Extensification.StringExts.Manipulation.UpperFirst(System.String)
+  nameWithType: Manipulation.UpperFirst(String)
+- uid: Extensification.StringExts.Manipulation.UpperFirst*
+  name: UpperFirst
+  href: api/Extensification.StringExts.Manipulation.html#Extensification_StringExts_Manipulation_UpperFirst_
+  commentId: Overload:Extensification.StringExts.Manipulation.UpperFirst
+  isSpec: "True"
+  fullName: Extensification.StringExts.Manipulation.UpperFirst
+  nameWithType: Manipulation.UpperFirst
 - uid: Extensification.StringExts.Querying
   name: Querying
   href: api/Extensification.StringExts.Querying.html
