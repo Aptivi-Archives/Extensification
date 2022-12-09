@@ -253,7 +253,7 @@ namespace Extensification.StringExts
         /// <returns></returns>
         public static string[] SplitNewLines(this string Str)
         {
-            return Str.Replace(Convert.ToChar(13), default).Split(Convert.ToChar(10));
+            return Str.Replace(Convert.ToChar(13).ToString(), "").Split(Convert.ToChar(10));
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace Extensification.StringExts
         /// <returns></returns>
         public static string[] SplitNewLinesCr(this string Str)
         {
-            return Str.Replace(Convert.ToChar(10), default).Split(Convert.ToChar(13));
+            return Str.Replace(Convert.ToChar(10).ToString(), "").Split(Convert.ToChar(13));
         }
 
         /// <summary>
