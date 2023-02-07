@@ -2,10 +2,8 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification.Legacy.Tests</RootNamespace>
-    <TargetFrameworks>netcoreapp3.1;net48;net6.0</TargetFrameworks>
-
+    <TargetFrameworks>net48</TargetFrameworks>
     <IsPackable>false</IsPackable>
-    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <OutputPath>../Extensification.Bin.Tests/</OutputPath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>

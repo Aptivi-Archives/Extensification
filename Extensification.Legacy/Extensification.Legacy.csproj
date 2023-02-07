@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification.Legacy</RootNamespace>
-    <TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net48</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <IncludeSymbols>True</IncludeSymbols>
 	  <PackageOutputPath>../Extensification.Bin</PackageOutputPath>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2022.0</Version>
-    <PackageVersion>2022.0.0.0</PackageVersion>
+    <Version>2022.0.0.1</Version>
+    <PackageVersion>2022.0.0.1</PackageVersion>
     <Authors>Aptivi</Authors>
     <Company>Aptivi</Company>
     <Product>Extensification</Product>
@@ -23,7 +23,6 @@ This package is for extensions that use the Microsoft.VisualBasic namespace.</De
     <RepositoryUrl>https://github.com/Aptivi/Extensification</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>extensions, extension methods</PackageTags>
-    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <OutputPath>../Extensification.Bin/</OutputPath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>

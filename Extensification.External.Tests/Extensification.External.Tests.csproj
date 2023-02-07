@@ -2,19 +2,10 @@
 
   <PropertyGroup>
     <RootNamespace>Extensification.External.Tests</RootNamespace>
-    <TargetFrameworks>netcoreapp3.1;net48;net6.0</TargetFrameworks>
-
+    <TargetFrameworks>net48;net6.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
-    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <OutputPath>../Extensification.Bin.Tests/</OutputPath>
     <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>../Extensification.Bin.Tests/</OutputPath>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>../Extensification.Bin.Tests/</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
