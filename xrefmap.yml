@@ -259,11 +259,11 @@ references:
   commentId: T:Extensification.ArrayListExts.Conversion
   fullName: Extensification.ArrayListExts.Conversion
   nameWithType: Conversion
-- uid: Extensification.ArrayListExts.Conversion.ToList(System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Conversion.ToList(ArrayList)
   name: ToList(ArrayList)
-  href: api/Extensification.ArrayListExts.Conversion.html#Extensification_ArrayListExts_Conversion_ToList_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Conversion.ToList(System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Conversion.ToList(System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Conversion.html#Extensification_ArrayListExts_Conversion_ToList_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Conversion.ToList(ArrayList)
+  fullName: Extensification.ArrayListExts.Conversion.ToList(ArrayList)
   nameWithType: Conversion.ToList(ArrayList)
 - uid: Extensification.ArrayListExts.Conversion.ToList*
   name: ToList
@@ -278,11 +278,11 @@ references:
   commentId: T:Extensification.ArrayListExts.Counts
   fullName: Extensification.ArrayListExts.Counts
   nameWithType: Counts
-- uid: Extensification.ArrayListExts.Counts.CountEmptyEntries(System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Counts.CountEmptyEntries(ArrayList)
   name: CountEmptyEntries(ArrayList)
-  href: api/Extensification.ArrayListExts.Counts.html#Extensification_ArrayListExts_Counts_CountEmptyEntries_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Counts.CountEmptyEntries(System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Counts.CountEmptyEntries(System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Counts.html#Extensification_ArrayListExts_Counts_CountEmptyEntries_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Counts.CountEmptyEntries(ArrayList)
+  fullName: Extensification.ArrayListExts.Counts.CountEmptyEntries(ArrayList)
   nameWithType: Counts.CountEmptyEntries(ArrayList)
 - uid: Extensification.ArrayListExts.Counts.CountEmptyEntries*
   name: CountEmptyEntries
@@ -291,11 +291,11 @@ references:
   isSpec: "True"
   fullName: Extensification.ArrayListExts.Counts.CountEmptyEntries
   nameWithType: Counts.CountEmptyEntries
-- uid: Extensification.ArrayListExts.Counts.CountFullEntries(System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Counts.CountFullEntries(ArrayList)
   name: CountFullEntries(ArrayList)
-  href: api/Extensification.ArrayListExts.Counts.html#Extensification_ArrayListExts_Counts_CountFullEntries_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Counts.CountFullEntries(System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Counts.CountFullEntries(System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Counts.html#Extensification_ArrayListExts_Counts_CountFullEntries_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Counts.CountFullEntries(ArrayList)
+  fullName: Extensification.ArrayListExts.Counts.CountFullEntries(ArrayList)
   nameWithType: Counts.CountFullEntries(ArrayList)
 - uid: Extensification.ArrayListExts.Counts.CountFullEntries*
   name: CountFullEntries
@@ -310,11 +310,11 @@ references:
   commentId: T:Extensification.ArrayListExts.Getting
   fullName: Extensification.ArrayListExts.Getting
   nameWithType: Getting
-- uid: Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(ArrayList)
   name: GetIndexesOfEmptyEntries(ArrayList)
-  href: api/Extensification.ArrayListExts.Getting.html#Extensification_ArrayListExts_Getting_GetIndexesOfEmptyEntries_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Getting.html#Extensification_ArrayListExts_Getting_GetIndexesOfEmptyEntries_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(ArrayList)
+  fullName: Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries(ArrayList)
   nameWithType: Getting.GetIndexesOfEmptyEntries(ArrayList)
 - uid: Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries*
   name: GetIndexesOfEmptyEntries
@@ -323,11 +323,11 @@ references:
   isSpec: "True"
   fullName: Extensification.ArrayListExts.Getting.GetIndexesOfEmptyEntries
   nameWithType: Getting.GetIndexesOfEmptyEntries
-- uid: Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(ArrayList)
   name: GetIndexesOfFullEntries(ArrayList)
-  href: api/Extensification.ArrayListExts.Getting.html#Extensification_ArrayListExts_Getting_GetIndexesOfFullEntries_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Getting.html#Extensification_ArrayListExts_Getting_GetIndexesOfFullEntries_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(ArrayList)
+  fullName: Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries(ArrayList)
   nameWithType: Getting.GetIndexesOfFullEntries(ArrayList)
 - uid: Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries*
   name: GetIndexesOfFullEntries
@@ -336,11 +336,11 @@ references:
   isSpec: "True"
   fullName: Extensification.ArrayListExts.Getting.GetIndexesOfFullEntries
   nameWithType: Getting.GetIndexesOfFullEntries
-- uid: Extensification.ArrayListExts.Getting.GetIndexOfEntry(System.Collections.ArrayList,System.Object)
+- uid: Extensification.ArrayListExts.Getting.GetIndexOfEntry(ArrayList,System.Object)
   name: GetIndexOfEntry(ArrayList, Object)
-  href: api/Extensification.ArrayListExts.Getting.html#Extensification_ArrayListExts_Getting_GetIndexOfEntry_System_Collections_ArrayList_System_Object_
-  commentId: M:Extensification.ArrayListExts.Getting.GetIndexOfEntry(System.Collections.ArrayList,System.Object)
-  fullName: Extensification.ArrayListExts.Getting.GetIndexOfEntry(System.Collections.ArrayList, System.Object)
+  href: api/Extensification.ArrayListExts.Getting.html#Extensification_ArrayListExts_Getting_GetIndexOfEntry_ArrayList_System_Object_
+  commentId: M:Extensification.ArrayListExts.Getting.GetIndexOfEntry(ArrayList,System.Object)
+  fullName: Extensification.ArrayListExts.Getting.GetIndexOfEntry(ArrayList, System.Object)
   nameWithType: Getting.GetIndexOfEntry(ArrayList, Object)
 - uid: Extensification.ArrayListExts.Getting.GetIndexOfEntry*
   name: GetIndexOfEntry
@@ -355,11 +355,11 @@ references:
   commentId: T:Extensification.ArrayListExts.Querying
   fullName: Extensification.ArrayListExts.Querying
   nameWithType: Querying
-- uid: Extensification.ArrayListExts.Querying.ContainsAllOf(System.Collections.ArrayList,System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Querying.ContainsAllOf(ArrayList,ArrayList)
   name: ContainsAllOf(ArrayList, ArrayList)
-  href: api/Extensification.ArrayListExts.Querying.html#Extensification_ArrayListExts_Querying_ContainsAllOf_System_Collections_ArrayList_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Querying.ContainsAllOf(System.Collections.ArrayList,System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Querying.ContainsAllOf(System.Collections.ArrayList, System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Querying.html#Extensification_ArrayListExts_Querying_ContainsAllOf_ArrayList_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Querying.ContainsAllOf(ArrayList,ArrayList)
+  fullName: Extensification.ArrayListExts.Querying.ContainsAllOf(ArrayList, ArrayList)
   nameWithType: Querying.ContainsAllOf(ArrayList, ArrayList)
 - uid: Extensification.ArrayListExts.Querying.ContainsAllOf*
   name: ContainsAllOf
@@ -368,11 +368,11 @@ references:
   isSpec: "True"
   fullName: Extensification.ArrayListExts.Querying.ContainsAllOf
   nameWithType: Querying.ContainsAllOf
-- uid: Extensification.ArrayListExts.Querying.ContainsAnyOf(System.Collections.ArrayList,System.Collections.ArrayList)
+- uid: Extensification.ArrayListExts.Querying.ContainsAnyOf(ArrayList,ArrayList)
   name: ContainsAnyOf(ArrayList, ArrayList)
-  href: api/Extensification.ArrayListExts.Querying.html#Extensification_ArrayListExts_Querying_ContainsAnyOf_System_Collections_ArrayList_System_Collections_ArrayList_
-  commentId: M:Extensification.ArrayListExts.Querying.ContainsAnyOf(System.Collections.ArrayList,System.Collections.ArrayList)
-  fullName: Extensification.ArrayListExts.Querying.ContainsAnyOf(System.Collections.ArrayList, System.Collections.ArrayList)
+  href: api/Extensification.ArrayListExts.Querying.html#Extensification_ArrayListExts_Querying_ContainsAnyOf_ArrayList_ArrayList_
+  commentId: M:Extensification.ArrayListExts.Querying.ContainsAnyOf(ArrayList,ArrayList)
+  fullName: Extensification.ArrayListExts.Querying.ContainsAnyOf(ArrayList, ArrayList)
   nameWithType: Querying.ContainsAnyOf(ArrayList, ArrayList)
 - uid: Extensification.ArrayListExts.Querying.ContainsAnyOf*
   name: ContainsAnyOf
@@ -387,11 +387,11 @@ references:
   commentId: T:Extensification.ArrayListExts.Removal
   fullName: Extensification.ArrayListExts.Removal
   nameWithType: Removal
-- uid: Extensification.ArrayListExts.Removal.TryRemove(System.Collections.ArrayList,System.Object)
+- uid: Extensification.ArrayListExts.Removal.TryRemove(ArrayList,System.Object)
   name: TryRemove(ArrayList, Object)
-  href: api/Extensification.ArrayListExts.Removal.html#Extensification_ArrayListExts_Removal_TryRemove_System_Collections_ArrayList_System_Object_
-  commentId: M:Extensification.ArrayListExts.Removal.TryRemove(System.Collections.ArrayList,System.Object)
-  fullName: Extensification.ArrayListExts.Removal.TryRemove(System.Collections.ArrayList, System.Object)
+  href: api/Extensification.ArrayListExts.Removal.html#Extensification_ArrayListExts_Removal_TryRemove_ArrayList_System_Object_
+  commentId: M:Extensification.ArrayListExts.Removal.TryRemove(ArrayList,System.Object)
+  fullName: Extensification.ArrayListExts.Removal.TryRemove(ArrayList, System.Object)
   nameWithType: Removal.TryRemove(ArrayList, Object)
 - uid: Extensification.ArrayListExts.Removal.TryRemove*
   name: TryRemove
@@ -632,13 +632,13 @@ references:
   commentId: M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char)
   fullName: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char)
   nameWithType: Querying.ToConsoleKeyInfo(Char)
-- uid: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,System.Collections.Generic.Dictionary{System.Char,System.Tuple{System.ConsoleKey,System.ConsoleModifiers}})
+- uid: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,Dictionary{System.Char,Tuple{ConsoleKey,ConsoleModifiers}})
   name: ToConsoleKeyInfo(Char, Dictionary<Char, Tuple<ConsoleKey, ConsoleModifiers>>)
-  href: api/Extensification.CharExts.Querying.html#Extensification_CharExts_Querying_ToConsoleKeyInfo_System_Char_System_Collections_Generic_Dictionary_System_Char_System_Tuple_System_ConsoleKey_System_ConsoleModifiers___
-  commentId: M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,System.Collections.Generic.Dictionary{System.Char,System.Tuple{System.ConsoleKey,System.ConsoleModifiers}})
+  href: api/Extensification.CharExts.Querying.html#Extensification_CharExts_Querying_ToConsoleKeyInfo_System_Char_Dictionary_System_Char_Tuple_ConsoleKey_ConsoleModifiers___
+  commentId: M:Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char,Dictionary{System.Char,Tuple{ConsoleKey,ConsoleModifiers}})
   name.vb: ToConsoleKeyInfo(Char, Dictionary(Of Char, Tuple(Of ConsoleKey, ConsoleModifiers)))
-  fullName: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char, System.Collections.Generic.Dictionary<System.Char, System.Tuple<System.ConsoleKey, System.ConsoleModifiers>>)
-  fullName.vb: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char, System.Collections.Generic.Dictionary(Of System.Char, System.Tuple(Of System.ConsoleKey, System.ConsoleModifiers)))
+  fullName: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char, Dictionary<System.Char, Tuple<ConsoleKey, ConsoleModifiers>>)
+  fullName.vb: Extensification.CharExts.Querying.ToConsoleKeyInfo(System.Char, Dictionary(Of System.Char, Tuple(Of ConsoleKey, ConsoleModifiers)))
   nameWithType: Querying.ToConsoleKeyInfo(Char, Dictionary<Char, Tuple<ConsoleKey, ConsoleModifiers>>)
   nameWithType.vb: Querying.ToConsoleKeyInfo(Char, Dictionary(Of Char, Tuple(Of ConsoleKey, ConsoleModifiers)))
 - uid: Extensification.CharExts.Querying.ToConsoleKeyInfo*
@@ -667,13 +667,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Addition.AddIfNotFound
   nameWithType: Addition.AddIfNotFound
-- uid: Extensification.DictionaryExts.Addition.AddIfNotFound``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)
+- uid: Extensification.DictionaryExts.Addition.AddIfNotFound``2(Dictionary{``0,``1},``0,``1)
   name: AddIfNotFound<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddIfNotFound__2_System_Collections_Generic_Dictionary___0___1____0___1_
-  commentId: M:Extensification.DictionaryExts.Addition.AddIfNotFound``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddIfNotFound__2_Dictionary___0___1____0___1_
+  commentId: M:Extensification.DictionaryExts.Addition.AddIfNotFound``2(Dictionary{``0,``1},``0,``1)
   name.vb: AddIfNotFound(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
-  fullName: Extensification.DictionaryExts.Addition.AddIfNotFound<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey, TValue)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddIfNotFound(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey, TValue)
+  fullName: Extensification.DictionaryExts.Addition.AddIfNotFound<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddIfNotFound(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
   nameWithType: Addition.AddIfNotFound<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
   nameWithType.vb: Addition.AddIfNotFound(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
 - uid: Extensification.DictionaryExts.Addition.AddOrDecrement*
@@ -683,94 +683,94 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Addition.AddOrDecrement
   nameWithType: Addition.AddOrDecrement
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0,System.Byte)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Byte},``0,System.Byte)
   name: AddOrDecrement<TKey>(Dictionary<TKey, Byte>, TKey, Byte)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_Byte____0_System_Byte_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0,System.Byte)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_Byte____0_System_Byte_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Byte},``0,System.Byte)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, Byte), TKey, Byte)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Byte>, TKey, System.Byte)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Byte), TKey, System.Byte)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.Byte>, TKey, System.Byte)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.Byte), TKey, System.Byte)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, Byte>, TKey, Byte)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, Byte), TKey, Byte)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Double},``0,System.Double)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Double},``0,System.Double)
   name: AddOrDecrement<TKey>(Dictionary<TKey, Double>, TKey, Double)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_Double____0_System_Double_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Double},``0,System.Double)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_Double____0_System_Double_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Double},``0,System.Double)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, Double), TKey, Double)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Double>, TKey, System.Double)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Double), TKey, System.Double)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.Double>, TKey, System.Double)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.Double), TKey, System.Double)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, Double>, TKey, Double)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, Double), TKey, Double)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0,System.Int16)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Int16},``0,System.Int16)
   name: AddOrDecrement<TKey>(Dictionary<TKey, Int16>, TKey, Int16)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_Int16____0_System_Int16_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0,System.Int16)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_Int16____0_System_Int16_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Int16},``0,System.Int16)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, Int16), TKey, Int16)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int16>, TKey, System.Int16)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int16), TKey, System.Int16)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.Int16>, TKey, System.Int16)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.Int16), TKey, System.Int16)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, Int16>, TKey, Int16)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, Int16), TKey, Int16)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0,System.Int32)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Int32},``0,System.Int32)
   name: AddOrDecrement<TKey>(Dictionary<TKey, Int32>, TKey, Int32)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_Int32____0_System_Int32_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0,System.Int32)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_Int32____0_System_Int32_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Int32},``0,System.Int32)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, Int32), TKey, Int32)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int32>, TKey, System.Int32)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int32), TKey, System.Int32)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.Int32>, TKey, System.Int32)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.Int32), TKey, System.Int32)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, Int32>, TKey, Int32)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, Int32), TKey, Int32)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0,System.Int64)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Int64},``0,System.Int64)
   name: AddOrDecrement<TKey>(Dictionary<TKey, Int64>, TKey, Int64)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_Int64____0_System_Int64_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0,System.Int64)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_Int64____0_System_Int64_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Int64},``0,System.Int64)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, Int64), TKey, Int64)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int64>, TKey, System.Int64)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int64), TKey, System.Int64)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.Int64>, TKey, System.Int64)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.Int64), TKey, System.Int64)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, Int64>, TKey, Int64)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, Int64), TKey, Int64)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0,System.SByte)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.SByte},``0,System.SByte)
   name: AddOrDecrement<TKey>(Dictionary<TKey, SByte>, TKey, SByte)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_SByte____0_System_SByte_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0,System.SByte)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_SByte____0_System_SByte_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.SByte},``0,System.SByte)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, SByte), TKey, SByte)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.SByte>, TKey, System.SByte)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.SByte), TKey, System.SByte)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.SByte>, TKey, System.SByte)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.SByte), TKey, System.SByte)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, SByte>, TKey, SByte)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, SByte), TKey, SByte)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Single},``0,System.Single)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Single},``0,System.Single)
   name: AddOrDecrement<TKey>(Dictionary<TKey, Single>, TKey, Single)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_Single____0_System_Single_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.Single},``0,System.Single)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_Single____0_System_Single_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.Single},``0,System.Single)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, Single), TKey, Single)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Single>, TKey, System.Single)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Single), TKey, System.Single)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.Single>, TKey, System.Single)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.Single), TKey, System.Single)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, Single>, TKey, Single)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, Single), TKey, Single)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0,System.UInt16)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.UInt16},``0,System.UInt16)
   name: AddOrDecrement<TKey>(Dictionary<TKey, UInt16>, TKey, UInt16)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_UInt16____0_System_UInt16_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0,System.UInt16)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_UInt16____0_System_UInt16_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.UInt16},``0,System.UInt16)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, UInt16), TKey, UInt16)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt16>, TKey, System.UInt16)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt16), TKey, System.UInt16)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.UInt16>, TKey, System.UInt16)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.UInt16), TKey, System.UInt16)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, UInt16>, TKey, UInt16)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, UInt16), TKey, UInt16)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0,System.UInt32)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.UInt32},``0,System.UInt32)
   name: AddOrDecrement<TKey>(Dictionary<TKey, UInt32>, TKey, UInt32)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_UInt32____0_System_UInt32_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0,System.UInt32)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_UInt32____0_System_UInt32_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.UInt32},``0,System.UInt32)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, UInt32), TKey, UInt32)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt32>, TKey, System.UInt32)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt32), TKey, System.UInt32)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.UInt32>, TKey, System.UInt32)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.UInt32), TKey, System.UInt32)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, UInt32>, TKey, UInt32)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, UInt32), TKey, UInt32)
-- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0,System.UInt64)
+- uid: Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.UInt64},``0,System.UInt64)
   name: AddOrDecrement<TKey>(Dictionary<TKey, UInt64>, TKey, UInt64)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_System_Collections_Generic_Dictionary___0_System_UInt64____0_System_UInt64_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0,System.UInt64)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrDecrement__1_Dictionary___0_System_UInt64____0_System_UInt64_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrDecrement``1(Dictionary{``0,System.UInt64},``0,System.UInt64)
   name.vb: AddOrDecrement(Of TKey)(Dictionary(Of TKey, UInt64), TKey, UInt64)
-  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt64>, TKey, System.UInt64)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt64), TKey, System.UInt64)
+  fullName: Extensification.DictionaryExts.Addition.AddOrDecrement<TKey>(Dictionary<TKey, System.UInt64>, TKey, System.UInt64)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, System.UInt64), TKey, System.UInt64)
   nameWithType: Addition.AddOrDecrement<TKey>(Dictionary<TKey, UInt64>, TKey, UInt64)
   nameWithType.vb: Addition.AddOrDecrement(Of TKey)(Dictionary(Of TKey, UInt64), TKey, UInt64)
 - uid: Extensification.DictionaryExts.Addition.AddOrIncrement*
@@ -780,94 +780,94 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Addition.AddOrIncrement
   nameWithType: Addition.AddOrIncrement
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0,System.Byte)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Byte},``0,System.Byte)
   name: AddOrIncrement<TKey>(Dictionary<TKey, Byte>, TKey, Byte)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_Byte____0_System_Byte_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0,System.Byte)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_Byte____0_System_Byte_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Byte},``0,System.Byte)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, Byte), TKey, Byte)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Byte>, TKey, System.Byte)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Byte), TKey, System.Byte)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.Byte>, TKey, System.Byte)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.Byte), TKey, System.Byte)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, Byte>, TKey, Byte)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, Byte), TKey, Byte)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Double},``0,System.Double)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Double},``0,System.Double)
   name: AddOrIncrement<TKey>(Dictionary<TKey, Double>, TKey, Double)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_Double____0_System_Double_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Double},``0,System.Double)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_Double____0_System_Double_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Double},``0,System.Double)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, Double), TKey, Double)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Double>, TKey, System.Double)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Double), TKey, System.Double)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.Double>, TKey, System.Double)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.Double), TKey, System.Double)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, Double>, TKey, Double)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, Double), TKey, Double)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0,System.Int16)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Int16},``0,System.Int16)
   name: AddOrIncrement<TKey>(Dictionary<TKey, Int16>, TKey, Int16)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_Int16____0_System_Int16_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0,System.Int16)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_Int16____0_System_Int16_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Int16},``0,System.Int16)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, Int16), TKey, Int16)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int16>, TKey, System.Int16)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int16), TKey, System.Int16)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.Int16>, TKey, System.Int16)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.Int16), TKey, System.Int16)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, Int16>, TKey, Int16)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, Int16), TKey, Int16)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0,System.Int32)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Int32},``0,System.Int32)
   name: AddOrIncrement<TKey>(Dictionary<TKey, Int32>, TKey, Int32)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_Int32____0_System_Int32_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0,System.Int32)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_Int32____0_System_Int32_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Int32},``0,System.Int32)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, Int32), TKey, Int32)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int32>, TKey, System.Int32)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int32), TKey, System.Int32)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.Int32>, TKey, System.Int32)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.Int32), TKey, System.Int32)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, Int32>, TKey, Int32)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, Int32), TKey, Int32)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0,System.Int64)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Int64},``0,System.Int64)
   name: AddOrIncrement<TKey>(Dictionary<TKey, Int64>, TKey, Int64)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_Int64____0_System_Int64_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0,System.Int64)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_Int64____0_System_Int64_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Int64},``0,System.Int64)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, Int64), TKey, Int64)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int64>, TKey, System.Int64)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int64), TKey, System.Int64)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.Int64>, TKey, System.Int64)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.Int64), TKey, System.Int64)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, Int64>, TKey, Int64)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, Int64), TKey, Int64)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0,System.SByte)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.SByte},``0,System.SByte)
   name: AddOrIncrement<TKey>(Dictionary<TKey, SByte>, TKey, SByte)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_SByte____0_System_SByte_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0,System.SByte)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_SByte____0_System_SByte_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.SByte},``0,System.SByte)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, SByte), TKey, SByte)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.SByte>, TKey, System.SByte)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.SByte), TKey, System.SByte)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.SByte>, TKey, System.SByte)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.SByte), TKey, System.SByte)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, SByte>, TKey, SByte)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, SByte), TKey, SByte)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Single},``0,System.Single)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Single},``0,System.Single)
   name: AddOrIncrement<TKey>(Dictionary<TKey, Single>, TKey, Single)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_Single____0_System_Single_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.Single},``0,System.Single)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_Single____0_System_Single_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.Single},``0,System.Single)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, Single), TKey, Single)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.Single>, TKey, System.Single)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Single), TKey, System.Single)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.Single>, TKey, System.Single)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.Single), TKey, System.Single)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, Single>, TKey, Single)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, Single), TKey, Single)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0,System.UInt16)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.UInt16},``0,System.UInt16)
   name: AddOrIncrement<TKey>(Dictionary<TKey, UInt16>, TKey, UInt16)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_UInt16____0_System_UInt16_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0,System.UInt16)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_UInt16____0_System_UInt16_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.UInt16},``0,System.UInt16)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, UInt16), TKey, UInt16)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt16>, TKey, System.UInt16)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt16), TKey, System.UInt16)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.UInt16>, TKey, System.UInt16)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.UInt16), TKey, System.UInt16)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, UInt16>, TKey, UInt16)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, UInt16), TKey, UInt16)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0,System.UInt32)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.UInt32},``0,System.UInt32)
   name: AddOrIncrement<TKey>(Dictionary<TKey, UInt32>, TKey, UInt32)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_UInt32____0_System_UInt32_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0,System.UInt32)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_UInt32____0_System_UInt32_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.UInt32},``0,System.UInt32)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, UInt32), TKey, UInt32)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt32>, TKey, System.UInt32)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt32), TKey, System.UInt32)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.UInt32>, TKey, System.UInt32)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.UInt32), TKey, System.UInt32)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, UInt32>, TKey, UInt32)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, UInt32), TKey, UInt32)
-- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0,System.UInt64)
+- uid: Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.UInt64},``0,System.UInt64)
   name: AddOrIncrement<TKey>(Dictionary<TKey, UInt64>, TKey, UInt64)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_System_Collections_Generic_Dictionary___0_System_UInt64____0_System_UInt64_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0,System.UInt64)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrIncrement__1_Dictionary___0_System_UInt64____0_System_UInt64_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrIncrement``1(Dictionary{``0,System.UInt64},``0,System.UInt64)
   name.vb: AddOrIncrement(Of TKey)(Dictionary(Of TKey, UInt64), TKey, UInt64)
-  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt64>, TKey, System.UInt64)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt64), TKey, System.UInt64)
+  fullName: Extensification.DictionaryExts.Addition.AddOrIncrement<TKey>(Dictionary<TKey, System.UInt64>, TKey, System.UInt64)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, System.UInt64), TKey, System.UInt64)
   nameWithType: Addition.AddOrIncrement<TKey>(Dictionary<TKey, UInt64>, TKey, UInt64)
   nameWithType.vb: Addition.AddOrIncrement(Of TKey)(Dictionary(Of TKey, UInt64), TKey, UInt64)
 - uid: Extensification.DictionaryExts.Addition.AddOrModify*
@@ -877,13 +877,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Addition.AddOrModify
   nameWithType: Addition.AddOrModify
-- uid: Extensification.DictionaryExts.Addition.AddOrModify``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)
+- uid: Extensification.DictionaryExts.Addition.AddOrModify``2(Dictionary{``0,``1},``0,``1)
   name: AddOrModify<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrModify__2_System_Collections_Generic_Dictionary___0___1____0___1_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrModify``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrModify__2_Dictionary___0___1____0___1_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrModify``2(Dictionary{``0,``1},``0,``1)
   name.vb: AddOrModify(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
-  fullName: Extensification.DictionaryExts.Addition.AddOrModify<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey, TValue)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrModify(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey, TValue)
+  fullName: Extensification.DictionaryExts.Addition.AddOrModify<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrModify(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
   nameWithType: Addition.AddOrModify<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
   nameWithType.vb: Addition.AddOrModify(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
 - uid: Extensification.DictionaryExts.Addition.AddOrRename*
@@ -893,13 +893,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Addition.AddOrRename
   nameWithType: Addition.AddOrRename
-- uid: Extensification.DictionaryExts.Addition.AddOrRename``1(System.Collections.Generic.Dictionary{System.String,``0},System.String,``0)
+- uid: Extensification.DictionaryExts.Addition.AddOrRename``1(Dictionary{System.String,``0},System.String,``0)
   name: AddOrRename<TValue>(Dictionary<String, TValue>, String, TValue)
-  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrRename__1_System_Collections_Generic_Dictionary_System_String___0__System_String___0_
-  commentId: M:Extensification.DictionaryExts.Addition.AddOrRename``1(System.Collections.Generic.Dictionary{System.String,``0},System.String,``0)
+  href: api/Extensification.DictionaryExts.Addition.html#Extensification_DictionaryExts_Addition_AddOrRename__1_Dictionary_System_String___0__System_String___0_
+  commentId: M:Extensification.DictionaryExts.Addition.AddOrRename``1(Dictionary{System.String,``0},System.String,``0)
   name.vb: AddOrRename(Of TValue)(Dictionary(Of String, TValue), String, TValue)
-  fullName: Extensification.DictionaryExts.Addition.AddOrRename<TValue>(System.Collections.Generic.Dictionary<System.String, TValue>, System.String, TValue)
-  fullName.vb: Extensification.DictionaryExts.Addition.AddOrRename(Of TValue)(System.Collections.Generic.Dictionary(Of System.String, TValue), System.String, TValue)
+  fullName: Extensification.DictionaryExts.Addition.AddOrRename<TValue>(Dictionary<System.String, TValue>, System.String, TValue)
+  fullName.vb: Extensification.DictionaryExts.Addition.AddOrRename(Of TValue)(Dictionary(Of System.String, TValue), System.String, TValue)
   nameWithType: Addition.AddOrRename<TValue>(Dictionary<String, TValue>, String, TValue)
   nameWithType.vb: Addition.AddOrRename(Of TValue)(Dictionary(Of String, TValue), String, TValue)
 - uid: Extensification.DictionaryExts.Counts
@@ -915,13 +915,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Counts.CountEmptyEntries
   nameWithType: Counts.CountEmptyEntries
-- uid: Extensification.DictionaryExts.Counts.CountEmptyEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+- uid: Extensification.DictionaryExts.Counts.CountEmptyEntries``2(Dictionary{``0,``1})
   name: CountEmptyEntries<TKey, TValue>(Dictionary<TKey, TValue>)
-  href: api/Extensification.DictionaryExts.Counts.html#Extensification_DictionaryExts_Counts_CountEmptyEntries__2_System_Collections_Generic_Dictionary___0___1__
-  commentId: M:Extensification.DictionaryExts.Counts.CountEmptyEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+  href: api/Extensification.DictionaryExts.Counts.html#Extensification_DictionaryExts_Counts_CountEmptyEntries__2_Dictionary___0___1__
+  commentId: M:Extensification.DictionaryExts.Counts.CountEmptyEntries``2(Dictionary{``0,``1})
   name.vb: CountEmptyEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
-  fullName: Extensification.DictionaryExts.Counts.CountEmptyEntries<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>)
-  fullName.vb: Extensification.DictionaryExts.Counts.CountEmptyEntries(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue))
+  fullName: Extensification.DictionaryExts.Counts.CountEmptyEntries<TKey, TValue>(Dictionary<TKey, TValue>)
+  fullName.vb: Extensification.DictionaryExts.Counts.CountEmptyEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
   nameWithType: Counts.CountEmptyEntries<TKey, TValue>(Dictionary<TKey, TValue>)
   nameWithType.vb: Counts.CountEmptyEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
 - uid: Extensification.DictionaryExts.Counts.CountFullEntries*
@@ -931,13 +931,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Counts.CountFullEntries
   nameWithType: Counts.CountFullEntries
-- uid: Extensification.DictionaryExts.Counts.CountFullEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+- uid: Extensification.DictionaryExts.Counts.CountFullEntries``2(Dictionary{``0,``1})
   name: CountFullEntries<TKey, TValue>(Dictionary<TKey, TValue>)
-  href: api/Extensification.DictionaryExts.Counts.html#Extensification_DictionaryExts_Counts_CountFullEntries__2_System_Collections_Generic_Dictionary___0___1__
-  commentId: M:Extensification.DictionaryExts.Counts.CountFullEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+  href: api/Extensification.DictionaryExts.Counts.html#Extensification_DictionaryExts_Counts_CountFullEntries__2_Dictionary___0___1__
+  commentId: M:Extensification.DictionaryExts.Counts.CountFullEntries``2(Dictionary{``0,``1})
   name.vb: CountFullEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
-  fullName: Extensification.DictionaryExts.Counts.CountFullEntries<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>)
-  fullName.vb: Extensification.DictionaryExts.Counts.CountFullEntries(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue))
+  fullName: Extensification.DictionaryExts.Counts.CountFullEntries<TKey, TValue>(Dictionary<TKey, TValue>)
+  fullName.vb: Extensification.DictionaryExts.Counts.CountFullEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
   nameWithType: Counts.CountFullEntries<TKey, TValue>(Dictionary<TKey, TValue>)
   nameWithType.vb: Counts.CountFullEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
 - uid: Extensification.DictionaryExts.Getting
@@ -953,13 +953,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries
   nameWithType: Getting.GetIndexesOfEmptyEntries
-- uid: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+- uid: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries``2(Dictionary{``0,``1})
   name: GetIndexesOfEmptyEntries<TKey, TValue>(Dictionary<TKey, TValue>)
-  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexesOfEmptyEntries__2_System_Collections_Generic_Dictionary___0___1__
-  commentId: M:Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexesOfEmptyEntries__2_Dictionary___0___1__
+  commentId: M:Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries``2(Dictionary{``0,``1})
   name.vb: GetIndexesOfEmptyEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
-  fullName: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>)
-  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue))
+  fullName: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries<TKey, TValue>(Dictionary<TKey, TValue>)
+  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexesOfEmptyEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
   nameWithType: Getting.GetIndexesOfEmptyEntries<TKey, TValue>(Dictionary<TKey, TValue>)
   nameWithType.vb: Getting.GetIndexesOfEmptyEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
 - uid: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries*
@@ -969,13 +969,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries
   nameWithType: Getting.GetIndexesOfFullEntries
-- uid: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+- uid: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries``2(Dictionary{``0,``1})
   name: GetIndexesOfFullEntries<TKey, TValue>(Dictionary<TKey, TValue>)
-  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexesOfFullEntries__2_System_Collections_Generic_Dictionary___0___1__
-  commentId: M:Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries``2(System.Collections.Generic.Dictionary{``0,``1})
+  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexesOfFullEntries__2_Dictionary___0___1__
+  commentId: M:Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries``2(Dictionary{``0,``1})
   name.vb: GetIndexesOfFullEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
-  fullName: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>)
-  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue))
+  fullName: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries<TKey, TValue>(Dictionary<TKey, TValue>)
+  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexesOfFullEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
   nameWithType: Getting.GetIndexesOfFullEntries<TKey, TValue>(Dictionary<TKey, TValue>)
   nameWithType.vb: Getting.GetIndexesOfFullEntries(Of TKey, TValue)(Dictionary(Of TKey, TValue))
 - uid: Extensification.DictionaryExts.Getting.GetIndexOfKey*
@@ -985,13 +985,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Getting.GetIndexOfKey
   nameWithType: Getting.GetIndexOfKey
-- uid: Extensification.DictionaryExts.Getting.GetIndexOfKey``2(System.Collections.Generic.Dictionary{``0,``1},``0)
+- uid: Extensification.DictionaryExts.Getting.GetIndexOfKey``2(Dictionary{``0,``1},``0)
   name: GetIndexOfKey<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
-  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexOfKey__2_System_Collections_Generic_Dictionary___0___1____0_
-  commentId: M:Extensification.DictionaryExts.Getting.GetIndexOfKey``2(System.Collections.Generic.Dictionary{``0,``1},``0)
+  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexOfKey__2_Dictionary___0___1____0_
+  commentId: M:Extensification.DictionaryExts.Getting.GetIndexOfKey``2(Dictionary{``0,``1},``0)
   name.vb: GetIndexOfKey(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
-  fullName: Extensification.DictionaryExts.Getting.GetIndexOfKey<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexOfKey(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey)
+  fullName: Extensification.DictionaryExts.Getting.GetIndexOfKey<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexOfKey(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
   nameWithType: Getting.GetIndexOfKey<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
   nameWithType.vb: Getting.GetIndexOfKey(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
 - uid: Extensification.DictionaryExts.Getting.GetIndexOfValue*
@@ -1001,13 +1001,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Getting.GetIndexOfValue
   nameWithType: Getting.GetIndexOfValue
-- uid: Extensification.DictionaryExts.Getting.GetIndexOfValue``2(System.Collections.Generic.Dictionary{``0,``1},``1)
+- uid: Extensification.DictionaryExts.Getting.GetIndexOfValue``2(Dictionary{``0,``1},``1)
   name: GetIndexOfValue<TKey, TValue>(Dictionary<TKey, TValue>, TValue)
-  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexOfValue__2_System_Collections_Generic_Dictionary___0___1____1_
-  commentId: M:Extensification.DictionaryExts.Getting.GetIndexOfValue``2(System.Collections.Generic.Dictionary{``0,``1},``1)
+  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetIndexOfValue__2_Dictionary___0___1____1_
+  commentId: M:Extensification.DictionaryExts.Getting.GetIndexOfValue``2(Dictionary{``0,``1},``1)
   name.vb: GetIndexOfValue(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue)
-  fullName: Extensification.DictionaryExts.Getting.GetIndexOfValue<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TValue)
-  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexOfValue(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TValue)
+  fullName: Extensification.DictionaryExts.Getting.GetIndexOfValue<TKey, TValue>(Dictionary<TKey, TValue>, TValue)
+  fullName.vb: Extensification.DictionaryExts.Getting.GetIndexOfValue(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue)
   nameWithType: Getting.GetIndexOfValue<TKey, TValue>(Dictionary<TKey, TValue>, TValue)
   nameWithType.vb: Getting.GetIndexOfValue(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue)
 - uid: Extensification.DictionaryExts.Getting.GetKeyFromValue*
@@ -1017,13 +1017,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Getting.GetKeyFromValue
   nameWithType: Getting.GetKeyFromValue
-- uid: Extensification.DictionaryExts.Getting.GetKeyFromValue``2(System.Collections.Generic.Dictionary{``0,``1},``1)
+- uid: Extensification.DictionaryExts.Getting.GetKeyFromValue``2(Dictionary{``0,``1},``1)
   name: GetKeyFromValue<TKey, TValue>(Dictionary<TKey, TValue>, TValue)
-  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetKeyFromValue__2_System_Collections_Generic_Dictionary___0___1____1_
-  commentId: M:Extensification.DictionaryExts.Getting.GetKeyFromValue``2(System.Collections.Generic.Dictionary{``0,``1},``1)
+  href: api/Extensification.DictionaryExts.Getting.html#Extensification_DictionaryExts_Getting_GetKeyFromValue__2_Dictionary___0___1____1_
+  commentId: M:Extensification.DictionaryExts.Getting.GetKeyFromValue``2(Dictionary{``0,``1},``1)
   name.vb: GetKeyFromValue(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue)
-  fullName: Extensification.DictionaryExts.Getting.GetKeyFromValue<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TValue)
-  fullName.vb: Extensification.DictionaryExts.Getting.GetKeyFromValue(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TValue)
+  fullName: Extensification.DictionaryExts.Getting.GetKeyFromValue<TKey, TValue>(Dictionary<TKey, TValue>, TValue)
+  fullName.vb: Extensification.DictionaryExts.Getting.GetKeyFromValue(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue)
   nameWithType: Getting.GetKeyFromValue<TKey, TValue>(Dictionary<TKey, TValue>, TValue)
   nameWithType.vb: Getting.GetKeyFromValue(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue)
 - uid: Extensification.DictionaryExts.Manipulation
@@ -1039,94 +1039,94 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber
   nameWithType: Manipulation.DecrementNumber
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Byte},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, Byte>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_Byte____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_Byte____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Byte},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, Byte), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Byte>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Byte), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.Byte>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.Byte), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, Byte>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, Byte), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Double},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Double},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, Double>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_Double____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Double},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_Double____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Double},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, Double), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Double>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Double), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.Double>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.Double), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, Double>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, Double), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Int16},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, Int16>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_Int16____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_Int16____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Int16},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, Int16), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int16>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int16), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.Int16>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.Int16), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, Int16>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, Int16), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Int32},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, Int32>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_Int32____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_Int32____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Int32},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, Int32), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int32>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int32), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.Int32>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.Int32), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, Int32>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, Int32), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Int64},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, Int64>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_Int64____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_Int64____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Int64},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, Int64), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int64>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int64), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.Int64>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.Int64), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, Int64>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, Int64), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.SByte},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, SByte>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_SByte____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_SByte____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.SByte},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, SByte), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.SByte>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.SByte), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.SByte>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.SByte), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, SByte>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, SByte), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Single},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Single},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, Single>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_Single____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Single},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_Single____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.Single},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, Single), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Single>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Single), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.Single>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.Single), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, Single>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, Single), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.UInt16},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, UInt16>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_UInt16____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_UInt16____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.UInt16},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, UInt16), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt16>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt16), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.UInt16>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.UInt16), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, UInt16>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, UInt16), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.UInt32},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, UInt32>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_UInt32____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_UInt32____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.UInt32},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, UInt32), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt32>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt32), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.UInt32>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.UInt32), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, UInt32>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, UInt32), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0)
+- uid: Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.UInt64},``0)
   name: DecrementNumber<TKey>(Dictionary<TKey, UInt64>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_System_Collections_Generic_Dictionary___0_System_UInt64____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_DecrementNumber__1_Dictionary___0_System_UInt64____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.DecrementNumber``1(Dictionary{``0,System.UInt64},``0)
   name.vb: DecrementNumber(Of TKey)(Dictionary(Of TKey, UInt64), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt64>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt64), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.DecrementNumber<TKey>(Dictionary<TKey, System.UInt64>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, System.UInt64), TKey)
   nameWithType: Manipulation.DecrementNumber<TKey>(Dictionary<TKey, UInt64>, TKey)
   nameWithType.vb: Manipulation.DecrementNumber(Of TKey)(Dictionary(Of TKey, UInt64), TKey)
 - uid: Extensification.DictionaryExts.Manipulation.IncrementNumber*
@@ -1136,94 +1136,94 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber
   nameWithType: Manipulation.IncrementNumber
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Byte},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, Byte>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_Byte____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Byte},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_Byte____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Byte},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, Byte), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Byte>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Byte), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.Byte>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.Byte), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, Byte>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, Byte), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Double},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Double},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, Double>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_Double____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Double},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_Double____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Double},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, Double), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Double>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Double), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.Double>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.Double), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, Double>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, Double), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Int16},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, Int16>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_Int16____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int16},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_Int16____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Int16},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, Int16), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int16>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int16), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.Int16>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.Int16), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, Int16>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, Int16), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Int32},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, Int32>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_Int32____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int32},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_Int32____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Int32},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, Int32), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int32>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int32), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.Int32>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.Int32), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, Int32>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, Int32), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Int64},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, Int64>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_Int64____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Int64},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_Int64____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Int64},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, Int64), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Int64>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Int64), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.Int64>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.Int64), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, Int64>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, Int64), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.SByte},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, SByte>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_SByte____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.SByte},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_SByte____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.SByte},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, SByte), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.SByte>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.SByte), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.SByte>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.SByte), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, SByte>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, SByte), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Single},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Single},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, Single>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_Single____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.Single},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_Single____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.Single},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, Single), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.Single>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.Single), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.Single>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.Single), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, Single>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, Single), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.UInt16},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, UInt16>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_UInt16____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt16},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_UInt16____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.UInt16},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, UInt16), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt16>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt16), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.UInt16>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.UInt16), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, UInt16>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, UInt16), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.UInt32},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, UInt32>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_UInt32____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt32},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_UInt32____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.UInt32},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, UInt32), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt32>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt32), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.UInt32>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.UInt32), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, UInt32>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, UInt32), TKey)
-- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0)
+- uid: Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.UInt64},``0)
   name: IncrementNumber<TKey>(Dictionary<TKey, UInt64>, TKey)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_System_Collections_Generic_Dictionary___0_System_UInt64____0_
-  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(System.Collections.Generic.Dictionary{``0,System.UInt64},``0)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_IncrementNumber__1_Dictionary___0_System_UInt64____0_
+  commentId: M:Extensification.DictionaryExts.Manipulation.IncrementNumber``1(Dictionary{``0,System.UInt64},``0)
   name.vb: IncrementNumber(Of TKey)(Dictionary(Of TKey, UInt64), TKey)
-  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(System.Collections.Generic.Dictionary<TKey, System.UInt64>, TKey)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(System.Collections.Generic.Dictionary(Of TKey, System.UInt64), TKey)
+  fullName: Extensification.DictionaryExts.Manipulation.IncrementNumber<TKey>(Dictionary<TKey, System.UInt64>, TKey)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, System.UInt64), TKey)
   nameWithType: Manipulation.IncrementNumber<TKey>(Dictionary<TKey, UInt64>, TKey)
   nameWithType.vb: Manipulation.IncrementNumber(Of TKey)(Dictionary(Of TKey, UInt64), TKey)
 - uid: Extensification.DictionaryExts.Manipulation.RenameKey*
@@ -1233,13 +1233,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Manipulation.RenameKey
   nameWithType: Manipulation.RenameKey
-- uid: Extensification.DictionaryExts.Manipulation.RenameKey``1(System.Collections.Generic.Dictionary{System.String,``0},System.String,System.String)
+- uid: Extensification.DictionaryExts.Manipulation.RenameKey``1(Dictionary{System.String,``0},System.String,System.String)
   name: RenameKey<TValue>(Dictionary<String, TValue>, String, String)
-  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_RenameKey__1_System_Collections_Generic_Dictionary_System_String___0__System_String_System_String_
-  commentId: M:Extensification.DictionaryExts.Manipulation.RenameKey``1(System.Collections.Generic.Dictionary{System.String,``0},System.String,System.String)
+  href: api/Extensification.DictionaryExts.Manipulation.html#Extensification_DictionaryExts_Manipulation_RenameKey__1_Dictionary_System_String___0__System_String_System_String_
+  commentId: M:Extensification.DictionaryExts.Manipulation.RenameKey``1(Dictionary{System.String,``0},System.String,System.String)
   name.vb: RenameKey(Of TValue)(Dictionary(Of String, TValue), String, String)
-  fullName: Extensification.DictionaryExts.Manipulation.RenameKey<TValue>(System.Collections.Generic.Dictionary<System.String, TValue>, System.String, System.String)
-  fullName.vb: Extensification.DictionaryExts.Manipulation.RenameKey(Of TValue)(System.Collections.Generic.Dictionary(Of System.String, TValue), System.String, System.String)
+  fullName: Extensification.DictionaryExts.Manipulation.RenameKey<TValue>(Dictionary<System.String, TValue>, System.String, System.String)
+  fullName.vb: Extensification.DictionaryExts.Manipulation.RenameKey(Of TValue)(Dictionary(Of System.String, TValue), System.String, System.String)
   nameWithType: Manipulation.RenameKey<TValue>(Dictionary<String, TValue>, String, String)
   nameWithType.vb: Manipulation.RenameKey(Of TValue)(Dictionary(Of String, TValue), String, String)
 - uid: Extensification.DictionaryExts.Querying
@@ -1255,13 +1255,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys
   nameWithType: Querying.ContainsAllOfInKeys
-- uid: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys``2(System.Collections.Generic.Dictionary{``0,``1},``0[])
+- uid: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys``2(Dictionary{``0,``1},``0[])
   name: ContainsAllOfInKeys<TKey, TValue>(Dictionary<TKey, TValue>, TKey[])
-  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAllOfInKeys__2_System_Collections_Generic_Dictionary___0___1____0___
-  commentId: M:Extensification.DictionaryExts.Querying.ContainsAllOfInKeys``2(System.Collections.Generic.Dictionary{``0,``1},``0[])
+  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAllOfInKeys__2_Dictionary___0___1____0___
+  commentId: M:Extensification.DictionaryExts.Querying.ContainsAllOfInKeys``2(Dictionary{``0,``1},``0[])
   name.vb: ContainsAllOfInKeys(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey())
-  fullName: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey[])
-  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey())
+  fullName: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys<TKey, TValue>(Dictionary<TKey, TValue>, TKey[])
+  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAllOfInKeys(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey())
   nameWithType: Querying.ContainsAllOfInKeys<TKey, TValue>(Dictionary<TKey, TValue>, TKey[])
   nameWithType.vb: Querying.ContainsAllOfInKeys(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey())
 - uid: Extensification.DictionaryExts.Querying.ContainsAllOfInValues*
@@ -1271,13 +1271,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Querying.ContainsAllOfInValues
   nameWithType: Querying.ContainsAllOfInValues
-- uid: Extensification.DictionaryExts.Querying.ContainsAllOfInValues``2(System.Collections.Generic.Dictionary{``0,``1},``1[])
+- uid: Extensification.DictionaryExts.Querying.ContainsAllOfInValues``2(Dictionary{``0,``1},``1[])
   name: ContainsAllOfInValues<TKey, TValue>(Dictionary<TKey, TValue>, TValue[])
-  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAllOfInValues__2_System_Collections_Generic_Dictionary___0___1____1___
-  commentId: M:Extensification.DictionaryExts.Querying.ContainsAllOfInValues``2(System.Collections.Generic.Dictionary{``0,``1},``1[])
+  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAllOfInValues__2_Dictionary___0___1____1___
+  commentId: M:Extensification.DictionaryExts.Querying.ContainsAllOfInValues``2(Dictionary{``0,``1},``1[])
   name.vb: ContainsAllOfInValues(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue())
-  fullName: Extensification.DictionaryExts.Querying.ContainsAllOfInValues<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TValue[])
-  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAllOfInValues(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TValue())
+  fullName: Extensification.DictionaryExts.Querying.ContainsAllOfInValues<TKey, TValue>(Dictionary<TKey, TValue>, TValue[])
+  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAllOfInValues(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue())
   nameWithType: Querying.ContainsAllOfInValues<TKey, TValue>(Dictionary<TKey, TValue>, TValue[])
   nameWithType.vb: Querying.ContainsAllOfInValues(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue())
 - uid: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys*
@@ -1287,13 +1287,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys
   nameWithType: Querying.ContainsAnyOfInKeys
-- uid: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys``2(System.Collections.Generic.Dictionary{``0,``1},``0[])
+- uid: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys``2(Dictionary{``0,``1},``0[])
   name: ContainsAnyOfInKeys<TKey, TValue>(Dictionary<TKey, TValue>, TKey[])
-  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAnyOfInKeys__2_System_Collections_Generic_Dictionary___0___1____0___
-  commentId: M:Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys``2(System.Collections.Generic.Dictionary{``0,``1},``0[])
+  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAnyOfInKeys__2_Dictionary___0___1____0___
+  commentId: M:Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys``2(Dictionary{``0,``1},``0[])
   name.vb: ContainsAnyOfInKeys(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey())
-  fullName: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey[])
-  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey())
+  fullName: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys<TKey, TValue>(Dictionary<TKey, TValue>, TKey[])
+  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAnyOfInKeys(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey())
   nameWithType: Querying.ContainsAnyOfInKeys<TKey, TValue>(Dictionary<TKey, TValue>, TKey[])
   nameWithType.vb: Querying.ContainsAnyOfInKeys(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey())
 - uid: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues*
@@ -1303,13 +1303,13 @@ references:
   isSpec: "True"
   fullName: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues
   nameWithType: Querying.ContainsAnyOfInValues
-- uid: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues``2(System.Collections.Generic.Dictionary{``0,``1},``1[])
+- uid: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues``2(Dictionary{``0,``1},``1[])
   name: ContainsAnyOfInValues<TKey, TValue>(Dictionary<TKey, TValue>, TValue[])
-  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAnyOfInValues__2_System_Collections_Generic_Dictionary___0___1____1___
-  commentId: M:Extensification.DictionaryExts.Querying.ContainsAnyOfInValues``2(System.Collections.Generic.Dictionary{``0,``1},``1[])
+  href: api/Extensification.DictionaryExts.Querying.html#Extensification_DictionaryExts_Querying_ContainsAnyOfInValues__2_Dictionary___0___1____1___
+  commentId: M:Extensification.DictionaryExts.Querying.ContainsAnyOfInValues``2(Dictionary{``0,``1},``1[])
   name.vb: ContainsAnyOfInValues(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue())
-  fullName: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TValue[])
-  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TValue())
+  fullName: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues<TKey, TValue>(Dictionary<TKey, TValue>, TValue[])
+  fullName.vb: Extensification.DictionaryExts.Querying.ContainsAnyOfInValues(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue())
   nameWithType: Querying.ContainsAnyOfInValues<TKey, TValue>(Dictionary<TKey, TValue>, TValue[])
   nameWithType.vb: Querying.ContainsAnyOfInValues(Of TKey, TValue)(Dictionary(Of TKey, TValue), TValue())
 - uid: Extensification.DoubleExts
@@ -1449,41 +1449,19 @@ references:
   commentId: N:Extensification.EnumerableExts
   fullName: Extensification.EnumerableExts
   nameWithType: Extensification.EnumerableExts
-- uid: Extensification.EnumerableExts.Addition
-  name: Addition
-  href: api/Extensification.EnumerableExts.Addition.html
-  commentId: T:Extensification.EnumerableExts.Addition
-  fullName: Extensification.EnumerableExts.Addition
-  nameWithType: Addition
-- uid: Extensification.EnumerableExts.Addition.Append*
-  name: Append
-  href: api/Extensification.EnumerableExts.Addition.html#Extensification_EnumerableExts_Addition_Append_
-  commentId: Overload:Extensification.EnumerableExts.Addition.Append
-  isSpec: "True"
-  fullName: Extensification.EnumerableExts.Addition.Append
-  nameWithType: Addition.Append
-- uid: Extensification.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)
-  name: Append<Source>(IEnumerable<Source>, Source)
-  href: api/Extensification.EnumerableExts.Addition.html#Extensification_EnumerableExts_Addition_Append__1_System_Collections_Generic_IEnumerable___0____0_
-  commentId: M:Extensification.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)
-  name.vb: Append(Of Source)(IEnumerable(Of Source), Source)
-  fullName: Extensification.EnumerableExts.Addition.Append<Source>(System.Collections.Generic.IEnumerable<Source>, Source)
-  fullName.vb: Extensification.EnumerableExts.Addition.Append(Of Source)(System.Collections.Generic.IEnumerable(Of Source), Source)
-  nameWithType: Addition.Append<Source>(IEnumerable<Source>, Source)
-  nameWithType.vb: Addition.Append(Of Source)(IEnumerable(Of Source), Source)
 - uid: Extensification.EnumerableExts.Manipulation
   name: Manipulation
   href: api/Extensification.EnumerableExts.Manipulation.html
   commentId: T:Extensification.EnumerableExts.Manipulation
   fullName: Extensification.EnumerableExts.Manipulation
   nameWithType: Manipulation
-- uid: Extensification.EnumerableExts.Manipulation.Stringify(System.Collections.Generic.IEnumerable{System.Char})
+- uid: Extensification.EnumerableExts.Manipulation.Stringify(IEnumerable{System.Char})
   name: Stringify(IEnumerable<Char>)
-  href: api/Extensification.EnumerableExts.Manipulation.html#Extensification_EnumerableExts_Manipulation_Stringify_System_Collections_Generic_IEnumerable_System_Char__
-  commentId: M:Extensification.EnumerableExts.Manipulation.Stringify(System.Collections.Generic.IEnumerable{System.Char})
+  href: api/Extensification.EnumerableExts.Manipulation.html#Extensification_EnumerableExts_Manipulation_Stringify_IEnumerable_System_Char__
+  commentId: M:Extensification.EnumerableExts.Manipulation.Stringify(IEnumerable{System.Char})
   name.vb: Stringify(IEnumerable(Of Char))
-  fullName: Extensification.EnumerableExts.Manipulation.Stringify(System.Collections.Generic.IEnumerable<System.Char>)
-  fullName.vb: Extensification.EnumerableExts.Manipulation.Stringify(System.Collections.Generic.IEnumerable(Of System.Char))
+  fullName: Extensification.EnumerableExts.Manipulation.Stringify(IEnumerable<System.Char>)
+  fullName.vb: Extensification.EnumerableExts.Manipulation.Stringify(IEnumerable(Of System.Char))
   nameWithType: Manipulation.Stringify(IEnumerable<Char>)
   nameWithType.vb: Manipulation.Stringify(IEnumerable(Of Char))
 - uid: Extensification.EnumerableExts.Manipulation.Stringify*
@@ -1857,13 +1835,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Addition.AddIfNotFound
   nameWithType: Addition.AddIfNotFound
-- uid: Extensification.ListExts.Addition.AddIfNotFound``1(System.Collections.Generic.List{``0},``0)
+- uid: Extensification.ListExts.Addition.AddIfNotFound``1(List{``0},``0)
   name: AddIfNotFound<T>(List<T>, T)
-  href: api/Extensification.ListExts.Addition.html#Extensification_ListExts_Addition_AddIfNotFound__1_System_Collections_Generic_List___0____0_
-  commentId: M:Extensification.ListExts.Addition.AddIfNotFound``1(System.Collections.Generic.List{``0},``0)
+  href: api/Extensification.ListExts.Addition.html#Extensification_ListExts_Addition_AddIfNotFound__1_List___0____0_
+  commentId: M:Extensification.ListExts.Addition.AddIfNotFound``1(List{``0},``0)
   name.vb: AddIfNotFound(Of T)(List(Of T), T)
-  fullName: Extensification.ListExts.Addition.AddIfNotFound<T>(System.Collections.Generic.List<T>, T)
-  fullName.vb: Extensification.ListExts.Addition.AddIfNotFound(Of T)(System.Collections.Generic.List(Of T), T)
+  fullName: Extensification.ListExts.Addition.AddIfNotFound<T>(List<T>, T)
+  fullName.vb: Extensification.ListExts.Addition.AddIfNotFound(Of T)(List(Of T), T)
   nameWithType: Addition.AddIfNotFound<T>(List<T>, T)
   nameWithType.vb: Addition.AddIfNotFound(Of T)(List(Of T), T)
 - uid: Extensification.ListExts.Conversion
@@ -1879,13 +1857,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Conversion.ToArrayList
   nameWithType: Conversion.ToArrayList
-- uid: Extensification.ListExts.Conversion.ToArrayList``1(System.Collections.Generic.List{``0})
+- uid: Extensification.ListExts.Conversion.ToArrayList``1(List{``0})
   name: ToArrayList<T>(List<T>)
-  href: api/Extensification.ListExts.Conversion.html#Extensification_ListExts_Conversion_ToArrayList__1_System_Collections_Generic_List___0__
-  commentId: M:Extensification.ListExts.Conversion.ToArrayList``1(System.Collections.Generic.List{``0})
+  href: api/Extensification.ListExts.Conversion.html#Extensification_ListExts_Conversion_ToArrayList__1_List___0__
+  commentId: M:Extensification.ListExts.Conversion.ToArrayList``1(List{``0})
   name.vb: ToArrayList(Of T)(List(Of T))
-  fullName: Extensification.ListExts.Conversion.ToArrayList<T>(System.Collections.Generic.List<T>)
-  fullName.vb: Extensification.ListExts.Conversion.ToArrayList(Of T)(System.Collections.Generic.List(Of T))
+  fullName: Extensification.ListExts.Conversion.ToArrayList<T>(List<T>)
+  fullName.vb: Extensification.ListExts.Conversion.ToArrayList(Of T)(List(Of T))
   nameWithType: Conversion.ToArrayList<T>(List<T>)
   nameWithType.vb: Conversion.ToArrayList(Of T)(List(Of T))
 - uid: Extensification.ListExts.Counts
@@ -1901,13 +1879,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Counts.CountEmptyEntries
   nameWithType: Counts.CountEmptyEntries
-- uid: Extensification.ListExts.Counts.CountEmptyEntries``1(System.Collections.Generic.List{``0})
+- uid: Extensification.ListExts.Counts.CountEmptyEntries``1(List{``0})
   name: CountEmptyEntries<T>(List<T>)
-  href: api/Extensification.ListExts.Counts.html#Extensification_ListExts_Counts_CountEmptyEntries__1_System_Collections_Generic_List___0__
-  commentId: M:Extensification.ListExts.Counts.CountEmptyEntries``1(System.Collections.Generic.List{``0})
+  href: api/Extensification.ListExts.Counts.html#Extensification_ListExts_Counts_CountEmptyEntries__1_List___0__
+  commentId: M:Extensification.ListExts.Counts.CountEmptyEntries``1(List{``0})
   name.vb: CountEmptyEntries(Of T)(List(Of T))
-  fullName: Extensification.ListExts.Counts.CountEmptyEntries<T>(System.Collections.Generic.List<T>)
-  fullName.vb: Extensification.ListExts.Counts.CountEmptyEntries(Of T)(System.Collections.Generic.List(Of T))
+  fullName: Extensification.ListExts.Counts.CountEmptyEntries<T>(List<T>)
+  fullName.vb: Extensification.ListExts.Counts.CountEmptyEntries(Of T)(List(Of T))
   nameWithType: Counts.CountEmptyEntries<T>(List<T>)
   nameWithType.vb: Counts.CountEmptyEntries(Of T)(List(Of T))
 - uid: Extensification.ListExts.Counts.CountFullEntries*
@@ -1917,13 +1895,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Counts.CountFullEntries
   nameWithType: Counts.CountFullEntries
-- uid: Extensification.ListExts.Counts.CountFullEntries``1(System.Collections.Generic.List{``0})
+- uid: Extensification.ListExts.Counts.CountFullEntries``1(List{``0})
   name: CountFullEntries<T>(List<T>)
-  href: api/Extensification.ListExts.Counts.html#Extensification_ListExts_Counts_CountFullEntries__1_System_Collections_Generic_List___0__
-  commentId: M:Extensification.ListExts.Counts.CountFullEntries``1(System.Collections.Generic.List{``0})
+  href: api/Extensification.ListExts.Counts.html#Extensification_ListExts_Counts_CountFullEntries__1_List___0__
+  commentId: M:Extensification.ListExts.Counts.CountFullEntries``1(List{``0})
   name.vb: CountFullEntries(Of T)(List(Of T))
-  fullName: Extensification.ListExts.Counts.CountFullEntries<T>(System.Collections.Generic.List<T>)
-  fullName.vb: Extensification.ListExts.Counts.CountFullEntries(Of T)(System.Collections.Generic.List(Of T))
+  fullName: Extensification.ListExts.Counts.CountFullEntries<T>(List<T>)
+  fullName.vb: Extensification.ListExts.Counts.CountFullEntries(Of T)(List(Of T))
   nameWithType: Counts.CountFullEntries<T>(List<T>)
   nameWithType.vb: Counts.CountFullEntries(Of T)(List(Of T))
 - uid: Extensification.ListExts.Getting
@@ -1939,13 +1917,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries
   nameWithType: Getting.GetIndexesOfEmptyEntries
-- uid: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries``1(System.Collections.Generic.List{``0})
+- uid: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries``1(List{``0})
   name: GetIndexesOfEmptyEntries<T>(List<T>)
-  href: api/Extensification.ListExts.Getting.html#Extensification_ListExts_Getting_GetIndexesOfEmptyEntries__1_System_Collections_Generic_List___0__
-  commentId: M:Extensification.ListExts.Getting.GetIndexesOfEmptyEntries``1(System.Collections.Generic.List{``0})
+  href: api/Extensification.ListExts.Getting.html#Extensification_ListExts_Getting_GetIndexesOfEmptyEntries__1_List___0__
+  commentId: M:Extensification.ListExts.Getting.GetIndexesOfEmptyEntries``1(List{``0})
   name.vb: GetIndexesOfEmptyEntries(Of T)(List(Of T))
-  fullName: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries<T>(System.Collections.Generic.List<T>)
-  fullName.vb: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries(Of T)(System.Collections.Generic.List(Of T))
+  fullName: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries<T>(List<T>)
+  fullName.vb: Extensification.ListExts.Getting.GetIndexesOfEmptyEntries(Of T)(List(Of T))
   nameWithType: Getting.GetIndexesOfEmptyEntries<T>(List<T>)
   nameWithType.vb: Getting.GetIndexesOfEmptyEntries(Of T)(List(Of T))
 - uid: Extensification.ListExts.Getting.GetIndexesOfFullEntries*
@@ -1955,13 +1933,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Getting.GetIndexesOfFullEntries
   nameWithType: Getting.GetIndexesOfFullEntries
-- uid: Extensification.ListExts.Getting.GetIndexesOfFullEntries``1(System.Collections.Generic.List{``0})
+- uid: Extensification.ListExts.Getting.GetIndexesOfFullEntries``1(List{``0})
   name: GetIndexesOfFullEntries<T>(List<T>)
-  href: api/Extensification.ListExts.Getting.html#Extensification_ListExts_Getting_GetIndexesOfFullEntries__1_System_Collections_Generic_List___0__
-  commentId: M:Extensification.ListExts.Getting.GetIndexesOfFullEntries``1(System.Collections.Generic.List{``0})
+  href: api/Extensification.ListExts.Getting.html#Extensification_ListExts_Getting_GetIndexesOfFullEntries__1_List___0__
+  commentId: M:Extensification.ListExts.Getting.GetIndexesOfFullEntries``1(List{``0})
   name.vb: GetIndexesOfFullEntries(Of T)(List(Of T))
-  fullName: Extensification.ListExts.Getting.GetIndexesOfFullEntries<T>(System.Collections.Generic.List<T>)
-  fullName.vb: Extensification.ListExts.Getting.GetIndexesOfFullEntries(Of T)(System.Collections.Generic.List(Of T))
+  fullName: Extensification.ListExts.Getting.GetIndexesOfFullEntries<T>(List<T>)
+  fullName.vb: Extensification.ListExts.Getting.GetIndexesOfFullEntries(Of T)(List(Of T))
   nameWithType: Getting.GetIndexesOfFullEntries<T>(List<T>)
   nameWithType.vb: Getting.GetIndexesOfFullEntries(Of T)(List(Of T))
 - uid: Extensification.ListExts.Getting.GetIndexFromEntry*
@@ -1971,13 +1949,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Getting.GetIndexFromEntry
   nameWithType: Getting.GetIndexFromEntry
-- uid: Extensification.ListExts.Getting.GetIndexFromEntry``1(System.Collections.Generic.List{``0},``0)
+- uid: Extensification.ListExts.Getting.GetIndexFromEntry``1(List{``0},``0)
   name: GetIndexFromEntry<T>(List<T>, T)
-  href: api/Extensification.ListExts.Getting.html#Extensification_ListExts_Getting_GetIndexFromEntry__1_System_Collections_Generic_List___0____0_
-  commentId: M:Extensification.ListExts.Getting.GetIndexFromEntry``1(System.Collections.Generic.List{``0},``0)
+  href: api/Extensification.ListExts.Getting.html#Extensification_ListExts_Getting_GetIndexFromEntry__1_List___0____0_
+  commentId: M:Extensification.ListExts.Getting.GetIndexFromEntry``1(List{``0},``0)
   name.vb: GetIndexFromEntry(Of T)(List(Of T), T)
-  fullName: Extensification.ListExts.Getting.GetIndexFromEntry<T>(System.Collections.Generic.List<T>, T)
-  fullName.vb: Extensification.ListExts.Getting.GetIndexFromEntry(Of T)(System.Collections.Generic.List(Of T), T)
+  fullName: Extensification.ListExts.Getting.GetIndexFromEntry<T>(List<T>, T)
+  fullName.vb: Extensification.ListExts.Getting.GetIndexFromEntry(Of T)(List(Of T), T)
   nameWithType: Getting.GetIndexFromEntry<T>(List<T>, T)
   nameWithType.vb: Getting.GetIndexFromEntry(Of T)(List(Of T), T)
 - uid: Extensification.ListExts.Manipulation
@@ -1986,13 +1964,13 @@ references:
   commentId: T:Extensification.ListExts.Manipulation
   fullName: Extensification.ListExts.Manipulation
   nameWithType: Manipulation
-- uid: Extensification.ListExts.Manipulation.Stringify(System.Collections.Generic.List{System.Char})
+- uid: Extensification.ListExts.Manipulation.Stringify(List{System.Char})
   name: Stringify(List<Char>)
-  href: api/Extensification.ListExts.Manipulation.html#Extensification_ListExts_Manipulation_Stringify_System_Collections_Generic_List_System_Char__
-  commentId: M:Extensification.ListExts.Manipulation.Stringify(System.Collections.Generic.List{System.Char})
+  href: api/Extensification.ListExts.Manipulation.html#Extensification_ListExts_Manipulation_Stringify_List_System_Char__
+  commentId: M:Extensification.ListExts.Manipulation.Stringify(List{System.Char})
   name.vb: Stringify(List(Of Char))
-  fullName: Extensification.ListExts.Manipulation.Stringify(System.Collections.Generic.List<System.Char>)
-  fullName.vb: Extensification.ListExts.Manipulation.Stringify(System.Collections.Generic.List(Of System.Char))
+  fullName: Extensification.ListExts.Manipulation.Stringify(List<System.Char>)
+  fullName.vb: Extensification.ListExts.Manipulation.Stringify(List(Of System.Char))
   nameWithType: Manipulation.Stringify(List<Char>)
   nameWithType.vb: Manipulation.Stringify(List(Of Char))
 - uid: Extensification.ListExts.Manipulation.Stringify*
@@ -2015,13 +1993,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Querying.ContainsAllOf
   nameWithType: Querying.ContainsAllOf
-- uid: Extensification.ListExts.Querying.ContainsAllOf``1(System.Collections.Generic.List{``0},``0[])
+- uid: Extensification.ListExts.Querying.ContainsAllOf``1(List{``0},``0[])
   name: ContainsAllOf<T>(List<T>, T[])
-  href: api/Extensification.ListExts.Querying.html#Extensification_ListExts_Querying_ContainsAllOf__1_System_Collections_Generic_List___0____0___
-  commentId: M:Extensification.ListExts.Querying.ContainsAllOf``1(System.Collections.Generic.List{``0},``0[])
+  href: api/Extensification.ListExts.Querying.html#Extensification_ListExts_Querying_ContainsAllOf__1_List___0____0___
+  commentId: M:Extensification.ListExts.Querying.ContainsAllOf``1(List{``0},``0[])
   name.vb: ContainsAllOf(Of T)(List(Of T), T())
-  fullName: Extensification.ListExts.Querying.ContainsAllOf<T>(System.Collections.Generic.List<T>, T[])
-  fullName.vb: Extensification.ListExts.Querying.ContainsAllOf(Of T)(System.Collections.Generic.List(Of T), T())
+  fullName: Extensification.ListExts.Querying.ContainsAllOf<T>(List<T>, T[])
+  fullName.vb: Extensification.ListExts.Querying.ContainsAllOf(Of T)(List(Of T), T())
   nameWithType: Querying.ContainsAllOf<T>(List<T>, T[])
   nameWithType.vb: Querying.ContainsAllOf(Of T)(List(Of T), T())
 - uid: Extensification.ListExts.Querying.ContainsAnyOf*
@@ -2031,13 +2009,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Querying.ContainsAnyOf
   nameWithType: Querying.ContainsAnyOf
-- uid: Extensification.ListExts.Querying.ContainsAnyOf``1(System.Collections.Generic.List{``0},``0[])
+- uid: Extensification.ListExts.Querying.ContainsAnyOf``1(List{``0},``0[])
   name: ContainsAnyOf<T>(List<T>, T[])
-  href: api/Extensification.ListExts.Querying.html#Extensification_ListExts_Querying_ContainsAnyOf__1_System_Collections_Generic_List___0____0___
-  commentId: M:Extensification.ListExts.Querying.ContainsAnyOf``1(System.Collections.Generic.List{``0},``0[])
+  href: api/Extensification.ListExts.Querying.html#Extensification_ListExts_Querying_ContainsAnyOf__1_List___0____0___
+  commentId: M:Extensification.ListExts.Querying.ContainsAnyOf``1(List{``0},``0[])
   name.vb: ContainsAnyOf(Of T)(List(Of T), T())
-  fullName: Extensification.ListExts.Querying.ContainsAnyOf<T>(System.Collections.Generic.List<T>, T[])
-  fullName.vb: Extensification.ListExts.Querying.ContainsAnyOf(Of T)(System.Collections.Generic.List(Of T), T())
+  fullName: Extensification.ListExts.Querying.ContainsAnyOf<T>(List<T>, T[])
+  fullName.vb: Extensification.ListExts.Querying.ContainsAnyOf(Of T)(List(Of T), T())
   nameWithType: Querying.ContainsAnyOf<T>(List<T>, T[])
   nameWithType.vb: Querying.ContainsAnyOf(Of T)(List(Of T), T())
 - uid: Extensification.ListExts.Removal
@@ -2053,13 +2031,13 @@ references:
   isSpec: "True"
   fullName: Extensification.ListExts.Removal.TryRemove
   nameWithType: Removal.TryRemove
-- uid: Extensification.ListExts.Removal.TryRemove``1(System.Collections.Generic.List{``0},``0)
+- uid: Extensification.ListExts.Removal.TryRemove``1(List{``0},``0)
   name: TryRemove<T>(List<T>, T)
-  href: api/Extensification.ListExts.Removal.html#Extensification_ListExts_Removal_TryRemove__1_System_Collections_Generic_List___0____0_
-  commentId: M:Extensification.ListExts.Removal.TryRemove``1(System.Collections.Generic.List{``0},``0)
+  href: api/Extensification.ListExts.Removal.html#Extensification_ListExts_Removal_TryRemove__1_List___0____0_
+  commentId: M:Extensification.ListExts.Removal.TryRemove``1(List{``0},``0)
   name.vb: TryRemove(Of T)(List(Of T), T)
-  fullName: Extensification.ListExts.Removal.TryRemove<T>(System.Collections.Generic.List<T>, T)
-  fullName.vb: Extensification.ListExts.Removal.TryRemove(Of T)(System.Collections.Generic.List(Of T), T)
+  fullName: Extensification.ListExts.Removal.TryRemove<T>(List<T>, T)
+  fullName.vb: Extensification.ListExts.Removal.TryRemove(Of T)(List(Of T), T)
   nameWithType: Removal.TryRemove<T>(List<T>, T)
   nameWithType.vb: Removal.TryRemove(Of T)(List(Of T), T)
 - uid: Extensification.LongExts
@@ -2256,6 +2234,90 @@ references:
   isSpec: "True"
   fullName: Extensification.LongExts.Querying.ListDigits
   nameWithType: Querying.ListDigits
+- uid: Extensification.NetFX.DictionaryExts
+  name: Extensification.NetFX.DictionaryExts
+  href: api/Extensification.NetFX.DictionaryExts.html
+  commentId: N:Extensification.NetFX.DictionaryExts
+  fullName: Extensification.NetFX.DictionaryExts
+  nameWithType: Extensification.NetFX.DictionaryExts
+- uid: Extensification.NetFX.DictionaryExts.Addition
+  name: Addition
+  href: api/Extensification.NetFX.DictionaryExts.Addition.html
+  commentId: T:Extensification.NetFX.DictionaryExts.Addition
+  fullName: Extensification.NetFX.DictionaryExts.Addition
+  nameWithType: Addition
+- uid: Extensification.NetFX.DictionaryExts.Addition.TryAdd*
+  name: TryAdd
+  href: api/Extensification.NetFX.DictionaryExts.Addition.html#Extensification_NetFX_DictionaryExts_Addition_TryAdd_
+  commentId: Overload:Extensification.NetFX.DictionaryExts.Addition.TryAdd
+  isSpec: "True"
+  fullName: Extensification.NetFX.DictionaryExts.Addition.TryAdd
+  nameWithType: Addition.TryAdd
+- uid: Extensification.NetFX.DictionaryExts.Addition.TryAdd``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)
+  name: TryAdd<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
+  href: api/Extensification.NetFX.DictionaryExts.Addition.html#Extensification_NetFX_DictionaryExts_Addition_TryAdd__2_System_Collections_Generic_Dictionary___0___1____0___1_
+  commentId: M:Extensification.NetFX.DictionaryExts.Addition.TryAdd``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)
+  name.vb: TryAdd(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
+  fullName: Extensification.NetFX.DictionaryExts.Addition.TryAdd<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey, TValue)
+  fullName.vb: Extensification.NetFX.DictionaryExts.Addition.TryAdd(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey, TValue)
+  nameWithType: Addition.TryAdd<TKey, TValue>(Dictionary<TKey, TValue>, TKey, TValue)
+  nameWithType.vb: Addition.TryAdd(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey, TValue)
+- uid: Extensification.NetFX.EnumerableExts
+  name: Extensification.NetFX.EnumerableExts
+  href: api/Extensification.NetFX.EnumerableExts.html
+  commentId: N:Extensification.NetFX.EnumerableExts
+  fullName: Extensification.NetFX.EnumerableExts
+  nameWithType: Extensification.NetFX.EnumerableExts
+- uid: Extensification.NetFX.EnumerableExts.Addition
+  name: Addition
+  href: api/Extensification.NetFX.EnumerableExts.Addition.html
+  commentId: T:Extensification.NetFX.EnumerableExts.Addition
+  fullName: Extensification.NetFX.EnumerableExts.Addition
+  nameWithType: Addition
+- uid: Extensification.NetFX.EnumerableExts.Addition.Append*
+  name: Append
+  href: api/Extensification.NetFX.EnumerableExts.Addition.html#Extensification_NetFX_EnumerableExts_Addition_Append_
+  commentId: Overload:Extensification.NetFX.EnumerableExts.Addition.Append
+  isSpec: "True"
+  fullName: Extensification.NetFX.EnumerableExts.Addition.Append
+  nameWithType: Addition.Append
+- uid: Extensification.NetFX.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)
+  name: Append<Source>(IEnumerable<Source>, Source)
+  href: api/Extensification.NetFX.EnumerableExts.Addition.html#Extensification_NetFX_EnumerableExts_Addition_Append__1_System_Collections_Generic_IEnumerable___0____0_
+  commentId: M:Extensification.NetFX.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)
+  name.vb: Append(Of Source)(IEnumerable(Of Source), Source)
+  fullName: Extensification.NetFX.EnumerableExts.Addition.Append<Source>(System.Collections.Generic.IEnumerable<Source>, Source)
+  fullName.vb: Extensification.NetFX.EnumerableExts.Addition.Append(Of Source)(System.Collections.Generic.IEnumerable(Of Source), Source)
+  nameWithType: Addition.Append<Source>(IEnumerable<Source>, Source)
+  nameWithType.vb: Addition.Append(Of Source)(IEnumerable(Of Source), Source)
+- uid: Extensification.NetFX.StreamExts
+  name: Extensification.NetFX.StreamExts
+  href: api/Extensification.NetFX.StreamExts.html
+  commentId: N:Extensification.NetFX.StreamExts
+  fullName: Extensification.NetFX.StreamExts
+  nameWithType: Extensification.NetFX.StreamExts
+- uid: Extensification.NetFX.StreamExts.Manipulation
+  name: Manipulation
+  href: api/Extensification.NetFX.StreamExts.Manipulation.html
+  commentId: T:Extensification.NetFX.StreamExts.Manipulation
+  fullName: Extensification.NetFX.StreamExts.Manipulation
+  nameWithType: Manipulation
+- uid: Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer(System.IO.Stream,System.ArraySegment{System.Byte}@)
+  name: TryGetBuffer(Stream, ref ArraySegment<Byte>)
+  href: api/Extensification.NetFX.StreamExts.Manipulation.html#Extensification_NetFX_StreamExts_Manipulation_TryGetBuffer_System_IO_Stream_System_ArraySegment_System_Byte___
+  commentId: M:Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer(System.IO.Stream,System.ArraySegment{System.Byte}@)
+  name.vb: TryGetBuffer(Stream, ByRef ArraySegment(Of Byte))
+  fullName: Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer(System.IO.Stream, ref System.ArraySegment<System.Byte>)
+  fullName.vb: Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer(System.IO.Stream, ByRef System.ArraySegment(Of System.Byte))
+  nameWithType: Manipulation.TryGetBuffer(Stream, ref ArraySegment<Byte>)
+  nameWithType.vb: Manipulation.TryGetBuffer(Stream, ByRef ArraySegment(Of Byte))
+- uid: Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer*
+  name: TryGetBuffer
+  href: api/Extensification.NetFX.StreamExts.Manipulation.html#Extensification_NetFX_StreamExts_Manipulation_TryGetBuffer_
+  commentId: Overload:Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer
+  isSpec: "True"
+  fullName: Extensification.NetFX.StreamExts.Manipulation.TryGetBuffer
+  nameWithType: Manipulation.TryGetBuffer
 - uid: Extensification.ShortExts
   name: Extensification.ShortExts
   href: api/Extensification.ShortExts.html
@@ -2568,11 +2630,11 @@ references:
   commentId: T:Extensification.StreamExts.Manipulation
   fullName: Extensification.StreamExts.Manipulation
   nameWithType: Manipulation
-- uid: Extensification.StreamExts.Manipulation.TryFlush(System.IO.Stream)
+- uid: Extensification.StreamExts.Manipulation.TryFlush(Stream)
   name: TryFlush(Stream)
-  href: api/Extensification.StreamExts.Manipulation.html#Extensification_StreamExts_Manipulation_TryFlush_System_IO_Stream_
-  commentId: M:Extensification.StreamExts.Manipulation.TryFlush(System.IO.Stream)
-  fullName: Extensification.StreamExts.Manipulation.TryFlush(System.IO.Stream)
+  href: api/Extensification.StreamExts.Manipulation.html#Extensification_StreamExts_Manipulation_TryFlush_Stream_
+  commentId: M:Extensification.StreamExts.Manipulation.TryFlush(Stream)
+  fullName: Extensification.StreamExts.Manipulation.TryFlush(Stream)
   nameWithType: Manipulation.TryFlush(Stream)
 - uid: Extensification.StreamExts.Manipulation.TryFlush*
   name: TryFlush
@@ -2581,11 +2643,11 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamExts.Manipulation.TryFlush
   nameWithType: Manipulation.TryFlush
-- uid: Extensification.StreamExts.Manipulation.TrySeek(System.IO.Stream,System.Int64,System.IO.SeekOrigin)
+- uid: Extensification.StreamExts.Manipulation.TrySeek(Stream,System.Int64,SeekOrigin)
   name: TrySeek(Stream, Int64, SeekOrigin)
-  href: api/Extensification.StreamExts.Manipulation.html#Extensification_StreamExts_Manipulation_TrySeek_System_IO_Stream_System_Int64_System_IO_SeekOrigin_
-  commentId: M:Extensification.StreamExts.Manipulation.TrySeek(System.IO.Stream,System.Int64,System.IO.SeekOrigin)
-  fullName: Extensification.StreamExts.Manipulation.TrySeek(System.IO.Stream, System.Int64, System.IO.SeekOrigin)
+  href: api/Extensification.StreamExts.Manipulation.html#Extensification_StreamExts_Manipulation_TrySeek_Stream_System_Int64_SeekOrigin_
+  commentId: M:Extensification.StreamExts.Manipulation.TrySeek(Stream,System.Int64,SeekOrigin)
+  fullName: Extensification.StreamExts.Manipulation.TrySeek(Stream, System.Int64, SeekOrigin)
   nameWithType: Manipulation.TrySeek(Stream, Int64, SeekOrigin)
 - uid: Extensification.StreamExts.Manipulation.TrySeek*
   name: TrySeek
@@ -2594,11 +2656,11 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamExts.Manipulation.TrySeek
   nameWithType: Manipulation.TrySeek
-- uid: Extensification.StreamExts.Manipulation.TrySetLength(System.IO.Stream,System.Int64)
+- uid: Extensification.StreamExts.Manipulation.TrySetLength(Stream,System.Int64)
   name: TrySetLength(Stream, Int64)
-  href: api/Extensification.StreamExts.Manipulation.html#Extensification_StreamExts_Manipulation_TrySetLength_System_IO_Stream_System_Int64_
-  commentId: M:Extensification.StreamExts.Manipulation.TrySetLength(System.IO.Stream,System.Int64)
-  fullName: Extensification.StreamExts.Manipulation.TrySetLength(System.IO.Stream, System.Int64)
+  href: api/Extensification.StreamExts.Manipulation.html#Extensification_StreamExts_Manipulation_TrySetLength_Stream_System_Int64_
+  commentId: M:Extensification.StreamExts.Manipulation.TrySetLength(Stream,System.Int64)
+  fullName: Extensification.StreamExts.Manipulation.TrySetLength(Stream, System.Int64)
   nameWithType: Manipulation.TrySetLength(Stream, Int64)
 - uid: Extensification.StreamExts.Manipulation.TrySetLength*
   name: TrySetLength
@@ -2613,13 +2675,13 @@ references:
   commentId: T:Extensification.StreamExts.Reading
   fullName: Extensification.StreamExts.Reading
   nameWithType: Reading
-- uid: Extensification.StreamExts.Reading.ReadAndSeek(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+- uid: Extensification.StreamExts.Reading.ReadAndSeek(Stream,System.Byte[],System.Int32,System.Int32)
   name: ReadAndSeek(Stream, Byte[], Int32, Int32)
-  href: api/Extensification.StreamExts.Reading.html#Extensification_StreamExts_Reading_ReadAndSeek_System_IO_Stream_System_Byte___System_Int32_System_Int32_
-  commentId: M:Extensification.StreamExts.Reading.ReadAndSeek(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+  href: api/Extensification.StreamExts.Reading.html#Extensification_StreamExts_Reading_ReadAndSeek_Stream_System_Byte___System_Int32_System_Int32_
+  commentId: M:Extensification.StreamExts.Reading.ReadAndSeek(Stream,System.Byte[],System.Int32,System.Int32)
   name.vb: ReadAndSeek(Stream, Byte(), Int32, Int32)
-  fullName: Extensification.StreamExts.Reading.ReadAndSeek(System.IO.Stream, System.Byte[], System.Int32, System.Int32)
-  fullName.vb: Extensification.StreamExts.Reading.ReadAndSeek(System.IO.Stream, System.Byte(), System.Int32, System.Int32)
+  fullName: Extensification.StreamExts.Reading.ReadAndSeek(Stream, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: Extensification.StreamExts.Reading.ReadAndSeek(Stream, System.Byte(), System.Int32, System.Int32)
   nameWithType: Reading.ReadAndSeek(Stream, Byte[], Int32, Int32)
   nameWithType.vb: Reading.ReadAndSeek(Stream, Byte(), Int32, Int32)
 - uid: Extensification.StreamExts.Reading.ReadAndSeek*
@@ -2629,13 +2691,13 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamExts.Reading.ReadAndSeek
   nameWithType: Reading.ReadAndSeek
-- uid: Extensification.StreamExts.Reading.TryRead(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+- uid: Extensification.StreamExts.Reading.TryRead(Stream,System.Byte[],System.Int32,System.Int32)
   name: TryRead(Stream, Byte[], Int32, Int32)
-  href: api/Extensification.StreamExts.Reading.html#Extensification_StreamExts_Reading_TryRead_System_IO_Stream_System_Byte___System_Int32_System_Int32_
-  commentId: M:Extensification.StreamExts.Reading.TryRead(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+  href: api/Extensification.StreamExts.Reading.html#Extensification_StreamExts_Reading_TryRead_Stream_System_Byte___System_Int32_System_Int32_
+  commentId: M:Extensification.StreamExts.Reading.TryRead(Stream,System.Byte[],System.Int32,System.Int32)
   name.vb: TryRead(Stream, Byte(), Int32, Int32)
-  fullName: Extensification.StreamExts.Reading.TryRead(System.IO.Stream, System.Byte[], System.Int32, System.Int32)
-  fullName.vb: Extensification.StreamExts.Reading.TryRead(System.IO.Stream, System.Byte(), System.Int32, System.Int32)
+  fullName: Extensification.StreamExts.Reading.TryRead(Stream, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: Extensification.StreamExts.Reading.TryRead(Stream, System.Byte(), System.Int32, System.Int32)
   nameWithType: Reading.TryRead(Stream, Byte[], Int32, Int32)
   nameWithType.vb: Reading.TryRead(Stream, Byte(), Int32, Int32)
 - uid: Extensification.StreamExts.Reading.TryRead*
@@ -2645,11 +2707,11 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamExts.Reading.TryRead
   nameWithType: Reading.TryRead
-- uid: Extensification.StreamExts.Reading.TryReadByte(System.IO.Stream)
+- uid: Extensification.StreamExts.Reading.TryReadByte(Stream)
   name: TryReadByte(Stream)
-  href: api/Extensification.StreamExts.Reading.html#Extensification_StreamExts_Reading_TryReadByte_System_IO_Stream_
-  commentId: M:Extensification.StreamExts.Reading.TryReadByte(System.IO.Stream)
-  fullName: Extensification.StreamExts.Reading.TryReadByte(System.IO.Stream)
+  href: api/Extensification.StreamExts.Reading.html#Extensification_StreamExts_Reading_TryReadByte_Stream_
+  commentId: M:Extensification.StreamExts.Reading.TryReadByte(Stream)
+  fullName: Extensification.StreamExts.Reading.TryReadByte(Stream)
   nameWithType: Reading.TryReadByte(Stream)
 - uid: Extensification.StreamExts.Reading.TryReadByte*
   name: TryReadByte
@@ -2664,13 +2726,13 @@ references:
   commentId: T:Extensification.StreamExts.Writing
   fullName: Extensification.StreamExts.Writing
   nameWithType: Writing
-- uid: Extensification.StreamExts.Writing.TryWrite(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+- uid: Extensification.StreamExts.Writing.TryWrite(Stream,System.Byte[],System.Int32,System.Int32)
   name: TryWrite(Stream, Byte[], Int32, Int32)
-  href: api/Extensification.StreamExts.Writing.html#Extensification_StreamExts_Writing_TryWrite_System_IO_Stream_System_Byte___System_Int32_System_Int32_
-  commentId: M:Extensification.StreamExts.Writing.TryWrite(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+  href: api/Extensification.StreamExts.Writing.html#Extensification_StreamExts_Writing_TryWrite_Stream_System_Byte___System_Int32_System_Int32_
+  commentId: M:Extensification.StreamExts.Writing.TryWrite(Stream,System.Byte[],System.Int32,System.Int32)
   name.vb: TryWrite(Stream, Byte(), Int32, Int32)
-  fullName: Extensification.StreamExts.Writing.TryWrite(System.IO.Stream, System.Byte[], System.Int32, System.Int32)
-  fullName.vb: Extensification.StreamExts.Writing.TryWrite(System.IO.Stream, System.Byte(), System.Int32, System.Int32)
+  fullName: Extensification.StreamExts.Writing.TryWrite(Stream, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: Extensification.StreamExts.Writing.TryWrite(Stream, System.Byte(), System.Int32, System.Int32)
   nameWithType: Writing.TryWrite(Stream, Byte[], Int32, Int32)
   nameWithType.vb: Writing.TryWrite(Stream, Byte(), Int32, Int32)
 - uid: Extensification.StreamExts.Writing.TryWrite*
@@ -2680,11 +2742,11 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamExts.Writing.TryWrite
   nameWithType: Writing.TryWrite
-- uid: Extensification.StreamExts.Writing.TryWriteByte(System.IO.Stream,System.Byte)
+- uid: Extensification.StreamExts.Writing.TryWriteByte(Stream,System.Byte)
   name: TryWriteByte(Stream, Byte)
-  href: api/Extensification.StreamExts.Writing.html#Extensification_StreamExts_Writing_TryWriteByte_System_IO_Stream_System_Byte_
-  commentId: M:Extensification.StreamExts.Writing.TryWriteByte(System.IO.Stream,System.Byte)
-  fullName: Extensification.StreamExts.Writing.TryWriteByte(System.IO.Stream, System.Byte)
+  href: api/Extensification.StreamExts.Writing.html#Extensification_StreamExts_Writing_TryWriteByte_Stream_System_Byte_
+  commentId: M:Extensification.StreamExts.Writing.TryWriteByte(Stream,System.Byte)
+  fullName: Extensification.StreamExts.Writing.TryWriteByte(Stream, System.Byte)
   nameWithType: Writing.TryWriteByte(Stream, Byte)
 - uid: Extensification.StreamExts.Writing.TryWriteByte*
   name: TryWriteByte
@@ -2693,13 +2755,13 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamExts.Writing.TryWriteByte
   nameWithType: Writing.TryWriteByte
-- uid: Extensification.StreamExts.Writing.WriteAndSeek(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+- uid: Extensification.StreamExts.Writing.WriteAndSeek(Stream,System.Byte[],System.Int32,System.Int32)
   name: WriteAndSeek(Stream, Byte[], Int32, Int32)
-  href: api/Extensification.StreamExts.Writing.html#Extensification_StreamExts_Writing_WriteAndSeek_System_IO_Stream_System_Byte___System_Int32_System_Int32_
-  commentId: M:Extensification.StreamExts.Writing.WriteAndSeek(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+  href: api/Extensification.StreamExts.Writing.html#Extensification_StreamExts_Writing_WriteAndSeek_Stream_System_Byte___System_Int32_System_Int32_
+  commentId: M:Extensification.StreamExts.Writing.WriteAndSeek(Stream,System.Byte[],System.Int32,System.Int32)
   name.vb: WriteAndSeek(Stream, Byte(), Int32, Int32)
-  fullName: Extensification.StreamExts.Writing.WriteAndSeek(System.IO.Stream, System.Byte[], System.Int32, System.Int32)
-  fullName.vb: Extensification.StreamExts.Writing.WriteAndSeek(System.IO.Stream, System.Byte(), System.Int32, System.Int32)
+  fullName: Extensification.StreamExts.Writing.WriteAndSeek(Stream, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: Extensification.StreamExts.Writing.WriteAndSeek(Stream, System.Byte(), System.Int32, System.Int32)
   nameWithType: Writing.WriteAndSeek(Stream, Byte[], Int32, Int32)
   nameWithType.vb: Writing.WriteAndSeek(Stream, Byte(), Int32, Int32)
 - uid: Extensification.StreamExts.Writing.WriteAndSeek*
@@ -2721,11 +2783,11 @@ references:
   commentId: T:Extensification.StreamReaderExts.Reading
   fullName: Extensification.StreamReaderExts.Reading
   nameWithType: Reading
-- uid: Extensification.StreamReaderExts.Reading.ReadLines(System.IO.StreamReader)
+- uid: Extensification.StreamReaderExts.Reading.ReadLines(StreamReader)
   name: ReadLines(StreamReader)
-  href: api/Extensification.StreamReaderExts.Reading.html#Extensification_StreamReaderExts_Reading_ReadLines_System_IO_StreamReader_
-  commentId: M:Extensification.StreamReaderExts.Reading.ReadLines(System.IO.StreamReader)
-  fullName: Extensification.StreamReaderExts.Reading.ReadLines(System.IO.StreamReader)
+  href: api/Extensification.StreamReaderExts.Reading.html#Extensification_StreamReaderExts_Reading_ReadLines_StreamReader_
+  commentId: M:Extensification.StreamReaderExts.Reading.ReadLines(StreamReader)
+  fullName: Extensification.StreamReaderExts.Reading.ReadLines(StreamReader)
   nameWithType: Reading.ReadLines(StreamReader)
 - uid: Extensification.StreamReaderExts.Reading.ReadLines*
   name: ReadLines
@@ -2734,11 +2796,11 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamReaderExts.Reading.ReadLines
   nameWithType: Reading.ReadLines
-- uid: Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(System.IO.StreamReader)
+- uid: Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(StreamReader)
   name: ReadLineWithNewLine(StreamReader)
-  href: api/Extensification.StreamReaderExts.Reading.html#Extensification_StreamReaderExts_Reading_ReadLineWithNewLine_System_IO_StreamReader_
-  commentId: M:Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(System.IO.StreamReader)
-  fullName: Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(System.IO.StreamReader)
+  href: api/Extensification.StreamReaderExts.Reading.html#Extensification_StreamReaderExts_Reading_ReadLineWithNewLine_StreamReader_
+  commentId: M:Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(StreamReader)
+  fullName: Extensification.StreamReaderExts.Reading.ReadLineWithNewLine(StreamReader)
   nameWithType: Reading.ReadLineWithNewLine(StreamReader)
 - uid: Extensification.StreamReaderExts.Reading.ReadLineWithNewLine*
   name: ReadLineWithNewLine
@@ -2747,11 +2809,11 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamReaderExts.Reading.ReadLineWithNewLine
   nameWithType: Reading.ReadLineWithNewLine
-- uid: Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(System.IO.StreamReader)
+- uid: Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(StreamReader)
   name: ReadToEndAndSeek(StreamReader)
-  href: api/Extensification.StreamReaderExts.Reading.html#Extensification_StreamReaderExts_Reading_ReadToEndAndSeek_System_IO_StreamReader_
-  commentId: M:Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(System.IO.StreamReader)
-  fullName: Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(System.IO.StreamReader)
+  href: api/Extensification.StreamReaderExts.Reading.html#Extensification_StreamReaderExts_Reading_ReadToEndAndSeek_StreamReader_
+  commentId: M:Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(StreamReader)
+  fullName: Extensification.StreamReaderExts.Reading.ReadToEndAndSeek(StreamReader)
   nameWithType: Reading.ReadToEndAndSeek(StreamReader)
 - uid: Extensification.StreamReaderExts.Reading.ReadToEndAndSeek*
   name: ReadToEndAndSeek
@@ -2772,11 +2834,11 @@ references:
   commentId: T:Extensification.StreamWriterExts.Writing
   fullName: Extensification.StreamWriterExts.Writing
   nameWithType: Writing
-- uid: Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter,System.String)
+- uid: Extensification.StreamWriterExts.Writing.WriteLineAndSeek(StreamWriter,System.String)
   name: WriteLineAndSeek(StreamWriter, String)
-  href: api/Extensification.StreamWriterExts.Writing.html#Extensification_StreamWriterExts_Writing_WriteLineAndSeek_System_IO_StreamWriter_System_String_
-  commentId: M:Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter,System.String)
-  fullName: Extensification.StreamWriterExts.Writing.WriteLineAndSeek(System.IO.StreamWriter, System.String)
+  href: api/Extensification.StreamWriterExts.Writing.html#Extensification_StreamWriterExts_Writing_WriteLineAndSeek_StreamWriter_System_String_
+  commentId: M:Extensification.StreamWriterExts.Writing.WriteLineAndSeek(StreamWriter,System.String)
+  fullName: Extensification.StreamWriterExts.Writing.WriteLineAndSeek(StreamWriter, System.String)
   nameWithType: Writing.WriteLineAndSeek(StreamWriter, String)
 - uid: Extensification.StreamWriterExts.Writing.WriteLineAndSeek*
   name: WriteLineAndSeek
@@ -2785,13 +2847,13 @@ references:
   isSpec: "True"
   fullName: Extensification.StreamWriterExts.Writing.WriteLineAndSeek
   nameWithType: Writing.WriteLineAndSeek
-- uid: Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter,System.String[])
+- uid: Extensification.StreamWriterExts.Writing.WriteLines(StreamWriter,System.String[])
   name: WriteLines(StreamWriter, String[])
-  href: api/Extensification.StreamWriterExts.Writing.html#Extensification_StreamWriterExts_Writing_WriteLines_System_IO_StreamWriter_System_String___
-  commentId: M:Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter,System.String[])
+  href: api/Extensification.StreamWriterExts.Writing.html#Extensification_StreamWriterExts_Writing_WriteLines_StreamWriter_System_String___
+  commentId: M:Extensification.StreamWriterExts.Writing.WriteLines(StreamWriter,System.String[])
   name.vb: WriteLines(StreamWriter, String())
-  fullName: Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter, System.String[])
-  fullName.vb: Extensification.StreamWriterExts.Writing.WriteLines(System.IO.StreamWriter, System.String())
+  fullName: Extensification.StreamWriterExts.Writing.WriteLines(StreamWriter, System.String[])
+  fullName.vb: Extensification.StreamWriterExts.Writing.WriteLines(StreamWriter, System.String())
   nameWithType: Writing.WriteLines(StreamWriter, String[])
   nameWithType.vb: Writing.WriteLines(StreamWriter, String())
 - uid: Extensification.StreamWriterExts.Writing.WriteLines*

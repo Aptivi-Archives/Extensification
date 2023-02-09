@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Manipulation
+    <title>Class Addition
    | Extensification API - Aptivi Internals </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Manipulation
+    <meta name="title" content="Class Addition
    | Extensification API - Aptivi Internals ">
     <meta name="generator" content="docfx 2.58.9.0">
     
@@ -78,37 +78,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Extensification.ArrayExts.Manipulation">
+            <article class="content wrap" id="_content" data-uid="Extensification.NetFX.EnumerableExts.Addition">
   
   
-  <h1 id="Extensification_ArrayExts_Manipulation" data-uid="Extensification.ArrayExts.Manipulation" class="text-break">Class Manipulation
+  <h1 id="Extensification_NetFX_EnumerableExts_Addition" data-uid="Extensification.NetFX.EnumerableExts.Addition" class="text-break">Class Addition
   </h1>
-  <div class="markdown level0 summary"><p>Provides the array extensions related to manipulation</p>
+  <div class="markdown level0 summary"><p>Provides the enumerable extensions related to addition</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Manipulation</span></div>
+    <div class="level1"><span class="xref">Addition</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Extensification.ArrayExts.html">Extensification.ArrayExts</a></h6>
-  <h6><strong>Assembly</strong>: Extensification.dll</h6>
-  <h5 id="Extensification_ArrayExts_Manipulation_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Extensification.NetFX.EnumerableExts.html">Extensification.NetFX.EnumerableExts</a></h6>
+  <h6><strong>Assembly</strong>: Extensification.NetFX.dll</h6>
+  <h5 id="Extensification_NetFX_EnumerableExts_Addition_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Manipulation : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Addition</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Extensification_ArrayExts_Manipulation_Stringify_" data-uid="Extensification.ArrayExts.Manipulation.Stringify*"></a>
-  <h4 id="Extensification_ArrayExts_Manipulation_Stringify_System_Char___" data-uid="Extensification.ArrayExts.Manipulation.Stringify(System.Char[])">Stringify(Char[])</h4>
-  <div class="markdown level1 summary"><p>Stringifies the character array (making a string from the character entries found inside the array)</p>
+  <a id="Extensification_NetFX_EnumerableExts_Addition_Append_" data-uid="Extensification.NetFX.EnumerableExts.Addition.Append*"></a>
+  <h4 id="Extensification_NetFX_EnumerableExts_Addition_Append__1_System_Collections_Generic_IEnumerable___0____0_" data-uid="Extensification.NetFX.EnumerableExts.Addition.Append``1(System.Collections.Generic.IEnumerable{``0},``0)">Append&lt;Source&gt;(IEnumerable&lt;Source&gt;, Source)</h4>
+  <div class="markdown level1 summary"><p>Appends a value to the end of the sequence</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Stringify(this char[] TargetCharArray)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Source&gt; Append&lt;Source&gt;(this IEnumerable&lt;Source&gt; TargetEnumerable, Source Value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,9 +121,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Char</span>[]</td>
-        <td><span class="parametername">TargetCharArray</span></td>
-        <td><p>Character array</p>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;Source&gt;</td>
+        <td><span class="parametername">TargetEnumerable</span></td>
+        <td><p>Source</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Source</span></td>
+        <td><span class="parametername">Value</span></td>
+        <td><p>Value</p>
 </td>
       </tr>
     </tbody>
@@ -138,8 +144,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;Source&gt;</td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">Source</span></td>
+        <td><p>Source type</p>
+</td>
       </tr>
     </tbody>
   </table>
