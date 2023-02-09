@@ -20,25 +20,22 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Extensification.EnumerableExts
+namespace Extensification.NetFX.EnumerableExts
 {
     /// <summary>
     /// Provides the enumerable extensions related to addition
     /// </summary>
     public static class Addition
     {
-
-#if NETCOREAPP == false
         /// <summary>
         /// Appends a value to the end of the sequence
         /// </summary>
         /// <typeparam name="Source">Source type</typeparam>
         /// <param name="TargetEnumerable">Source</param>
         /// <param name="Value">Value</param>
-        public static IEnumerable<Source> Append<Source>(IEnumerable<Source> TargetEnumerable, Source Value)
+        public static IEnumerable<Source> Append<Source>(this IEnumerable<Source> TargetEnumerable, Source Value)
         {
             return TargetEnumerable.Concat(new[] { Value });
         }
-#endif
     }
 }

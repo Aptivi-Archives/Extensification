@@ -16,18 +16,15 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-#if NET48
 using Microsoft.VisualBasic;
 using System;
 using System.CodeDom.Compiler;
 using System.Reflection;
-#endif
 
 namespace Extensification.Legacy.StringExts
 {
     public static class Querying
     {
-#if NET48
         /// <summary>
         /// Evaluates a string
         /// </summary>
@@ -57,6 +54,5 @@ namespace Extensification.Legacy.StringExts
             }
             return null;
         }
-#endif
     }
 }

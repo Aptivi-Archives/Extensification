@@ -16,26 +16,38 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-using Extensification.EnumerableExts;
+using Extensification.NetFX.EnumerableExts;
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace Extensification.Tests
+namespace Extensification.NetFX.Tests
 {
 
     [TestFixture]
     public class EnumerableTests
     {
 
-        #region Manipulation
+        #region Addition
         /// <summary>
-        /// Tests stringifying a char enumerable
+        /// Tests appending a value to the end of a list
         /// </summary>
         [Test]
-        public void TestStringify()
+        public static void TestAppendList()
         {
-            IEnumerable<char> TargetArray = new[] { 'H', 'e', 'l', 'l', 'o' };
-            Assert.AreEqual("Hello", TargetArray.Stringify());
+            List<string> TargetEnum = new() { "Welcome", "to" };
+            TargetEnum = (List<string>)TargetEnum.Append("Extensification");
+            Assert.IsTrue(TargetEnum.Contains("Extensification"));
+        }
+
+        /// <summary>
+        /// Tests appending a value to the end of a string
+        /// </summary>
+        [Test]
+        public static void TestAppendString()
+        {
+            string TargetString = "Welcom";
+            TargetString = string.Join("", TargetString.Append('e'));
+            Assert.IsTrue(TargetString == "Welcome");
         }
         #endregion
 

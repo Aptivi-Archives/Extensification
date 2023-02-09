@@ -16,31 +16,29 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using Extensification.NetFX.DictionaryExts;
+using NUnit.Framework;
 
-namespace Extensification.ArrayListExts
+namespace Extensification.NetFX.Tests
 {
-    /// <summary>
-    /// Provides the array list extensions related to conversion
-    /// </summary>
-    public static class Conversion
+
+    [TestFixture]
+    public class DictionaryTests
     {
 
+        #region Addition
         /// <summary>
-        /// Converts an array list to list of <see cref="object"/>.
+        /// Tests trying to add an entry to dictionary
         /// </summary>
-        /// <param name="TargetArray">Target array list</param>
-        /// <returns>A list from array list</returns>
-        public static List<object> ToList(this ArrayList TargetArray)
-        {
-            if (TargetArray is null)
-                throw new ArgumentNullException(nameof(TargetArray));
-            var ArrayValues = new List<object>();
-            ArrayValues.AddRange(TargetArray.ToArray());
-            return ArrayValues;
+        [Test]
+        public static void TestTryAdd()
+            {
+            Dictionary<string, int> TargetDict = new();
+            Assert.IsTrue(TargetDict.TryAdd("Document number", 12));
+            Assert.IsFalse(TargetDict.TryAdd("Document number", 13));
         }
+        #endregion
 
     }
 }

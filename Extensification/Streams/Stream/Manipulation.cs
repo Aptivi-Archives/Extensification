@@ -93,39 +93,5 @@ namespace Extensification.StreamExts
             // Return the result
             return Success;
         }
-
-#if NET48_OR_GREATER
-        /// <summary>
-        /// Tries to return the array of unsigned bytes from which this stream was created.
-        /// </summary>
-        /// <returns>True if successful; False if unsuccessful</returns>
-        public static bool TryGetBuffer(this Stream TargetStream, ref ArraySegment<byte> Buffer)
-        {
-            bool Success = true;
-
-            // Try to seek
-            try
-            {
-                List<byte> Chars = new List<byte>();
-                int CharByte = 0;
-                while (!(CharByte == -1))
-                {
-                    CharByte = TargetStream.ReadByte();
-                    if (!(CharByte == -1))
-                    {
-                        Chars.Add(Convert.ToByte(CharByte));
-                    }
-                }
-                Buffer = new ArraySegment<byte>(Chars.ToArray());
-            }
-            catch
-            {
-                Success = false;
-            }
-
-            //Return the result
-            return Success;
-        }
-#endif
     }
 }

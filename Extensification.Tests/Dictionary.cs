@@ -306,19 +306,6 @@ namespace Extensification.Tests
             TargetDict.AddOrDecrement("String 1", 32f);
             Assert.IsTrue(TargetDict["String 1"] == 32f);
         }
-
-#if NET48_OR_GREATER
-        /// <summary>
-        /// Tests trying to add an entry to dictionary
-        /// </summary>
-        [Test]
-        public static void TestTryAdd()
-            {
-            Dictionary<string, int> TargetDict = new();
-            Assert.IsTrue(TargetDict.TryAdd("Document number", 12));
-            Assert.IsFalse(TargetDict.TryAdd("Document number", 13));
-        }
-#endif
         #endregion
 
         #region Counts
@@ -361,7 +348,7 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-        /// Tests getting index of a key in dictionary that has keys of type <see cref="String"/>
+        /// Tests getting index of a key in dictionary that has keys of type <see cref="string"/>
         /// </summary>
         [Test]
         public void TestGetIndexOfKey()
@@ -373,7 +360,7 @@ namespace Extensification.Tests
         }
 
         /// <summary>
-        /// Tests getting index of a value in dictionary that has keys of type <see cref="String"/>
+        /// Tests getting index of a value in dictionary that has keys of type <see cref="string"/>
         /// </summary>
         [Test]
         public void TestGetIndexOfValue()

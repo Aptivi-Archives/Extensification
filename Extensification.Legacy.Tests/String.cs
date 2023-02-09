@@ -25,7 +25,6 @@ namespace Extensification.Legacy.Tests.Extensification.Legacy.Tests
     [TestFixture]
     public class StringTests
     {
-#if NET48
         /// <summary>
         /// Tests removing letters from a string
         /// </summary>
@@ -36,7 +35,6 @@ namespace Extensification.Legacy.Tests.Extensification.Legacy.Tests
             int ExpectedEvaluated = 7;
             Assert.AreEqual(ExpectedEvaluated, TargetString.Evaluate());
         }
-#endif
     }
 
 }

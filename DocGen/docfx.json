@@ -6,7 +6,8 @@
                     "files": [ 
                         "Extensification/**.csproj",
                         "Extensification.External/**.csproj",
-                        "Extensification.Legacy/**.csproj"
+                        "Extensification.Legacy/**.csproj",
+                        "Extensification.NetFX/**.csproj"
                     ],
                     "src": ".."
                 }
@@ -25,9 +26,6 @@
                     "index.md",
                     "toc.yml"
                 ]
-            },
-            {
-                "files": [ "wiki/**/*.md" ]
             }
         ],
         "resource": [
@@ -37,7 +35,7 @@
         ],
         "dest": "../docs",
         "globalMetadata": {
-            "_appTitle": "Extensification API - Eofla Internals",
+            "_appTitle": "Extensification API - Aptivi Internals",
             "_enableSearch": true
         },
         "globalMetadataFiles": [],

@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Extensification.NetFX</RootNamespace>
+    <TargetFramework>net48</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageOutputPath>../Extensification.Bin</PackageOutputPath>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>2023.0</Version>
+    <PackageVersion>2023.0</PackageVersion>
+    <Authors>Aptivi</Authors>
+    <Company>Aptivi</Company>
+    <Product>Extensification</Product>
+    <Description>
+      Extensification is an extension pack to .NET Framework that extends your ability to use more functions on strings, integers, and objects. Initially, it started with the string, integer, double, long, dictionary, array, arraylist, and list extensions, and inherited from Kernel Simulator. Over time, it grows with support for more objects.
+
+      This package is for extensions that re-implement .NET 6.0 functions in .NET 4.8.
+    </Description>
+    <Copyright>Copyright © 2020-2023 Aptivi</Copyright>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Aptivi/Extensification</PackageProjectUrl>
+    <PackageIcon>OfficialAppIcon-Extensification-512.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/Aptivi/Extensification</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>extensions, extension methods</PackageTags>
+    <OutputPath>../Extensification.Bin/</OutputPath>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="OfficialAppIcon-Extensification-512.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

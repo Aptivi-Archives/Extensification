@@ -507,32 +507,5 @@ namespace Extensification.DictionaryExts
                 Dict[EntryKey] -= EntryValue;
             }
         }
-
-#if NET48_OR_GREATER
-        /// <summary>
-        /// Attempts to add the specified key and value to the dictionary
-        /// </summary>
-        /// <typeparam name="TKey">Key</typeparam>
-        /// <typeparam name="TValue">Value</typeparam>
-        /// <param name="Dict">Target dictionary</param>
-        /// <param name="EntryKey">A key entry to be added</param>
-        /// <param name="EntryValue">A value of entry</param>
-        /// <returns>True if successful; False if unsuccessful</returns>
-        public static bool TryAdd<TKey, TValue>(this Dictionary<TKey, TValue> Dict, TKey EntryKey, TValue EntryValue)
-        {
-            if (EntryKey is null)
-                throw new ArgumentNullException(nameof(EntryKey));
-
-            try
-            {
-                Dict.Add(EntryKey, EntryValue);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-#endif
     }
 }
