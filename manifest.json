@@ -976,15 +976,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "nvETbpS8VhvF+mjNn8+xQib9EUgAgNp9+XPY5hZlGb0="
+          "hash": "V2doPNJslASs0wbKnHHovL+5i/sojhQl/9zbnCgdG78="
         }
       },
       "is_incremental": false,
