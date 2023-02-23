@@ -1,117 +1,67 @@
+
+<div align = center>
+
+<br>
+<br>
+    
+<img
+  src = 'https://cdn.jsdelivr.net/gh/Aptivi/Extensification@master/Extensification/OfficialAppIcon-Extensification-512.png'
+  width = 256
+  align = center
+/>
+
+<br>
+
 # Extensification
+    
+*A group of extensions that improve your programming experience.*
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Aptivi/Extensification?color=purple&label=size) [![GitHub All Releases](https://img.shields.io/github/downloads/Aptivi/Extensification/total?color=purple&label=d/l)](https://github.com/Aptivi/Extensification/releases) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Aptivi/Extensification?color=purple&include_prereleases&label=github)](https://github.com/Aptivi/Extensification/releases/latest) [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Extensification?color=purple)](https://www.nuget.org/packages/Extensification/)
+<br>
+<br>
 
-Extensification is the group of extensions that improve your experience of programming for .NET Core and .NET Framework applications.
+[![Badge Main]][Main]   
+[![Badge Main Linux]][Main Linux]
 
-## Build Status
+[![Badge Latest]][Latest]   
+[![Badge NuGet]][NuGet]
 
-Here are all the CI build status for all Extensification branches.
+![Badge Size]   
+[![Badge Downloads]][Releases]
 
-| Branch                | AppVeyor | Travis CI
-|-----------------------|----------|------------
-| master                | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/master?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/master) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=master)](https://travis-ci.org/Aptivi/Extensification)
-| v2021.5.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.5.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.5.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.5.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2021.4.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.4.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.4.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.4.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2021.3.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.3.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.3.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.3.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2021.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.2.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.2.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.2.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2021.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.1.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.1.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.1.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2021.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2021.0.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2021.0.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2021.0.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2020.2.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.2.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2020.2.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2020.2.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2020.1.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.1.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2020.1.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2020.1.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
-| v2020.0.x-servicing   | [![Build status](https://ci.appveyor.com/api/projects/status/99vuwsmx8qqhj05u/branch/v2020.0.x-servicing?svg=true)](https://ci.appveyor.com/project/Aptivi/extensification/branch/v2020.0.x-servicing) | [![Build Status](https://travis-ci.org/Aptivi/Extensification.svg?branch=v2020.0.x-servicing)](https://travis-ci.org/Aptivi/Extensification)
+[![Button Manual]][Manual]   
+[![Button Libraries]][Libraries]
 
-## System Requirements
+</div>
+    
+<br>
 
-To run any project that use this library, we recommend that you have:
+</div>
 
-### Windows systems
 
-1. Windows 7 or later (Windows 10 recommended)
-2. .NET Framework 4.5 or later, or .NET Core 2.1 or 3.1, or .NET 5.0
+<!----------------------------------------------------------------------------->
 
-* If your app uses Extensification, uses x86, and uses one of .NET Core 2.1, 3.1, or .NET 5.0, at least a 2.00 GHz processor with SSE2 is required.
+[Releases]: https://github.com/Aptivi/Extensification/releases
+[Latest]: https://github.com/Aptivi/Extensification/releases/latest
+[NuGet]: https://www.nuget.org/packages/Extensification/
 
-### Linux systems
+[Main]: https://github.com/Aptivi/Extensification/actions/workflows/build-win.yml
+[Main Linux]: https://github.com/Aptivi/Extensification/actions/workflows/build-linux.yml
 
-1. Mono 5.10 or higher (6.0 or higher is recommended) or dotnet with .NET Core 2.1 or 3.1 or .NET 5.0
+[Libraries]: https://aptivi.gitbook.io/extensification-manual/project-dependencies
+[Manual]: https://aptivi.gitbook.io/extensification-manual/
 
-## How to install
+<!----------------------------------[ Badges ]--------------------------------->
 
-This section covers how to install Extensification on your project. Please scroll down to your system below.
+[Badge Downloads]: https://img.shields.io/github/downloads/Aptivi/Extensification/total?color=217346&label=Downloads&style=for-the-badge&logoColor=white&logo=DocuSign&labelColor=2d9d5f
+[Badge Latest]: https://img.shields.io/github/v/release/Aptivi/Extensification?color=212121&include_prereleases&label=github&style=for-the-badge&logoColor=white&logo=AzureArtifacts&labelColor=303030
+[Badge NuGet]: https://img.shields.io/nuget/vpre/Extensification?color=012f52&style=for-the-badge&logoColor=white&logo=NuGet&labelColor=004880
+[Badge Size]: https://img.shields.io/github/repo-size/Aptivi/Extensification?color=bb4a28&label=size&logoColor=white&style=for-the-badge&logo=GoogleAnalytics&labelColor=E85C33
 
-### Windows systems (Recommended)
+[Badge Main]: https://github.com/Aptivi/Extensification/actions/workflows/build-win.yml/badge.svg
+[Badge Main Linux]: https://github.com/Aptivi/Extensification/actions/workflows/build-linux.yml/badge.svg
 
-1. Open Visual Studio to any project, and open the NuGet package manager
-2. Search for `Extensification` and install it there
 
-### Windows systems (Alternative)
+<!---------------------------------[ Buttons ]--------------------------------->
 
-1. Download the Extensification library files [here](https://github.com/Aptivi/Extensification/releases).
-2. Unzip the file to any directory
-3. Open Visual Studio to any project, and add a reference to Extensification
-
-## How to Build
-
-This section covers how to build Extensification on your system. Please scroll down to your platform below.
-
-### Visual Studio 2019 16.8+
-
-1. Open Visual Studio
-2. Press `Clone a repository`
-3. In Repository Location, enter `https://github.com/Aptivi/Extensification.git`
-4. Wait until it clones. It might take a few minutes depending on your Internet connection.
-5. Press `Solution Explorer`, then press `Switch Views`
-6. Click on `Extensification.sln`
-7. Press `Start` or press `Build > Build Solution`
-
-### JetBrains Rider (64-bit)
-
-1. Install Mono Runtime, Git, and `libmono-microsoft-visualbasic10.0-cil`.
-2. Install JetBrains Rider.
-3. After installation, open JetBrains Rider, and follow the configuration steps.
-4. When the main menu opens, choose `Check out from Version Control` and then `Git`.
-5. Write on the URL `https://github.com/Aptivi/Extensification.git` and press `Test` to verify your connectivity.
-6. Press Clone, and git will download the repo, then Rider will open up. It might take a few minutes depending on your Internet connection.
-7. Click on the hammer button to build.
-
-### MonoDevelop
-
-1. Install Mono Runtime, `libmono-microsoft-visualbasic10.0-cil`, and MonoDevelop.
-2. After installation, extract the source code, open MonoDevelop, and click on `Open...`
-3. Click on the `Build` menu bar, and click on build button to compile.
-
-## Credits
-
-**Aptivi:** Owner of Extensification
-
-## Open Source Libraries
-
-Below entries are the open source libraries that is used by Extensification. They are required for execution.
-
-### Newtonsoft.Json
-
-Source code: https://github.com/JamesNK/Newtonsoft.Json
-
-Copyright (c) 2007, James Newton-King
-
-License (MIT): https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
-
-## License
-
-    Extensification - Extends your .NET methods
-    Copyright (C) 2020-2021  Aptivi
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
+[Button Libraries]: https://img.shields.io/badge/Libraries-EA8220?style=for-the-badge&logoColor=white&logo=AzureArtifacts
+[Button Manual]: https://img.shields.io/badge/Docs-blueviolet?style=for-the-badge&logoColor=white&logo=GitBook
