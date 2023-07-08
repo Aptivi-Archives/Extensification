@@ -16,6 +16,8 @@
     
 *A group of extensions that improve your programming experience.*
 
+*Warning: This library is deprecated. Its source code should be used for reference purposes only.*
+
 <br>
 <br>
 
